@@ -1,0 +1,18 @@
+# 可合并到已有 Hugo 站点的 WeRead 读书笔记配置片段
+
+params:
+  weread:
+    data_file: '/data/weread_notes.json'
+    notes_per_page: 12
+    enable_search: true
+
+menus:
+  main:
+    - name: '阅读'
+      url: '/weread/'
+      weight: 20
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,66 @@
+{{ define "main" }}
+<article class="page gallery-page">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}<div class="page-summary">{{ . }}</div>{{ end }}
+    </header>
+
+    {{ $allowed := slice ".jpg" ".jpeg" ".png" ".gif" ".webp" ".bmp" ".svg" }}
+    {{ $images := slice }}
+    {{ range readDir "static/gallery" }}
+        {{ if not .IsDir }}
+            {{ $ext := lower (path.Ext .Name) }}
+            {{ if in $allowed $ext }}
+                {{ $images = $images | append . }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if $images }}
+    <div class="gallery-grid">
+        {{ range $images }}
+        <figure class="gallery-item" data-src="{{ .Name }}">
+            <img src="{{ .Name }}" loading="lazy" alt="{{ .Name }}">
+            <figcaption>{{ strings.TrimSuffix (path.Ext .Name) .Name }}</figcaption>
+        </figure>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p class="empty-state">相册还是空的。把图片放到 <code>static/gallery/</code> 目录即可自动展示。</p>
+    {{ end }}
+</article>
+
+<div class="lightbox" id="lightbox" hidden>
+    <img id="lightboxImg" alt="预览图">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭">×</button>
+</div>
+
+<script>
+(function () {
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lightboxImg');
+    var closeBtn = document.getElementById('lightboxClose');
+
+    function open(src) {
+        img.src = src;
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+    }
+    function close() {
+        box.hidden = true;
+        img.src = '';
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+            open(item.getAttribute('data-src'));
+        });
+    });
+
+    closeBtn.addEventListener('click', close);
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+{{ end }}

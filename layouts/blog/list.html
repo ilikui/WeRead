@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article class="page">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}<div class="page-summary">{{ . }}</div>{{ end }}
+    </header>
+
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ if $pages }}
+    <div class="blog-grid">
+        {{ range $pages }}
+        <article class="blog-card">
+            <a class="blog-card-link" href="{{ .RelPermalink }}">
+                <time class="blog-card-date">{{ .Date.Format "2006-01-02" }}</time>
+                <h2 class="blog-card-title">{{ .Title }}</h2>
+                {{ with .Params.summary }}
+                <p class="blog-card-summary">{{ . }}</p>
+                {{ else }}
+                <p class="blog-card-summary">{{ .Summary | plainify | truncate 120 }}</p>
+                {{ end }}
+                {{ with .Params.tags }}
+                <div class="blog-card-tags">
+                    {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <span class="blog-card-more">阅读全文 →</span>
+            </a>
+        </article>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p class="empty-state">还没有文章，在 <code>content/blog/</code> 下新建一篇 Markdown 即可。</p>
+    {{ end }}
+</article>
+{{ end }}

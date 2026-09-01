@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="page">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}
+        <div class="page-summary">{{ . }}</div>
+        {{ end }}
+    </header>
+
+    <div class="book-grid">
+        {{ range .Pages }}
+        <article class="book-card">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="book-card-meta">
+                {{ .Params.author }}
+                {{ if .Params.note_count }}· {{ .Params.note_count }} 条笔记{{ end }}
+            </p>
+        </article>
+        {{ end }}
+    </div>
+</article>
+{{ end }}

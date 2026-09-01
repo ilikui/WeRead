@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default `zh-CN` }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}{{ end }}</title>
+    <meta name="description" content="{{ .Params.description | default site.Params.description }}">
+    {{ $style := resources.Get "css/weread-theme.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ block "extra-head" . }}{{ end }}
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="{{ `/` | relURL }}">{{ site.Title }}</a>
+            <ul class="nav-menu">
+                {{ range site.Menus.main }}
+                <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent `main` . }} class="active"{{ end }}>{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        {{ block "sidebar" . }}
+        <aside class="side-tabs" aria-label="分类导航">
+            {{ range site.Params.menu.side }}
+            <a href="{{ .url | relURL }}" class="side-tab{{ if eq $.RelPermalink (.url | relURL) }} active{{ end }}">
+                {{ .name }}
+            </a>
+            {{ end }}
+        </aside>
+        {{ end }}
+
+        <main class="site-main">
+            {{ block "main" . }}{{ end }}
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>{{ site.Title }} · 使用 Hugo 构建</p>
+    </footer>
+
+    {{ block "extra-scripts" . }}{{ end }}
+</body>
+</html>

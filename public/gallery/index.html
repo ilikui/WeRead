@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8131&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>相册 | WeRead 读书笔记</title>
+    <meta name="description" content="图片集锦">
+    
+    <link rel="stylesheet" href="../css/weread-theme.min.0e145bcc963dc1f311c16808f445aca3a4a8a5ad55d8767e3897a226e9cadf0c.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../">WeRead 读书笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../">首页</a></li>
+                
+                <li><a href="../weread/">阅读</a></li>
+                
+                <li><a href="../about/">关于</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../weread/" class="side-tab">
+                Read
+            </a>
+            
+            <a href="../blog/" class="side-tab">
+                Blog
+            </a>
+            
+            <a href="../gallery/" class="side-tab active">
+                Gallery
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<article class="page gallery-page">
+    <header class="page-header">
+        <h1>相册</h1>
+        <div class="page-summary"><p>把图片放入 <code>static/gallery/</code> 目录即可自动展示在这里，点击图片可放大查看。</p>
+</div>
+    </header>
+
+    
+    
+    
+        
+            
+            
+                
+            
+        
+    
+        
+            
+            
+                
+            
+        
+    
+        
+            
+            
+                
+            
+        
+    
+        
+            
+            
+                
+            
+        
+    
+
+    
+    <div class="gallery-grid">
+        
+        <figure class="gallery-item" data-src="prototype-1.png">
+            <img src="prototype-1.png" loading="lazy" alt="prototype-1.png">
+            <figcaption>prototype-1</figcaption>
+        </figure>
+        
+        <figure class="gallery-item" data-src="prototype-2.png">
+            <img src="prototype-2.png" loading="lazy" alt="prototype-2.png">
+            <figcaption>prototype-2</figcaption>
+        </figure>
+        
+        <figure class="gallery-item" data-src="prototype-3.png">
+            <img src="prototype-3.png" loading="lazy" alt="prototype-3.png">
+            <figcaption>prototype-3</figcaption>
+        </figure>
+        
+        <figure class="gallery-item" data-src="prototype-4.png">
+            <img src="prototype-4.png" loading="lazy" alt="prototype-4.png">
+            <figcaption>prototype-4</figcaption>
+        </figure>
+        
+    </div>
+    
+</article>
+
+<div class="lightbox" id="lightbox" hidden>
+    <img id="lightboxImg" alt="预览图">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="关闭">×</button>
+</div>
+
+<script>
+(function () {
+    var box = document.getElementById('lightbox');
+    var img = document.getElementById('lightboxImg');
+    var closeBtn = document.getElementById('lightboxClose');
+
+    function open(src) {
+        img.src = src;
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+    }
+    function close() {
+        box.hidden = true;
+        img.src = '';
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(function (item) {
+        item.addEventListener('click', function () {
+            open(item.getAttribute('data-src'));
+        });
+    });
+
+    closeBtn.addEventListener('click', close);
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>WeRead 读书笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+</body>
+</html>

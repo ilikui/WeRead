@@ -1,0 +1,38 @@
+{{ define "main" }}
+<article class="page blog-post">
+    <header class="page-header blog-post-header">
+        <h1>{{ .Title }}</h1>
+        <div class="blog-post-meta">
+            {{ with .Date }}<time>{{ .Format "2006-01-02" }}</time>{{ end }}
+            {{ with .Params.author }}<span>· {{ . }}</span>{{ end }}
+            {{ if gt .ReadingTime 0 }}<span>· 约 {{ .ReadingTime }} 分钟</span>{{ end }}
+        </div>
+        {{ with .Params.tags }}
+        <div class="blog-post-tags">
+            {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+    </header>
+
+    {{ if and .Params.toc .TableOfContents }}
+    <aside class="blog-toc">
+        <div class="blog-toc-title">目录</div>
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
+
+    <div class="page-content blog-content">
+        {{ .Content }}
+    </div>
+
+    <nav class="blog-post-nav">
+        {{ with .PrevInSection }}
+        <a class="blog-nav-link" href="{{ .RelPermalink }}">← {{ .Title }}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a class="blog-nav-link blog-nav-next" href="{{ .RelPermalink }}">{{ .Title }} →</a>
+        {{ end }}
+    </nav>
+</article>
+{{ partial "markdown-extensions.html" . }}
+{{ end }}

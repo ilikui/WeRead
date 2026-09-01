@@ -1,0 +1,37 @@
+{{/* 按需加载 Mermaid 与 KaTeX，仅当正文中出现对应语法时才引入对应 CDN 资源 */}}
+
+{{ if in .RawContent "mermaid" }}
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+(function () {
+    function renderMermaid() {
+        // Hugo 把 ```mermaid 围栏渲染成 <pre><code class="language-mermaid">，
+        // 转换为 mermaid 可识别的 <div class="mermaid"> 后再渲染。
+        var blocks = document.querySelectorAll('pre > code.language-mermaid');
+        blocks.forEach(function (code) {
+            var pre = code.parentElement;
+            var div = document.createElement('div');
+            div.className = 'mermaid';
+            div.textContent = code.textContent;
+            pre.parentElement.replaceChild(div, pre);
+        });
+        if (window.mermaid && document.querySelector('.mermaid')) {
+            mermaid.initialize({ startOnLoad: false, theme: 'default' });
+            mermaid.run({ querySelector: '.mermaid' });
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderMermaid);
+    } else {
+        renderMermaid();
+    }
+})();
+</script>
+{{ end }}
+
+{{ if or (in .RawContent "$$") (in .RawContent "\\[") }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, { delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}], throwOnError: false });"></script>
+{{ end }}

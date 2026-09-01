@@ -1,0 +1,19 @@
+{{ $chapter := .Get "chapter" }}
+{{ $color := .Get "color" | default "default" }}
+{{ $highlight := .Get "highlight" }}
+{{ $comment := .Get "comment" }}
+{{ $date := .Get "date" }}
+
+<article class="note-card color-{{ $color }}">
+    <div class="note-tags">
+        {{ with $chapter }}<span class="tag tag-chapter">{{ . }}</span>{{ end }}
+        <span class="tag tag-color">{{ $color }}</span>
+    </div>
+    <blockquote class="note-highlight">
+        {{ $highlight | default "无划线内容" }}
+    </blockquote>
+    {{ with $comment }}
+    <div class="note-comment"><strong>批注：</strong>{{ . }}</div>
+    {{ end }}
+    {{ with $date }}<time class="note-time">{{ . }}</time>{{ end }}
+</article>

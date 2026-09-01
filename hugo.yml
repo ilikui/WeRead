@@ -1,0 +1,91 @@
+baseURL: 'https://example.org/'
+locale: 'zh-CN'
+title: 'WeRead 读书笔记'
+theme: ''
+
+# 生成相对链接，保证站点既可本地预览，也可部署到 GitHub Pages 子路径（如 /repo/）下
+relativeURLs: true
+paginate: 12
+enableRobotsTXT: true
+enableGitInfo: true
+
+params:
+  author: 'WeRead Reader'
+  description: '使用 Hugo 打造的微信读书笔记静态博客'
+  weread:
+    data_file: 'data/weread_notes.json'
+    books_per_page: 15
+    notes_per_page: 12
+    enable_search: true
+  menu:
+    side:
+      - identifier: read
+        name: 'Read'
+        url: '/weread/'
+        weight: 10
+      - identifier: blog
+        name: 'Blog'
+        url: '/blog/'
+        weight: 20
+      - identifier: gallery
+        name: 'Gallery'
+        url: '/gallery/'
+        weight: 30
+
+menus:
+  main:
+    - name: '首页'
+      url: '/'
+      weight: 10
+    - name: '阅读'
+      url: '/weread/'
+      weight: 20
+    - name: '关于'
+      url: '/about/'
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+      hardWraps: false
+      xhtml: true
+    parser:
+      attribute:
+        block: true
+        title: true
+    extensions:
+      linkify: true
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ['$$', '$$']
+            - ['\\[', '\\]']
+          inline:
+            - ['$', '$']
+      strikethrough: true
+      table: true
+      typographer: true
+      definitionList: true
+      footnote: true
+      taskList: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  highlight:
+    style: 'github'
+    noClasses: true
+    lineNos: false
+
+outputFormats:
+  JSON:
+    mediaType: 'application/json'
+    baseName: 'index'
+    isPlainText: true
+
+outputs:
+  home: ['HTML', 'RSS']
+  page: ['HTML']
+  section: ['HTML', 'RSS']
