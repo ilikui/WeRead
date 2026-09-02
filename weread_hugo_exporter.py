@@ -32,8 +32,11 @@ WEREAD_API_GATEWAY = os.getenv(
 ).strip()
 
 HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Authorization": f"Bearer {WEREAD_API_KEY}",
     "Content-Type": "application/json",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
 }
 
 COLOR_MAP = {
@@ -62,6 +65,9 @@ def fetch_from_weread(api_name: str, extra_params: dict | None = None) -> dict:
         print("❌ 未检测到 WEREAD_API_KEY，请先配置环境变量。")
         return {}
 
+    headers = dict(HEADERS)
+    headers["Authorization"] = f"Bearer {WEREAD_API_KEY}"
+
     payload = {"api_name": api_name, "skill_version": "1.0.4"}
     if extra_params:
         payload.update(extra_params)
@@ -69,7 +75,7 @@ def fetch_from_weread(api_name: str, extra_params: dict | None = None) -> dict:
     try:
         response = requests.post(
             WEREAD_API_GATEWAY,
-            headers=HEADERS,
+            headers=headers,
             data=json.dumps(payload),
             proxies={"http": None, "https": None},
             timeout=15,
