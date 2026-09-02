@@ -28,12 +28,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
@@ -44,7 +44,7 @@ jobs:
       - name: Export WeRead notes
         env:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
-          WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
+          WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://qq.com' }}
         run: |
           if [ -z "$WEREAD_API_KEY" ]; then
             echo "::warning::未配置 WEREAD_API_KEY，跳过数据更新，使用仓库中已有的笔记数据。"
@@ -55,7 +55,7 @@ jobs:
       - name: Commit updated notes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "github-actions[bot]@://github.com"
           git add static/data/weread_notes.json content/weread/
           git diff --staged --quiet || git commit -m "chore: auto update weread notes [skip ci]"
           git push
@@ -81,10 +81,10 @@ jobs:
           hugo --gc --minify --baseURL "$BASEURL"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: public
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.1
