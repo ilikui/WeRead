@@ -55,7 +55,7 @@ jobs:
       - name: Commit updated notes
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@://github.com"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add static/data/weread_notes.json content/weread/
           git diff --staged --quiet || git commit -m "chore: auto update weread notes [skip ci]"
           git push
@@ -81,10 +81,10 @@ jobs:
           hugo --gc --minify --baseURL "$BASEURL"
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v4
         with:
           path: public
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.1
+        uses: actions/deploy-pages@v5
