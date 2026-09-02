@@ -44,7 +44,7 @@ jobs:
       - name: Export WeRead notes
         env:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
-          WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://qq.com' }}
+          WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
         run: |
           if [ -z "$WEREAD_API_KEY" ]; then
             echo "::warning::未配置 WEREAD_API_KEY，跳过数据更新，使用仓库中已有的笔记数据。"

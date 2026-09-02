@@ -85,10 +85,17 @@ def fetch_from_weread(api_name: str, extra_params: dict | None = None) -> dict:
         return {}
 
     if response.status_code == 200:
-        return response.json()
+        try:
+            return response.json()
+        except Exception as e:
+            print(
+                f"❌ 接口 [{api_name}] 返回非 JSON 响应，解析失败: {e}"
+            )
+            print(f"   响应内容前 500 字符: {response.text[:500]}")
+            return {}
 
     print(
-        f"❌ 接口 [{api_name}] 握手失败，状态码: {response.status_code}，详情: {response.text}"
+        f"❌ 接口 [{api_name}] 握手失败，状态码: {response.status_code}，详情: {response.text[:500]}"
     )
     return {}
 
