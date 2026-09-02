@@ -123,5 +123,12 @@
 				<guid>http://localhost:1313/weread/zhi-shi-guan-li-1000002/</guid>
 				<description>&lt;h2 id=&#34;关于知识管理&#34;&gt;关于《知识管理》&lt;/h2&gt;&#xA;&lt;p&gt;作者：田志刚&lt;/p&gt;&#xA;&lt;p&gt;共 &lt;strong&gt;4&lt;/strong&gt; 条笔记。&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;提示：阅读页使用动态 JSON 数据展示卡片，本文件主要用于 SEO 与固定链接。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
 			</item>
+			<item>
+				<title>笔记的方法</title>
+				<link>http://localhost:1313/weread/%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95-cb_8do8pm8sf5hp76775s9g5gcj/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/weread/%E7%AC%94%E8%AE%B0%E7%9A%84%E6%96%B9%E6%B3%95-cb_8do8pm8sf5hp76775s9g5gcj/</guid>
+				<description>&lt;h2 id=&#34;关于笔记的方法&#34;&gt;关于《笔记的方法》&lt;/h2&gt;&#xA;&lt;p&gt;作者：刘白光&lt;/p&gt;&#xA;&lt;p&gt;共 &lt;strong&gt;2&lt;/strong&gt; 条笔记。&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;提示：阅读页使用动态 JSON 数据展示卡片，本文件主要用于 SEO 与固定链接。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
 	</channel>
 </rss>

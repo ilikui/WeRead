@@ -1,11 +1,161 @@
 {
   "meta": {
-    "generated_at": "2026-09-02T01:11:15.484507+00:00",
+    "generated_at": "2026-09-02T02:04:57.818408+00:00",
     "source": "wechat-reading-skill-gateway",
-    "total_books": 12,
-    "total_notes": 416
+    "total_books": 13,
+    "total_notes": 418
   },
   "books": [
+    {
+      "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
+      "title": "笔记的方法",
+      "author": "刘白光",
+      "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
+      "category": "",
+      "note_count": 2,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "版权信息",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "推荐序 我读这本书的15个收获",
+          "level": 1
+        },
+        {
+          "uid": 3,
+          "title": "推荐序 好笔记是智慧的土壤",
+          "level": 1
+        },
+        {
+          "uid": 4,
+          "title": "自序 记笔记，是为了增援未来的自己",
+          "level": 1
+        },
+        {
+          "uid": 5,
+          "title": "PART ONE 第一部分 应用篇 如何用笔记，增援未来的自己",
+          "level": 1
+        },
+        {
+          "uid": 6,
+          "title": "# 给“想法”，让你拿来就能用",
+          "level": 1
+        },
+        {
+          "uid": 7,
+          "title": "PART TWO 第二部分 记录篇 如何记笔记，做好信息预处理",
+          "level": 1
+        },
+        {
+          "uid": 8,
+          "title": "用自己的话记笔记",
+          "level": 1
+        },
+        {
+          "uid": 9,
+          "title": "用自己的话记笔记",
+          "level": 2
+        },
+        {
+          "uid": 12,
+          "title": "用标签为笔记分类",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "通过回顾持续刺激",
+          "level": 2
+        },
+        {
+          "uid": 13,
+          "title": "通过回顾持续刺激",
+          "level": 1
+        },
+        {
+          "uid": 11,
+          "title": "PART THREE 第三部分 收集篇 如何做筛选，获取高质量信息",
+          "level": 2
+        },
+        {
+          "uid": 14,
+          "title": "PART THREE 第三部分 收集篇 如何做筛选，获取高质量信息",
+          "level": 1
+        },
+        {
+          "uid": 15,
+          "title": "# 审视自己和信息之间的关系",
+          "level": 1
+        },
+        {
+          "uid": 16,
+          "title": "# 三项原则，掌握获取信息的主动权",
+          "level": 1
+        },
+        {
+          "uid": 17,
+          "title": "# 建议一：做减法，削减你的信息源",
+          "level": 1
+        },
+        {
+          "uid": 18,
+          "title": "# 建议二：做加法，增加书本之外的优质信息源",
+          "level": 1
+        },
+        {
+          "uid": 19,
+          "title": "# 建议三：做乘法，用多重视角看待信息",
+          "level": 1
+        },
+        {
+          "uid": 20,
+          "title": "PART FOUR 第四部分 心法篇 以我为主，持续不断",
+          "level": 1
+        },
+        {
+          "uid": 21,
+          "title": "以我为主",
+          "level": 1
+        },
+        {
+          "uid": 22,
+          "title": "持续不断",
+          "level": 1
+        },
+        {
+          "uid": 23,
+          "title": "附录 工具篇",
+          "level": 1
+        },
+        {
+          "uid": 24,
+          "title": "后记 这本书的出版是一场“慢直播”",
+          "level": 1
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_2_2107-2187",
+          "chapter": "推荐序 我读这本书的15个收获",
+          "chapter_uid": 2,
+          "highlight": "学习是什么？就是把新信息和自己原来的认知结构缝在一起。笔记是什么？就是你接收到的信息，跟记忆结构里那个正在生长的结构对接出来的产物——这才是真正值得记录的东西。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788313484
+        },
+        {
+          "id": "79857957_8bOgcQZSF",
+          "chapter": "推荐序 我读这本书的15个收获",
+          "chapter_uid": 2,
+          "highlight": "它只有一个任务：为你“剧透”我读这本《笔记的方法》的 15 个收获",
+          "comment": "15个收获\n1. 重新认识记笔记\n2. 抓准契机记笔记\n3. 受启发了\n4. 收藏≠记笔记",
+          "color": "default",
+          "created_at": 1788313465
+        }
+      ]
+    },
     {
       "book_id": "CB_3Kp4rn4uW9PT6oR6ok7OoCu2",
       "title": "CPrimer Plus（第6版）中文版",
