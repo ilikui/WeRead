@@ -5,7 +5,7 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 2,
+  "note_count": 3,
   "notes": [
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_2_2107-2187",
@@ -15,6 +15,15 @@
       "comment": "",
       "color": "blue",
       "created_at": 1788313484
+    },
+    {
+      "id": "79857957_8bOF3ABCj",
+      "chapter": "推荐序 好笔记是智慧的土壤",
+      "chapter_uid": 3,
+      "highlight": "知识管理工具的设计，要适应知识管理的应用环境。我们每天从哪里获取信息，获取什么样的信息，决定了我们需要什么样的知识管理工具。",
+      "comment": "知识管理工具",
+      "color": "default",
+      "created_at": 1788336231
     },
     {
       "id": "79857957_8bOgcQZSF",
@@ -35,7 +44,7 @@
 
 作者：刘白光
 
-共 **2** 条笔记。
+共 **3** 条笔记。
 
 ---
 
