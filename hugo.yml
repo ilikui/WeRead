@@ -1,6 +1,6 @@
-baseURL: 'https://example.org/'
+baseURL: 'https://blog.zzek.cn/'
 locale: 'zh-CN'
-title: 'WeRead 读书笔记'
+title: '阅读笔记'
 
 # 生成相对链接，保证站点既可本地预览，也可部署到 GitHub Pages 子路径（如 /repo/）下
 relativeURLs: true
