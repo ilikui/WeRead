@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on WeRead 读书笔记</title><link>https://example.org/tags/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on WeRead 读书笔记</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://example.org/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown 全格式指南：Mermaid、数学公式与更多</title><link>https://example.org/blog/markdown-guide/</link><pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate><guid>https://example.org/blog/markdown-guide/</guid><description>一篇涵盖 Mermaid 流程图、KaTeX 数学公式、表格、脚注、任务列表、定义列表等全部 Markdown 能力的示例文章。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>教程 on 阅读笔记</title>
+		<link>http://localhost:1313/tags/%E6%95%99%E7%A8%8B/</link>
+		<description>Recent content in 教程 on 阅读笔记</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 01 Sep 2026 20:16:42 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Markdown 全格式指南：Mermaid、数学公式与更多</title>
+				<link>http://localhost:1313/blog/markdown-guide/</link>
+				<pubDate>Tue, 01 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/blog/markdown-guide/</guid>
+				<description>一篇涵盖 Mermaid 流程图、KaTeX 数学公式、表格、脚注、任务列表、定义列表等全部 Markdown 能力的示例文章。</description>
+			</item>
+	</channel>
+</rss>
