@@ -5,7 +5,7 @@
   "book_id": "CB_74x7bz7el1WG6qa6okCRzARj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Akp2IR2HI4NW6i26gd3n18mC_parsecover",
   "category": "",
-  "note_count": 25,
+  "note_count": 26,
   "notes": [
     {
       "id": "CB_74x7bz7el1WG6qa6okCRzARj_2_4688-4845",
@@ -192,7 +192,7 @@
       "chapter": "09、怎样分析农村阶级",
       "chapter_uid": 10,
       "highlight": "占有土地，自己不劳动，或只有附带的劳动，而靠剥削农民为生的，叫做地主。",
-      "comment": "",
+      "comment": "地主的定义",
       "color": "blue",
       "created_at": 1725277007
     },
@@ -231,6 +231,15 @@
       "comment": "",
       "color": "blue",
       "created_at": 1725276070
+    },
+    {
+      "id": "79857957_7TUBI5OIt",
+      "chapter": "11、关心群众生活，注意工作方法",
+      "chapter_uid": 12,
+      "highlight": "第一个问题是关于群众生活的问题",
+      "comment": "目前依旧还有这样的问题。2024年",
+      "color": "default",
+      "created_at": 1725284904
     }
   ],
   "layout": "single",
@@ -242,7 +251,7 @@
 
 作者：毛泽东
 
-共 **25** 条笔记。
+共 **26** 条笔记。
 
 ---
 

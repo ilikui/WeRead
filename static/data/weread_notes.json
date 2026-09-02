@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-02T02:18:14.089595+00:00",
+    "generated_at": "2026-09-02T05:18:24.055600+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 13,
-    "total_notes": 417
+    "total_notes": 418
   },
   "books": [
     {
@@ -6782,7 +6782,7 @@
       "author": "毛泽东",
       "cover": "https://res.weread.qq.com/wrepub/CB_Akp2IR2HI4NW6i26gd3n18mC_parsecover",
       "category": "",
-      "note_count": 25,
+      "note_count": 26,
       "chapters": [
         {
           "uid": 1,
@@ -8081,7 +8081,7 @@
           "chapter": "09、怎样分析农村阶级",
           "chapter_uid": 10,
           "highlight": "占有土地，自己不劳动，或只有附带的劳动，而靠剥削农民为生的，叫做地主。",
-          "comment": "",
+          "comment": "地主的定义",
           "color": "blue",
           "created_at": 1725277007
         },
@@ -8120,6 +8120,15 @@
           "comment": "",
           "color": "blue",
           "created_at": 1725276070
+        },
+        {
+          "id": "79857957_7TUBI5OIt",
+          "chapter": "11、关心群众生活，注意工作方法",
+          "chapter_uid": 12,
+          "highlight": "第一个问题是关于群众生活的问题",
+          "comment": "目前依旧还有这样的问题。2024年",
+          "color": "default",
+          "created_at": 1725284904
         }
       ]
     },
