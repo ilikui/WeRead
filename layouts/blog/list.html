@@ -6,21 +6,34 @@
     </header>
 
     {{ $pages := .Pages.ByDate.Reverse }}
+    {{ $total := len $pages }}
     {{ if $pages }}
     <div class="blog-grid">
-        {{ range $pages }}
-        <article class="blog-card">
-            <a class="blog-card-link" href="{{ .RelPermalink }}">
-                <time class="blog-card-date">{{ .Date.Format "2006-01-02" }}</time>
-                <h2 class="blog-card-title">{{ .Title }}</h2>
-                {{ with .Params.summary }}
+        {{ range $index, $page := $pages }}
+        <article class="blog-card zettel-card">
+            <a class="blog-card-link" href="{{ $page.RelPermalink }}">
+                <div class="zettel-card-head">
+                    <span class="zettel-card-id">№ {{ printf "%03d" (sub $total $index) }}</span>
+                    <time class="blog-card-date">{{ $page.Date.Format "2006-01-02" }}</time>
+                </div>
+                <h2 class="blog-card-title">{{ $page.Title }}</h2>
+                {{ with $page.Params.summary }}
                 <p class="blog-card-summary">{{ . }}</p>
                 {{ else }}
-                <p class="blog-card-summary">{{ .Summary | plainify | truncate 120 }}</p>
+                <p class="blog-card-summary">{{ $page.Summary | plainify | truncate 120 }}</p>
                 {{ end }}
-                {{ with .Params.tags }}
+                {{ with $page.Params.tags }}
                 <div class="blog-card-tags">
                     {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                {{ with $page.Params.topics }}
+                <div class="blog-card-topics">
+                    {{ range . }}
+                        {{ with site.GetPage (printf "/topics/%s" .) }}
+                        <span class="topic-badge">📁 {{ .Title }}</span>
+                        {{ end }}
+                    {{ end }}
                 </div>
                 {{ end }}
                 <span class="blog-card-more">阅读全文 →</span>

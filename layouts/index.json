@@ -1,0 +1,28 @@
+{{- $items := slice -}}
+{{- range where site.RegularPages "Section" "blog" -}}
+    {{- $items = $items | append (dict
+        "title" .Title
+        "url" .Permalink
+        "type" "blog"
+        "meta" (.Params.summary | default (.Summary | plainify | truncate 60))
+    ) -}}
+{{- end -}}
+{{- range where site.RegularPages "Section" "weread" -}}
+    {{- $items = $items | append (dict
+        "title" .Title
+        "url" .Permalink
+        "type" "weread"
+        "meta" (.Params.author | default "")
+    ) -}}
+{{- end -}}
+{{- range where site.Pages "Section" "topics" -}}
+    {{- if not .Parent.IsHome -}}
+        {{- $items = $items | append (dict
+            "title" .Title
+            "url" .Permalink
+            "type" "topic"
+            "meta" (.Params.description | default "")
+        ) -}}
+    {{- end -}}
+{{- end -}}
+{{ $items | jsonify }}

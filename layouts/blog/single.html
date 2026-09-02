@@ -12,6 +12,15 @@
             {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
         </div>
         {{ end }}
+        {{ with .Params.topics }}
+        <div class="blog-post-topics">
+            {{ range . }}
+                {{ with site.GetPage (printf "/topics/%s" .) }}
+                <a class="topic-badge" href="{{ .RelPermalink }}">📁 {{ .Title }}</a>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
     </header>
 
     {{ if and .Params.toc .TableOfContents }}

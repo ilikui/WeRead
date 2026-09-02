@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }}{{ if not .IsHome }} | {{ site.Title }}{{ end }}</title>
     <meta name="description" content="{{ .Params.description | default site.Params.description }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     {{ $style := resources.Get "css/weread-theme.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 </head>
@@ -303,12 +304,22 @@
         }
 
         function getChapters(book) {
-            const chapters = new Set();
-            (book.notes || []).forEach(n => {
-                const ch = formatChapter(n.chapter);
-                if (ch) chapters.add(ch);
+            // 用 book.chapters（微信读书目录接口的原始顺序）建立 uid -> 顺序号，
+            // 让侧边栏章节列表按书籍实际目录顺序展示，而非笔记的创建顺序
+            const orderMap = new Map();
+            (book.chapters || []).forEach((c, idx) => {
+                if (c && c.uid !== undefined && c.uid !== null) orderMap.set(c.uid, idx);
             });
-            return Array.from(chapters);
+            const order = new Map();
+            (book.notes || []).forEach(n => {
+                const label = formatChapter(n.chapter);
+                if (!label || order.has(label)) return;
+                const pos = orderMap.has(n.chapter_uid) ? orderMap.get(n.chapter_uid) : Number.MAX_SAFE_INTEGER;
+                order.set(label, pos);
+            });
+            return Array.from(order.entries())
+                .sort((a, b) => a[1] - b[1])
+                .map(([label]) => label);
         }
 
         function filteredNotes(book) {

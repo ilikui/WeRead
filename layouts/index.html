@@ -10,13 +10,27 @@
 
 <section class="section">
     <h2 class="section-title">最近更新</h2>
+    {{ $blogPages := where site.RegularPages "Section" "blog" }}
+    {{ $wereadPages := where site.RegularPages "Section" "weread" }}
+    {{ $recent := first 6 (( $blogPages | union $wereadPages ).ByLastmod.Reverse) }}
+    {{ if $recent }}
     <div class="book-grid">
-        {{ range first 4 (where site.RegularPages "Section" "weread") }}
-        <article class="book-card">
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p class="book-card-meta">{{ .Params.author }} · {{ len .Params.notes }} 条笔记</p>
+        {{ range $recent }}
+        <article class="recent-card">
+            <a class="recent-card-link" href="{{ .RelPermalink }}">
+                <span class="recent-card-kind">{{ if eq .Section "blog" }}📝 博客{{ else }}📚 读书{{ end }}</span>
+                <h3 class="recent-card-title">{{ .Title }}</h3>
+                {{ if eq .Section "blog" }}
+                <p class="recent-card-meta">{{ .Date.Format "2006-01-02" }}</p>
+                {{ else }}
+                <p class="recent-card-meta">{{ .Params.author }} · {{ len .Params.notes }} 条笔记</p>
+                {{ end }}
+            </a>
         </article>
         {{ end }}
     </div>
+    {{ else }}
+    <p class="empty-state">还没有内容，去 <code>content/</code> 下添加书籍或文章吧。</p>
+    {{ end }}
 </section>
 {{ end }}

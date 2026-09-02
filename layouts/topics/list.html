@@ -1,0 +1,67 @@
+{{ define "main" }}
+<article class="page topics-page">
+    <header class="page-header">
+        <h1>{{ .Title }}</h1>
+        {{ with .Content }}<div class="page-summary">{{ . }}</div>{{ end }}
+    </header>
+
+    {{ if .Parent.IsHome }}
+    {{/* 专题总览：展示所有专题卡片（封面 + 说明 + 卡片数） */}}
+    {{ $topics := .Pages.ByTitle }}
+    {{ if $topics }}
+    <div class="topic-grid">
+        {{ range $topics }}
+        {{ $slug := .File.ContentBaseName }}
+        {{ $posts := where (where site.RegularPages "Section" "blog") "Params.topics" "intersect" (slice $slug) }}
+        <article class="topic-card">
+            <a class="topic-card-link" href="{{ .RelPermalink }}">
+                {{ with .Params.cover }}
+                <div class="topic-card-cover" style="background-image:url('{{ . | relURL }}')"></div>
+                {{ else }}
+                <div class="topic-card-cover topic-card-cover-empty">{{ .Title }}</div>
+                {{ end }}
+                <div class="topic-card-body">
+                    <h2 class="topic-card-title">{{ .Title }}</h2>
+                    {{ with .Params.description }}<p class="topic-card-desc">{{ . }}</p>{{ end }}
+                    <span class="topic-card-count">{{ len $posts }} 张卡片</span>
+                </div>
+            </a>
+        </article>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p class="empty-state">还没有专题，在 <code>content/topics/</code> 下新建一个文件夹即可。</p>
+    {{ end }}
+
+    {{ else }}
+    {{/* 单个专题详情：展示归属该专题的所有卡片（博客文章） */}}
+    {{ $slug := .File.ContentBaseName }}
+    {{ $posts := (where (where site.RegularPages "Section" "blog") "Params.topics" "intersect" (slice $slug)).ByDate.Reverse }}
+    {{ if $posts }}
+    <div class="blog-grid">
+        {{ range $posts }}
+        <article class="blog-card">
+            <a class="blog-card-link" href="{{ .RelPermalink }}">
+                <time class="blog-card-date">{{ .Date.Format "2006-01-02" }}</time>
+                <h2 class="blog-card-title">{{ .Title }}</h2>
+                {{ with .Params.summary }}
+                <p class="blog-card-summary">{{ . }}</p>
+                {{ else }}
+                <p class="blog-card-summary">{{ .Summary | plainify | truncate 120 }}</p>
+                {{ end }}
+                {{ with .Params.tags }}
+                <div class="blog-card-tags">
+                    {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+                </div>
+                {{ end }}
+                <span class="blog-card-more">阅读全文 →</span>
+            </a>
+        </article>
+        {{ end }}
+    </div>
+    {{ else }}
+    <p class="empty-state">这个专题下还没有卡片，给文章的 Front Matter 加上 <code>topics: ["{{ $slug }}"]</code> 即可归入此专题。</p>
+    {{ end }}
+    {{ end }}
+</article>
+{{ end }}

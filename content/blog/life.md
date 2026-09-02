@@ -2,6 +2,7 @@
 title: "做事，还是要由近及远"
 date: 2026-09-02
 tags: ["思考", "人生", "笔记"]
+topics: ["life"]
 summary: "个人成长"
 toc: true
 ---

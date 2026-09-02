@@ -26,6 +26,10 @@ params:
         name: 'Blog'
         url: '/blog/'
         weight: 20
+      - identifier: topics
+        name: 'Topics'
+        url: '/topics/'
+        weight: 25
       - identifier: gallery
         name: 'Gallery'
         url: '/gallery/'
@@ -85,6 +89,6 @@ outputFormats:
     isPlainText: true
 
 outputs:
-  home: ['HTML', 'RSS']
+  home: ['HTML', 'RSS', 'JSON']
   page: ['HTML']
   section: ['HTML', 'RSS']

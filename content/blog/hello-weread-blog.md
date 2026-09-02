@@ -30,6 +30,16 @@ summary: "一句话摘要"
 
 保存后，文章会自动以卡片形式出现在 Blog 列表页。
 
+## 加入专题
+
+给文章的 Front Matter 加上 `topics`，就能把它归入一个或多个专题卡片盒：
+
+```markdown
+topics: ["geren-chengzhang", "xie-zuo-fang-fa"]
+```
+
+专题本身在 `content/topics/<文件夹名>/_index.md` 中定义封面与说明，详见 [专题](/topics/) 页面。一篇笔记可以同时属于多个专题——这正是卢曼卡片盒「一卡多线」的思路。
+
 ## 下一步
 
 - 完善 Gallery 相册

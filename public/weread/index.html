@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>阅读 | 阅读笔记</title>
     <meta name="description" content="微信读书笔记墙，左侧选择书籍查看划线与批注。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <link rel="stylesheet" href="../css/weread-theme.min.0e145bcc963dc1f311c16808f445aca3a4a8a5ad55d8767e3897a226e9cadf0c.css">
+    <link rel="stylesheet" href="../css/weread-theme.min.535a0bf0ab37e6a9142049ecfdc12833ad132a64c71cefbadac3fd18948ff7ff.css">
 </head>
 <body class="weread-page">
     <header class="site-header">
@@ -37,6 +38,10 @@
                 
                 <a href="../blog/" class="side-tab">
                     Blog
+                </a>
+                
+                <a href="../topics/" class="side-tab">
+                    Topics
                 </a>
                 
                 <a href="../gallery/" class="side-tab">
@@ -315,12 +320,22 @@
         }
 
         function getChapters(book) {
-            const chapters = new Set();
-            (book.notes || []).forEach(n => {
-                const ch = formatChapter(n.chapter);
-                if (ch) chapters.add(ch);
+            
+            
+            const orderMap = new Map();
+            (book.chapters || []).forEach((c, idx) => {
+                if (c && c.uid !== undefined && c.uid !== null) orderMap.set(c.uid, idx);
             });
-            return Array.from(chapters);
+            const order = new Map();
+            (book.notes || []).forEach(n => {
+                const label = formatChapter(n.chapter);
+                if (!label || order.has(label)) return;
+                const pos = orderMap.has(n.chapter_uid) ? orderMap.get(n.chapter_uid) : Number.MAX_SAFE_INTEGER;
+                order.set(label, pos);
+            });
+            return Array.from(order.entries())
+                .sort((a, b) => a[1] - b[1])
+                .map(([label]) => label);
         }
 
         function filteredNotes(book) {

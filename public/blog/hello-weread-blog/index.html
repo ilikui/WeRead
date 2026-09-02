@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>你好，WeRead 博客 | 阅读笔记</title>
     <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <link rel="stylesheet" href="../../css/weread-theme.min.0e145bcc963dc1f311c16808f445aca3a4a8a5ad55d8767e3897a226e9cadf0c.css">
+    <link rel="stylesheet" href="../../css/weread-theme.min.535a0bf0ab37e6a9142049ecfdc12833ad132a64c71cefbadac3fd18948ff7ff.css">
     
 </head>
 <body>
@@ -23,7 +24,8 @@
                 
             </ul>
             <div class="nav-search">
-                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
             </div>
         </nav>
     </header>
@@ -38,6 +40,10 @@
             
             <a href="../../blog/" class="side-tab">
                 Blog
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                Topics
             </a>
             
             <a href="../../gallery/" class="side-tab">
@@ -62,6 +68,7 @@
             <span class="tag">随笔</span>
         </div>
         
+        
     </header>
 
     
@@ -84,6 +91,10 @@
 </span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>正文从这里开始……
 </span></span></code></pre></div><p>保存后，文章会自动以卡片形式出现在 Blog 列表页。</p>
+<h2 id="加入专题">加入专题</h2>
+<p>给文章的 Front Matter 加上 <code>topics</code>，就能把它归入一个或多个专题卡片盒：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>topics: [&#34;geren-chengzhang&#34;, &#34;xie-zuo-fang-fa&#34;]
+</span></span></code></pre></div><p>专题本身在 <code>content/topics/&lt;文件夹名&gt;/_index.md</code> 中定义封面与说明，详见 <a href="../../topics/">专题</a> 页面。一篇笔记可以同时属于多个专题——这正是卢曼卡片盒「一卡多线」的思路。</p>
 <h2 id="下一步">下一步</h2>
 <ul>
 <li>完善 Gallery 相册</li>
@@ -116,5 +127,99 @@
     </footer>
 
     
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
 </body>
 </html>
