@@ -1,20 +1,486 @@
-<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Memos | 阅读笔记</title><meta name=description content="Flomo 卡片墙，展示带有指定标签的 memo。"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css><link rel=stylesheet href=../css/weread-theme.min.58eb11560cc009cd23c1a70ecbe3de56f5d6bec5cd2bcc6da36492576b521212.css><script src=https://cdn.jsdelivr.net/npm/marked@12/marked.min.js></script><script src=https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js></script></head><body class="weread-page memos-page"><header class=site-header><nav class=site-nav aria-label=主导航><a class=site-brand href=../>阅读笔记</a><ul class=nav-menu><li><a href=../>首页</a></li><li><a href=../weread/>阅读</a></li><li><a href=../memos/>Memos</a></li><li><a href=../about/>关于</a></li></ul><div class=nav-search><input type=search id=globalSearch placeholder=Search aria-label=搜索></div></nav></header><div class=weread-layout><aside class=weread-side aria-label="Memos 标签"><div class=side-tabs><a href=../weread/ class=side-tab>Read
-</a><a href=../memos/ class="side-tab active">Memos
-</a><a href=../blog/ class=side-tab>Blog
-</a><a href=../topics/ class=side-tab>Topics
-</a><a href=../gallery/ class=side-tab>Gallery</a></div><div class=side-panel id=memosSide><div class=side-head>Memos</div><div class=side-stats><div class=stat-item><span class=stat-num id=sideMemoCount>0</span> 条记录</div></div><div class=side-head>标签</div><ul id=tagList class=chapter-list><li class="chapter-item empty">无标签</li></ul></div></aside><main class=weread-main><header class=weread-hero><h1>Memos</h1><p id=memosMeta>加载中…</p></header><section id=memosView class=bookshelf-view><div id=memosGrid class="notes-grid memos-grid"><p class=empty-state>加载中…</p></div><nav class=pagination id=memosPagination aria-label="Memos 分页"></nav></section></main></div><footer class=site-footer><p>阅读笔记 · 使用 Hugo 构建</p></footer><input id=jsonFileInput type=file accept=application/json,.json style=display:none>
-<script>(function(){const e={memos:[],page:1,perPage:12,searchTerm:"",activeTag:null,tagFilter:""},m="../data/flomo_memos.json";function t(e){return document.getElementById(e)}function s(e){return String(e).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}function o(e){if(!e)return 0;if(typeof e=="number")return e<1e12?e*1e3:e;const t=new Date(e).getTime();return isNaN(t)?0:t}function c(e){if(!e)return"";const t=o(e);return t?new Date(t).toLocaleString("zh-CN"):String(e)}function h(e){const n=e.generated_at?`导出时间: ${c(e.generated_at)}`:"",s=e.tag_filter?`标签: #${e.tag_filter}`:"",o=`共 ${e.total_memos||0} 条`;t("memosMeta").textContent=[n,s,o].filter(Boolean).join(" | ")}function g(){t("sideMemoCount").textContent=e.memos.length}function i(t){return(t||[]).filter(t=>t.toLowerCase()!==e.tagFilter.toLowerCase())}function d(){const t=new Set;return e.memos.forEach(e=>i(e.tags).forEach(e=>t.add(e))),Array.from(t).sort()}function a(){const o=t("tagList"),i=d();if(!i.length){o.innerHTML='<li class="chapter-item empty">无标签</li>';return}o.innerHTML=i.map(t=>{const n=t===e.activeTag?"active":"";return`<li class="chapter-item"><button class="${n}" data-tag="${s(t)}">${s(t)}</button></li>`}).join(""),o.querySelectorAll("button[data-tag]").forEach(t=>{t.addEventListener("click",()=>{const s=t.getAttribute("data-tag");e.activeTag=e.activeTag===s?null:s,e.page=1,a(),n()})})}function u(){let t=e.memos.slice().sort((e,t)=>o(t.created_at)-o(e.created_at));if(e.activeTag&&(t=t.filter(t=>(t.tags||[]).includes(e.activeTag))),e.searchTerm){const n=e.searchTerm.toLowerCase();t=t.filter(e=>{const t=(e.content||"").toLowerCase(),s=(e.tags||[]).join(" ").toLowerCase();return t.includes(n)||s.includes(n)})}return t}function l(e,n,s,o,i){const c=t(o),a=Math.max(1,Math.ceil(e/n));if(a<=1){c.innerHTML="";return}let r="";r+=`<button class="page-btn" ${s===1?"disabled":""} data-page="${s-1}">上一页</button>`,r+=`<span class="page-info">${s} / ${a}</span>`,r+=`<button class="page-btn" ${s===a?"disabled":""} data-page="${s+1}">下一页</button>`,c.innerHTML=r,c.querySelectorAll("button[data-page]").forEach(e=>{e.addEventListener("click",()=>{const t=parseInt(e.getAttribute("data-page"),10);t>=1&&t<=a&&i(t)})})}function n(){const o=u(),a=o.length,r=Math.max(1,Math.ceil(a/e.perPage));e.page>r&&(e.page=r||1);const d=(e.page-1)*e.perPage,h=o.slice(d,d+e.perPage),m=t("memosGrid");h.length?(m.innerHTML=h.map(e=>`
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1315&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memos | 阅读笔记</title>
+    <meta name="description" content="Flomo 卡片墙，展示带有指定标签的 memo。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../css/weread-theme.min.65aae6b26bd96036589dfbcaaac569ca2a90f725b34f921ddd81123833c823a9.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+</head>
+<body class="weread-page memos-page">
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../">首页</a></li>
+                
+                <li><a href="../weread/">阅读</a></li>
+                
+                <li><a href="../memos/">Memos</a></li>
+                
+                <li><a href="../about/">关于</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+            </div>
+        </nav>
+    </header>
+
+    <div class="weread-layout">
+        <aside class="weread-side" aria-label="Memos 标签">
+            <div class="side-tabs">
+                
+                <a href="../weread/" class="side-tab">
+                    Read
+                </a>
+                
+                <a href="../memos/" class="side-tab active">
+                    Memos
+                </a>
+                
+                <a href="../blog/" class="side-tab">
+                    Blog
+                </a>
+                
+                <a href="../topics/" class="side-tab">
+                    Topics
+                </a>
+                
+                <a href="../gallery/" class="side-tab">
+                    Gallery
+                </a>
+                
+            </div>
+
+            <div class="side-panel" id="memoShelfSide">
+                <div class="side-head">Memos</div>
+                <div class="side-stats">
+                    <div class="stat-item"><span class="stat-num" id="sideMemoCount">0</span> 条记录</div>
+                    <div class="stat-item"><span class="stat-num" id="sideTagCount">0</span> 个标签</div>
+                </div>
+            </div>
+
+            <div class="side-panel" id="memoDetailSide" style="display:none">
+                <div class="side-head">
+                    <button id="backToMemoShelf" class="back-btn" type="button">← 返回标签</button>
+                </div>
+                <div class="book-filter">
+                    <select id="tagSelect" aria-label="选择标签">
+                        <option value="">切换标签</option>
+                    </select>
+                </div>
+                <div class="side-head">标签</div>
+                <ul id="tagList" class="chapter-list">
+                    <li class="chapter-item empty">无标签</li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="weread-main">
+            <header class="weread-hero">
+                <h1>Memos</h1>
+                <p id="memosMeta">加载中…</p>
+            </header>
+
+            <section id="memoShelfView" class="bookshelf-view">
+                <div id="memoShelfGrid" class="bookshelf-grid">
+                    <p class="empty-state">加载中…</p>
+                </div>
+                <nav class="pagination" id="memoShelfPagination" aria-label="标签分页"></nav>
+            </section>
+
+            <section id="memoDetailView" class="detail-view" style="display:none">
+                <div class="book-head">
+                    <div class="book-cover" id="tagCover">
+                        <span id="tagCoverText" class="book-cover-fallback">#</span>
+                    </div>
+                    <div class="book-info">
+                        <h2 id="tagTitle">请选择一个标签</h2>
+                        <p id="tagSub" class="book-sub">-</p>
+                    </div>
+                </div>
+
+                <div id="memosGrid" class="notes-grid memos-grid">
+                    <p class="empty-state">选择一个标签查看 memo。</p>
+                </div>
+
+                <nav class="pagination" id="memosPagination" aria-label="Memos 分页"></nav>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    <input id="jsonFileInput" type="file" accept="application/json,.json" style="display:none">
+
+    <script>
+    (function() {
+        const ALL_TAG = '__all__';
+        const TAG_PALETTE = [
+            ['#a8402a', '#d9784f'],
+            ['#3498db', '#8e44ad'],
+            ['#27ae60', '#16a085'],
+            ['#e84393', '#fd79a8'],
+            ['#f39c12', '#e67e22'],
+            ['#2c3e50', '#4a6572']
+        ];
+
+        const state = {
+            memos: [],
+            view: 'shelf',
+            selectedTag: null,
+            shelfPage: 1,
+            shelfPerPage:  12 ,
+            detailPage: 1,
+            detailPerPage:  12 ,
+            searchTerm: '',
+            tagFilter: ''
+        };
+        
+        
+        const dataUrl = '../' + 'data\/flomo_memos.json';
+
+        function $(id) { return document.getElementById(id); }
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        
+        function toTs(value) {
+            if (!value) return 0;
+            if (typeof value === 'number') return value < 1e12 ? value * 1000 : value;
+            const t = new Date(value).getTime();
+            return isNaN(t) ? 0 : t;
+        }
+
+        function formatDate(value) {
+            if (!value) return '';
+            const ts = toTs(value);
+            if (!ts) return String(value);
+            return new Date(ts).toLocaleString('zh-CN');
+        }
+
+        function renderMeta(meta) {
+            const generated = meta.generated_at ? `导出时间: ${formatDate(meta.generated_at)}` : '';
+            const tag = meta.tag_filter ? `标签: #${meta.tag_filter}` : '';
+            const total = `共 ${meta.total_memos || 0} 条`;
+            $('memosMeta').textContent = [generated, tag, total].filter(Boolean).join(' | ');
+        }
+
+        
+        function displayTags(tags) {
+            return (tags || []).filter(t => t.toLowerCase() !== state.tagFilter.toLowerCase());
+        }
+
+        
+        function getTagCounts() {
+            const counts = new Map();
+            state.memos.forEach(m => displayTags(m.tags).forEach(t => {
+                counts.set(t, (counts.get(t) || 0) + 1);
+            }));
+            return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+        }
+
+        function updateSideStats() {
+            $('sideMemoCount').textContent = state.memos.length;
+            $('sideTagCount').textContent = getTagCounts().length;
+        }
+
+        
+        function paletteFor(text) {
+            let hash = 0;
+            for (let i = 0; i < text.length; i++) hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
+            return TAG_PALETTE[hash % TAG_PALETTE.length];
+        }
+
+        function tagCoverHtml(tag, isAll) {
+            const [c1, c2] = isAll ? TAG_PALETTE[0] : paletteFor(tag);
+            const label = isAll ? '全部' : (tag.charAt(0) || '#');
+            return `<div class="book-cover-thumb tag-card-cover" style="background: linear-gradient(135deg, ${c1}, ${c2});">${escapeHtml(label)}</div>`;
+        }
+
+        function switchView(view, tag) {
+            state.view = view;
+            state.searchTerm = '';
+            $('globalSearch').value = '';
+            if (view === 'shelf') {
+                state.selectedTag = null;
+                state.shelfPage = 1;
+                $('memoShelfView').style.display = '';
+                $('memoDetailView').style.display = 'none';
+                $('memoShelfSide').style.display = '';
+                $('memoDetailSide').style.display = 'none';
+                renderShelf();
+            } else {
+                state.selectedTag = tag || ALL_TAG;
+                state.detailPage = 1;
+                $('memoShelfView').style.display = 'none';
+                $('memoDetailView').style.display = '';
+                $('memoShelfSide').style.display = 'none';
+                $('memoDetailSide').style.display = '';
+                renderDetail();
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function filteredTags() {
+            const counts = getTagCounts();
+            const term = state.searchTerm.toLowerCase();
+            if (!term) return counts;
+            return counts.filter(([tag]) => tag.toLowerCase().includes(term));
+        }
+
+        function renderPagination(totalItems, perPage, currentPage, navId, onChange) {
+            const nav = $(navId);
+            const totalPages = Math.max(1, Math.ceil(totalItems / perPage));
+            if (totalPages <= 1) {
+                nav.innerHTML = '';
+                return;
+            }
+            let html = '';
+            html += `<button class="page-btn" ${currentPage === 1 ? 'disabled' : ''} data-page="${currentPage - 1}">上一页</button>`;
+            html += `<span class="page-info">${currentPage} / ${totalPages}</span>`;
+            html += `<button class="page-btn" ${currentPage === totalPages ? 'disabled' : ''} data-page="${currentPage + 1}">下一页</button>`;
+            nav.innerHTML = html;
+
+            nav.querySelectorAll('button[data-page]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const page = parseInt(btn.getAttribute('data-page'), 10);
+                    if (page >= 1 && page <= totalPages) {
+                        onChange(page);
+                    }
+                });
+            });
+        }
+
+        
+        function renderShelf() {
+            const tags = filteredTags();
+            const cards = [['', state.memos.length, true]].concat(tags.map(([t, c]) => [t, c, false]));
+            const total = cards.length;
+            const totalPages = Math.max(1, Math.ceil(total / state.shelfPerPage));
+            if (state.shelfPage > totalPages) state.shelfPage = totalPages || 1;
+            const start = (state.shelfPage - 1) * state.shelfPerPage;
+            const pageCards = cards.slice(start, start + state.shelfPerPage);
+            const grid = $('memoShelfGrid');
+
+            if (!pageCards.length) {
+                grid.innerHTML = '<p class="empty-state">没有找到标签。</p>';
+            } else {
+                grid.innerHTML = pageCards.map(([tag, count, isAll]) => `
+                    <article class="book-card tag-card" data-tag="${escapeHtml(isAll ? ALL_TAG : tag)}">
+                        ${tagCoverHtml(tag, isAll)}
+                        <div class="book-card-info">
+                            <h3 class="book-card-title">${isAll ? '全部 Memos' : '#' + escapeHtml(tag)}</h3>
+                            <span class="book-card-count">${count} 条记录</span>
+                        </div>
+                    </article>
+                `).join('');
+            }
+
+            grid.querySelectorAll('.tag-card').forEach(card => {
+                card.addEventListener('click', () => switchView('detail', card.getAttribute('data-tag')));
+            });
+
+            renderPagination(total, state.shelfPerPage, state.shelfPage, 'memoShelfPagination', (page) => {
+                state.shelfPage = page;
+                renderShelf();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        function filteredMemos() {
+            let memos = state.memos.slice().sort((a, b) => toTs(b.created_at) - toTs(a.created_at));
+            if (state.selectedTag && state.selectedTag !== ALL_TAG) {
+                memos = memos.filter(m => (m.tags || []).includes(state.selectedTag));
+            }
+            if (state.searchTerm) {
+                const term = state.searchTerm.toLowerCase();
+                memos = memos.filter(m => {
+                    const content = (m.content || '').toLowerCase();
+                    const tags = (m.tags || []).join(' ').toLowerCase();
+                    return content.includes(term) || tags.includes(term);
+                });
+            }
+            return memos;
+        }
+
+        function renderTagSelect() {
+            const select = $('tagSelect');
+            const tags = getTagCounts();
+            select.innerHTML = `<option value="${ALL_TAG}">全部 Memos (${state.memos.length})</option>` +
+                tags.map(([t, c]) => `<option value="${escapeHtml(t)}">#${escapeHtml(t)} (${c})</option>`).join('');
+            select.value = state.selectedTag || ALL_TAG;
+            select.onchange = (e) => {
+                if (e.target.value) switchView('detail', e.target.value);
+            };
+        }
+
+        function renderTagList() {
+            const list = $('tagList');
+            const tags = getTagCounts();
+            if (!tags.length) {
+                list.innerHTML = '<li class="chapter-item empty">无标签</li>';
+                return;
+            }
+            list.innerHTML = tags.map(([tag]) => {
+                const active = tag === state.selectedTag ? 'active' : '';
+                return `<li class="chapter-item"><button class="${active}" data-tag="${escapeHtml(tag)}">#${escapeHtml(tag)}</button></li>`;
+            }).join('');
+            list.querySelectorAll('button[data-tag]').forEach(btn => {
+                btn.addEventListener('click', () => switchView('detail', btn.getAttribute('data-tag')));
+            });
+        }
+
+        function renderDetailHeader() {
+            const isAll = state.selectedTag === ALL_TAG;
+            const count = filteredMemos().length;
+            $('tagTitle').textContent = isAll ? '全部 Memos' : `#${state.selectedTag}`;
+            $('tagSub').textContent = `共 ${count} 条记录`;
+            const [c1, c2] = isAll ? TAG_PALETTE[0] : paletteFor(state.selectedTag);
+            $('tagCover').style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
+            $('tagCoverText').textContent = isAll ? '全部' : (state.selectedTag.charAt(0) || '#');
+        }
+
+        function renderMemosDetail() {
+            const memos = filteredMemos();
+            const total = memos.length;
+            const totalPages = Math.max(1, Math.ceil(total / state.detailPerPage));
+            if (state.detailPage > totalPages) state.detailPage = totalPages || 1;
+            const start = (state.detailPage - 1) * state.detailPerPage;
+            const pageMemos = memos.slice(start, start + state.detailPerPage);
+            const grid = $('memosGrid');
+
+            if (!pageMemos.length) {
+                grid.innerHTML = '<p class="empty-state">当前筛选条件下没有 memo。</p>';
+            } else {
+                grid.innerHTML = pageMemos.map(memo => `
                     <article class="note-card color-default memo-card">
                         <div class="note-tags">
-                            ${i(e.tags).map(e=>`<span class="tag tag-chapter">${s(e)}</span>`).join("")}
+                            ${displayTags(memo.tags).map(t => `<span class="tag tag-chapter">${escapeHtml(t)}</span>`).join('')}
                         </div>
                         <div class="memo-collapse">
-                            <div class="note-highlight memo-content markdown-body">${f(e.content)}</div>
+                            <div class="note-highlight memo-content markdown-body">${renderMarkdown(memo.content)}</div>
                         </div>
                         <button type="button" class="memo-toggle" hidden>展开</button>
                         <div class="note-comment">
-                            ${e.created_at?`<time class="note-time">${c(e.created_at)}</time>`:""}
-                            ${e.url?`<a href="${s(e.url)}" target="_blank" rel="noopener">在 Flomo 中查看 →</a>`:""}
+                            ${memo.created_at ? `<time class="note-time">${formatDate(memo.created_at)}</time>` : ''}
+                            ${memo.url ? `<a href="${escapeHtml(memo.url)}" target="_blank" rel="noopener">在 Flomo 中查看 →</a>` : ''}
                         </div>
                     </article>
-                `).join(""),p()):m.innerHTML='<p class="empty-state">当前筛选条件下没有 memo。</p>',l(a,e.perPage,e.page,"memosPagination",t=>{e.page=t,n(),window.scrollTo({top:0,behavior:"smooth"})})}function f(e){if(!e)return"<em>无内容</em>";const t=marked.parse(e,{breaks:!0});return typeof DOMPurify!="undefined"?DOMPurify.sanitize(t):t}function p(){const e=220;document.querySelectorAll(".memo-card").forEach(t=>{const s=t.querySelector(".memo-collapse"),n=t.querySelector(".memo-toggle");if(s.scrollHeight<=e+8)return;s.classList.add("is-collapsed"),n.hidden=!1,n.textContent="展开",n.addEventListener("click",()=>{const e=s.classList.toggle("is-collapsed");n.textContent=e?"展开":"折叠"})})}function r(t){const s=t.meta||{};e.memos=t.memos||[],e.tagFilter=s.tag_filter||"",h(s),g(),a(),n()}function v(e){const n=t("memosMeta");n.textContent="当前使用 file:// 打开，点击这里选择 JSON 文件加载 Memos。",n.style.cursor="pointer";const s=t("jsonFileInput");n.onclick=()=>s.click(),s.onchange=async e=>{const t=e.target.files&&e.target.files[0];if(!t)return;try{const e=await t.text();r(JSON.parse(e))}catch(e){n.textContent="加载失败: "+e.message}},console.warn("Auto fetch failed in file mode:",e)}async function b(){t("globalSearch").addEventListener("input",t=>{e.searchTerm=t.target.value.trim(),e.page=1,n()});try{const e=await fetch(m);if(!e.ok)throw new Error(`HTTP ${e.status}`);r(await e.json())}catch(e){if(location.protocol==="file:"){v(e);return}t("memosMeta").textContent="加载失败: "+e.message,t("memosGrid").innerHTML='<p class="empty-state">数据加载失败</p>'}}b()})()</script></body></html>
+                `).join('');
+                setupCollapsibleMemos();
+            }
+
+            renderPagination(total, state.detailPerPage, state.detailPage, 'memosPagination', (page) => {
+                state.detailPage = page;
+                renderMemosDetail();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        function renderDetail() {
+            renderDetailHeader();
+            renderTagSelect();
+            renderTagList();
+            renderMemosDetail();
+        }
+
+        
+        function renderMarkdown(content) {
+            if (!content) return '<em>无内容</em>';
+            const html = marked.parse(content, { breaks: true });
+            return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+        }
+
+        
+        function setupCollapsibleMemos() {
+            const collapseHeight = 220;
+            document.querySelectorAll('.memo-card').forEach(card => {
+                const collapse = card.querySelector('.memo-collapse');
+                const toggle = card.querySelector('.memo-toggle');
+                if (collapse.scrollHeight <= collapseHeight + 8) return;
+                collapse.classList.add('is-collapsed');
+                toggle.hidden = false;
+                toggle.textContent = '展开';
+                toggle.addEventListener('click', () => {
+                    const collapsed = collapse.classList.toggle('is-collapsed');
+                    toggle.textContent = collapsed ? '展开' : '折叠';
+                });
+            });
+        }
+
+        function bootstrap(data) {
+            const meta = data.meta || {};
+            state.memos = data.memos || [];
+            state.tagFilter = meta.tag_filter || '';
+            renderMeta(meta);
+            updateSideStats();
+            $('backToMemoShelf').addEventListener('click', () => switchView('shelf'));
+            switchView('shelf');
+        }
+
+        function enableFileFallback(err) {
+            const meta = $('memosMeta');
+            meta.textContent = '当前使用 file:// 打开，点击这里选择 JSON 文件加载 Memos。';
+            meta.style.cursor = 'pointer';
+            const input = $('jsonFileInput');
+            meta.onclick = () => input.click();
+            input.onchange = async (event) => {
+                const file = event.target.files && event.target.files[0];
+                if (!file) return;
+                try {
+                    const text = await file.text();
+                    bootstrap(JSON.parse(text));
+                } catch (parseErr) {
+                    meta.textContent = '加载失败: ' + parseErr.message;
+                }
+            };
+            console.warn('Auto fetch failed in file mode:', err);
+        }
+
+        async function main() {
+            $('globalSearch').addEventListener('input', (e) => {
+                state.searchTerm = e.target.value.trim();
+                if (state.view === 'shelf') {
+                    state.shelfPage = 1;
+                    renderShelf();
+                } else {
+                    state.detailPage = 1;
+                    renderMemosDetail();
+                }
+            });
+
+            try {
+                const res = await fetch(dataUrl);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                bootstrap(await res.json());
+            } catch (err) {
+                if (location.protocol === 'file:') {
+                    enableFileFallback(err);
+                    return;
+                }
+                $('memosMeta').textContent = '加载失败: ' + err.message;
+                $('memoShelfGrid').innerHTML = '<p class="empty-state">数据加载失败</p>';
+            }
+        }
+
+        main();
+    })();
+    </script>
+</body>
+</html>

@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>随笔 on 阅读笔记</title><link>https://blog.zzek.cn/tags/%E9%9A%8F%E7%AC%94/</link><description>Recent content in 随笔 on 阅读笔记</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Wed, 02 Sep 2026 13:17:22 +0800</lastBuildDate><atom:link href="https://blog.zzek.cn/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml"/><item><title>你好，WeRead 博客</title><link>https://blog.zzek.cn/blog/hello-weread-blog/</link><pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate><guid>https://blog.zzek.cn/blog/hello-weread-blog/</guid><description>欢迎来到这个由 Hugo 驱动的读书笔记博客。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>随笔 on 阅读笔记</title>
+		<link>http://localhost:1315/tags/%E9%9A%8F%E7%AC%94/</link>
+		<description>Recent content in 随笔 on 阅读笔记</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 02 Sep 2026 13:17:22 +0800</lastBuildDate>
+		
+			<atom:link href="http://localhost:1315/tags/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>你好，WeRead 博客</title>
+				<link>http://localhost:1315/blog/hello-weread-blog/</link>
+				<pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1315/blog/hello-weread-blog/</guid>
+				<description>欢迎来到这个由 Hugo 驱动的读书笔记博客。</description>
+			</item>
+	</channel>
+</rss>

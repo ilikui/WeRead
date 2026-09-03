@@ -990,6 +990,18 @@ a:hover {
     border-bottom: 1px solid var(--line);
 }
 
+/* Memos 标签墙：无封面图，用渐变色块 + 首字代替 */
+.tag-card-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'LXGW WenKai', "Iowan Old Style", "Palatino Linotype", "Songti SC", serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    user-select: none;
+}
+
 .book-card-info {
     padding: 14px;
     display: flex;
