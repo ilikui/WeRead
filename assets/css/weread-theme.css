@@ -477,6 +477,16 @@ a:hover {
     grid-template-columns: repeat(4, 1fr);
 }
 
+/* Memos 页面加宽容器、缩窄侧栏，避免 4 列卡片过窄 */
+.memos-page .weread-layout {
+    max-width: 1680px;
+    grid-template-columns: 220px 1fr;
+}
+
+.memos-page .memos-grid {
+    gap: 20px;
+}
+
 .note-card {
     background: var(--paper);
     border: 1px solid var(--line);
@@ -1091,6 +1101,10 @@ a:hover {
 @media (max-width: 1024px) {
     .weread-layout {
         grid-template-columns: 220px 1fr;
+    }
+
+    .memos-page .memos-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
