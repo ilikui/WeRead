@@ -1,3 +1,4 @@
-# Hugo build output (deployed via actions/upload-pages-artifact, not git)
-
+# Netlify serves the committed public/ directory directly (no build step there),
+# so public/ must stay tracked in git. Only ignore Hugo's local build cache.
+resources/_gen/
 .hugo_build.lock

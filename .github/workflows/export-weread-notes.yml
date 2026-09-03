@@ -1,4 +1,4 @@
-name: Export WeRead Notes and Deploy Hugo Site
+name: Export WeRead Notes and Build Hugo Site
 
 on:
   # 每天晚上 12 点自动更新（北京时间 00:00 = UTC 16:00）
@@ -13,19 +13,14 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: "build-and-commit"
   cancel-in-progress: false
 
 jobs:
-  export-and-deploy:
+  export-and-build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -49,45 +44,28 @@ jobs:
           FLOMO_TAG: ${{ vars.FLOMO_TAG || 'Archive/Blog' }}
         run: python weread_hugo_exporter.py
 
-      - name: Commit updated notes
-        continue-on-error: true
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/data/weread_notes.json content/weread/ static/data/flomo_memos.json content/memos/
-          if git diff --staged --quiet; then
-            echo "No data changes to commit."
-          else
-            git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
-            # actions/checkout 默认是 detached HEAD，需显式指定分支才能 push 成功
-            git push origin HEAD:${{ github.ref_name }}
-          fi
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: 'latest'
           extended: true
 
-      # 自动计算 GitHub Pages 的 baseURL，支持「用户/组织站点」与「项目站点」两种子路径
+      # baseURL 使用 hugo.yml 中配置的 Netlify 自定义域名（站点部署在根路径，无需子路径拼接）
       - name: Build Hugo site
-        env:
-          OWNER: ${{ github.repository_owner }}
-          REPO: ${{ github.event.repository.name }}
+        run: hugo --gc --minify
+
+      # Netlify 的发布目录直接指向仓库里的 public/，构建产物与数据变更需一并提交推送触发部署
+      - name: Commit updated notes and site
+        continue-on-error: true
         run: |
-          if [ "$REPO" = "$OWNER.github.io" ]; then
-            BASEURL="https://$OWNER.github.io/"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/data/weread_notes.json content/weread/ static/data/flomo_memos.json content/memos/ public/
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
           else
-            BASEURL="https://$OWNER.github.io/$REPO/"
+            git commit -m "chore: auto update weread notes, flomo memos and built site [skip ci]"
+            # actions/checkout 默认是 detached HEAD，需显式指定分支才能 push 成功
+            git push origin HEAD:${{ github.ref_name }}
           fi
-          echo "Building with baseURL: $BASEURL"
-          hugo --gc --minify --baseURL "$BASEURL"
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
