@@ -1,4 +1,3 @@
 # Hugo build output (deployed via actions/upload-pages-artifact, not git)
-public/
-resources/_gen/
+
 .hugo_build.lock
