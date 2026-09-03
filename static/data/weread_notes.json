@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-03T10:44:57.484119+00:00",
+    "generated_at": "2026-09-03T19:06:02.182335+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 13,
-    "total_notes": 424
+    "total_notes": 432
   },
   "books": [
     {
@@ -12,7 +12,7 @@
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 8,
+      "note_count": 16,
       "chapters": [
         {
           "uid": 1,
@@ -137,6 +137,51 @@
       ],
       "notes": [
         {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_17179-17391",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "时刻一：这个灵感太棒了第一种触动时刻叫作，“这个灵感太棒了”。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788443100
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_13114-13154",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "我们从小记笔记都被要求先记忆，等有时间再思考，而正确的方式是，先思考，后记忆。”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788442678
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_2927-3126",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "它的主要内容是，人的记忆有两种基本机制：存储和提取。过去，人们通常以为，记得越快，学习效果越好。简言之，存储越容易，提取就越快。但比约克的实验发现了与常识相反的结论：“存储与提取负相关。”也就是说，存入记忆越容易，提取出来越困难；反之，如果你存入得有些吃力，知识提取会更方便。 [插图]",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788441848
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_916-943",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "做好信息预处理的第一种方法，叫作“用自己的话记笔记”。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788441547
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_6_4647-4747",
+          "chapter": "# 给“想法”，让你拿来就能用",
+          "chapter_uid": 6,
+          "highlight": "翻阅一下本周记录的笔记，从中找到一些有趣的“想法”并据此确定主题，然后我会对这些想法进行一定的串联、改写、扩写等，最终汇聚成一篇文章。打个比方，之前记录的想法就像洗净切好的食材，而写文章则像烹饪菜肴。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788440671
+        },
+        {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_4_16608-16757",
           "chapter": "自序 记笔记，是为了增援未来的自己",
           "chapter_uid": 4,
@@ -180,6 +225,33 @@
           "comment": "",
           "color": "blue",
           "created_at": 1788313484
+        },
+        {
+          "id": "79857957_8bQw6Wq3s",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "一是明明记了很多笔记，却想不起来；二是即使找到相关笔记，也很难快速应用于待解决的问题。",
+          "comment": "用自己的话来说",
+          "color": "default",
+          "created_at": 1788441636
+        },
+        {
+          "id": "79857957_8bQvV1pTs",
+          "chapter": "# 给“想法”，让你拿来就能用",
+          "chapter_uid": 6,
+          "highlight": "笔记的最终价值在于应用。如果不知道如何用，那么我们学再多的方法也没有意义。",
+          "comment": "笔记的价值",
+          "color": "default",
+          "created_at": 1788441460
+        },
+        {
+          "id": "79857957_8bQvm4knb",
+          "chapter": "# 给“想法”，让你拿来就能用",
+          "chapter_uid": 6,
+          "highlight": "除了“想法”和“线索”，笔记还可以提供第三种增援方式，那就是给“依据”。",
+          "comment": "有依据的想法",
+          "color": "default",
+          "created_at": 1788440943
         },
         {
           "id": "79857957_8bPDQJgt4",
