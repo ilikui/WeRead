@@ -544,6 +544,19 @@ a:hover {
     text-transform: capitalize;
 }
 
+/* Memos 卡片上的可点击标签芯片 */
+button.tag {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+button.tag:hover {
+    background: rgba(168, 64, 42, 0.2);
+    transform: translateY(-1px);
+}
+
 .note-highlight {
     margin: 0;
     padding: 0;
@@ -1138,6 +1151,12 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+    /* .memos-page .weread-layout 桌面规则优先级更高，需在窄屏显式覆盖，
+       否则 Memos 页移动端不会像 Read 页那样塌缩为单列 */
+    .memos-page .weread-layout {
+        grid-template-columns: 1fr;
+    }
+
     .weread-side {
         position: static;
     }
@@ -1195,6 +1214,10 @@ a:hover {
 
     .memos-grid {
         grid-template-columns: 1fr;
+    }
+
+    .memos-page .memos-grid {
+        gap: 12px;
     }
 
     .bookshelf-grid {
