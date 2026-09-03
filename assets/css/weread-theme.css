@@ -472,15 +472,15 @@ a:hover {
     gap: 16px;
 }
 
-/* Memos 固定每行 4 张卡片，超出部分由分页展示 */
+/* Memos 卡片宽度自适应（约 4 列/行，随视口宽度弹性调整，避免固定 4 列在窄屏被压扁 */
 .memos-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 
-/* Memos 页面加宽容器、缩窄侧栏，避免 4 列卡片过窄 */
+/* Memos 页面加宽容器、缩窄侧栏，尽量让卡片用满可用宽度 */
 .memos-page .weread-layout {
-    max-width: 1680px;
-    grid-template-columns: 220px 1fr;
+    max-width: 1800px;
+    grid-template-columns: 200px 1fr;
 }
 
 .memos-page .memos-grid {
@@ -1101,10 +1101,6 @@ a:hover {
 @media (max-width: 1024px) {
     .weread-layout {
         grid-template-columns: 220px 1fr;
-    }
-
-    .memos-page .memos-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
