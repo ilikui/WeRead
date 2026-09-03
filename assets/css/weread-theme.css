@@ -881,6 +881,7 @@ a:hover {
 .page-content {
     font-size: 16px;
     line-height: 1.8;
+    overflow-wrap: anywhere;
 }
 
 .page-content h2,
@@ -1112,7 +1113,13 @@ a:hover {
     .side-tabs {
         position: static;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .side-tab {
+        height: 36px;
+        padding: 0 12px;
     }
 
     .weread-layout {
@@ -1493,7 +1500,10 @@ a.topic-badge:hover {
 
 /* ===== Markdown 扩展渲染（表格/定义列表/任务列表/脚注） ===== */
 .page-content table {
+    display: block;
     width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
     border-collapse: collapse;
     margin: 0 0 20px;
     font-size: 14px;
