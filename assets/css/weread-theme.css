@@ -472,6 +472,11 @@ a:hover {
     gap: 16px;
 }
 
+/* Memos 固定每行 4 张卡片，超出部分由分页展示 */
+.memos-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .note-card {
     background: var(--paper);
     border: 1px solid var(--line);
@@ -1120,6 +1125,10 @@ a:hover {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
+    .memos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .chapter-list {
         max-height: 200px;
     }
@@ -1152,6 +1161,10 @@ a:hover {
     }
 
     .notes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .memos-grid {
         grid-template-columns: 1fr;
     }
 
