@@ -38,26 +38,23 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
-        run: pip install requests
+        run: pip install requests flomo
 
-      # 从微信读书拉取最新划线与批注（未配置 WEREAD_API_KEY 时跳过，使用已有数据）
-      - name: Export WeRead notes
+      # 从微信读书/Flomo 拉取最新数据（对应密钥未配置时，脚本会自动跳过并保留已有数据）
+      - name: Export WeRead notes and Flomo memos
         env:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
           WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
-        run: |
-          if [ -z "$WEREAD_API_KEY" ]; then
-            echo "::warning::未配置 WEREAD_API_KEY，跳过数据更新，使用仓库中已有的笔记数据。"
-          else
-            python weread_hugo_exporter.py
-          fi
+          FLOMO_AUTHORIZATION: ${{ secrets.FLOMO_AUTHORIZATION }}
+          FLOMO_TAG: ${{ vars.FLOMO_TAG || 'Archive/Blog' }}
+        run: python weread_hugo_exporter.py
 
       - name: Commit updated notes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/data/weread_notes.json content/weread/
-          git diff --staged --quiet || git commit -m "chore: auto update weread notes [skip ci]"
+          git add static/data/weread_notes.json content/weread/ static/data/flomo_memos.json content/memos/
+          git diff --staged --quiet || git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
           git push
 
       - name: Setup Hugo

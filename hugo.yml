@@ -16,12 +16,19 @@ params:
     books_per_page: 15
     notes_per_page: 12
     enable_search: true
+  flomo:
+    data_file: 'data/flomo_memos.json'
+    memos_per_page: 12
   menu:
     side:
       - identifier: read
         name: 'Read'
         url: '/weread/'
         weight: 10
+      - identifier: memos
+        name: 'Memos'
+        url: '/memos/'
+        weight: 15
       - identifier: blog
         name: 'Blog'
         url: '/blog/'
@@ -43,6 +50,9 @@ menus:
     - name: '阅读'
       url: '/weread/'
       weight: 20
+    - name: 'Memos'
+      url: '/memos/'
+      weight: 25
     - name: '关于'
       url: '/about/'
       weight: 30

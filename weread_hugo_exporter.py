@@ -8,10 +8,14 @@ WeRead → Hugo 导出脚本
 - 标准化笔记格式并去重
 - 输出 JSON 数据文件 (static/data/weread_notes.json)
 - 为每本书生成 Hugo Markdown 内容文件 (content/weread/<slug>.md)
+- 通过 flomo 库拉取 Flomo 中带 #Archive/Blog 标签的 memo
+- 输出 JSON 数据文件 (static/data/flomo_memos.json)，供 Memos 卡片页展示
 
 环境变量：
 - WEREAD_API_KEY: 微信读书 API 密钥
 - WEREAD_API_GATEWAY: API 网关地址（可选，有默认值）
+- FLOMO_AUTHORIZATION: Flomo 登录后获取的 authorization token
+- FLOMO_TAG: 需要导出的 Flomo 标签（可选，默认 Archive/Blog）
 """
 
 from __future__ import annotations
@@ -21,6 +25,7 @@ import json
 import os
 import re
 import unicodedata
+from flomo import Flomo, Parser
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -30,6 +35,9 @@ WEREAD_API_KEY = os.getenv("WEREAD_API_KEY", "").strip()
 WEREAD_API_GATEWAY = os.getenv(
     "WEREAD_API_GATEWAY", "https://i.weread.qq.com/api/agent/gateway"
 ).strip()
+
+FLOMO_AUTHORIZATION = os.getenv("FLOMO_AUTHORIZATION", "").strip()
+FLOMO_TAG = os.getenv("FLOMO_TAG", "Archive/Blog").strip()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -418,6 +426,114 @@ def build_export_data(books: list) -> dict:
     }
 
 
+def _normalize_tag(tag: str) -> str:
+    """去除标签前缀 # 并去除首尾空白，便于统一比较。"""
+    return (tag or "").strip().lstrip("#")
+
+
+def normalize_memo(memo: "Parser") -> dict:
+    """把 Flomo Parser 对象标准化为统一字段。"""
+    created_at = (getattr(memo, "created_at", "") or "").replace(" ", "T")
+    updated_at = (getattr(memo, "updated_at", "") or "").replace(" ", "T")
+    tags = [_normalize_tag(t) for t in (getattr(memo, "tags", None) or [])]
+    return {
+        "id": getattr(memo, "slug", ""),
+        "content": memo.text.strip(),
+        "tags": tags,
+        "created_at": created_at,
+        "updated_at": updated_at,
+        "url": memo.url,
+    }
+
+
+def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
+    """通过 flomo 库拉取指定标签（含子标签）下的 memo，返回标准化列表。"""
+    if not FLOMO_AUTHORIZATION:
+        print("❌ 未检测到 FLOMO_AUTHORIZATION，请先配置环境变量。")
+        return []
+
+    authorization = (
+        FLOMO_AUTHORIZATION
+        if FLOMO_AUTHORIZATION.lower().startswith("bearer")
+        else f"Bearer {FLOMO_AUTHORIZATION}"
+    )
+    client = Flomo(authorization)
+
+    try:
+        raw_memos = client.get_all_memos()
+    except Exception as exc:
+        print(f"❌ 拉取 Flomo memo 失败: {exc}")
+        return []
+
+    target_tag = _normalize_tag(tag_filter)
+    matched = []
+    for raw in raw_memos:
+        parsed = Parser(raw)
+        tags = [_normalize_tag(t) for t in (getattr(parsed, "tags", None) or [])]
+        if not any(t == target_tag or t.startswith(f"{target_tag}/") for t in tags):
+            continue
+        matched.append(normalize_memo(parsed))
+
+    matched.sort(key=lambda m: m["created_at"], reverse=True)
+    return matched
+
+
+def build_memos_export_data(memos: list, tag_filter: str) -> dict:
+    """构建 Memos 标准导出数据结构。"""
+    generated_at = datetime.now(timezone.utc).isoformat()
+    return {
+        "meta": {
+            "generated_at": generated_at,
+            "source": "flomo",
+            "tag_filter": tag_filter,
+            "total_memos": len(memos),
+        },
+        "memos": memos,
+    }
+
+
+def write_memos_outputs(
+    data: dict,
+    site_dir: Path,
+    json_name: str = "flomo_memos.json",
+) -> Path:
+    """输出 Memos JSON 数据文件。"""
+    static_data_dir = site_dir / "static" / "data"
+    static_data_dir.mkdir(parents=True, exist_ok=True)
+
+    json_path = static_data_dir / json_name
+    json_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"📦 Memos JSON 已输出: {json_path}")
+    return json_path
+
+
+def generate_memos_index_page(content_dir: Path) -> Path:
+    """生成 content/memos/_index.md 主入口。"""
+    content_dir.mkdir(parents=True, exist_ok=True)
+    index_path = content_dir / "_index.md"
+    index_path.write_text(
+        "---\n"
+        "title: Memos\n"
+        "description: Flomo 卡片墙，展示带有指定标签的 memo。\n"
+        "layout: memos\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    return index_path
+
+
+def main_export_memos(tag_filter: str):
+    print(f"====== 开始通过 Flomo API 拉取 #{tag_filter} 标签下的 memo ======")
+    memos = fetch_flomo_memos(tag_filter)
+
+    if not memos:
+        print("⚠️ 未能拉取到符合条件的 memo。")
+        return None
+
+    print(f"🎉 成功获取 {len(memos)} 条 #{tag_filter} memo。")
+    return build_memos_export_data(memos, tag_filter)
+
+
 def generate_hugo_content(book: dict, content_dir: Path) -> Path:
     """为单本书生成 Hugo Markdown 文件。"""
     slug = slugify(f"{book['title']} {book['book_id']}")
@@ -509,7 +625,7 @@ def main_export():
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="WeRead → Hugo 笔记导出脚本")
+    parser = argparse.ArgumentParser(description="WeRead / Flomo → Hugo 笔记导出脚本")
     parser.add_argument(
         "--site-dir",
         default=".",
@@ -518,12 +634,32 @@ def parse_args():
     parser.add_argument(
         "--json-name",
         default="weread_notes.json",
-        help="输出的 JSON 文件名",
+        help="微信读书输出的 JSON 文件名",
     )
     parser.add_argument(
         "--skip-markdown",
         action="store_true",
         help="仅输出 JSON，不生成 Markdown",
+    )
+    parser.add_argument(
+        "--skip-weread",
+        action="store_true",
+        help="跳过微信读书导出",
+    )
+    parser.add_argument(
+        "--skip-memos",
+        action="store_true",
+        help="跳过 Flomo Memos 导出",
+    )
+    parser.add_argument(
+        "--memo-tag",
+        default=FLOMO_TAG,
+        help="需要导出的 Flomo 标签（默认 Archive/Blog）",
+    )
+    parser.add_argument(
+        "--memo-json-name",
+        default="flomo_memos.json",
+        help="Memos 输出的 JSON 文件名",
     )
     return parser.parse_args()
 
@@ -532,14 +668,27 @@ if __name__ == "__main__":
     args = parse_args()
     site_dir = Path(args.site_dir).resolve()
 
-    # 确保入口页面存在
-    generate_index_page(site_dir / "content" / "weread")
+    if not args.skip_weread:
+        # 确保入口页面存在
+        generate_index_page(site_dir / "content" / "weread")
 
-    export_data = main_export()
-    if export_data:
-        write_outputs(
-            export_data,
-            site_dir,
-            json_name=args.json_name,
-        )
-        print("\n✅ 全部完成。运行 `hugo server -D` 预览站点。")
+        export_data = main_export()
+        if export_data:
+            write_outputs(
+                export_data,
+                site_dir,
+                json_name=args.json_name,
+            )
+
+    if not args.skip_memos:
+        generate_memos_index_page(site_dir / "content" / "memos")
+
+        memos_data = main_export_memos(args.memo_tag)
+        if memos_data:
+            write_memos_outputs(
+                memos_data,
+                site_dir,
+                json_name=args.memo_json_name,
+            )
+
+    print("\n✅ 全部完成。运行 `hugo server -D` 预览站点。")

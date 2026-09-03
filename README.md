@@ -1,6 +1,6 @@
 # WeRead → Hugo 读书笔记博客
 
-基于 `ReadMe.md` 在 `Hugo/` 目录中实现的 Hugo 静态博客，包含 **阅读（Read）**、**博客（Blog）**、**相册（Gallery）** 三个板块。
+基于 `ReadMe.md` 在 `Hugo/` 目录中实现的 Hugo 静态博客，包含 **阅读（Read）**、**Memos**、**博客（Blog）**、**相册（Gallery）** 四个板块。
 
 ## 项目结构
 
@@ -12,6 +12,7 @@ Hugo/
 │   ├── about.md                      # 关于页面
 │   ├── blog/                         # 博客（Markdown 编写，卡片式展示）
 │   ├── gallery/_index.md             # 相册页
+│   ├── memos/_index.md               # Memos 页（Flomo 卡片墙）
 │   └── weread/                       # 阅读页（每本书一个 .md）
 ├── layouts/
 │   ├── _default/                     # 默认布局（baseof / list / single）
@@ -19,13 +20,15 @@ Hugo/
 │   ├── gallery/                      # 相册布局
 │   ├── partials/markdown-extensions.html  # Mermaid / KaTeX 按需加载
 │   ├── weread.html                   # 阅读页主布局（书架 + 笔记详情）
+│   ├── memos.html                    # Memos 页主布局（Flomo 卡片墙）
 │   └── shortcodes/weread-card.html
 ├── static/
 │   ├── data/weread_notes.json        # 笔记 JSON 数据
+│   ├── data/flomo_memos.json         # Memos JSON 数据
 │   └── gallery/                      # 相册图片（放入即自动展示）
 ├── .github/workflows/export-weread-notes.yml  # 自动化导出 + 部署
 ├── hugo.yml                          # Hugo 站点配置
-└── weread_hugo_exporter.py           # 微信读书 → Hugo 导出脚本
+└── weread_hugo_exporter.py           # 微信读书 / Flomo → Hugo 导出脚本
 ```
 
 ## 本地预览
@@ -35,7 +38,7 @@ cd Hugo
 hugo server -D
 ```
 
-访问 <http://localhost:1313/weread/> 查看阅读页；Blog 在 `/blog/`，相册在 `/gallery/`。
+访问 <http://localhost:1313/weread/> 查看阅读页；Memos 在 `/memos/`，Blog 在 `/blog/`，相册在 `/gallery/`。
 
 ## 博客写作
 
@@ -73,6 +76,24 @@ python weread_hugo_exporter.py --site-dir .
 hugo --gc --minify
 ```
 
+## 从 Flomo 导出 Memos（#Archive/Blog）
+
+1. 安装依赖并配置环境变量（`FLOMO_AUTHORIZATION` 是登录 Flomo 网页版后，在浏览器开发者工具中抓取的 `authorization` 请求头值）：
+
+```bash
+pip install flomo
+export FLOMO_AUTHORIZATION="Bearer xxxxxxxxxxx"
+export FLOMO_TAG="Archive/Blog"   # 可选，默认 Archive/Blog
+```
+
+2. 运行导出脚本（会同时导出微信读书与 Flomo Memos，可用 `--skip-weread` / `--skip-memos` 单独跳过）：
+
+```bash
+python weread_hugo_exporter.py --site-dir .
+```
+
+导出结果会写入 `static/data/flomo_memos.json`，并在 `/memos/` 页面以卡片形式展示，支持按标签筛选与全文搜索。
+
 ## GitHub Actions 自动更新与部署
 
 工作流 `.github/workflows/export-weread-notes.yml` 会在以下时机运行：
@@ -83,7 +104,7 @@ hugo --gc --minify
 
 启用步骤：
 
-1. 在仓库 **Settings → Secrets and variables → Actions** 添加密钥 `WEREAD_API_KEY`（微信读书 API 密钥）。
+1. 在仓库 **Settings → Secrets and variables → Actions** 添加密钥 `WEREAD_API_KEY`（微信读书 API 密钥）与 `FLOMO_AUTHORIZATION`（Flomo authorization token，可选）。
 2. 在 **Settings → Pages** 中，将 **Source** 设为 **GitHub Actions**。
 3. 推送代码到 `main`，等待工作流完成即可通过 Pages 链接访问。
 
