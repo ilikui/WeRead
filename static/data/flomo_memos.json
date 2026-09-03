@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-03T08:11:41.075989+00:00",
+    "generated_at": "2026-09-03T08:22:36.695547+00:00",
     "source": "flomo",
     "tag_filter": "Archive/Blog",
-    "total_memos": 3
+    "total_memos": 4
   },
   "memos": [
     {
@@ -35,6 +35,16 @@
       "created_at": "2026-07-05T08:39:02",
       "updated_at": "2026-09-03T14:55:46",
       "url": "https://v.flomoapp.com/mine/?memo_id=MjQ1MjU2NTMw"
+    },
+    {
+      "id": "ODM5NTg4Njc",
+      "content": "控制理论相关的书籍\n\n**一、学习前提**\n\n假定学习者已经完全掌握**微积分、线性代数、概率论梳理统计** ，并具备基本的英文文献阅读能力。\n\n**二、适用人群**\n\n计划**从事控制理论研究和应用** 的工程相关人员。\n\n**三、具体推荐**\n\n _**1.系统学与控制基础**_\n\n第一本：反馈控制原理或自动控制原理\n\n适合初学控制理论的学习者，基础入门的书籍，自行选择一本进行翻阅，虽然里面的理论早已不是学术热点，但在一般的应用场合还是很有市场。\n\n《反馈控制原理》：\n\n**Feedback Control of Dynamic Systems**\nhttps://book.douban.com/subject/26815189/​\n\n《自动控制原理》：\n\n**自动控制原理 (豆瓣)** https://​book.douban.com/subject/23860663/\n\n_**第二本：线性系统理论**_\n\n国内的课程设置，自动控制紧接着是现代控制，一般到研究生才会学习线性系统理论。那么这里为什么会推荐它作为第二本学习书籍，主要是因为现代控制和线性系统两者均基于状态空间，而且在知识理解、体系构建上，线性系统理论也要优于现代控制。\n\n《Linear System Theory and Design》：\n\n**Linear System Theory and Design** https://book.douban.com/subject/20522338/​\n\n _**第三本：非线性系统理论**_\n\n为了建立起对于控制理论全局的认识，在学习完线性系统理论后，继续了解非线性系统理论。\n\n到这里，肯定会有人说，又是线性系统，又是非线性系统的。每本书都上千页的厚度，学完还能学习其他内容吗？这里推荐这三类书，主要考虑到搞科研，首先得系统的掌握基本的分析方法，而不是了解线性系统和非线性系统的概况，对于后续的研究也是无从下手，初学者可以读一读导论，不用通读书籍，以后再某个方向的研究中继续深入学习就可以了。\n\n《Nonlinear Systems》：\n\n**Nonlinear Systems (3rd Edition)** https://book.douban.com/subject/1574019/​\n\n《非线性控制》：\n\n**非线性控制 (豆瓣)** ​ https://book.douban.com/subject/26986475/\n\n第四本：动力学相关\n\n研究完线性系统和非线性系统，还需要掌握基础的动力学知识。掌握基础的理论与方法、建模原则、建模各主要步骤。\n\n《系统动力学》：\n\n**系统动力学 (豆瓣)** ​ https://book.douban.com/subject/3994540/\n\n完成以上四本书的学习，基本上对于控制所涉及的系统理论有了大概认识。接下来，就是选择具体研究方向了。一般可以参考导师，也可以参考维基百科列出的主流控制理论。**研究方向**\n\n主要有**滑模控制、鲁棒控制、神经网络、最优控制与状态估计、系统辨识、自适应控制、多智能体与网络化控制、模型预测控制等**\n，（大方向选择范围依据日本朝仓书店出版的制御の事典（控制百科全书），如有遗漏，请在评论区赐教。）对于与具体生产结合的过程控制，运动控制等，由于研究方向涉及较多，我们仅从理论上予以区分。注意：教材只是入门，深入研究依靠文献。\n\n**1.滑模控制**\n\n《Sliding Mode Control》：\n\n**Sliding Mode Control** ​book.douban.com/subject/12324957/\n\n为读者提供了滑模控制的基础知识，适合于具有经典控制理论基础知识和一些状态空间方法知识的研究生。在此基础上，发展出更为先进的理论成果。通过两个工业实例，给出了滑模控制器实现的结果，说明了其成功的实际应用理论。\n\n**2.鲁棒控制**\n\n《Robust and Optimal Control》：\n\n**Robust and Optimal Control** ​book.douban.com/subject/3312356/\n\n当代鲁棒与最优控制的主要和基本的内容，书中在开篇会直接给出关键结果，方便读者查阅。\n\n**3.神经网络**\n\n《Neural Networks and Learning Machines》：\n\n**Neural Networks and Learning Machines** ​book.douban.com/subject/2584657/\n\n为计算机工程、电气工程和计算机科学系提供的研究生级神经网络课程。以其彻底性和可读性而闻名，是从工程角度对神经网络最全面的处理。\n\n**4.最优控制**\n\n《最优控制》：\n\n**最优控制 (豆瓣)** ​book.douban.com/subject/27168644/\n\n本书上册包括最优控制基础和最优控制的数学理论两部分，着重介绍经典变分法、庞特里亚金极小值原理以及动态规划方法；下册侧重最优控制的智能方法，包括强化学习与自适应动态规划、最优控制的数值方法、模型预测控制、微分博弈以及平行控制。\n\n《Optimal State Estimation》:\n\n**Optimal State Estimation** ​book.douban.com/subject/2855494/\n\n本书自上而下，使读者能够掌握并应用最新的状态估计技术。提供了一般系统状态的最佳数学方法。清晰、严谨地介绍了状态估计理论，提供了大量的先进资料、最新研究成果和参考文献，使读者能够自信地将状态估计技术应用于科学和工程的各个领域。\n\n《Reinforcement Learning and Optimal Control》：\n\n**Reinforcement Learning and Optimal Control**\n​book.douban.com/subject/35037972/\n\n涉及机器学习与最优控制，也值得参考一下。\n\n**5.系统辨识**\n\n《System Identification》：\n\n**System Identification** ​book.douban.com/subject/2856690/\n\n这本书是对系统辨识的理论、方法和实践的全面和连贯的描述通过观察输入/输出数据建立动态系统数学模型的科学。它把用户放在焦点上，给出必要的背景来理解理论基础，并强调面向用户的选项和选择的实际方面。\n\n**6.自适应控制**\n\n《自适应控制及应用》：\n\n**自适应控制及应用 (豆瓣)** ​book.douban.com/subject/1132950/\n\n本书主要介绍自适应控制的基本原理及应用。全书共分10章，主要为绪论、自适应控制系统的理论基础、模型参考自适应控制、自校正控制、变结构控制、混合自适应控制、对象具有未建模动态时的混合自适应控制、非线性控制对象的自适应控制、模糊自适应控制和自适应控制的应用。\n\n**7.多智能体与网络化控制**\n\n《Cooperative Control of Multi-Agent Systems》：\n\n**Cooperative Control of Multi-Agent Systems: Optimal and Adaptive Design\nApproaches** ​book.douban.com/subject/32706512/\n\n《Cooperative Control of Distributed Multi-Agent Systems》：\n\n**Cooperative Control of Distributed Multi-Agent Systems**\n​book.douban.com/subject/4657122/\n\n8.模型预测控制《Model Predictive Control Theory and Design》：\n\n**Model Predictive Control Theory and Design**\n​book.douban.com/subject/4601229/\n\n国外大学学习模型预测控制（MPC）的指定教材。",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2023-09-24T20:27:52",
+      "updated_at": "2026-09-03T16:19:58",
+      "url": "https://v.flomoapp.com/mine/?memo_id=ODM5NTg4Njc"
     }
   ]
 }
