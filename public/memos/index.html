@@ -7,7 +7,9 @@
     <meta name="description" content="Flomo 卡片墙，展示带有指定标签的 memo。">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <link rel="stylesheet" href="../css/weread-theme.min.255c5a93bd8019164d92b044a083c637473b94ce5ff69af3f3688a25f9b8ff1c.css">
+    <link rel="stylesheet" href="../css/weread-theme.min.91bd740d81c8ef60dcdf04710aba5b75a9e0e4500a2762111228b10e083be198.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
 <body class="weread-page">
     <header class="site-header">
@@ -225,23 +227,51 @@
                 grid.innerHTML = '<p class="empty-state">当前筛选条件下没有 memo。</p>';
             } else {
                 grid.innerHTML = pageMemos.map(memo => `
-                    <article class="note-card color-default">
+                    <article class="note-card color-default memo-card">
                         <div class="note-tags">
                             ${displayTags(memo.tags).map(t => `<span class="tag tag-chapter">${escapeHtml(t)}</span>`).join('')}
                         </div>
-                        <blockquote class="note-highlight" style="white-space:pre-wrap">${memo.content ? escapeHtml(memo.content) : '<em>无内容</em>'}</blockquote>
+                        <div class="memo-collapse">
+                            <div class="note-highlight memo-content markdown-body">${renderMarkdown(memo.content)}</div>
+                        </div>
+                        <button type="button" class="memo-toggle" hidden>展开</button>
                         <div class="note-comment">
                             ${memo.created_at ? `<time class="note-time">${formatDate(memo.created_at)}</time>` : ''}
                             ${memo.url ? `<a href="${escapeHtml(memo.url)}" target="_blank" rel="noopener">在 Flomo 中查看 →</a>` : ''}
                         </div>
                     </article>
                 `).join('');
+                setupCollapsibleMemos();
             }
 
             renderPagination(total, state.perPage, state.page, 'memosPagination', (page) => {
                 state.page = page;
                 renderMemos();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        
+        function renderMarkdown(content) {
+            if (!content) return '<em>无内容</em>';
+            const html = marked.parse(content, { breaks: true });
+            return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+        }
+
+        
+        function setupCollapsibleMemos() {
+            const collapseHeight = 220;
+            document.querySelectorAll('.memo-card').forEach(card => {
+                const collapse = card.querySelector('.memo-collapse');
+                const toggle = card.querySelector('.memo-toggle');
+                if (collapse.scrollHeight <= collapseHeight + 8) return;
+                collapse.classList.add('is-collapsed');
+                toggle.hidden = false;
+                toggle.textContent = '展开';
+                toggle.addEventListener('click', () => {
+                    const collapsed = collapse.classList.toggle('is-collapsed');
+                    toggle.textContent = collapsed ? '展开' : '折叠';
+                });
             });
         }
 
