@@ -50,12 +50,18 @@ jobs:
         run: python weread_hugo_exporter.py
 
       - name: Commit updated notes
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add static/data/weread_notes.json content/weread/ static/data/flomo_memos.json content/memos/
-          git diff --staged --quiet || git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
-          git push
+          if git diff --staged --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
+            # actions/checkout 默认是 detached HEAD，需显式指定分支才能 push 成功
+            git push origin HEAD:${{ github.ref_name }}
+          fi
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3

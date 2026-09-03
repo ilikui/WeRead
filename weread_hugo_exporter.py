@@ -431,6 +431,18 @@ def _normalize_tag(tag: str) -> str:
     return (tag or "").strip().lstrip("#")
 
 
+def _strip_tags_from_content(content: str, tags: list) -> str:
+    """去除正文中内联的 #标签文本，避免与卡片标签区重复展示。"""
+    text = content
+    for tag in tags:
+        if not tag:
+            continue
+        text = re.sub(rf"#{re.escape(tag)}(?![\w/])", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def normalize_memo(memo: "Parser") -> dict:
     """把 Flomo Parser 对象标准化为统一字段。"""
     created_at = (getattr(memo, "created_at", "") or "").replace(" ", "T")
@@ -438,7 +450,7 @@ def normalize_memo(memo: "Parser") -> dict:
     tags = [_normalize_tag(t) for t in (getattr(memo, "tags", None) or [])]
     return {
         "id": getattr(memo, "slug", ""),
-        "content": memo.text.strip(),
+        "content": _strip_tags_from_content(memo.text.strip(), tags),
         "tags": tags,
         "created_at": created_at,
         "updated_at": updated_at,

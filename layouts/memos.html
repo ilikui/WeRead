@@ -74,7 +74,8 @@
             page: 1,
             perPage: {{ site.Params.flomo.memos_per_page | default 12 }},
             searchTerm: '',
-            activeTag: null
+            activeTag: null,
+            tagFilter: ''
         };
         // 数据文件位于站点根 /data/ 下，Memos 页固定位于 /memos/（根下一层），
         // 用相对路径 ../ 向上取到站点根，兼容本地预览与 GitHub Pages 子路径部署。
@@ -117,9 +118,14 @@
             $('sideMemoCount').textContent = state.memos.length;
         }
 
+        // 卡片本身就是按 tag_filter 筛选出来的，展示时无需重复展示该标签
+        function displayTags(tags) {
+            return (tags || []).filter(t => t.toLowerCase() !== state.tagFilter.toLowerCase());
+        }
+
         function getTags() {
             const tags = new Set();
-            state.memos.forEach(m => (m.tags || []).forEach(t => tags.add(t)));
+            state.memos.forEach(m => displayTags(m.tags).forEach(t => tags.add(t)));
             return Array.from(tags).sort();
         }
 
@@ -199,7 +205,7 @@
                 grid.innerHTML = pageMemos.map(memo => `
                     <article class="note-card color-default">
                         <div class="note-tags">
-                            ${(memo.tags || []).map(t => `<span class="tag tag-chapter">${escapeHtml(t)}</span>`).join('')}
+                            ${displayTags(memo.tags).map(t => `<span class="tag tag-chapter">${escapeHtml(t)}</span>`).join('')}
                         </div>
                         <blockquote class="note-highlight" style="white-space:pre-wrap">${memo.content ? escapeHtml(memo.content) : '<em>无内容</em>'}</blockquote>
                         <div class="note-comment">
@@ -220,6 +226,7 @@
         function bootstrap(data) {
             const meta = data.meta || {};
             state.memos = data.memos || [];
+            state.tagFilter = meta.tag_filter || '';
             renderMeta(meta);
             updateSideStats();
             renderTagList();
