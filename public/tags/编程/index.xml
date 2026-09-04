@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>编程 on 阅读笔记</title><link>https://blog.zzek.cn/tags/%E7%BC%96%E7%A8%8B/</link><description>Recent content in 编程 on 阅读笔记</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.zzek.cn/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>C语言 1000问</title><link>https://blog.zzek.cn/blog/c%E8%AF%AD%E8%A8%80/</link><pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate><guid>https://blog.zzek.cn/blog/c%E8%AF%AD%E8%A8%80/</guid><description>存储类Q3：const 修饰变量和 const 修饰指针，编译器各保证了什么?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>编程 on 阅读笔记</title>
+		<link>http://localhost:56497/tags/%E7%BC%96%E7%A8%8B/</link>
+		<description>Recent content in 编程 on 阅读笔记</description>
+		<generator>Hugo</generator>
+		<language>zh-CN</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:56497/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>C语言 1000问 </title>
+				<link>http://localhost:56497/blog/c%E8%AF%AD%E8%A8%80/</link>
+				<pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:56497/blog/c%E8%AF%AD%E8%A8%80/</guid>
+				<description>存储类Q3：const 修饰变量和 const 修饰指针，编译器各保证了什么?</description>
+			</item>
+	</channel>
+</rss>
