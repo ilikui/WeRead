@@ -5,8 +5,26 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 18,
+  "note_count": 20,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_53331-53390",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "记录情绪，也可以是一种情感的释放，避免我们没搞清楚原因就把情绪发泄到别人身上，或者长时间压抑自己的情绪，影响身心健康。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788519788
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_38449-38480",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "前文提到，记笔记不要搬运，要多思考，要记录对自己有启发的内容。",
+      "comment": "",
+      "color": "pink",
+      "created_at": 1788515363
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_26595-26684",
       "chapter": "用自己的话记笔记",
@@ -179,7 +197,7 @@
 
 作者：刘白光
 
-共 **18** 条笔记。
+共 **20** 条笔记。
 
 ---
 
