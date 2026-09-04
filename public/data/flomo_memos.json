@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-04T04:16:27.899401+00:00",
+    "generated_at": "2026-09-04T04:49:54.943890+00:00",
     "source": "flomo",
     "tag_filter": "Archive/Blog",
-    "total_memos": 4
+    "total_memos": 6
   },
   "memos": [
     {
@@ -15,6 +15,16 @@
       "created_at": "2026-09-03T12:26:18",
       "updated_at": "2026-09-03T12:26:21",
       "url": "https://v.flomoapp.com/mine/?memo_id=MjU0ODc2MjIw"
+    },
+    {
+      "id": "MjQ3Njc2ODA5",
+      "content": "**你的个人笔记规则（从实践中长出来的）**\n\n基于卡片笔记法+PARA框架+你的26关键词系统，结合实际使用习惯，总结如下：\n\n▎**1\\. 原子性：一张卡片只装一个想法**\n存技术知识、模型、方法时，一条只写一个独立点。多个点拆开，拆开后才看得到关系。\n\n▎**2\\. 标签即分类：28个Inbox标签 + 4个Area + 2个Project**\nInbox/卡片、Inbox/模型、Inbox/文件库、Inbox/信息源等用于输入流；Area/学习管理、Area/个人成长等用于知识沉淀；Project/考试管理、Project/工作笔记等用于任务管理。\n\n▎**3\\. 链接注明\"为什么\"**\n两条笔记间加链接时，在旁边写一句为什么有关——链接质量比数量重要（来自你记过的\"10条规则\"第4条）。\n\n▎**4\\. 堆问题法驱动笔记**\n不是\"记下答案\"，是\"先攒问题再填答案\"。1000问系列就是这条规则的实践：嵌入式/AUTOSAR/硬件/数学/历史等，都是用问题结构驱动笔记生长。\n\n▎**5\\. 从Inbox长出来，不是从大纲长出来**\n先存在Inbox/卡片或Inbox/信息等临时标签中，攒够后再重组成Area/下的系统笔记。不先画框架再填空。\n\n▎**6\\. 定期翻旧笔记**\n每隔一段时间回看旧卡片，现在的理解跟当时不同了，会看到新的连接可能。定时任务\"每日回顾\"和\"那年今日\"都在做这件事。\n\n▎**7\\. 先有卡片网络，后有文章**\n不是\"要写一篇AUTOSAR文章所以找几个观点支撑\"，是\"攒了10个CAN终端电阻的卡片，发现它们在说同一个主题，于是织出了一篇付费专栏\"。",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-07-20T14:59:28",
+      "updated_at": "2026-09-04T12:47:16",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjQ3Njc2ODA5"
     },
     {
       "id": "MjQ2MjY3Njcy",
@@ -35,6 +45,16 @@
       "created_at": "2026-07-05T08:39:02",
       "updated_at": "2026-09-03T14:55:46",
       "url": "https://v.flomoapp.com/mine/?memo_id=MjQ1MjU2NTMw"
+    },
+    {
+      "id": "MTIxNzQwNzUx",
+      "content": "相关的电影待看\n\n  * 《黑暗深处》\n\n  * 《所罗门传奇》\n\n  * 《千年僵尸王》\n\n  * 《牛仔和外星人》\n\n  * 《寄生异性》\n\n  * 《魔柜小奇兵》\n\n  * 《星际之门》\n\n  * 《西出玉门》\n\n  * 《汪洋中的一条船》\n\n  * 《巨人捕手杰克》",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2024-06-05T08:06:31",
+      "updated_at": "2026-09-04T12:47:28",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MTIxNzQwNzUx"
     },
     {
       "id": "ODM5NTg4Njc",
