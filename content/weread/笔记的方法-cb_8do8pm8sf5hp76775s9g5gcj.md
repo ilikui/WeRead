@@ -5,8 +5,17 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 16,
+  "note_count": 18,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_26595-26684",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "建议二：记录有启发的内容",
+      "comment": "",
+      "color": "yellow",
+      "created_at": 1788478226
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_17179-17391",
       "chapter": "用自己的话记笔记",
@@ -98,6 +107,15 @@
       "created_at": 1788313484
     },
     {
+      "id": "79857957_8bRagAVy2",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "总编辑王烁老师有个习惯：他写读书笔记，大多数时候都是为自己而写（除非写的目的是向别人介绍），只记录自己收获的启发。",
+      "comment": "💡只记录自己有关的东西",
+      "color": "default",
+      "created_at": 1788478424
+    },
+    {
       "id": "79857957_8bQw6Wq3s",
       "chapter": "用自己的话记笔记",
       "chapter_uid": 8,
@@ -161,7 +179,7 @@
 
 作者：刘白光
 
-共 **16** 条笔记。
+共 **18** 条笔记。
 
 ---
 
