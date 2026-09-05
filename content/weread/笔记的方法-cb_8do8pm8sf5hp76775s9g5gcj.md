@@ -5,8 +5,62 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 20,
+  "note_count": 26,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_66085-66113",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "理论上，理论和实际是一样的；但实际上，理论和实际并不一样",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788580855
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_65076-65136",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "中的两个典型问题：第一，热爱学习却进步有限，难以解决实际问题；第二，努力工作却看不到成长的台阶，不知道如何积累核心能力。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788580807
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_65034-65076",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "记录实战经验之所以重要，是因为它可以帮我们每个人，尤其是知识工作者解决学习和成长过程",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788580798
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_61271-61423",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "那么如何尽可能做到“诚实”呢？我有两个小技巧分享给你：第一，你可以试着把自己抽离出来，像观察最好的朋友那样观察自己。看到什么记什么，尽可能保持旁观者视角。第二，只记录，不评判。情绪没有好坏，不要苛责自己。当你把情绪当作“问题”的时候，往往会限制自己的视野；而当你把它当作“合理的存在”​，视野反而宽广很多。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788575514
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_61626-61723",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "不仅记录情绪，还要记录环境",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788575498
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_60566-60589",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "第一个记录要点是，诚实面对内心，如实记录想法。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788575490
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_53331-53390",
       "chapter": "用自己的话记笔记",
@@ -197,7 +251,7 @@
 
 作者：刘白光
 
-共 **20** 条笔记。
+共 **26** 条笔记。
 
 ---
 

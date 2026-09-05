@@ -5,8 +5,125 @@
   "book_id": "CB_6I7CstCs4ADD6od6okGDn2Eq",
   "cover": "https://res.weread.qq.com/wrepub/CB_FKlCrzCtF2FE6hs6gZ1EA9h7_parsecover",
   "category": "",
-  "note_count": 116,
+  "note_count": 131,
   "notes": [
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_26279-26369",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "在裸机环境下一片连续的堆内存空间，经过多次小块内存的申请和释放后，就会造成内存碎片化，在内存中留下越来越多、越来越碎片化的空闲小内存块。此时如果再去申请一片连续的大块内存就会失败。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788574163
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_19938-20009",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "● 局部变量的作用域由{}限定。● 可以使用static修饰局部变量来改变它们的存储属性（生命周期）​，但不能改变其作用域。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573619
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_19817-19907",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "● 全局变量的作用域由文件来限定。● 可使用extern进行扩展，被其他文件引用。● 也可以使用static进行限制，只能在本文件中被引用。",
+      "comment": "全局变量的作用域",
+      "color": "blue",
+      "created_at": 1788573613
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_9594-9656",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "在每一个函数栈帧中，除了要保存局部变量、函数实参、函数调用者的返回地址，有时候编译过程中的一些临时变量也会保存到函数的栈帧中",
+      "comment": "函数栈中存储的数据内容\n1.局部变量 2.函数实参 3. 函数调用的返回地址",
+      "color": "purple",
+      "created_at": 1788573499
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_8716-8837",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "为了防止栈溢出，可以参考下面的一些原则。● 尽量不要在函数内使用大数组，如果确实需要大块内存，则可以使用malloc申请动态内存。● 函数的嵌套层数不宜过深。● 递归的层数不宜太深。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573428
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_7992-8044",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "如果设置得过小，则程序超出栈设置的内存空间又容易发生栈溢出（Stack Overflow）​，产生段错误。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573412
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_6896-6974",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "栈的初始化其实就是栈指针SP的初始化。在系统启动过程中，内存初始化后，将栈指针指向内存中的一段空间，就完成了栈的初始化，栈指针指向的这片内存空间被称为栈空间",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573351
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_5761-5866",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "栈有两种基本操作：入栈（push）和出栈（pop）​。入栈是把一个栈元素压入栈中，而出栈则是从栈中弹出一个栈元素。入栈和出栈都靠栈指针（Stack Pointer，SP）来维护，SP会随着入栈和出栈在栈顶上下移动",
+      "comment": "",
+      "color": "yellow",
+      "created_at": 1788573257
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_3489-3514",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "计算机上运行的程序主要分为两种：操作系统和应用程序",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573174
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_2970-3029",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "用户使用malloc申请的内存一般被称为堆内存（heap）​，函数调用过程中使用的内存一般被称为栈内存（stack）​。",
+      "comment": "",
+      "color": "yellow",
+      "created_at": 1788573095
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_2912-2969",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "而在程序中使用malloc申请的内存、函数调用过程中的栈在程序运行期间则是不断变化的，这部分内存一般也称为动态内存",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573085
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_2839-2911",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "在一个进程的地址空间中，代码段、数据段、BSS段在程序加载运行后，地址就已经固定了，在整个程序运行期间不再发生变化，这部分内存一般也称为静态内存",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788573074
+    },
+    {
+      "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_10_2764-2829",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "一个进程实例不仅包括汇编指令代码、数据，还包括进程上下文环境、CPU寄存器状态、打开的文件描述符、信号、分配的物理内存等相关资源。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788573059
+    },
     {
       "id": "CB_6I7CstCs4ADD6od6okGDn2Eq_12_2727-2791",
       "chapter": "第7章 数据存储与指针",
@@ -980,6 +1097,24 @@
       "created_at": 1717289373
     },
     {
+      "id": "79857957_8bSQwIpGw",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "栈溢出攻击原理",
+      "comment": "模拟栈溢出",
+      "color": "default",
+      "created_at": 1788573940
+    },
+    {
+      "id": "79857957_8bSPtP6h7",
+      "chapter": "第5章 内存堆栈管理",
+      "chapter_uid": 10,
+      "highlight": "[插图]",
+      "comment": "可执行文件加载到内存中运行\n1. 内核空间 2.用户栈",
+      "color": "default",
+      "created_at": 1788572981
+    },
+    {
       "id": "79857957_8bzgQ20I3",
       "chapter": "第5章 内存堆栈管理",
       "chapter_uid": 10,
@@ -1061,7 +1196,7 @@
 
 作者：王利涛　编著
 
-共 **116** 条笔记。
+共 **131** 条笔记。
 
 ---
 
