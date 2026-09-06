@@ -5,8 +5,44 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 39,
+  "note_count": 44,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_71893-71936",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "满足用户需求的时候，不应该盲目做加法，而是要想办法降低复杂度。比如将功能分组或者折置。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788737620
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_71394-71427",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "而及时、如实地记录自己的实战经验，可以帮我们有效对抗“认知失调”。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788737600
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_64261-64295",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "所谓实战经验，对应的是理论知识，指我们在实践过程中收获的有价值信息。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788737369
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_63281-63339",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "如你所见，和传统意义上的笔记不同，“记录让自己情绪波动的事情”可以帮你更深入地认识自己，并为你“调试自己”提供依据。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788737331
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_47610-47631",
       "chapter": "用自己的话记笔记",
@@ -296,6 +332,15 @@
       "created_at": 1788313484
     },
     {
+      "id": "79857957_8bVJ7rGs8",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "关于个人成长，Light 曾分享过三种方法。他说，假设有资质相同的三个人，成长方法各不相同。A 的成长方法是“理论学习”, B 的成长方法是“理论学习+实践”，C 的成长方法是“理论学习+实践+复盘”。那么，A 的成长速度一定比不上 B，而 B 的成长速度一定比不上 C。假以时日，三人的境界也必然迥异。",
+      "comment": "理论学习➕实践➕复盘",
+      "color": "default",
+      "created_at": 1788737554
+    },
+    {
       "id": "79857957_8bRagAVy2",
       "chapter": "用自己的话记笔记",
       "chapter_uid": 8,
@@ -368,7 +413,7 @@
 
 作者：刘白光
 
-共 **39** 条笔记。
+共 **44** 条笔记。
 
 ---
 
