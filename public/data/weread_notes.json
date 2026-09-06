@@ -1,18 +1,489 @@
 {
   "meta": {
-    "generated_at": "2026-09-05T17:54:57.113717+00:00",
+    "generated_at": "2026-09-06T18:01:06.402868+00:00",
     "source": "wechat-reading-skill-gateway",
-    "total_books": 13,
-    "total_notes": 457
+    "total_books": 15,
+    "total_notes": 488
   },
   "books": [
+    {
+      "book_id": "CB_8hT8Mp8O45xz76B75S01H8FG",
+      "title": "思维模型：建立高品质思维的30种模型",
+      "author": "(美) 彼 得·霍林斯 (Peter Hollins)",
+      "cover": "https://res.weread.qq.com/wrepub/CB_Blp8VV8UNGxF76975PCwg5bu_parsecover",
+      "category": "",
+      "note_count": 10,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "第一章    如何快速而全面地做出决策",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "level": 2
+        },
+        {
+          "uid": 3,
+          "title": "思维模型2：设想出所有多米诺骨牌",
+          "level": 2
+        },
+        {
+          "uid": 4,
+          "title": "思维模型3：做出可逆的决策",
+          "level": 2
+        },
+        {
+          "uid": 5,
+          "title": "思维模型4：寻求“满意度”",
+          "level": 2
+        },
+        {
+          "uid": 6,
+          "title": "思维模型5：停留在40%～70%的区间",
+          "level": 2
+        },
+        {
+          "uid": 7,
+          "title": "思维模型6：遗憾最小化框架",
+          "level": 2
+        },
+        {
+          "uid": 8,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 9,
+          "title": "第二章    如何更清晰地看待问题",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "思维模型7：忽略“黑天鹅”",
+          "level": 2
+        },
+        {
+          "uid": 11,
+          "title": "思维模型8：寻找均衡点",
+          "level": 2
+        },
+        {
+          "uid": 12,
+          "title": "思维模型9：等待均值回归",
+          "level": 2
+        },
+        {
+          "uid": 13,
+          "title": "思维模型10：贝叶斯会怎样做",
+          "level": 2
+        },
+        {
+          "uid": 14,
+          "title": "思维模型11：借鉴达尔文",
+          "level": 2
+        },
+        {
+          "uid": 15,
+          "title": "思维模型12：调动系统2思维",
+          "level": 2
+        },
+        {
+          "uid": 16,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 17,
+          "title": "第三章    如何找到解决方案的思维模型",
+          "level": 1
+        },
+        {
+          "uid": 18,
+          "title": "思维模型13：让你的观点接受同行评议",
+          "level": 2
+        },
+        {
+          "uid": 19,
+          "title": "思维模型14：找出自己的缺陷",
+          "level": 2
+        },
+        {
+          "uid": 20,
+          "title": "思维模型15：相关性不等于因果关系",
+          "level": 2
+        },
+        {
+          "uid": 21,
+          "title": "思维模型16：从结果反推原因",
+          "level": 2
+        },
+        {
+          "uid": 22,
+          "title": "思维模型17：以“奔驰法”激发创意",
+          "level": 2
+        },
+        {
+          "uid": 23,
+          "title": "思维模型18：回归第一性原理",
+          "level": 2
+        },
+        {
+          "uid": 24,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 25,
+          "title": "第四章    反向思考思维模型",
+          "level": 1
+        },
+        {
+          "uid": 26,
+          "title": "思维模型19：避免直接目标",
+          "level": 2
+        },
+        {
+          "uid": 27,
+          "title": "思维模型20：避免专家思维模式",
+          "level": 2
+        },
+        {
+          "uid": 28,
+          "title": "思维模型21：避免非天才区",
+          "level": 2
+        },
+        {
+          "uid": 29,
+          "title": "思维模型22：避免待办事项清单",
+          "level": 2
+        },
+        {
+          "uid": 30,
+          "title": "思维模型23：避免阻力最小的道路",
+          "level": 2
+        },
+        {
+          "uid": 31,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 32,
+          "title": "第五章    经典思维模型",
+          "level": 1
+        },
+        {
+          "uid": 33,
+          "title": "思维模型24：墨菲定律",
+          "level": 2
+        },
+        {
+          "uid": 34,
+          "title": "思维模型25：奥卡姆剃刀定律",
+          "level": 2
+        },
+        {
+          "uid": 35,
+          "title": "思维模型26：汉隆剃刀原则",
+          "level": 2
+        },
+        {
+          "uid": 36,
+          "title": "思维模型27：帕累托法则",
+          "level": 2
+        },
+        {
+          "uid": 37,
+          "title": "思维模型28：史特金定律",
+          "level": 2
+        },
+        {
+          "uid": 38,
+          "title": "思维模型29～30：帕金森定律",
+          "level": 2
+        },
+        {
+          "uid": 39,
+          "title": "本章要点",
+          "level": 2
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_3_1183-1251",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "这通常称为“一阶思维”，我们只专注于解决手头上的问题或对手头上的事情做出决策，而不去考虑长远影响或我们的决策在遥远的未来会发挥什么作用。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788693078
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_7058-7139",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "纵然有些事情仿佛要求你快速回应，但这并不代表你必须马上去做；纵然有些事情仿佛是嘀嘀嗒嗒，不急不缓，但这并不代表你可以听而不闻。学会平衡这两点，你才能做出最佳决策。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788688204
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2757-2779",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "换言之，也就是把重要任务和紧急任务区分开来。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687947
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2668-2712",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "把活动和需求分类，整理出最重要的任务，并找出为了实现这些重要任务需要采取哪些最关键的流程",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687932
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_1_3298-3365",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "思维模型是针对你所面对的情况，指引你关注重要元素的蓝图，界定场景、背景和方向。即使缺乏实际知识或经验，你也能够增进了解，做出最佳决策。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687046
+        },
+        {
+          "id": "79857957_8bUWPadx9",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "要质疑我们的行动会对眼前之外的情况产生什么影响，需要我们探究未知的未来，进入费力或复杂的思考迷宫，别人可能会说我们在做出决策或考虑问题时“想太多了”。",
+          "comment": "也可能根据自己当时的情绪有关，不顾后果。",
+          "color": "default",
+          "created_at": 1788693310
+        },
+        {
+          "id": "79857957_8bUWHsTSJ",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "所谓二阶思维，是指努力预估未来，推断出可能产生的一系列后果，用于进行成本效益分析，以便做出决策或制订解决方案",
+          "comment": "做事之前往前想三步，往后想三步。",
+          "color": "default",
+          "created_at": 1788693196
+        },
+        {
+          "id": "79857957_8bUQNE7Lr",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "时间就是金钱。我们把太多时间花在所谓“紧急”任务上，其实应该关注的是“重要”任务。",
+          "comment": "有的时候重要的事情没有处理好，后面就会变成紧急的问题了",
+          "color": "default",
+          "created_at": 1788687791
+        },
+        {
+          "id": "79857957_8bUQApdiP",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "多个模型可以相互质疑，形成更统一的整体观点。而若是只使用一两个模型，就会让你只从具有局限性的场景或学科出发，致使远景不够开阔",
+          "comment": "通过部署AI训练，加上思维模型，通过思维碰撞，作出决策系统",
+          "color": "default",
+          "created_at": 1788687595
+        },
+        {
+          "id": "79857957_8bUQ1M7Dr",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "思维模型",
+          "comment": "给你解决问题的指明灯",
+          "color": "default",
+          "created_at": 1788687083
+        }
+      ]
+    },
+    {
+      "book_id": "CB_FZM8NQ8O45xz76B75SGIXAuj",
+      "title": "打造第二大脑",
+      "author": "蒂亚戈·福特",
+      "cover": "https://res.weread.qq.com/wrepub/CB_EK9AC9AFXFQI76A75Z8K85UA_parsecover",
+      "category": "",
+      "note_count": 8,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "推荐语",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "序 第二大脑，前景无限",
+          "level": 1
+        },
+        {
+          "uid": 3,
+          "title": "第一部分 万丈高楼平地起",
+          "level": 1
+        },
+        {
+          "uid": 4,
+          "title": "第一章 梦开始的地方",
+          "level": 1
+        },
+        {
+          "uid": 5,
+          "title": "第二章 何谓第二大脑？",
+          "level": 1
+        },
+        {
+          "uid": 6,
+          "title": "第三章 第二大脑的运作机理",
+          "level": 1
+        },
+        {
+          "uid": 7,
+          "title": "第二部分 方法，还是方法",
+          "level": 1
+        },
+        {
+          "uid": 8,
+          "title": "第四章 抓取：让笔记更“走心”",
+          "level": 1
+        },
+        {
+          "uid": 9,
+          "title": "第五章 组织：以行动为导向",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "第六章 提炼：萃取本质",
+          "level": 1
+        },
+        {
+          "uid": 11,
+          "title": "第七章 表达：成果展示",
+          "level": 1
+        },
+        {
+          "uid": 12,
+          "title": "第三部分 质变时刻",
+          "level": 1
+        },
+        {
+          "uid": 13,
+          "title": "第八章 创新也有套路",
+          "level": 1
+        },
+        {
+          "uid": 14,
+          "title": "第九章 数字信息管理者的必备习惯",
+          "level": 1
+        },
+        {
+          "uid": 15,
+          "title": "第十章 自我表达的路径",
+          "level": 1
+        },
+        {
+          "uid": 16,
+          "title": "番外篇 如何打造有效的标签系统",
+          "level": 1
+        },
+        {
+          "uid": 17,
+          "title": "补充资源及指南",
+          "level": 1
+        },
+        {
+          "uid": 18,
+          "title": "致谢",
+          "level": 1
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_1744-1798",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "对于任何一项任务来说——无论是执行新项目、谋求新职位、学习新技能，还是开创新事业，都离不开信息的收集和利用。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788666250
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_3493-3521",
+          "chapter": "序 第二大脑，前景无限",
+          "chapter_uid": 2,
+          "highlight": "让你忙里偷闲，将追踪各种细节的任务托付给值得信赖的系统；",
+          "comment": "",
+          "color": "yellow",
+          "created_at": 1788664655
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_1637-1716",
+          "chapter": "序 第二大脑，前景无限",
+          "chapter_uid": 2,
+          "highlight": "本书致力于为你提供改善之策。正如你所见的，无论通过哪个媒体平台购买的在线内容产品都是重要且有价值的，唯一的问题在于，你接受这些信息服务的时机可能需要有所调整。",
+          "comment": "",
+          "color": "pink",
+          "created_at": 1788664465
+        },
+        {
+          "id": "79857957_8bUu7dLuB",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "知识模块正如我们儿时把玩的乐高积木，可以被快速搜寻、获取、移动、组装以及重组（无须从零开始）。同样的，知识模块一旦成型便可以不断地进行组合与混搭，直到擦出理想的火花。",
+          "comment": "通过思维模型，构建可靠的知识网络",
+          "color": "default",
+          "created_at": 1788667009
+        },
+        {
+          "id": "79857957_8bUu2ExV1",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "我们应当对自己的笔记进行加工，而非仅仅生搬硬抄。",
+          "comment": "经过自己思考记下来的东西，思考方式参考费曼，如何记参考卢曼卡片。",
+          "color": "default",
+          "created_at": 1788666941
+        },
+        {
+          "id": "79857957_8bUtwZ1JE",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "如果将精力耗费在回忆事物上，那么势必会挤占某些人类独特活动的资源：发明创造、编撰文字、归纳模式、遵循直觉、相互合作、研究课题、制定计划或是检验理论等。",
+          "comment": "就是将记忆的工作简单化",
+          "color": "default",
+          "created_at": 1788666473
+        },
+        {
+          "id": "79857957_8bUttZHb5",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "所以，是时候对我们老掉牙的记忆方式进行升级改造了。",
+          "comment": "如何升级",
+          "color": "default",
+          "created_at": 1788666429
+        },
+        {
+          "id": "79857957_8bUsvYdmn",
+          "chapter": "第一章 梦开始的地方",
+          "chapter_uid": 4,
+          "highlight": "在正确的时间找到正确的信息”",
+          "comment": "如何在正确的时间找到正确的信息",
+          "color": "default",
+          "created_at": 1788665542
+        }
+      ]
+    },
     {
       "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
       "title": "笔记的方法",
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 26,
+      "note_count": 39,
       "chapters": [
         {
           "uid": 1,
@@ -136,6 +607,123 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_47610-47631",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "毕竟，创建标签不是目的，为你所用才是目的。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788662535
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_44373-44405",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "意识到这件事之后，我开始刻意培养一个习惯：收集各种“好问题”​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788662430
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_34051-34128",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "理论上，理论和实际是一样的；但实际上，理论和实际总是不一样。空有好的理论还不够，还需要在实战中不断地打磨、验证、调整，也需要在实战中持续地理解其适用范围。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788662269
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_33376-33399",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "因为知识本身没有任何价值，只有为我所用才有价值",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788662223
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_26768-27394",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "1..内功心法：高频使用的知识；2..招式套路：低频使用的知识；3..实战经验：实践中的思考和外界反馈。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788662133
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_4400-4494",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "其中R（relevance）代表相关性，连接产品与用户；E（ease）代表便利性，让用户能够轻松捕捉产品信息、获取产品；D（distinctiveness）代表独特性，帮助企业构建护城河。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788661584
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_98320-98354",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "精炼过的笔记是最有价值的内容，因为它们更容易在我们遇到问题时被调用。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788661402
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_95504-95569",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "反复整理，避免臃肿",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788661357
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_93255-93339",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "人类大脑与计算机处理器类似，处理信息的能力有限。因此，当输入信息量超过处理能力时，我们就会产生认知负荷。这会导致我们的工作表现受影响，比如忽略关键细节，甚至因此感到沮丧",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788661317
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_86113-86593",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "1.树状分类（Taxonomy）​：将元素分类，层级化展示，常见于科学类书籍，比如生物学书籍中的生物分类法。2.因果解释（Causal Explanation）​：解析原因与结果，常见于社会科学类书籍，如解析某种思想的萌发。3.描述（Description）​：解释事物的组成部分，常见于各种工程技术类书籍，如描述发动机结构。4.时间线（Timeline）​：按时间顺序排列事件，",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788660927
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_82333-82425",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "我们的建议是，不要着急记笔记，而是尽量先了解整本书或整篇文章的主干结构——因为这会帮你抽离出来，拥有更高、更广的视角，知道书或文章的内容大致如何分布，从而为挑选值得记录的内容打好基础。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788660755
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_77998-78069",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "所以，不论你在哪里，做什么工作，请记录你的实战经验，这样做不但能让你有更多反思和进步的空间，还能让你持续积累“长在身上”的能力，变得更有价值。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788654850
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_77640-77690",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "在我们每个人的日常工作中，除了工资等收入之外，实战经验也是非常有价值的——甚至我们越年轻，就越重要。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788654784
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_66085-66113",
           "chapter": "用自己的话记笔记",

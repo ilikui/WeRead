@@ -5,8 +5,125 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 26,
+  "note_count": 39,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_47610-47631",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "毕竟，创建标签不是目的，为你所用才是目的。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788662535
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_44373-44405",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "意识到这件事之后，我开始刻意培养一个习惯：收集各种“好问题”​。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788662430
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_34051-34128",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "理论上，理论和实际是一样的；但实际上，理论和实际总是不一样。空有好的理论还不够，还需要在实战中不断地打磨、验证、调整，也需要在实战中持续地理解其适用范围。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788662269
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_33376-33399",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "因为知识本身没有任何价值，只有为我所用才有价值",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788662223
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_26768-27394",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "1..内功心法：高频使用的知识；2..招式套路：低频使用的知识；3..实战经验：实践中的思考和外界反馈。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788662133
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_4400-4494",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "其中R（relevance）代表相关性，连接产品与用户；E（ease）代表便利性，让用户能够轻松捕捉产品信息、获取产品；D（distinctiveness）代表独特性，帮助企业构建护城河。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788661584
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_98320-98354",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "精炼过的笔记是最有价值的内容，因为它们更容易在我们遇到问题时被调用。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788661402
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_95504-95569",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "反复整理，避免臃肿",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788661357
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_93255-93339",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "人类大脑与计算机处理器类似，处理信息的能力有限。因此，当输入信息量超过处理能力时，我们就会产生认知负荷。这会导致我们的工作表现受影响，比如忽略关键细节，甚至因此感到沮丧",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788661317
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_86113-86593",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "1.树状分类（Taxonomy）​：将元素分类，层级化展示，常见于科学类书籍，比如生物学书籍中的生物分类法。2.因果解释（Causal Explanation）​：解析原因与结果，常见于社会科学类书籍，如解析某种思想的萌发。3.描述（Description）​：解释事物的组成部分，常见于各种工程技术类书籍，如描述发动机结构。4.时间线（Timeline）​：按时间顺序排列事件，",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788660927
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_82333-82425",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "我们的建议是，不要着急记笔记，而是尽量先了解整本书或整篇文章的主干结构——因为这会帮你抽离出来，拥有更高、更广的视角，知道书或文章的内容大致如何分布，从而为挑选值得记录的内容打好基础。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788660755
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_77998-78069",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "所以，不论你在哪里，做什么工作，请记录你的实战经验，这样做不但能让你有更多反思和进步的空间，还能让你持续积累“长在身上”的能力，变得更有价值。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788654850
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_77640-77690",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "在我们每个人的日常工作中，除了工资等收入之外，实战经验也是非常有价值的——甚至我们越年轻，就越重要。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1788654784
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_66085-66113",
       "chapter": "用自己的话记笔记",
@@ -251,7 +368,7 @@
 
 作者：刘白光
 
-共 **26** 条笔记。
+共 **39** 条笔记。
 
 ---
 
