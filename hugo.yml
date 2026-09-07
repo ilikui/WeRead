@@ -41,6 +41,10 @@ params:
         name: 'Gallery'
         url: '/gallery/'
         weight: 30
+      - identifier: activity
+        name: 'Activity'
+        url: '/activity/'
+        weight: 35
 
 menus:
   main:
@@ -53,6 +57,9 @@ menus:
     - name: 'Memos'
       url: '/memos/'
       weight: 25
+    - name: '热力墙'
+      url: '/activity/'
+      weight: 27
     - name: '关于'
       url: '/about/'
       weight: 30
