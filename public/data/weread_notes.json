@@ -1,309 +1,18 @@
 {
   "meta": {
-    "generated_at": "2026-09-07T10:40:46.640749+00:00",
+    "generated_at": "2026-09-07T19:35:56.729041+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 15,
-    "total_notes": 507
+    "total_notes": 525
   },
   "books": [
-    {
-      "book_id": "CB_FZM8NQ8O45xz76B75SGIXAuj",
-      "title": "打造第二大脑",
-      "author": "蒂亚戈·福特",
-      "cover": "https://res.weread.qq.com/wrepub/CB_EK9AC9AFXFQI76A75Z8K85UA_parsecover",
-      "category": "",
-      "note_count": 21,
-      "chapters": [
-        {
-          "uid": 1,
-          "title": "推荐语",
-          "level": 1
-        },
-        {
-          "uid": 2,
-          "title": "序 第二大脑，前景无限",
-          "level": 1
-        },
-        {
-          "uid": 3,
-          "title": "第一部分 万丈高楼平地起",
-          "level": 1
-        },
-        {
-          "uid": 4,
-          "title": "第一章 梦开始的地方",
-          "level": 1
-        },
-        {
-          "uid": 5,
-          "title": "第二章 何谓第二大脑？",
-          "level": 1
-        },
-        {
-          "uid": 6,
-          "title": "第三章 第二大脑的运作机理",
-          "level": 1
-        },
-        {
-          "uid": 7,
-          "title": "第二部分 方法，还是方法",
-          "level": 1
-        },
-        {
-          "uid": 8,
-          "title": "第四章 抓取：让笔记更“走心”",
-          "level": 1
-        },
-        {
-          "uid": 9,
-          "title": "第五章 组织：以行动为导向",
-          "level": 1
-        },
-        {
-          "uid": 10,
-          "title": "第六章 提炼：萃取本质",
-          "level": 1
-        },
-        {
-          "uid": 11,
-          "title": "第七章 表达：成果展示",
-          "level": 1
-        },
-        {
-          "uid": 12,
-          "title": "第三部分 质变时刻",
-          "level": 1
-        },
-        {
-          "uid": 13,
-          "title": "第八章 创新也有套路",
-          "level": 1
-        },
-        {
-          "uid": 14,
-          "title": "第九章 数字信息管理者的必备习惯",
-          "level": 1
-        },
-        {
-          "uid": 15,
-          "title": "第十章 自我表达的路径",
-          "level": 1
-        },
-        {
-          "uid": 16,
-          "title": "番外篇 如何打造有效的标签系统",
-          "level": 1
-        },
-        {
-          "uid": 17,
-          "title": "补充资源及指南",
-          "level": 1
-        },
-        {
-          "uid": 18,
-          "title": "致谢",
-          "level": 1
-        }
-      ],
-      "notes": [
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_15382-16180",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "“信管法则（CODE）”闪亮登场：重点记忆的四大要点为了帮助大家构建起属于自己的第二大脑，我发明了一个简单而直观的四步法，也即所谓的“信管法则（CODE）​”——抓取（Capture）​、组织（Organize）​、提炼（Distill）​、表达（Express）​。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788757160
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_13597-13623",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "第二大脑的构建通常包含三个阶段，也即识记、联结和创新",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788757045
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_13042-13518",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "个人知识管理的三个阶段：识记、联结、创新",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788757034
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_11277-11355",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "上述四大特质亦为纸质笔记所共有。不过笔记的电子化意味着我们可以借助各种神奇的科技手段——搜索、共享、备份、编辑、链接、同步等功能——提升这些特质的长期收益。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756975
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_8151-8213",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "当你在创作之路上遭遇瓶颈时，并不意味着你有哪里不对。并不是你的能力欠缺，也不是你的创意枯竭，仅仅是因为你的可用素材比较匮乏。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756577
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_2013-2261",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "1. 推动抽象思维的具象化；2. 促进不同思想间的融会贯通；3. 辅助长期决策规划；4. 形成鲜明而独到的观点。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756152
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_1548-1589",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "对所谓“信管法则（CODE）​”及其四大要点的详细介绍，这也是本章中最为核心的部分。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756143
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_17889-17921",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "我们将各种深度好文加入收藏以便日后阅览，但却很难腾出时间细细品味",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756110
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_16711-16805",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "美国科学家万尼瓦尔·布什曾描述过一种名为“记忆扩展器”​（Memex）的科研设备，它可以存储所有书籍、记录、通信等，且可通过机械化手段实现高速灵活的查询，从而实现研究人员大脑记忆的无缝扩展。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788756085
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_15206-15266",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "你早已展开过多维度的深度剖析，推演过多种可能的解决方案，并进一步考虑到了大局影响，甚至还吸纳了来自同事们的诸多反馈和建议",
-          "comment": "",
-          "color": "yellow",
-          "created_at": 1788756046
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_12040-12087",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "待完成的任务、待考虑的问题、待决定的事项……潜意识里酝酿了一整个周末的思潮，在这一刻喷薄而出。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788755205
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_1744-1798",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "对于任何一项任务来说——无论是执行新项目、谋求新职位、学习新技能，还是开创新事业，都离不开信息的收集和利用。",
-          "comment": "",
-          "color": "blue",
-          "created_at": 1788666250
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_3493-3521",
-          "chapter": "序 第二大脑，前景无限",
-          "chapter_uid": 2,
-          "highlight": "让你忙里偷闲，将追踪各种细节的任务托付给值得信赖的系统；",
-          "comment": "",
-          "color": "yellow",
-          "created_at": 1788664655
-        },
-        {
-          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_1637-1716",
-          "chapter": "序 第二大脑，前景无限",
-          "chapter_uid": 2,
-          "highlight": "本书致力于为你提供改善之策。正如你所见的，无论通过哪个媒体平台购买的在线内容产品都是重要且有价值的，唯一的问题在于，你接受这些信息服务的时机可能需要有所调整。",
-          "comment": "",
-          "color": "pink",
-          "created_at": 1788664465
-        },
-        {
-          "id": "79857957_8bW4PXny1",
-          "chapter": "第三章 第二大脑的运作机理",
-          "chapter_uid": 6,
-          "highlight": "所谓的重磅信息，能够直击你的内心深处。它们往往是最与众不同的构思、最颠覆常规的异想、最妙趣横生的设计，抑或最富于潜力的创意。当你遇到它们——无论是一段文字、一幅图案、一句引言还是一桩事件时，不要刻意让自己保持理性，也不必过于刨根问底，只须遵从自己内心的快感、好奇、困惑以及激情，你便能清晰地意识到，是时候记录下这一切了。",
-          "comment": "要想办法记下来",
-          "color": "default",
-          "created_at": 1788757451
-        },
-        {
-          "id": "79857957_8bW2uon5f",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "一走出浴室，你便立刻拿起智能手机，将这一灵感记录为数字笔记。",
-          "comment": "不断去发现与记录自己的灵感笔记",
-          "color": "default",
-          "created_at": 1788755300
-        },
-        {
-          "id": "79857957_8bUu7dLuB",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "知识模块正如我们儿时把玩的乐高积木，可以被快速搜寻、获取、移动、组装以及重组（无须从零开始）。同样的，知识模块一旦成型便可以不断地进行组合与混搭，直到擦出理想的火花。",
-          "comment": "通过思维模型，构建可靠的知识网络",
-          "color": "default",
-          "created_at": 1788667009
-        },
-        {
-          "id": "79857957_8bUu2ExV1",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "我们应当对自己的笔记进行加工，而非仅仅生搬硬抄。",
-          "comment": "经过自己思考记下来的东西，思考方式参考费曼，如何记参考卢曼卡片。",
-          "color": "default",
-          "created_at": 1788666941
-        },
-        {
-          "id": "79857957_8bUtwZ1JE",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "如果将精力耗费在回忆事物上，那么势必会挤占某些人类独特活动的资源：发明创造、编撰文字、归纳模式、遵循直觉、相互合作、研究课题、制定计划或是检验理论等。",
-          "comment": "就是将记忆的工作简单化",
-          "color": "default",
-          "created_at": 1788666473
-        },
-        {
-          "id": "79857957_8bUttZHb5",
-          "chapter": "第二章 何谓第二大脑？",
-          "chapter_uid": 5,
-          "highlight": "所以，是时候对我们老掉牙的记忆方式进行升级改造了。",
-          "comment": "如何升级",
-          "color": "default",
-          "created_at": 1788666429
-        },
-        {
-          "id": "79857957_8bUsvYdmn",
-          "chapter": "第一章 梦开始的地方",
-          "chapter_uid": 4,
-          "highlight": "在正确的时间找到正确的信息”",
-          "comment": "如何在正确的时间找到正确的信息",
-          "color": "default",
-          "created_at": 1788665542
-        }
-      ]
-    },
     {
       "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
       "title": "笔记的方法",
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 44,
+      "note_count": 62,
       "chapters": [
         {
           "uid": 1,
@@ -427,6 +136,168 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_62092-62213",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "第一个方法是制作“标签说明书”。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788779689
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_60538-60601",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "但随着笔记越记越多，标签越打越多，或许你会陷入另一个常见的困境：感觉标签越来越“乱”，以至于很难提取和应用记过的笔记。怎么办？",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788779626
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_41646-41672",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "这便是我的三类笔记——内功心法、招式套路和实战经验。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788779124
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_36775-36809",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "第二类实战经验，叫决策记录，即如实、客观地记录每一次重大决策和结果。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788779059
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_34562-34583",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "实战经验又分两类。第一类实战经验，叫情报。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788779023
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_30357-30426",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "删除 flomo 里的笔记，是为了专注于修炼其他内功。九阳神功既已大成，那就不必对秘籍恋恋不舍，咱继续练乾坤大挪移呗。如此反复，持续修行。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778964
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_25400-25450",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "很多人把记笔记当作一件独立存在的事情，但实际上，只记笔记没有意义，它一定要为你的现实生活服务才有意义",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778790
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_23424-23462",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "当然，领域不是选定了就不能变，你大可以随着时间和环境的变化，调整自己的方向。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778758
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_20897-20968",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "当然，理想状态是“兴趣”和“领域”差得不太远，比如如果有些“游戏设计”的思路能被借鉴到“产品设计”中来，那么我们就可以说“兴趣”支撑了“领域”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778650
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_14915-14936",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "详见后文“建议一：结合需求，先借鉴再改造”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778538
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_11353-11389",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "一旦形成相对系统或重要的知识模块，将其加入 Notion 或 blog。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778392
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_3086-3391",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "第二，打标签可以帮你实现网状分类，而不仅仅是层级分类，从而提高提取笔记的效率。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778242
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_1689-1986",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 9,
+          "highlight": "第一，打标签可以帮你做好归类，在你需要的时候，快速提取某一分类下的所有笔记。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778145
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_98509-98627",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "不要着急进入细节，而要先理解主干，再从中选择要点；不要贪心，记一部分也无妨——如果是重要的知识，将来你还会在其他地方遇到，而不重要的知识被记录下来，反而徒增压力；不断删减冗余、整理关系，让你的笔记处于活跃、有序状态，随时准备好为你所用。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778125
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_97649-97866",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "第三，对于有因果关系的信息，辨析哪些是本质，哪些是现象。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778105
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_96940-97069",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "第二，对于同类的信息，做归纳总结。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778094
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_96126-96255",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "第一，对于重复的信息，做剔除和精简",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778080
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_95832-95863",
+          "chapter": "用自己的话记笔记",
+          "chapter_uid": 8,
+          "highlight": "你可以通过以下三种方式，反复整理笔记，让你的笔记更精炼、更有序",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788778071
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_71893-71936",
           "chapter": "用自己的话记笔记",
@@ -822,6 +693,297 @@
           "comment": "15个收获\n1. 重新认识记笔记\n2. 抓准契机记笔记\n3. 受启发了\n4. 收藏≠记笔记",
           "color": "default",
           "created_at": 1788313465
+        }
+      ]
+    },
+    {
+      "book_id": "CB_FZM8NQ8O45xz76B75SGIXAuj",
+      "title": "打造第二大脑",
+      "author": "蒂亚戈·福特",
+      "cover": "https://res.weread.qq.com/wrepub/CB_EK9AC9AFXFQI76A75Z8K85UA_parsecover",
+      "category": "",
+      "note_count": 21,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "推荐语",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "序 第二大脑，前景无限",
+          "level": 1
+        },
+        {
+          "uid": 3,
+          "title": "第一部分 万丈高楼平地起",
+          "level": 1
+        },
+        {
+          "uid": 4,
+          "title": "第一章 梦开始的地方",
+          "level": 1
+        },
+        {
+          "uid": 5,
+          "title": "第二章 何谓第二大脑？",
+          "level": 1
+        },
+        {
+          "uid": 6,
+          "title": "第三章 第二大脑的运作机理",
+          "level": 1
+        },
+        {
+          "uid": 7,
+          "title": "第二部分 方法，还是方法",
+          "level": 1
+        },
+        {
+          "uid": 8,
+          "title": "第四章 抓取：让笔记更“走心”",
+          "level": 1
+        },
+        {
+          "uid": 9,
+          "title": "第五章 组织：以行动为导向",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "第六章 提炼：萃取本质",
+          "level": 1
+        },
+        {
+          "uid": 11,
+          "title": "第七章 表达：成果展示",
+          "level": 1
+        },
+        {
+          "uid": 12,
+          "title": "第三部分 质变时刻",
+          "level": 1
+        },
+        {
+          "uid": 13,
+          "title": "第八章 创新也有套路",
+          "level": 1
+        },
+        {
+          "uid": 14,
+          "title": "第九章 数字信息管理者的必备习惯",
+          "level": 1
+        },
+        {
+          "uid": 15,
+          "title": "第十章 自我表达的路径",
+          "level": 1
+        },
+        {
+          "uid": 16,
+          "title": "番外篇 如何打造有效的标签系统",
+          "level": 1
+        },
+        {
+          "uid": 17,
+          "title": "补充资源及指南",
+          "level": 1
+        },
+        {
+          "uid": 18,
+          "title": "致谢",
+          "level": 1
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_15382-16180",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "“信管法则（CODE）”闪亮登场：重点记忆的四大要点为了帮助大家构建起属于自己的第二大脑，我发明了一个简单而直观的四步法，也即所谓的“信管法则（CODE）​”——抓取（Capture）​、组织（Organize）​、提炼（Distill）​、表达（Express）​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788757160
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_13597-13623",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "第二大脑的构建通常包含三个阶段，也即识记、联结和创新",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788757045
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_13042-13518",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "个人知识管理的三个阶段：识记、联结、创新",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788757034
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_11277-11355",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "上述四大特质亦为纸质笔记所共有。不过笔记的电子化意味着我们可以借助各种神奇的科技手段——搜索、共享、备份、编辑、链接、同步等功能——提升这些特质的长期收益。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756975
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_8151-8213",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "当你在创作之路上遭遇瓶颈时，并不意味着你有哪里不对。并不是你的能力欠缺，也不是你的创意枯竭，仅仅是因为你的可用素材比较匮乏。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756577
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_2013-2261",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "1. 推动抽象思维的具象化；2. 促进不同思想间的融会贯通；3. 辅助长期决策规划；4. 形成鲜明而独到的观点。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756152
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_6_1548-1589",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "对所谓“信管法则（CODE）​”及其四大要点的详细介绍，这也是本章中最为核心的部分。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756143
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_17889-17921",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "我们将各种深度好文加入收藏以便日后阅览，但却很难腾出时间细细品味",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756110
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_16711-16805",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "美国科学家万尼瓦尔·布什曾描述过一种名为“记忆扩展器”​（Memex）的科研设备，它可以存储所有书籍、记录、通信等，且可通过机械化手段实现高速灵活的查询，从而实现研究人员大脑记忆的无缝扩展。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788756085
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_15206-15266",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "你早已展开过多维度的深度剖析，推演过多种可能的解决方案，并进一步考虑到了大局影响，甚至还吸纳了来自同事们的诸多反馈和建议",
+          "comment": "",
+          "color": "yellow",
+          "created_at": 1788756046
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_12040-12087",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "待完成的任务、待考虑的问题、待决定的事项……潜意识里酝酿了一整个周末的思潮，在这一刻喷薄而出。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788755205
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_5_1744-1798",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "对于任何一项任务来说——无论是执行新项目、谋求新职位、学习新技能，还是开创新事业，都离不开信息的收集和利用。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788666250
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_3493-3521",
+          "chapter": "序 第二大脑，前景无限",
+          "chapter_uid": 2,
+          "highlight": "让你忙里偷闲，将追踪各种细节的任务托付给值得信赖的系统；",
+          "comment": "",
+          "color": "yellow",
+          "created_at": 1788664655
+        },
+        {
+          "id": "CB_FZM8NQ8O45xz76B75SGIXAuj_2_1637-1716",
+          "chapter": "序 第二大脑，前景无限",
+          "chapter_uid": 2,
+          "highlight": "本书致力于为你提供改善之策。正如你所见的，无论通过哪个媒体平台购买的在线内容产品都是重要且有价值的，唯一的问题在于，你接受这些信息服务的时机可能需要有所调整。",
+          "comment": "",
+          "color": "pink",
+          "created_at": 1788664465
+        },
+        {
+          "id": "79857957_8bW4PXny1",
+          "chapter": "第三章 第二大脑的运作机理",
+          "chapter_uid": 6,
+          "highlight": "所谓的重磅信息，能够直击你的内心深处。它们往往是最与众不同的构思、最颠覆常规的异想、最妙趣横生的设计，抑或最富于潜力的创意。当你遇到它们——无论是一段文字、一幅图案、一句引言还是一桩事件时，不要刻意让自己保持理性，也不必过于刨根问底，只须遵从自己内心的快感、好奇、困惑以及激情，你便能清晰地意识到，是时候记录下这一切了。",
+          "comment": "要想办法记下来",
+          "color": "default",
+          "created_at": 1788757451
+        },
+        {
+          "id": "79857957_8bW2uon5f",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "一走出浴室，你便立刻拿起智能手机，将这一灵感记录为数字笔记。",
+          "comment": "不断去发现与记录自己的灵感笔记",
+          "color": "default",
+          "created_at": 1788755300
+        },
+        {
+          "id": "79857957_8bUu7dLuB",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "知识模块正如我们儿时把玩的乐高积木，可以被快速搜寻、获取、移动、组装以及重组（无须从零开始）。同样的，知识模块一旦成型便可以不断地进行组合与混搭，直到擦出理想的火花。",
+          "comment": "通过思维模型，构建可靠的知识网络",
+          "color": "default",
+          "created_at": 1788667009
+        },
+        {
+          "id": "79857957_8bUu2ExV1",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "我们应当对自己的笔记进行加工，而非仅仅生搬硬抄。",
+          "comment": "经过自己思考记下来的东西，思考方式参考费曼，如何记参考卢曼卡片。",
+          "color": "default",
+          "created_at": 1788666941
+        },
+        {
+          "id": "79857957_8bUtwZ1JE",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "如果将精力耗费在回忆事物上，那么势必会挤占某些人类独特活动的资源：发明创造、编撰文字、归纳模式、遵循直觉、相互合作、研究课题、制定计划或是检验理论等。",
+          "comment": "就是将记忆的工作简单化",
+          "color": "default",
+          "created_at": 1788666473
+        },
+        {
+          "id": "79857957_8bUttZHb5",
+          "chapter": "第二章 何谓第二大脑？",
+          "chapter_uid": 5,
+          "highlight": "所以，是时候对我们老掉牙的记忆方式进行升级改造了。",
+          "comment": "如何升级",
+          "color": "default",
+          "created_at": 1788666429
+        },
+        {
+          "id": "79857957_8bUsvYdmn",
+          "chapter": "第一章 梦开始的地方",
+          "chapter_uid": 4,
+          "highlight": "在正确的时间找到正确的信息”",
+          "comment": "如何在正确的时间找到正确的信息",
+          "color": "default",
+          "created_at": 1788665542
         }
       ]
     },

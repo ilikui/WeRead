@@ -5,8 +5,170 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 44,
+  "note_count": 62,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_62092-62213",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "第一个方法是制作“标签说明书”。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788779689
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_60538-60601",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "但随着笔记越记越多，标签越打越多，或许你会陷入另一个常见的困境：感觉标签越来越“乱”，以至于很难提取和应用记过的笔记。怎么办？",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788779626
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_41646-41672",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "这便是我的三类笔记——内功心法、招式套路和实战经验。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788779124
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_36775-36809",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "第二类实战经验，叫决策记录，即如实、客观地记录每一次重大决策和结果。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788779059
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_34562-34583",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "实战经验又分两类。第一类实战经验，叫情报。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788779023
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_30357-30426",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "删除 flomo 里的笔记，是为了专注于修炼其他内功。九阳神功既已大成，那就不必对秘籍恋恋不舍，咱继续练乾坤大挪移呗。如此反复，持续修行。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778964
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_25400-25450",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "很多人把记笔记当作一件独立存在的事情，但实际上，只记笔记没有意义，它一定要为你的现实生活服务才有意义",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778790
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_23424-23462",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "当然，领域不是选定了就不能变，你大可以随着时间和环境的变化，调整自己的方向。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778758
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_20897-20968",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "当然，理想状态是“兴趣”和“领域”差得不太远，比如如果有些“游戏设计”的思路能被借鉴到“产品设计”中来，那么我们就可以说“兴趣”支撑了“领域”",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778650
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_14915-14936",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "详见后文“建议一：结合需求，先借鉴再改造”",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778538
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_11353-11389",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "一旦形成相对系统或重要的知识模块，将其加入 Notion 或 blog。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778392
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_3086-3391",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "第二，打标签可以帮你实现网状分类，而不仅仅是层级分类，从而提高提取笔记的效率。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778242
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_1689-1986",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 9,
+      "highlight": "第一，打标签可以帮你做好归类，在你需要的时候，快速提取某一分类下的所有笔记。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778145
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_98509-98627",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "不要着急进入细节，而要先理解主干，再从中选择要点；不要贪心，记一部分也无妨——如果是重要的知识，将来你还会在其他地方遇到，而不重要的知识被记录下来，反而徒增压力；不断删减冗余、整理关系，让你的笔记处于活跃、有序状态，随时准备好为你所用。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778125
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_97649-97866",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "第三，对于有因果关系的信息，辨析哪些是本质，哪些是现象。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778105
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_96940-97069",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "第二，对于同类的信息，做归纳总结。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778094
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_96126-96255",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "第一，对于重复的信息，做剔除和精简",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778080
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_95832-95863",
+      "chapter": "用自己的话记笔记",
+      "chapter_uid": 8,
+      "highlight": "你可以通过以下三种方式，反复整理笔记，让你的笔记更精炼、更有序",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1788778071
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_8_71893-71936",
       "chapter": "用自己的话记笔记",
@@ -413,7 +575,7 @@
 
 作者：刘白光
 
-共 **44** 条笔记。
+共 **62** 条笔记。
 
 ---
 
