@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-07T19:35:56.729041+00:00",
+    "generated_at": "2026-09-08T19:16:45.031256+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 15,
-    "total_notes": 525
+    "total_notes": 528
   },
   "books": [
     {
@@ -12,7 +12,7 @@
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 62,
+      "note_count": 65,
       "chapters": [
         {
           "uid": 1,
@@ -136,6 +136,33 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_4392-4498",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "百胜餐饮集团的营销法则，其中R（relevance）代表相关性，连接产品与用户；E（ease）代表便利性，让用户能够轻松捕捉产品信息、获取产品；D（distinctiveness）代表独特性，帮助企业构建护城河。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788871700
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_3086-3391",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第二，打标签可以帮你实现网状分类，而不仅仅是层级分类，从而提高提取笔记的效率。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788871578
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_1689-1986",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第一，打标签可以帮你做好归类，在你需要的时候，快速提取某一分类下的所有笔记。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788871533
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_9_62092-62213",
           "chapter": "用自己的话记笔记",
