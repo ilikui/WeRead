@@ -1912,3 +1912,149 @@ a.topic-badge:hover {
         align-items: flex-start;
     }
 }
+
+/* ===== 热力图贪吃蛇动效（Platane/snk 风格） ===== */
+.hm-body {
+    position: relative;
+}
+
+.hm-snake-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* 蛇头：亮紫 + 光晕 */
+.hm-snake-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background: #a371f7;
+    box-shadow: 0 0 7px rgba(163, 113, 247, 0.9);
+}
+
+/* 蛇身：紫色方块，越靠尾越淡 */
+.hm-snake-seg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    background: #8250df;
+}
+
+.hm-snake-seg:nth-of-type(1) { background: #9a63ee; }
+.hm-snake-seg:nth-of-type(4) { background: #8d58e6; }
+.hm-snake-seg:nth-of-type(8) { background: #7e4fd4; opacity: 0.85; }
+
+/* 爬行结束整体淡出，随后重开 */
+.hm-snake-head.hm-snake-done,
+.hm-snake-seg.hm-snake-done {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* 被吃掉的活跃格：闪绿光后保持高亮 */
+.hm-cell.s-eaten {
+    box-shadow: 0 0 6px rgba(46, 160, 67, 0.6);
+    filter: brightness(1.18);
+    animation: hmBite 0.45s ease;
+}
+
+@keyframes hmBite {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.45); }
+    100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hm-snake-layer {
+        display: none;
+    }
+
+    .hm-cell.s-eaten {
+        animation: none;
+    }
+}
+
+/* ===== 当日卡片弹层 ===== */
+.hm-card {
+    position: relative;
+}
+
+.hm-pop {
+    position: absolute;
+    z-index: 6;
+    width: 320px;
+    max-width: calc(100% - 16px);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+    padding: 12px 14px;
+}
+
+.hm-pop-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.hm-pop-close {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 13px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.hm-pop-close:hover {
+    background: var(--line);
+    color: var(--ink);
+}
+
+.hm-pop-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.hm-pop-list li {
+    display: flex;
+    gap: 6px;
+    align-items: flex-start;
+    font-size: 12.5px;
+    line-height: 1.55;
+    word-break: break-word;
+}
+
+.hm-pop-list a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.hm-pop-list a:hover {
+    text-decoration: underline;
+}
+
+.hm-pop-empty {
+    color: var(--muted);
+}

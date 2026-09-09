@@ -48,8 +48,8 @@
                 <div class="side-head">说明</div>
                 <ul class="hm-tips">
                     <li>方格代表当天活跃度，颜色越深越活跃。</li>
+                    <li>点击方格可查看当天发布的笔记、博客和 Memo。</li>
                     <li>阅读按微信读书划线/想法的日期计。</li>
-                    <li>博客按发布日期、Memos 按创建日期计。</li>
                 </ul>
             </div>
         </aside>
@@ -69,11 +69,17 @@
 
             <div class="hm-card">
                 <div class="hm-toolbar">
+                    <div class="hm-chips" id="hmYears" role="group" aria-label="年份切换"></div>
+                </div>
+                <div class="hm-toolbar">
                     <div class="hm-chips" id="hmChips" role="group" aria-label="内容类型筛选">
                         <button type="button" class="hm-chip active" data-cat="all">全部</button>
                         <button type="button" class="hm-chip" data-cat="weread">📚 阅读</button>
                         <button type="button" class="hm-chip" data-cat="blog">📝 博客</button>
                         <button type="button" class="hm-chip" data-cat="memos">💡 Memos</button>
+                    </div>
+                    <div class="hm-chips">
+                        <button type="button" class="hm-chip" id="hmReplay">🐍 重播</button>
                     </div>
                     <div class="hm-legend">
                         <span>少</span>
@@ -86,12 +92,21 @@
                     <div class="hm-track">
                         <div class="hm-months" id="hmMonths"></div>
                         <div class="hm-body">
+                            <div class="hm-snake-layer" id="hmSnakeLayer"></div>
                             <div class="hm-rows" id="hmRows"></div>
                             <div class="hm-grid" id="hmGrid"></div>
                         </div>
                     </div>
                 </div>
                 <p class="hm-empty" id="hmEmpty" hidden>所选范围内没有活动记录。</p>
+
+                <div class="hm-pop" id="hmPop" hidden>
+                    <div class="hm-pop-head">
+                        <strong id="hmPopDate"></strong>
+                        <button type="button" class="hm-pop-close" id="hmPopClose" aria-label="关闭">✕</button>
+                    </div>
+                    <ul class="hm-pop-list" id="hmPopList"></ul>
+                </div>
             </div>
         </main>
     </div>
@@ -102,37 +117,41 @@
 
     <script>
     (function() {
-        // ===== 服务端构建时聚合的数据：统一为 Unix 秒 =====
+        // ===== 服务端构建时聚合的数据：条目含时间戳（Unix 秒）与展示信息 =====
         {{ $wereadRaw := readFile "static/data/weread_notes.json" }}
         {{ $wereadData := transform.Unmarshal $wereadRaw }}
         {{ $memosRaw := readFile "static/data/flomo_memos.json" }}
         {{ $memosData := transform.Unmarshal $memosRaw }}
 
-        {{ $wereadTs := slice }}
+        {{ $wereadItems := slice }}
         {{ range $wereadData.books }}
+            {{ $bt := .title }}
             {{ range .notes }}
-                {{ $wereadTs = $wereadTs | append (printf "%.0f" .created_at) }}
+                {{ $wereadItems = $wereadItems | append (dict "t" (printf "%.0f" .created_at) "b" $bt "h" .highlight "c" .comment) }}
             {{ end }}
         {{ end }}
-        {{ $blogTs := slice }}
+        {{ $blogItems := slice }}
         {{ range where site.RegularPages "Section" "blog" }}
-            {{ $blogTs = $blogTs | append .Date.Unix }}
+            {{ $blogItems = $blogItems | append (dict "t" (printf "%d" .Date.Unix) "title" .Title "url" .RelPermalink) }}
         {{ end }}
-        {{ $memosTs := slice }}
+        {{ $memoItems := slice }}
         {{ range $memosData.memos }}
-            {{ $memosTs = $memosTs | append (time.AsTime .created_at).Unix }}
+            {{ $raw := index (split .content "\n") 0 | plainify }}
+            {{ $mt := replace $raw "*" "" | strings.TrimSpace | truncate 42 }}
+            {{ if eq $mt "" }}{{ $mt = "Memo" }}{{ end }}
+            {{ $memoItems = $memoItems | append (dict "t" (printf "%d" (time.AsTime .created_at).Unix) "title" $mt "url" .url) }}
         {{ end }}
 
         const DATA = {
-            weread: {{ $wereadTs | jsonify | safeJS }},
-            blog: {{ $blogTs | jsonify | safeJS }},
-            memos: {{ $memosTs | jsonify | safeJS }}
+            weread: {{ $wereadItems | jsonify | safeJS }},
+            blog: {{ $blogItems | jsonify | safeJS }},
+            memos: {{ $memoItems | jsonify | safeJS }}
         };
         const TOTALS = {
             books: {{ len $wereadData.books }},
-            notes: {{ len $wereadTs }},
-            blog: {{ len $blogTs }},
-            memos: {{ len $memosTs }}
+            notes: {{ len $wereadItems }},
+            blog: {{ len $blogItems }},
+            memos: {{ len $memoItems }}
         };
 
         const DAY_MS = 86400000;
@@ -146,10 +165,12 @@
 
         const state = {
             cat: 'all',
+            range: 'recent',    // 'recent' 或年份字符串
             start: null,        // 对齐到周一
-            today: null,
+            end: null,          // 窗口最后一天（含）
             weeks: 0,
-            buckets: new Map()  // key -> {weread, blog, memos}
+            buckets: new Map(), // key -> {weread, blog, memos, items:[]}
+            years: []
         };
 
         function $(id) { return document.getElementById(id); }
@@ -162,28 +183,46 @@
         }
 
         function collect() {
-            state.today = new Date();
-            state.today.setHours(0, 0, 0, 0);
-
-            const start = new Date(state.today);
-            start.setDate(start.getDate() - 364); // 含今天共 365 天
-            const offset = (start.getDay() + 6) % 7; // 对齐到周一
-            if (offset) start.setDate(start.getDate() - offset);
-
-            state.start = start;
-            state.weeks = Math.ceil((state.today - start) / DAY_MS / 7);
-
             const buckets = new Map();
-            const put = (ts, cat) => {
-                const k = localKey(ts);
-                if (k < keyOf(state.start) || k > keyOf(state.today)) return;
-                if (!buckets.has(k)) buckets.set(k, { weread: 0, blog: 0, memos: 0 });
-                buckets.get(k)[cat] += 1;
+            const put = (ts, cat, item) => {
+                const k = localKey(Number(ts));
+                if (!buckets.has(k)) buckets.set(k, { weread: 0, blog: 0, memos: 0, items: [] });
+                const b = buckets.get(k);
+                b[cat] += 1;
+                b.items.push(item);
             };
-            DATA.weread.forEach(t => put(Number(t), 'weread'));
-            DATA.blog.forEach(t => put(Number(t), 'blog'));
-            DATA.memos.forEach(t => put(Number(t), 'memos'));
+            DATA.weread.forEach(it => put(it.t, 'weread', { kind: 'weread', book: it.b, text: (it.c || it.h || '').trim() }));
+            DATA.blog.forEach(it => put(it.t, 'blog', { kind: 'blog', title: it.title, url: it.url }));
+            DATA.memos.forEach(it => put(it.t, 'memos', { kind: 'memos', title: it.title, url: it.url }));
             state.buckets = buckets;
+
+            const ys = new Set();
+            buckets.forEach((_, k) => ys.add(Number(k.slice(0, 4))));
+            ys.add(new Date().getFullYear());
+            state.years = Array.from(ys).sort((a, b) => b - a);
+        }
+
+        function applyRange() {
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (state.range === 'recent') {
+                const start = new Date(today);
+                start.setDate(start.getDate() - 364); // 含今天共 365 天
+                const off = (start.getDay() + 6) % 7; // 对齐到周一
+                if (off) start.setDate(start.getDate() - off);
+                state.start = start;
+                state.end = today;
+            } else {
+                const y = Number(state.range);
+                const start = new Date(y, 0, 1);
+                const off = (start.getDay() + 6) % 7;
+                if (off) start.setDate(start.getDate() - off);
+                let end = new Date(y, 11, 31);
+                if (end > today) end = today;
+                state.start = start;
+                state.end = end;
+            }
+            state.weeks = Math.ceil((state.end - state.start) / DAY_MS / 7);
         }
 
         function countOf(b, cat) {
@@ -199,8 +238,7 @@
         }
 
         function cellTitle(k, b) {
-            const parts = [`${k} · 阅读 ${b.weread} / 博客 ${b.blog} / Memos ${b.memos}`];
-            return escapeHtml(parts.join('\n'));
+            return escapeHtml(`${k} · 阅读 ${b.weread} / 博客 ${b.blog} / Memos ${b.memos}`);
         }
 
         function escapeHtml(text) {
@@ -241,26 +279,25 @@
             const grid = $('hmGrid');
             const cat = state.cat;
 
-            // 计算本筛选维度下的最大值（仅统计有值的格子）
             let max = 0;
-            state.buckets.forEach(b => {
+            state.buckets.forEach((b, k) => {
+                if (k < keyOf(state.start) || k > keyOf(state.end)) return;
                 const c = countOf(b, cat);
                 if (c > max) max = c;
             });
 
-            const startDay = state.start;
             const cells = [];
             for (let w = 0; w < state.weeks; w++) {
                 for (let r = 0; r < 7; r++) {
-                    const d = new Date(startDay.getTime() + (w * 7 + r) * DAY_MS);
+                    const d = new Date(state.start.getTime() + (w * 7 + r) * DAY_MS);
                     const k = keyOf(d);
-                    if (k < keyOf(state.start) || k > keyOf(state.today)) {
+                    if (k < keyOf(state.start) || k > keyOf(state.end)) {
                         cells.push('<span class="hm-cell hm-future"></span>');
                         continue;
                     }
-                    const b = state.buckets.get(k) || { weread: 0, blog: 0, memos: 0 };
+                    const b = state.buckets.get(k) || { weread: 0, blog: 0, memos: 0, items: [] };
                     const c = countOf(b, cat);
-                    cells.push(`<span class="hm-cell lvl${levelFor(c, max)}" title="${cellTitle(k, b)}"></span>`);
+                    cells.push(`<span class="hm-cell lvl${levelFor(c, max)}" data-k="${k}" title="${cellTitle(k, b)}"></span>`);
                 }
             }
             grid.innerHTML = cells.join('');
@@ -268,7 +305,8 @@
 
         function renderMeta() {
             let noteDays = 0, blogCount = 0, memoCount = 0, active = 0;
-            state.buckets.forEach(b => {
+            state.buckets.forEach((b, k) => {
+                if (k < keyOf(state.start) || k > keyOf(state.end)) return;
                 if (b.weread) noteDays++;
                 if (b.blog) blogCount++;
                 if (b.memos) memoCount++;
@@ -278,8 +316,11 @@
             $('statBlog').textContent = blogCount;
             $('statMemo').textContent = memoCount;
             $('statActive').textContent = active;
+            const label = state.range === 'recent'
+                ? `近一年（${keyOf(state.start)} ~ ${keyOf(state.end)}）`
+                : `${state.range} 年（${keyOf(state.start)} ~ ${keyOf(state.end)}）`;
             $('hmMeta').textContent =
-                `近一年（${keyOf(state.start)} ~ ${keyOf(state.today)}）· 阅读活跃 ${noteDays} 天 · 博客 ${blogCount} 篇 · Memos ${memoCount} 条`;
+                `${label} · 阅读活跃 ${noteDays} 天 · 博客 ${blogCount} 篇 · Memos ${memoCount} 条`;
         }
 
         function render() {
@@ -287,25 +328,244 @@
             renderMonthLabels(state.start);
             renderGrid();
             renderMeta();
+            hidePop();
             const any = Array.from(state.buckets.values()).some(b => b.weread || b.blog || b.memos);
             $('hmEmpty').hidden = any;
         }
 
-        function bindChips() {
-            document.querySelectorAll('.hm-chip').forEach(chip => {
+        function renderYears() {
+            const el = $('hmYears');
+            const opts = ['recent'].concat(state.years);
+            el.innerHTML = opts.map(y =>
+                `<button type="button" class="hm-chip${String(y) === String(state.range) ? ' active' : ''}" data-range="${y}">${y === 'recent' ? '近一年' : y + ' 年'}</button>`
+            ).join('');
+            el.querySelectorAll('.hm-chip').forEach(chip => {
                 chip.addEventListener('click', () => {
-                    state.cat = chip.getAttribute('data-cat');
-                    document.querySelectorAll('.hm-chip').forEach(c => c.classList.toggle('active', c === chip));
-                    renderGrid();
-                    renderMeta();
+                    state.range = chip.getAttribute('data-range');
+                    applyRange();
+                    renderYears();
+                    render();
+                    startSnake();
                 });
             });
         }
 
+        function bindChips() {
+            document.querySelectorAll('#hmChips .hm-chip').forEach(chip => {
+                chip.addEventListener('click', () => {
+                    state.cat = chip.getAttribute('data-cat');
+                    document.querySelectorAll('#hmChips .hm-chip').forEach(c => c.classList.toggle('active', c === chip));
+                    renderGrid();
+                    renderMeta();
+                    hidePop();
+                    startSnake();
+                });
+            });
+        }
+
+        // ===== 当日卡片：点击格子显示该天的笔记/博客/Memo =====
+        let popCell = null;
+
+        function hidePop() {
+            $('hmPop').hidden = true;
+            popCell = null;
+        }
+
+        function showDayPop(cell) {
+            const k = cell.getAttribute('data-k');
+            if (!k) { hidePop(); return; }
+            const b = state.buckets.get(k) || { weread: 0, blog: 0, memos: 0, items: [] };
+            const d = new Date(Number(k.slice(0, 4)), Number(k.slice(5, 7)) - 1, Number(k.slice(8, 10)));
+            $('hmPopDate').textContent =
+                `${d.getMonth() + 1}月${d.getDate()}日 · 阅读 ${b.weread} / 博客 ${b.blog} / Memos ${b.memos}`;
+
+            const items = b.items.filter(it => state.cat === 'all' || it.kind === state.cat);
+            $('hmPopList').innerHTML = items.length ? items.map(it => {
+                const icon = it.kind === 'weread' ? '📚' : it.kind === 'blog' ? '📝' : '💡';
+                const text = it.kind === 'weread'
+                    ? (it.book ? `《${escapeHtml(it.book)}》` : '') + escapeHtml(it.text || '划线')
+                    : escapeHtml(it.title || '');
+                return `<li>${icon}<span>${it.url ? `<a href="${escapeHtml(it.url)}">${text}</a>` : text}</span></li>`;
+            }).join('') : '<li class="hm-pop-empty">当天没有记录</li>';
+
+            const pop = $('hmPop');
+            pop.hidden = false;
+            const host = cell.closest('.hm-card');
+            const cr = host.getBoundingClientRect();
+            const rr = cell.getBoundingClientRect();
+            const pw = pop.offsetWidth, ph = pop.offsetHeight;
+            let left = rr.left - cr.left + rr.width / 2 - pw / 2;
+            left = Math.max(8, Math.min(left, cr.width - pw - 8));
+            let top = rr.bottom - cr.top + 8;
+            if (top + ph > cr.height - 8) top = rr.top - cr.top - ph - 8;
+            pop.style.left = left + 'px';
+            pop.style.top = Math.max(8, top) + 'px';
+        }
+
+        function bindPop() {
+            $('hmGrid').addEventListener('click', e => {
+                const cell = e.target.closest('.hm-cell');
+                if (!cell) return;
+                if (cell === popCell && !$('hmPop').hidden) { hidePop(); return; }
+                popCell = cell;
+                showDayPop(cell);
+            });
+            $('hmPopClose').addEventListener('click', hidePop);
+            document.addEventListener('click', e => {
+                if (!e.target.closest('.hm-card')) hidePop();
+            });
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') hidePop();
+            });
+        }
+
+        // ===== 贪吃蛇动效（Platane/snk 风格）：带身体的蛇爬过热力图吃活跃格 =====
+        const SNAKE = {
+            PITCH: 14,          // 格子 12px + 间距 2px
+            GRID_X: 22,         // 周标签 16px + 间距 6px
+            STEP_MS: 48,        // 每格耗时
+            REPLAY_DELAY: 2600, // 爬完后停留时长
+            BODY_LEN: 12,       // 身体节数（不含头）
+            timer: null,
+            restartTimer: null,
+            segs: [],           // [头, 身体...]
+            path: [],
+            cells: [],
+            idx: 0,
+            history: []         // 近期走过的位置，history[0] 为蛇头
+        };
+
+        function snakeReduced() {
+            return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        }
+
+        function stopSnake() {
+            if (SNAKE.timer) { clearInterval(SNAKE.timer); SNAKE.timer = null; }
+            if (SNAKE.restartTimer) { clearTimeout(SNAKE.restartTimer); SNAKE.restartTimer = null; }
+        }
+
+        function snakePathSerpentine() {
+            const path = [];
+            for (let w = 0; w < state.weeks; w++) {
+                for (let i = 0; i < 7; i++) {
+                    const r = (w % 2 === 0) ? i : 6 - i; // 偶数列从上往下，奇数列从下往上
+                    path.push({ w, r });
+                }
+            }
+            return path;
+        }
+
+        // 5x7 数字字形：按笔画顺序的格子序列（蛇沿此“写出”数字）
+        const DIGIT_GLYPHS = {
+            '0': [[0,1],[0,2],[0,3],[0,4],[0,5],[1,6],[2,6],[3,6],[4,5],[4,4],[4,3],[4,2],[4,1],[3,0],[2,0],[1,0]],
+            '1': [[1,1],[2,0],[2,1],[2,2],[2,3],[2,4],[2,5],[1,6],[2,6],[3,6]],
+            '2': [[1,0],[2,0],[3,0],[4,0],[4,1],[4,2],[3,3],[2,3],[1,4],[0,5],[0,6],[1,6],[2,6],[3,6],[4,6]],
+            '3': [[0,0],[1,0],[2,0],[3,0],[4,0],[4,1],[4,2],[3,3],[4,3],[4,4],[4,5],[4,6],[3,6],[2,6],[1,6],[0,6]],
+            '4': [[1,0],[0,1],[0,2],[0,3],[1,3],[2,3],[3,3],[4,3],[4,2],[4,1],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6]],
+            '5': [[4,0],[3,0],[2,0],[1,0],[0,0],[0,1],[0,2],[1,3],[2,3],[3,3],[4,3],[4,4],[4,5],[3,6],[2,6],[1,6],[0,6]],
+            '6': [[3,0],[2,0],[1,0],[0,1],[0,2],[0,3],[0,4],[0,5],[1,6],[2,6],[3,6],[4,5],[4,4],[4,3],[3,3],[2,3],[1,3]],
+            '7': [[0,0],[1,0],[2,0],[3,0],[4,0],[4,1],[3,2],[2,3],[2,4],[2,5],[2,6]],
+            '8': [[0,1],[1,0],[2,0],[3,0],[4,1],[4,2],[3,3],[2,3],[1,3],[0,4],[0,5],[1,6],[2,6],[3,6],[4,5],[4,4],[3,3]],
+            '9': [[3,3],[2,3],[1,3],[0,2],[0,1],[1,0],[2,0],[3,0],[4,0],[4,1],[4,2],[4,3],[4,4],[4,5],[4,6]]
+        };
+
+        // 从 from 到 to 走 L 形连接线（先横向后纵向）
+        function snakeConnect(path, from, to) {
+            let { w, r } = from;
+            const dw = Math.sign(to.w - w), dr = Math.sign(to.r - r);
+            while (w !== to.w) { w += dw; path.push({ w, r }); }
+            while (r !== to.r) { r += dr; path.push({ w, r }); }
+        }
+
+        // 年份字形路径：把 “2026” 四个数字居中画在 7 行高的网格上
+        function snakePathYear() {
+            const glyphs = String(state.range).split('').map(ch => DIGIT_GLYPHS[ch]).filter(Boolean);
+            const DW = 5, GAP = 2;
+            const totalW = glyphs.length * DW + (glyphs.length - 1) * GAP;
+            if (!glyphs.length || totalW > state.weeks) return snakePathSerpentine();
+            const offX = Math.max(0, Math.floor((state.weeks - totalW) / 2));
+            const path = [];
+            let cur = null;
+            glyphs.forEach((g, gi) => {
+                const baseX = offX + gi * (DW + GAP);
+                const cells = g.map(([c, r]) => ({ w: baseX + c, r }));
+                if (cur) snakeConnect(path, cur, cells[0]);
+                path.push(...cells);
+                cur = cells[cells.length - 1];
+            });
+            return path;
+        }
+
+        function snakePath() {
+            // 始终按年份数字字形走位：“近一年”用当前年份
+            const y = state.range === 'recent' ? String(new Date().getFullYear()) : String(state.range);
+            return snakePathYear(y);
+        }
+
+        function placeSnakeSegs(p) {
+            SNAKE.history.unshift({ w: p.w, r: p.r });
+            if (SNAKE.history.length > SNAKE.BODY_LEN + 1) SNAKE.history.pop();
+            SNAKE.segs.forEach((seg, i) => {
+                const h = SNAKE.history[Math.min(i, SNAKE.history.length - 1)];
+                seg.style.transform =
+                    `translate(${SNAKE.GRID_X + h.w * SNAKE.PITCH}px, ${h.r * SNAKE.PITCH}px)`;
+            });
+        }
+
+        function snakeVisit(cell) {
+            if (!cell || cell.classList.contains('hm-future')) return;
+            cell.classList.add('s-eaten'); // 走到的格子都点亮，"写"出年份数字
+        }
+
+        function stepSnake() {
+            SNAKE.idx++;
+            if (SNAKE.idx >= SNAKE.path.length) {
+                stopSnake();
+                SNAKE.segs.forEach(s => s.classList.add('hm-snake-done'));
+                SNAKE.restartTimer = setTimeout(startSnake, SNAKE.REPLAY_DELAY);
+                return;
+            }
+            const p = SNAKE.path[SNAKE.idx];
+            placeSnakeSegs(p);
+            snakeVisit(SNAKE.cells[p.w * 7 + p.r]);
+        }
+
+        function startSnake() {
+            stopSnake();
+            if (snakeReduced()) return;
+
+            const grid = $('hmGrid');
+            grid.querySelectorAll('.s-eaten')
+                .forEach(c => c.classList.remove('s-eaten'));
+            SNAKE.cells = Array.from(grid.children);
+            SNAKE.path = snakePath();
+            SNAKE.idx = 0;
+            SNAKE.history = [];
+
+            const layer = $('hmSnakeLayer');
+            layer.innerHTML = '';
+            SNAKE.segs = [];
+            for (let i = 0; i <= SNAKE.BODY_LEN; i++) {
+                const seg = document.createElement('div');
+                seg.className = i === 0 ? 'hm-snake-head' : 'hm-snake-seg';
+                layer.appendChild(seg);
+                SNAKE.segs.push(seg);
+            }
+            placeSnakeSegs(SNAKE.path[0]);
+            snakeVisit(SNAKE.cells[0]);
+            SNAKE.timer = setInterval(stepSnake, SNAKE.STEP_MS);
+        }
+
+        $('hmReplay').addEventListener('click', startSnake);
+
         statSidebar();
         collect();
+        applyRange();
+        renderYears();
         bindChips();
+        bindPop();
         render();
+        startSnake();
     })();
     </script>
 </body>
