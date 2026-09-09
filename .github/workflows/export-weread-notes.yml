@@ -1,4 +1,4 @@
-name: Export WeRead Notes and Build Hugo Site
+name: Export WeRead Notes and Deploy to GitHub Pages
 
 on:
   # 每天晚上 12 点自动更新（北京时间 00:00 = UTC 16:00）
@@ -11,16 +11,23 @@ on:
     branches:
       - main
 
+# contents: write          —— 允许机器人提交导出的数据文件
+# pages/id-token: write    —— 允许部署到 GitHub Pages
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "build-and-commit"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
-  export-and-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -44,28 +51,45 @@ jobs:
           FLOMO_TAG: ${{ vars.FLOMO_TAG || 'Archive/Blog' }}
         run: python weread_hugo_exporter.py
 
+      # 固定与本地一致的 Hugo 版本，避免 latest 升级导致模板行为变化
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.165.0'
           extended: true
 
-      # baseURL 使用 hugo.yml 中配置的 Netlify 自定义域名（站点部署在根路径，无需子路径拼接）
+      # 自动启用 Pages（若仓库限制不允许，请到 Settings → Pages 手动把 Source 设为 GitHub Actions）
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+        continue-on-error: true
+
+      # baseURL 使用 hugo.yml 中配置的自定义域名 blog.zzek.cn
       - name: Build Hugo site
         run: hugo --gc --minify
 
-      # Netlify 的发布目录直接指向仓库里的 public/，构建产物与数据变更需一并提交推送触发部署
-      - name: Commit updated notes and site
+      # 仅提交导出的数据与生成的内容文件；构建产物 public/ 不再入库，
+      # 由下面的 upload/deploy 步骤直接发布到 GitHub Pages
+      - name: Commit updated notes and content
         continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/data/weread_notes.json content/weread/ static/data/flomo_memos.json content/memos/ public/
+          git add static/data/weread_notes.json static/data/flomo_memos.json content/weread/ content/memos/
           if git diff --staged --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "chore: auto update weread notes, flomo memos and built site [skip ci]"
+            git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
             # actions/checkout 默认是 detached HEAD，需显式指定分支才能 push 成功
             git push origin HEAD:${{ github.ref_name }}
           fi
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
