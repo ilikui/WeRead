@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-09T04:46:37.976446+00:00",
+    "generated_at": "2026-09-09T12:07:25.753424+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 15,
-    "total_notes": 528
+    "total_notes": 545
   },
   "books": [
     {
@@ -12,7 +12,7 @@
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 65,
+      "note_count": 82,
       "chapters": [
         {
           "uid": 1,
@@ -136,6 +136,159 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_68585-68698",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第三个动作，寻找标签之间的联系",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788955333
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_67565-67654",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第二个动作，添加新标签。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788955021
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_66851-66964",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第一个动作，删除或合并旧标签。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788955008
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_66631-66681",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "接下来，如果想让记过的笔记发挥指数级的“网络效应”​，你还需要做第二步，叫作“定期梳理，维护网络”​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954999
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_55199-55247",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "笔记分为个人的领域、兴趣、项目、归档四大部分——这足以涵盖我记过的大多数笔记，因此让我眼前一亮。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954820
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_53803-53861",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "P.A.R.A 是项目（Project）​、领域（Area）​、资源（Resource）​、归档（Archive）的简称。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954795
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_51371-51450",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第二，不必试图一次性规划好标签分类体系，而要允许它自然生长出来。刚开始打标签的时候，或许你会觉得有点乱。但是别担心，你的标签体系会随着认知加深而逐渐生长出来。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954763
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_51190-51273",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "第一，不要机械照搬外部的分类，因为这并不符合你自己的提取习惯——就像大多数人不会根据图书馆的分类方式来整理自己的书架。所以大胆一些，根据你的主观需求为笔记打标签就好。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954756
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_47802-47947",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "特征二：不是一次成型的，而是动态生长的",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954691
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_42834-42979",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "特征一：不是机械照搬的，而是相对主观的",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954574
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_42136-42211",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "本文的最佳使用方式，也绝不是照抄这套笔记系统，而应该是：理解我是如何以终为始设计这套笔记系统，再从你自己的需求、场景和目标出发，设计你的知识管理流程。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954566
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_25002-25042",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "所以，选择领域，重要的是诚实地面对自己，而不是带着寻找“标准答案”的心态随大流。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788954004
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_18411-18508",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "R：R 是 Resource 的缩写，本意是“资源”​，我用它来标记那些自己持续感兴趣，但对别人没影响，别人也不在乎的内容，比如游戏设计、写作技巧、计算机历史、政治经济学等。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788953673
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_16586-16655",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "A：A 是 Area 的缩写，也就是前面说的“领域”​。领域用来标记那些做了对别人有帮助，做砸了自己要承担责任的事情。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788953662
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_17601-17660",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "P：P 是 Project 的缩写，意思是“项目”​。项目用来标记那些有明确起止时间和目标的事情。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788953650
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_6514-6584",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "分类的目的是什么？答案很简单，分类是为了让“自己”更容易找到信息，而不是别人。换句话说，对于别人来说有用的分类方式，可能对我们自己并不适用。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788953553
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_6514-6583",
+          "chapter": "用标签为笔记分类",
+          "chapter_uid": 12,
+          "highlight": "分类的目的是什么？答案很简单，分类是为了让“自己”更容易找到信息，而不是别人。换句话说，对于别人来说有用的分类方式，可能对我们自己并不适用",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1788953540
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_4392-4498",
           "chapter": "用标签为笔记分类",
