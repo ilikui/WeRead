@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-09-09T19:05:11.407971+00:00",
+    "generated_at": "2026-09-10T18:57:28.523152+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 15,
-    "total_notes": 545
+    "total_notes": 555
   },
   "books": [
     {
@@ -12,7 +12,7 @@
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 82,
+      "note_count": 92,
       "chapters": [
         {
           "uid": 1,
@@ -136,6 +136,96 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_27183-27218",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "我们的建议是：不要把回顾当成大扫除，而要将其分解成小任务，定期投入时间",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789038009
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_21782-21919",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "第三，影响现实，把笔记里的知识用起来",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037915
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_14660-14708",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "2.散乱、容易遗漏、需要更新（知识有半衰期，比如当年自己学的平面设计，现在看来就不太重要了）​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037817
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_14510-14563",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "1.可以反复利用，并且回报越来越多（比如掌握了逆向思维，可以在很多情况下使用，并且决策越大，回报越高）​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037811
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_12865-12986",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "第二，发展新知，知识连接不断增加",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037792
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_9555-9617",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "一阶思维指只考虑直接结果，不考虑后续结果；而二阶思维指努力预估未来，推断出可能产生的一系列后果，以便做出决策或制订解决方案。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037724
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_8541-8662",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "第一，去肥增瘦，知识结构不断优化",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037679
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_7495-7528",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "所谓内化，指的是把外部知识转化为内部知识，让记录的知识真正属于你。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037646
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_2054-2074",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "第一，对抗遗忘曲线；第二，推动知识内化。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037550
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_1883-1938",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "通过回顾来加强记忆、不断内化，看似效率很高，实则是在做无用功——因为在面对实际问题时，我根本想不起来那些笔记。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789037539
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_12_68585-68698",
           "chapter": "用标签为笔记分类",
