@@ -5,8 +5,332 @@
   "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
   "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
   "category": "",
-  "note_count": 92,
+  "note_count": 130,
   "notes": [
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_23_14428-14464",
+      "chapter": "附录 工具篇",
+      "chapter_uid": 23,
+      "highlight": "我们常说，重要的不是记录，而是思考。而回顾笔记，就是引发思考的重要契机。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383925
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_16190-16232",
+      "chapter": "持续不断",
+      "chapter_uid": 22,
+      "highlight": "想要得到一朵鲜花，你必须先种下一颗种子，设置好温度、湿度和光照，让它自然地生长出来。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383752
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_8926-9175",
+      "chapter": "持续不断",
+      "chapter_uid": 22,
+      "highlight": "1.控制主观意愿，让自己愿意坚持；2.设计客观环境，让自己容易坚持；3.根据价值观管理时间，让自己能够坚持",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383619
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_8407-8449",
+      "chapter": "持续不断",
+      "chapter_uid": 22,
+      "highlight": "积累知识也一样，要想真正把记过的笔记用起来，我们也需要为自己打造一套持续不断的系统。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383612
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_4237-4245",
+      "chapter": "持续不断",
+      "chapter_uid": 22,
+      "highlight": "持续不断的重要性",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383535
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_16015-16062",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "具体来说，我们可以重新思考自己所处的环境，通过提出一个长期而又具体的问题，来重启并优化提问机器",
+      "comment": "有时候好的问题，比好的答案更好",
+      "color": "blue",
+      "created_at": 1789383398
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_12539-12564",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "时间有限但知识无限，我们必须勇于放弃，才能专注精进",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383329
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_11971-12031",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "理论学习固然重要，但若脱离了实践，难免成为纸上谈兵；只有结合亲身实践，与理论知识互相补充，我们才能真正牢牢掌握相关的知识",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789383319
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_4667-4691",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "思维的偷懒，不愿意用力思考，只跟着人群随波逐流。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1789297632
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_892-940",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "前文“应用篇”“记录篇”“收集篇”分享了如何用笔记、如何记笔记、如何收集高质量信息的方法和建议。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1789294480
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_18_7279-7350",
+      "chapter": "# 建议二：做加法，增加书本之外的优质信息源",
+      "chapter_uid": 18,
+      "highlight": "而是建一个表格，把他们的社交网站或访谈资料整理进去，定期学习这些一手信息。如果你有兴趣，也可以创建属于你的关注名单，并整理关于他们的一手信息。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1789293906
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_17_5621-5648",
+      "chapter": "# 建议一：做减法，削减你的信息源",
+      "chapter_uid": 17,
+      "highlight": "削减信息源的第三个方法叫作，削减缺乏具体事实的信息源。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1789293378
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_17_3254-3295",
+      "chapter": "# 建议一：做减法，削减你的信息源",
+      "chapter_uid": 17,
+      "highlight": "是因为，很多试图激起强烈情绪的信息，其目的往往是利用我们的情绪获得点击量或阅读量。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1789293291
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_5196-5243",
+      "chapter": "# 三项原则，掌握获取信息的主动权",
+      "chapter_uid": 16,
+      "highlight": "加上大多数人不是在拼命工作就是在拼命消费，根本没有时间停下来思考意义，就会陷入更加恶性的循环。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789188805
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_3930-3954",
+      "chapter": "# 三项原则，掌握获取信息的主动权",
+      "chapter_uid": 16,
+      "highlight": "获取优质信息的第三条原则叫作：主动监控，保持质疑",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789184037
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_2467-2491",
+      "chapter": "# 三项原则，掌握获取信息的主动权",
+      "chapter_uid": 16,
+      "highlight": "获取优质信息的第二条原则叫作：以具体问题为牵引。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789184006
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_1231-1261",
+      "chapter": "# 三项原则，掌握获取信息的主动权",
+      "chapter_uid": 16,
+      "highlight": "获取优质信息的第一条原则叫作：不必成为各个领域的“全能专家”",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789183970
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_15_3847-3911",
+      "chapter": "# 审视自己和信息之间的关系",
+      "chapter_uid": 15,
+      "highlight": "这就引发了大脑的一个系统错误：一方面，大脑本能地渴望获取信息，用来保持进化优势，于是会在捕捉到新信息的时候，分泌多巴胺作为奖励；",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789183055
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_15_1475-1518",
+      "chapter": "# 审视自己和信息之间的关系",
+      "chapter_uid": 15,
+      "highlight": "这就需要我们解决两大典型挑战：第一，避免信息成瘾；第二，逃离信息茧房。下面我们分别来看",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182912
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_59216-59283",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "回顾笔记的三个步骤：投入时间、同步思考、保持互动。每个步骤都提供了一些建议，你可以结合自己的情况灵活取用，让回顾笔记这件事变得更有价值",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182710
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_57580-57615",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "不必担心这样会破坏内容，因为改造是为了更好地使用，而不是把它展示给他人",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182685
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_54962-55027",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "这里所谓的改写，并不是对文字做语法或词汇上的修饰，而是经过消化吸收、深入思考之后，把别人的案例或洞察换成自己的，用自己的话说一遍。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182625
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_47849-47953",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "蔡钰老师说，所谓信息增量，其实来自不同信息之间的关系；而所谓关系，无外乎有这么几种形式：差异、变化、冲突、呼应、互补、联动。下次回顾笔记的时候，你不妨顺着这些形式，找找不同信息之间的关系，说不定会有新的发现。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182405
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_42748-42774",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "所谓客户旅程，指“获取—感知—熟悉—使用”的全过程。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182287
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_35343-35504",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "（1）这条笔记和我最近遇到的什么问题有关？",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182196
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_35073-35136",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "你看，长期以来的教育模式，潜移默化地让我们有“背诵答案”的习惯，回顾时往往下意识地去复诵记过的笔记，却忽略了最重要的思考过程。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182183
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_34014-34064",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "亲密关系不是丧失自我，成为只会满足对方需求的“奴隶”，而是找到彼此一致的视角，看到生活中新的可能性。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182040
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_33726-33760",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "拥有良好亲密关系的前提是“知道自己是谁”。先成为自己，才能看清对方。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789182024
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_25268-25314",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "在有限的时间里，我们与其不断追求更多新知识，不如花点时间回顾记过的笔记，让更多知识内化于心。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181791
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_24708-24784",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "比如在一个平常的日子，你可以漫无目的地随机回顾，看看过往的自己记过什么，想过什么，对什么在意，又对什么念念不忘，让外界的声音散去，只留下自己和自己对话。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181777
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_9552-9621",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "对应一阶思维。一阶思维指只考虑直接结果，不考虑后续结果；而二阶思维指努力预估未来，推断出可能产生的一系列后果，以便做出决策或制订解决方案。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181414
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_9120-9281",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "所以当时我做了两个决定：一方面，停止记录更多思维模型，控制输入，避免囤积到无法消化的地步；另一方面，集中时间回顾过去的记录，把那些看完一遍也没能很快理解的思维模型——诸如 Zwicky box、Cynefin 框架，都直接删除。虽然也会担心“未来或许用得上”，但现有的思维模型都还没吃透，干吗“吃着碗里的，瞧着锅里的”呢？",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181393
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_7495-7528",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "所谓内化，指的是把外部知识转化为内部知识，让记录的知识真正属于你。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181352
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_5420-5435",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "记录时间，知道把时间用在了哪里",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181221
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_1846-1868",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 13,
+      "highlight": "知识并不是商品，记下来并不等于“拥有”了它。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789181128
+    },
+    {
+      "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_59760-59802",
+      "chapter": "通过回顾持续刺激",
+      "chapter_uid": 10,
+      "highlight": "为了整理笔记而整理笔记，而是希望你通过回顾引发思考，继而解决现实问题，影响现实世界。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1789178528
+    },
     {
       "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_27183-27218",
       "chapter": "通过回顾持续刺激",
@@ -764,6 +1088,24 @@
       "created_at": 1788313484
     },
     {
+      "id": "79857957_8c70sOEKx",
+      "chapter": "以我为主",
+      "chapter_uid": 21,
+      "highlight": "所以，很多时候我们不必学习屠龙之术，不要做研究长期主义的乞丐，而要多问问自己，当前的真问题是什么，然后从自己的真问题出发进行学习。",
+      "comment": "解决当前的问题，比如给出自己的问题清单",
+      "color": "default",
+      "created_at": 1789378247
+    },
+    {
+      "id": "79857957_8c3zvlUKG",
+      "chapter": "# 审视自己和信息之间的关系",
+      "chapter_uid": 15,
+      "highlight": "指的是人们形成的一种信息过滤系统，这种系统会使一个人只愿意接受自己熟悉的信息，而看不到其他重要信息——就像把自己关在一个茧房里，短期来看十分满足，长期来看却是作茧自缚。",
+      "comment": "信息茧房",
+      "color": "default",
+      "created_at": 1789183148
+    },
+    {
       "id": "79857957_8bVJ7rGs8",
       "chapter": "用自己的话记笔记",
       "chapter_uid": 8,
@@ -845,7 +1187,7 @@
 
 作者：刘白光
 
-共 **92** 条笔记。
+共 **130** 条笔记。
 
 ---
 
