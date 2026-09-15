@@ -1,18 +1,1018 @@
 {
   "meta": {
-    "generated_at": "2026-09-11T00:33:22.884321+00:00",
+    "generated_at": "2026-09-14T20:09:29.392312+00:00",
     "source": "wechat-reading-skill-gateway",
-    "total_books": 15,
-    "total_notes": 555
+    "total_books": 16,
+    "total_notes": 601
   },
   "books": [
+    {
+      "book_id": "CB_8hT8Mp8O45xz76B75S01H8FG",
+      "title": "思维模型：建立高品质思维的30种模型",
+      "author": "(美) 彼 得·霍林斯 (Peter Hollins)",
+      "cover": "https://res.weread.qq.com/wrepub/CB_Blp8VV8UNGxF76975PCwg5bu_parsecover",
+      "category": "",
+      "note_count": 18,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "第一章    如何快速而全面地做出决策",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "level": 2
+        },
+        {
+          "uid": 3,
+          "title": "思维模型2：设想出所有多米诺骨牌",
+          "level": 2
+        },
+        {
+          "uid": 4,
+          "title": "思维模型3：做出可逆的决策",
+          "level": 2
+        },
+        {
+          "uid": 5,
+          "title": "思维模型4：寻求“满意度”",
+          "level": 2
+        },
+        {
+          "uid": 6,
+          "title": "思维模型5：停留在40%～70%的区间",
+          "level": 2
+        },
+        {
+          "uid": 7,
+          "title": "思维模型6：遗憾最小化框架",
+          "level": 2
+        },
+        {
+          "uid": 8,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 9,
+          "title": "第二章    如何更清晰地看待问题",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "思维模型7：忽略“黑天鹅”",
+          "level": 2
+        },
+        {
+          "uid": 11,
+          "title": "思维模型8：寻找均衡点",
+          "level": 2
+        },
+        {
+          "uid": 12,
+          "title": "思维模型9：等待均值回归",
+          "level": 2
+        },
+        {
+          "uid": 13,
+          "title": "思维模型10：贝叶斯会怎样做",
+          "level": 2
+        },
+        {
+          "uid": 14,
+          "title": "思维模型11：借鉴达尔文",
+          "level": 2
+        },
+        {
+          "uid": 15,
+          "title": "思维模型12：调动系统2思维",
+          "level": 2
+        },
+        {
+          "uid": 16,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 17,
+          "title": "第三章    如何找到解决方案的思维模型",
+          "level": 1
+        },
+        {
+          "uid": 18,
+          "title": "思维模型13：让你的观点接受同行评议",
+          "level": 2
+        },
+        {
+          "uid": 19,
+          "title": "思维模型14：找出自己的缺陷",
+          "level": 2
+        },
+        {
+          "uid": 20,
+          "title": "思维模型15：相关性不等于因果关系",
+          "level": 2
+        },
+        {
+          "uid": 21,
+          "title": "思维模型16：从结果反推原因",
+          "level": 2
+        },
+        {
+          "uid": 22,
+          "title": "思维模型17：以“奔驰法”激发创意",
+          "level": 2
+        },
+        {
+          "uid": 23,
+          "title": "思维模型18：回归第一性原理",
+          "level": 2
+        },
+        {
+          "uid": 24,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 25,
+          "title": "第四章    反向思考思维模型",
+          "level": 1
+        },
+        {
+          "uid": 26,
+          "title": "思维模型19：避免直接目标",
+          "level": 2
+        },
+        {
+          "uid": 27,
+          "title": "思维模型20：避免专家思维模式",
+          "level": 2
+        },
+        {
+          "uid": 28,
+          "title": "思维模型21：避免非天才区",
+          "level": 2
+        },
+        {
+          "uid": 29,
+          "title": "思维模型22：避免待办事项清单",
+          "level": 2
+        },
+        {
+          "uid": 30,
+          "title": "思维模型23：避免阻力最小的道路",
+          "level": 2
+        },
+        {
+          "uid": 31,
+          "title": "本章要点",
+          "level": 2
+        },
+        {
+          "uid": 32,
+          "title": "第五章    经典思维模型",
+          "level": 1
+        },
+        {
+          "uid": 33,
+          "title": "思维模型24：墨菲定律",
+          "level": 2
+        },
+        {
+          "uid": 34,
+          "title": "思维模型25：奥卡姆剃刀定律",
+          "level": 2
+        },
+        {
+          "uid": 35,
+          "title": "思维模型26：汉隆剃刀原则",
+          "level": 2
+        },
+        {
+          "uid": 36,
+          "title": "思维模型27：帕累托法则",
+          "level": 2
+        },
+        {
+          "uid": 37,
+          "title": "思维模型28：史特金定律",
+          "level": 2
+        },
+        {
+          "uid": 38,
+          "title": "思维模型29～30：帕金森定律",
+          "level": 2
+        },
+        {
+          "uid": 39,
+          "title": "本章要点",
+          "level": 2
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_7_1136-1402",
+          "chapter": "思维模型6：遗憾最小化框架",
+          "chapter_uid": 7,
+          "highlight": "1. 想象你自己已经80岁了。2. 在这个年纪回首今生，你想要尽量减少人生中留下的遗憾。3. 扪心自问：​“×年后，我会为采取（或不采取）这一行动感到遗憾吗？​”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384937
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_7_748-761",
+          "chapter": "思维模型6：遗憾最小化框架",
+          "chapter_uid": 7,
+          "highlight": "思维模型6：遗憾最小化框架",
+          "comment": "",
+          "color": "yellow",
+          "created_at": 1789384910
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_6_857-930",
+          "chapter": "思维模型5：停留在40%～70%的区间",
+          "chapter_uid": 6,
+          "highlight": "我遵循的规则是，如果某个人或某件事获得了70%的认可，就可以付诸行动了，因为只要其他选项立即消失，决策的痛苦随之结束，你的选择就会变成80分。​”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384853
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_6_747-766",
+          "chapter": "思维模型5：停留在40%～70%的区间",
+          "chapter_uid": 6,
+          "highlight": "思维模型5：停留在40%～70%的区间",
+          "comment": "",
+          "color": "yellow",
+          "created_at": 1789384841
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_5_1112-1301",
+          "chapter": "思维模型4：寻求“满意度”",
+          "chapter_uid": 5,
+          "highlight": "“满意度”​（satisfice）是满意（satisfy）和足够（suffice）两个词合成的，由赫伯特·西蒙（Herbert Simon）在20世纪50年代首创，是为了给那些希望从决策中获得最大利益的人提供便利的选择。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384752
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_4_2810-2911",
+          "chapter": "思维模型3：做出可逆的决策",
+          "chapter_uid": 4,
+          "highlight": "第一类决策是不可逆的，是不可收回的重大决策，经常会产生巨大影响。第二类决策是可逆的，虽然贝索斯也警告说，我们不应该过度依赖可逆的决策而鲁莽行事，但审慎运用这类决策，可以给予决策者更多快速行动的回旋余地。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384420
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_4_2285-2305",
+          "chapter": "思维模型3：做出可逆的决策",
+          "chapter_uid": 4,
+          "highlight": "一次良好的试验胜过一千个专家的意见。​”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384394
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_4_783-806",
+          "chapter": "思维模型3：做出可逆的决策",
+          "chapter_uid": 4,
+          "highlight": "用于尽可能战略性地消除犹豫不决，形成行动偏向。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788734705
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_3_1183-1251",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "这通常称为“一阶思维”，我们只专注于解决手头上的问题或对手头上的事情做出决策，而不去考虑长远影响或我们的决策在遥远的未来会发挥什么作用。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788693078
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_7058-7139",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "纵然有些事情仿佛要求你快速回应，但这并不代表你必须马上去做；纵然有些事情仿佛是嘀嘀嗒嗒，不急不缓，但这并不代表你可以听而不闻。学会平衡这两点，你才能做出最佳决策。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788688204
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2757-2779",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "换言之，也就是把重要任务和紧急任务区分开来。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687947
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2668-2712",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "把活动和需求分类，整理出最重要的任务，并找出为了实现这些重要任务需要采取哪些最关键的流程",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687932
+        },
+        {
+          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_1_3298-3365",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "思维模型是针对你所面对的情况，指引你关注重要元素的蓝图，界定场景、背景和方向。即使缺乏实际知识或经验，你也能够增进了解，做出最佳决策。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1788687046
+        },
+        {
+          "id": "79857957_8bUWPadx9",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "要质疑我们的行动会对眼前之外的情况产生什么影响，需要我们探究未知的未来，进入费力或复杂的思考迷宫，别人可能会说我们在做出决策或考虑问题时“想太多了”。",
+          "comment": "也可能根据自己当时的情绪有关，不顾后果。",
+          "color": "default",
+          "created_at": 1788693310
+        },
+        {
+          "id": "79857957_8bUWHsTSJ",
+          "chapter": "思维模型2：设想出所有多米诺骨牌",
+          "chapter_uid": 3,
+          "highlight": "所谓二阶思维，是指努力预估未来，推断出可能产生的一系列后果，用于进行成本效益分析，以便做出决策或制订解决方案",
+          "comment": "做事之前往前想三步，往后想三步。",
+          "color": "default",
+          "created_at": 1788693196
+        },
+        {
+          "id": "79857957_8bUQNE7Lr",
+          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
+          "chapter_uid": 2,
+          "highlight": "时间就是金钱。我们把太多时间花在所谓“紧急”任务上，其实应该关注的是“重要”任务。",
+          "comment": "有的时候重要的事情没有处理好，后面就会变成紧急的问题了",
+          "color": "default",
+          "created_at": 1788687791
+        },
+        {
+          "id": "79857957_8bUQApdiP",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "多个模型可以相互质疑，形成更统一的整体观点。而若是只使用一两个模型，就会让你只从具有局限性的场景或学科出发，致使远景不够开阔",
+          "comment": "通过部署AI训练，加上思维模型，通过思维碰撞，作出决策系统",
+          "color": "default",
+          "created_at": 1788687595
+        },
+        {
+          "id": "79857957_8bUQ1M7Dr",
+          "chapter": "第一章    如何快速而全面地做出决策",
+          "chapter_uid": 1,
+          "highlight": "思维模型",
+          "comment": "给你解决问题的指明灯",
+          "color": "default",
+          "created_at": 1788687083
+        }
+      ]
+    },
+    {
+      "book_id": "22651389",
+      "title": "嵌入式Linux与物联网软件开发：C语言内核深度解析",
+      "author": "朱有鹏 张先凤",
+      "cover": "https://wfqqreader-1252317822.image.myqcloud.com/cover/389/22651389/t6_22651389.jpg",
+      "category": "",
+      "note_count": 1,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "封面",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "版权信息",
+          "level": 1
+        },
+        {
+          "uid": 3,
+          "title": "前言",
+          "level": 1
+        },
+        {
+          "uid": 4,
+          "title": "参与本书整理和编写的学生",
+          "level": 1
+        },
+        {
+          "uid": 5,
+          "title": "第1章 C语言与内存",
+          "level": 1
+        },
+        {
+          "uid": 6,
+          "title": "1.2 计算机程序运行的目的",
+          "level": 2
+        },
+        {
+          "uid": 7,
+          "title": "1.3 位、字节、半字、字的概念和内存位宽",
+          "level": 2
+        },
+        {
+          "uid": 8,
+          "title": "1.4 内存编址和寻址、内存对齐",
+          "level": 2
+        },
+        {
+          "uid": 9,
+          "title": "1.5 C语言如何操作内存",
+          "level": 2
+        },
+        {
+          "uid": 10,
+          "title": "1.6 内存管理之结构体",
+          "level": 2
+        },
+        {
+          "uid": 11,
+          "title": "1.7 内存管理之栈（stack）",
+          "level": 2
+        },
+        {
+          "uid": 12,
+          "title": "1.8 内存管理之堆",
+          "level": 2
+        },
+        {
+          "uid": 13,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 14,
+          "title": "第2章 C语言位操作",
+          "level": 1
+        },
+        {
+          "uid": 15,
+          "title": "2.2 常用位操作符",
+          "level": 2
+        },
+        {
+          "uid": 16,
+          "title": "2.3 位操作与寄存器",
+          "level": 2
+        },
+        {
+          "uid": 17,
+          "title": "2.4 位运算构建特定二进制数",
+          "level": 2
+        },
+        {
+          "uid": 18,
+          "title": "2.5 位运算实战演练1",
+          "level": 2
+        },
+        {
+          "uid": 19,
+          "title": "2.6 位运算实战演练2",
+          "level": 2
+        },
+        {
+          "uid": 20,
+          "title": "2.7 技术升级：用宏定义来完成位运算",
+          "level": 2
+        },
+        {
+          "uid": 21,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 22,
+          "title": "第3章 指针才是C语言的精髓",
+          "level": 1
+        },
+        {
+          "uid": 23,
+          "title": "3.2 指针到底是什么",
+          "level": 2
+        },
+        {
+          "uid": 24,
+          "title": "3.3 理解指针符号",
+          "level": 2
+        },
+        {
+          "uid": 25,
+          "title": "3.4 野指针与段错误问题",
+          "level": 2
+        },
+        {
+          "uid": 26,
+          "title": "3.5 const关键字与指针",
+          "level": 2
+        },
+        {
+          "uid": 27,
+          "title": "3.6 深入学习数组",
+          "level": 2
+        },
+        {
+          "uid": 28,
+          "title": "3.7 指针与数组的天生“姻缘”",
+          "level": 2
+        },
+        {
+          "uid": 29,
+          "title": "3.8 指针类型与强制类型转换",
+          "level": 2
+        },
+        {
+          "uid": 30,
+          "title": "3.9 指针、数组与sizeof运算符",
+          "level": 2
+        },
+        {
+          "uid": 31,
+          "title": "3.10 指针与函数传参",
+          "level": 2
+        },
+        {
+          "uid": 32,
+          "title": "3.11 输入型参数与输出型参数",
+          "level": 2
+        },
+        {
+          "uid": 33,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 34,
+          "title": "第4章 C语言复杂表达式与指针高级应用",
+          "level": 1
+        },
+        {
+          "uid": 35,
+          "title": "4.2 指针数组与数组指针",
+          "level": 2
+        },
+        {
+          "uid": 36,
+          "title": "4.3 函数指针与typedef",
+          "level": 2
+        },
+        {
+          "uid": 37,
+          "title": "4.4 函数指针实战1——用函数指针调用执行函数",
+          "level": 2
+        },
+        {
+          "uid": 38,
+          "title": "4.5 函数指针实战2——结构体内嵌函数指针实现分层",
+          "level": 2
+        },
+        {
+          "uid": 39,
+          "title": "4.6 再论typedef",
+          "level": 2
+        },
+        {
+          "uid": 40,
+          "title": "4.7 二维数组",
+          "level": 2
+        },
+        {
+          "uid": 41,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 42,
+          "title": "第5章 数组&字符串&结构体&共用体&枚举",
+          "level": 1
+        },
+        {
+          "uid": 43,
+          "title": "5.2 程序中的内存从哪里来",
+          "level": 2
+        },
+        {
+          "uid": 44,
+          "title": "5.3 堆",
+          "level": 2
+        },
+        {
+          "uid": 45,
+          "title": "5.4 内存中的各个段",
+          "level": 2
+        },
+        {
+          "uid": 46,
+          "title": "5.5 C语言的字符串类型",
+          "level": 2
+        },
+        {
+          "uid": 47,
+          "title": "5.6 字符串和字符数组的细节",
+          "level": 2
+        },
+        {
+          "uid": 48,
+          "title": "5.7 结构体概述",
+          "level": 2
+        },
+        {
+          "uid": 49,
+          "title": "5.8 结构体的对齐访问",
+          "level": 2
+        },
+        {
+          "uid": 50,
+          "title": "5.9 offsetof宏与container_of宏",
+          "level": 2
+        },
+        {
+          "uid": 51,
+          "title": "5.10 共用体（union）",
+          "level": 2
+        },
+        {
+          "uid": 52,
+          "title": "5.11 大小端模式",
+          "level": 2
+        },
+        {
+          "uid": 53,
+          "title": "5.12 枚举enum",
+          "level": 2
+        },
+        {
+          "uid": 54,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 55,
+          "title": "第6章 C语言的预处理、函数和函数库",
+          "level": 1
+        },
+        {
+          "uid": 56,
+          "title": "6.2 C语言为什么需要编译链接",
+          "level": 2
+        },
+        {
+          "uid": 57,
+          "title": "6.3 预处理详解",
+          "level": 2
+        },
+        {
+          "uid": 58,
+          "title": "6.4 常见的预处理详解",
+          "level": 2
+        },
+        {
+          "uid": 59,
+          "title": "6.5 函数的本质",
+          "level": 2
+        },
+        {
+          "uid": 60,
+          "title": "6.6 函数的基本使用",
+          "level": 2
+        },
+        {
+          "uid": 61,
+          "title": "6.7 递归函数",
+          "level": 2
+        },
+        {
+          "uid": 62,
+          "title": "6.8 库函数",
+          "level": 2
+        },
+        {
+          "uid": 63,
+          "title": "6.9 常见的库函数之字符串函数",
+          "level": 2
+        },
+        {
+          "uid": 64,
+          "title": "6.10 常见的库函数之数学库函数",
+          "level": 2
+        },
+        {
+          "uid": 65,
+          "title": "6.11 制作静态链接库并使用",
+          "level": 2
+        },
+        {
+          "uid": 66,
+          "title": "6.12 制作动态链接库并使用",
+          "level": 2
+        },
+        {
+          "uid": 67,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 68,
+          "title": "第7章 存储类&作用域&生命周期&链接属性",
+          "level": 1
+        },
+        {
+          "uid": 69,
+          "title": "7.2 概念解析",
+          "level": 2
+        },
+        {
+          "uid": 70,
+          "title": "7.3 Linux下C程序的内存映像",
+          "level": 2
+        },
+        {
+          "uid": 71,
+          "title": "7.4 存储类相关的关键字1",
+          "level": 2
+        },
+        {
+          "uid": 72,
+          "title": "7.5 存储类相关的关键字2",
+          "level": 2
+        },
+        {
+          "uid": 73,
+          "title": "7.6 作用域详解",
+          "level": 2
+        },
+        {
+          "uid": 74,
+          "title": "7.7 变量的生命周期",
+          "level": 2
+        },
+        {
+          "uid": 75,
+          "title": "7.8 链接属性",
+          "level": 2
+        },
+        {
+          "uid": 76,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 77,
+          "title": "第8章 C语言关键细节讨论",
+          "level": 1
+        },
+        {
+          "uid": 78,
+          "title": "8.2 操作系统概述",
+          "level": 2
+        },
+        {
+          "uid": 79,
+          "title": "8.3 main函数返回值",
+          "level": 2
+        },
+        {
+          "uid": 80,
+          "title": "8.4 argc、argv与main函数的传参",
+          "level": 2
+        },
+        {
+          "uid": 81,
+          "title": "8.5 void类型的本质",
+          "level": 2
+        },
+        {
+          "uid": 82,
+          "title": "8.6 C语言中的NULL",
+          "level": 2
+        },
+        {
+          "uid": 83,
+          "title": "8.7 运算中的临时匿名变量",
+          "level": 2
+        },
+        {
+          "uid": 84,
+          "title": "8.8 顺序结构",
+          "level": 2
+        },
+        {
+          "uid": 85,
+          "title": "8.9 程序调试",
+          "level": 2
+        },
+        {
+          "uid": 86,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 87,
+          "title": "第9章 链表&状态机&多线程",
+          "level": 1
+        },
+        {
+          "uid": 88,
+          "title": "9.2 链表的引入",
+          "level": 2
+        },
+        {
+          "uid": 89,
+          "title": "9.3 单链表的实现之构建第一个节点",
+          "level": 2
+        },
+        {
+          "uid": 90,
+          "title": "9.4 单链表的实现之从尾部插入节点",
+          "level": 2
+        },
+        {
+          "uid": 91,
+          "title": "9.5 单链表的算法之从头部插入节点",
+          "level": 2
+        },
+        {
+          "uid": 92,
+          "title": "9.6 单链表的算法之遍历节点",
+          "level": 2
+        },
+        {
+          "uid": 93,
+          "title": "9.7 单链表的算法之删除节点",
+          "level": 2
+        },
+        {
+          "uid": 94,
+          "title": "9.8 单链表的算法之逆序",
+          "level": 2
+        },
+        {
+          "uid": 95,
+          "title": "9.9 双链表的引入和基本实现",
+          "level": 2
+        },
+        {
+          "uid": 96,
+          "title": "9.10 双链表的算法之插入节点",
+          "level": 2
+        },
+        {
+          "uid": 97,
+          "title": "9.11 双链表的算法之遍历",
+          "level": 2
+        },
+        {
+          "uid": 98,
+          "title": "9.12 双链表的算法之删除节点",
+          "level": 2
+        },
+        {
+          "uid": 99,
+          "title": "9.13 Linux内核链表",
+          "level": 2
+        },
+        {
+          "uid": 100,
+          "title": "9.14 内核链表的基本算法和使用简介",
+          "level": 2
+        },
+        {
+          "uid": 101,
+          "title": "9.15 什么是状态机",
+          "level": 2
+        },
+        {
+          "uid": 102,
+          "title": "9.16 用C语言实现简单的状态机",
+          "level": 2
+        },
+        {
+          "uid": 103,
+          "title": "9.17 多线程简介",
+          "level": 2
+        },
+        {
+          "uid": 104,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 105,
+          "title": "第10章 程序员和编译器的暧昧",
+          "level": 1
+        },
+        {
+          "uid": 106,
+          "title": "10.2 编程工作的演进史",
+          "level": 2
+        },
+        {
+          "uid": 107,
+          "title": "10.3 程序员、编译器和CPU之间的三角恋",
+          "level": 2
+        },
+        {
+          "uid": 108,
+          "title": "10.4 像编译器一样思考吧——理论篇",
+          "level": 2
+        },
+        {
+          "uid": 109,
+          "title": "10.5 像编译器一样思考吧——实战篇",
+          "level": 2
+        },
+        {
+          "uid": 110,
+          "title": "课后题",
+          "level": 2
+        },
+        {
+          "uid": 111,
+          "title": "附录 答案",
+          "level": 1
+        },
+        {
+          "uid": 112,
+          "title": "第2章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 113,
+          "title": "第3章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 114,
+          "title": "第4章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 115,
+          "title": "第5章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 116,
+          "title": "第6章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 117,
+          "title": "第7章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 118,
+          "title": "第8章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 119,
+          "title": "第9章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 120,
+          "title": "第10章 课后题答案",
+          "level": 2
+        },
+        {
+          "uid": 121,
+          "title": "内容简介",
+          "level": 1
+        },
+        {
+          "uid": 122,
+          "title": "作者简介",
+          "level": 1
+        }
+      ],
+      "notes": [
+        {
+          "id": "22651389_6_514-532",
+          "chapter": "1.2 计算机程序运行的目的",
+          "chapter_uid": 6,
+          "highlight": "最为直观的表达就是：程序=数据+算法",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789384290
+        }
+      ]
+    },
     {
       "book_id": "CB_8DO8Pm8SF5hP76775S9g5GCj",
       "title": "笔记的方法",
       "author": "刘白光",
       "cover": "https://res.weread.qq.com/wrepub/CB_Dng2HM2Ib4qX72n70k4U0Ftw_parsecover",
       "category": "",
-      "note_count": 92,
+      "note_count": 130,
       "chapters": [
         {
           "uid": 1,
@@ -136,6 +1136,330 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_23_14428-14464",
+          "chapter": "附录 工具篇",
+          "chapter_uid": 23,
+          "highlight": "我们常说，重要的不是记录，而是思考。而回顾笔记，就是引发思考的重要契机。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383925
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_16190-16232",
+          "chapter": "持续不断",
+          "chapter_uid": 22,
+          "highlight": "想要得到一朵鲜花，你必须先种下一颗种子，设置好温度、湿度和光照，让它自然地生长出来。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383752
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_8926-9175",
+          "chapter": "持续不断",
+          "chapter_uid": 22,
+          "highlight": "1.控制主观意愿，让自己愿意坚持；2.设计客观环境，让自己容易坚持；3.根据价值观管理时间，让自己能够坚持",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383619
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_8407-8449",
+          "chapter": "持续不断",
+          "chapter_uid": 22,
+          "highlight": "积累知识也一样，要想真正把记过的笔记用起来，我们也需要为自己打造一套持续不断的系统。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383612
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_22_4237-4245",
+          "chapter": "持续不断",
+          "chapter_uid": 22,
+          "highlight": "持续不断的重要性",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383535
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_16015-16062",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "具体来说，我们可以重新思考自己所处的环境，通过提出一个长期而又具体的问题，来重启并优化提问机器",
+          "comment": "有时候好的问题，比好的答案更好",
+          "color": "blue",
+          "created_at": 1789383398
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_12539-12564",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "时间有限但知识无限，我们必须勇于放弃，才能专注精进",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383329
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_11971-12031",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "理论学习固然重要，但若脱离了实践，难免成为纸上谈兵；只有结合亲身实践，与理论知识互相补充，我们才能真正牢牢掌握相关的知识",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789383319
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_4667-4691",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "思维的偷懒，不愿意用力思考，只跟着人群随波逐流。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1789297632
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_21_892-940",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "前文“应用篇”“记录篇”“收集篇”分享了如何用笔记、如何记笔记、如何收集高质量信息的方法和建议。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1789294480
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_18_7279-7350",
+          "chapter": "# 建议二：做加法，增加书本之外的优质信息源",
+          "chapter_uid": 18,
+          "highlight": "而是建一个表格，把他们的社交网站或访谈资料整理进去，定期学习这些一手信息。如果你有兴趣，也可以创建属于你的关注名单，并整理关于他们的一手信息。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1789293906
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_17_5621-5648",
+          "chapter": "# 建议一：做减法，削减你的信息源",
+          "chapter_uid": 17,
+          "highlight": "削减信息源的第三个方法叫作，削减缺乏具体事实的信息源。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1789293378
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_17_3254-3295",
+          "chapter": "# 建议一：做减法，削减你的信息源",
+          "chapter_uid": 17,
+          "highlight": "是因为，很多试图激起强烈情绪的信息，其目的往往是利用我们的情绪获得点击量或阅读量。",
+          "comment": "",
+          "color": "purple",
+          "created_at": 1789293291
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_5196-5243",
+          "chapter": "# 三项原则，掌握获取信息的主动权",
+          "chapter_uid": 16,
+          "highlight": "加上大多数人不是在拼命工作就是在拼命消费，根本没有时间停下来思考意义，就会陷入更加恶性的循环。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789188805
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_3930-3954",
+          "chapter": "# 三项原则，掌握获取信息的主动权",
+          "chapter_uid": 16,
+          "highlight": "获取优质信息的第三条原则叫作：主动监控，保持质疑",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789184037
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_2467-2491",
+          "chapter": "# 三项原则，掌握获取信息的主动权",
+          "chapter_uid": 16,
+          "highlight": "获取优质信息的第二条原则叫作：以具体问题为牵引。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789184006
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_16_1231-1261",
+          "chapter": "# 三项原则，掌握获取信息的主动权",
+          "chapter_uid": 16,
+          "highlight": "获取优质信息的第一条原则叫作：不必成为各个领域的“全能专家”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789183970
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_15_3847-3911",
+          "chapter": "# 审视自己和信息之间的关系",
+          "chapter_uid": 15,
+          "highlight": "这就引发了大脑的一个系统错误：一方面，大脑本能地渴望获取信息，用来保持进化优势，于是会在捕捉到新信息的时候，分泌多巴胺作为奖励；",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789183055
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_15_1475-1518",
+          "chapter": "# 审视自己和信息之间的关系",
+          "chapter_uid": 15,
+          "highlight": "这就需要我们解决两大典型挑战：第一，避免信息成瘾；第二，逃离信息茧房。下面我们分别来看",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182912
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_59216-59283",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "回顾笔记的三个步骤：投入时间、同步思考、保持互动。每个步骤都提供了一些建议，你可以结合自己的情况灵活取用，让回顾笔记这件事变得更有价值",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182710
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_57580-57615",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "不必担心这样会破坏内容，因为改造是为了更好地使用，而不是把它展示给他人",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182685
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_54962-55027",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "这里所谓的改写，并不是对文字做语法或词汇上的修饰，而是经过消化吸收、深入思考之后，把别人的案例或洞察换成自己的，用自己的话说一遍。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182625
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_47849-47953",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "蔡钰老师说，所谓信息增量，其实来自不同信息之间的关系；而所谓关系，无外乎有这么几种形式：差异、变化、冲突、呼应、互补、联动。下次回顾笔记的时候，你不妨顺着这些形式，找找不同信息之间的关系，说不定会有新的发现。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182405
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_42748-42774",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "所谓客户旅程，指“获取—感知—熟悉—使用”的全过程。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182287
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_35343-35504",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "（1）这条笔记和我最近遇到的什么问题有关？",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182196
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_35073-35136",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "你看，长期以来的教育模式，潜移默化地让我们有“背诵答案”的习惯，回顾时往往下意识地去复诵记过的笔记，却忽略了最重要的思考过程。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182183
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_34014-34064",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "亲密关系不是丧失自我，成为只会满足对方需求的“奴隶”，而是找到彼此一致的视角，看到生活中新的可能性。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182040
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_33726-33760",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "拥有良好亲密关系的前提是“知道自己是谁”。先成为自己，才能看清对方。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789182024
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_25268-25314",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "在有限的时间里，我们与其不断追求更多新知识，不如花点时间回顾记过的笔记，让更多知识内化于心。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181791
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_24708-24784",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "比如在一个平常的日子，你可以漫无目的地随机回顾，看看过往的自己记过什么，想过什么，对什么在意，又对什么念念不忘，让外界的声音散去，只留下自己和自己对话。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181777
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_9552-9621",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "对应一阶思维。一阶思维指只考虑直接结果，不考虑后续结果；而二阶思维指努力预估未来，推断出可能产生的一系列后果，以便做出决策或制订解决方案。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181414
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_9120-9281",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "所以当时我做了两个决定：一方面，停止记录更多思维模型，控制输入，避免囤积到无法消化的地步；另一方面，集中时间回顾过去的记录，把那些看完一遍也没能很快理解的思维模型——诸如 Zwicky box、Cynefin 框架，都直接删除。虽然也会担心“未来或许用得上”，但现有的思维模型都还没吃透，干吗“吃着碗里的，瞧着锅里的”呢？",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181393
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_7495-7528",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "所谓内化，指的是把外部知识转化为内部知识，让记录的知识真正属于你。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181352
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_5420-5435",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "记录时间，知道把时间用在了哪里",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181221
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_13_1846-1868",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 13,
+          "highlight": "知识并不是商品，记下来并不等于“拥有”了它。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789181128
+        },
+        {
+          "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_59760-59802",
+          "chapter": "通过回顾持续刺激",
+          "chapter_uid": 10,
+          "highlight": "为了整理笔记而整理笔记，而是希望你通过回顾引发思考，继而解决现实问题，影响现实世界。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1789178528
+        },
         {
           "id": "CB_8DO8Pm8SF5hP76775S9g5GCj_10_27183-27218",
           "chapter": "通过回顾持续刺激",
@@ -893,6 +2217,24 @@
           "created_at": 1788313484
         },
         {
+          "id": "79857957_8c70sOEKx",
+          "chapter": "以我为主",
+          "chapter_uid": 21,
+          "highlight": "所以，很多时候我们不必学习屠龙之术，不要做研究长期主义的乞丐，而要多问问自己，当前的真问题是什么，然后从自己的真问题出发进行学习。",
+          "comment": "解决当前的问题，比如给出自己的问题清单",
+          "color": "default",
+          "created_at": 1789378247
+        },
+        {
+          "id": "79857957_8c3zvlUKG",
+          "chapter": "# 审视自己和信息之间的关系",
+          "chapter_uid": 15,
+          "highlight": "指的是人们形成的一种信息过滤系统，这种系统会使一个人只愿意接受自己熟悉的信息，而看不到其他重要信息——就像把自己关在一个茧房里，短期来看十分满足，长期来看却是作茧自缚。",
+          "comment": "信息茧房",
+          "color": "default",
+          "created_at": 1789183148
+        },
+        {
           "id": "79857957_8bVJ7rGs8",
           "chapter": "用自己的话记笔记",
           "chapter_uid": 8,
@@ -1254,312 +2596,6 @@
           "comment": "如何在正确的时间找到正确的信息",
           "color": "default",
           "created_at": 1788665542
-        }
-      ]
-    },
-    {
-      "book_id": "CB_8hT8Mp8O45xz76B75S01H8FG",
-      "title": "思维模型：建立高品质思维的30种模型",
-      "author": "(美) 彼 得·霍林斯 (Peter Hollins)",
-      "cover": "https://res.weread.qq.com/wrepub/CB_Blp8VV8UNGxF76975PCwg5bu_parsecover",
-      "category": "",
-      "note_count": 11,
-      "chapters": [
-        {
-          "uid": 1,
-          "title": "第一章    如何快速而全面地做出决策",
-          "level": 1
-        },
-        {
-          "uid": 2,
-          "title": "思维模型1：关注“重要”任务，忽略“紧急”任务",
-          "level": 2
-        },
-        {
-          "uid": 3,
-          "title": "思维模型2：设想出所有多米诺骨牌",
-          "level": 2
-        },
-        {
-          "uid": 4,
-          "title": "思维模型3：做出可逆的决策",
-          "level": 2
-        },
-        {
-          "uid": 5,
-          "title": "思维模型4：寻求“满意度”",
-          "level": 2
-        },
-        {
-          "uid": 6,
-          "title": "思维模型5：停留在40%～70%的区间",
-          "level": 2
-        },
-        {
-          "uid": 7,
-          "title": "思维模型6：遗憾最小化框架",
-          "level": 2
-        },
-        {
-          "uid": 8,
-          "title": "本章要点",
-          "level": 2
-        },
-        {
-          "uid": 9,
-          "title": "第二章    如何更清晰地看待问题",
-          "level": 1
-        },
-        {
-          "uid": 10,
-          "title": "思维模型7：忽略“黑天鹅”",
-          "level": 2
-        },
-        {
-          "uid": 11,
-          "title": "思维模型8：寻找均衡点",
-          "level": 2
-        },
-        {
-          "uid": 12,
-          "title": "思维模型9：等待均值回归",
-          "level": 2
-        },
-        {
-          "uid": 13,
-          "title": "思维模型10：贝叶斯会怎样做",
-          "level": 2
-        },
-        {
-          "uid": 14,
-          "title": "思维模型11：借鉴达尔文",
-          "level": 2
-        },
-        {
-          "uid": 15,
-          "title": "思维模型12：调动系统2思维",
-          "level": 2
-        },
-        {
-          "uid": 16,
-          "title": "本章要点",
-          "level": 2
-        },
-        {
-          "uid": 17,
-          "title": "第三章    如何找到解决方案的思维模型",
-          "level": 1
-        },
-        {
-          "uid": 18,
-          "title": "思维模型13：让你的观点接受同行评议",
-          "level": 2
-        },
-        {
-          "uid": 19,
-          "title": "思维模型14：找出自己的缺陷",
-          "level": 2
-        },
-        {
-          "uid": 20,
-          "title": "思维模型15：相关性不等于因果关系",
-          "level": 2
-        },
-        {
-          "uid": 21,
-          "title": "思维模型16：从结果反推原因",
-          "level": 2
-        },
-        {
-          "uid": 22,
-          "title": "思维模型17：以“奔驰法”激发创意",
-          "level": 2
-        },
-        {
-          "uid": 23,
-          "title": "思维模型18：回归第一性原理",
-          "level": 2
-        },
-        {
-          "uid": 24,
-          "title": "本章要点",
-          "level": 2
-        },
-        {
-          "uid": 25,
-          "title": "第四章    反向思考思维模型",
-          "level": 1
-        },
-        {
-          "uid": 26,
-          "title": "思维模型19：避免直接目标",
-          "level": 2
-        },
-        {
-          "uid": 27,
-          "title": "思维模型20：避免专家思维模式",
-          "level": 2
-        },
-        {
-          "uid": 28,
-          "title": "思维模型21：避免非天才区",
-          "level": 2
-        },
-        {
-          "uid": 29,
-          "title": "思维模型22：避免待办事项清单",
-          "level": 2
-        },
-        {
-          "uid": 30,
-          "title": "思维模型23：避免阻力最小的道路",
-          "level": 2
-        },
-        {
-          "uid": 31,
-          "title": "本章要点",
-          "level": 2
-        },
-        {
-          "uid": 32,
-          "title": "第五章    经典思维模型",
-          "level": 1
-        },
-        {
-          "uid": 33,
-          "title": "思维模型24：墨菲定律",
-          "level": 2
-        },
-        {
-          "uid": 34,
-          "title": "思维模型25：奥卡姆剃刀定律",
-          "level": 2
-        },
-        {
-          "uid": 35,
-          "title": "思维模型26：汉隆剃刀原则",
-          "level": 2
-        },
-        {
-          "uid": 36,
-          "title": "思维模型27：帕累托法则",
-          "level": 2
-        },
-        {
-          "uid": 37,
-          "title": "思维模型28：史特金定律",
-          "level": 2
-        },
-        {
-          "uid": 38,
-          "title": "思维模型29～30：帕金森定律",
-          "level": 2
-        },
-        {
-          "uid": 39,
-          "title": "本章要点",
-          "level": 2
-        }
-      ],
-      "notes": [
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_4_783-806",
-          "chapter": "思维模型3：做出可逆的决策",
-          "chapter_uid": 4,
-          "highlight": "用于尽可能战略性地消除犹豫不决，形成行动偏向。",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788734705
-        },
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_3_1183-1251",
-          "chapter": "思维模型2：设想出所有多米诺骨牌",
-          "chapter_uid": 3,
-          "highlight": "这通常称为“一阶思维”，我们只专注于解决手头上的问题或对手头上的事情做出决策，而不去考虑长远影响或我们的决策在遥远的未来会发挥什么作用。",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788693078
-        },
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_7058-7139",
-          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
-          "chapter_uid": 2,
-          "highlight": "纵然有些事情仿佛要求你快速回应，但这并不代表你必须马上去做；纵然有些事情仿佛是嘀嘀嗒嗒，不急不缓，但这并不代表你可以听而不闻。学会平衡这两点，你才能做出最佳决策。",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788688204
-        },
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2757-2779",
-          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
-          "chapter_uid": 2,
-          "highlight": "换言之，也就是把重要任务和紧急任务区分开来。",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788687947
-        },
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_2_2668-2712",
-          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
-          "chapter_uid": 2,
-          "highlight": "把活动和需求分类，整理出最重要的任务，并找出为了实现这些重要任务需要采取哪些最关键的流程",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788687932
-        },
-        {
-          "id": "CB_8hT8Mp8O45xz76B75S01H8FG_1_3298-3365",
-          "chapter": "第一章    如何快速而全面地做出决策",
-          "chapter_uid": 1,
-          "highlight": "思维模型是针对你所面对的情况，指引你关注重要元素的蓝图，界定场景、背景和方向。即使缺乏实际知识或经验，你也能够增进了解，做出最佳决策。",
-          "comment": "",
-          "color": "purple",
-          "created_at": 1788687046
-        },
-        {
-          "id": "79857957_8bUWPadx9",
-          "chapter": "思维模型2：设想出所有多米诺骨牌",
-          "chapter_uid": 3,
-          "highlight": "要质疑我们的行动会对眼前之外的情况产生什么影响，需要我们探究未知的未来，进入费力或复杂的思考迷宫，别人可能会说我们在做出决策或考虑问题时“想太多了”。",
-          "comment": "也可能根据自己当时的情绪有关，不顾后果。",
-          "color": "default",
-          "created_at": 1788693310
-        },
-        {
-          "id": "79857957_8bUWHsTSJ",
-          "chapter": "思维模型2：设想出所有多米诺骨牌",
-          "chapter_uid": 3,
-          "highlight": "所谓二阶思维，是指努力预估未来，推断出可能产生的一系列后果，用于进行成本效益分析，以便做出决策或制订解决方案",
-          "comment": "做事之前往前想三步，往后想三步。",
-          "color": "default",
-          "created_at": 1788693196
-        },
-        {
-          "id": "79857957_8bUQNE7Lr",
-          "chapter": "思维模型1：关注“重要”任务，忽略“紧急”任务",
-          "chapter_uid": 2,
-          "highlight": "时间就是金钱。我们把太多时间花在所谓“紧急”任务上，其实应该关注的是“重要”任务。",
-          "comment": "有的时候重要的事情没有处理好，后面就会变成紧急的问题了",
-          "color": "default",
-          "created_at": 1788687791
-        },
-        {
-          "id": "79857957_8bUQApdiP",
-          "chapter": "第一章    如何快速而全面地做出决策",
-          "chapter_uid": 1,
-          "highlight": "多个模型可以相互质疑，形成更统一的整体观点。而若是只使用一两个模型，就会让你只从具有局限性的场景或学科出发，致使远景不够开阔",
-          "comment": "通过部署AI训练，加上思维模型，通过思维碰撞，作出决策系统",
-          "color": "default",
-          "created_at": 1788687595
-        },
-        {
-          "id": "79857957_8bUQ1M7Dr",
-          "chapter": "第一章    如何快速而全面地做出决策",
-          "chapter_uid": 1,
-          "highlight": "思维模型",
-          "comment": "给你解决问题的指明灯",
-          "color": "default",
-          "created_at": 1788687083
         }
       ]
     },
