@@ -88,7 +88,7 @@
 				<link>https://blog.zzek.cn/about/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://blog.zzek.cn/about/</guid>
-				<description>&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;&#xA;&lt;p&gt;本站使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; 构建，数据来源为微信读书划线与批注。&lt;/p&gt;&#xA;&lt;p&gt;通过 &lt;code&gt;weread_hugo_exporter.py&lt;/code&gt; 脚本，可以：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;从微信读书 API 拉取包含笔记的书单&lt;/li&gt;&#xA;&lt;li&gt;递归获取每本书的划线与想法&lt;/li&gt;&#xA;&lt;li&gt;标准化并去重&lt;/li&gt;&#xA;&lt;li&gt;生成 Hugo 内容文件与 JSON 数据&lt;/li&gt;&#xA;&lt;li&gt;在 Hugo 站点中以卡片网格形式展示&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hugo 静态站点生成器&lt;/li&gt;&#xA;&lt;li&gt;原生 JavaScript（无框架依赖）&lt;/li&gt;&#xA;&lt;li&gt;CSS 变量与响应式布局&lt;/li&gt;&#xA;&lt;li&gt;GitHub Actions 自动化（可选）&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+				<description>&lt;h2 id=&#34;开源地址&#34;&gt;开源地址&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/ilikui/WeRead&#34;&gt;WeRead&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;关于本站&#34;&gt;关于本站&lt;/h2&gt;&#xA;&lt;p&gt;本站使用 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; 构建，数据来源为微信读书划线与批注。&lt;/p&gt;&#xA;&lt;p&gt;通过 &lt;code&gt;weread_hugo_exporter.py&lt;/code&gt; 脚本，可以：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;从微信读书 API 拉取包含笔记的书单&lt;/li&gt;&#xA;&lt;li&gt;递归获取每本书的划线与想法&lt;/li&gt;&#xA;&lt;li&gt;标准化并去重&lt;/li&gt;&#xA;&lt;li&gt;生成 Hugo 内容文件与 JSON 数据&lt;/li&gt;&#xA;&lt;li&gt;在 Hugo 站点中以卡片网格形式展示&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Hugo 静态站点生成器&lt;/li&gt;&#xA;&lt;li&gt;原生 JavaScript（无框架依赖）&lt;/li&gt;&#xA;&lt;li&gt;CSS 变量与响应式布局&lt;/li&gt;&#xA;&lt;li&gt;GitHub Actions 自动化（可选）&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
 			</item>
 			<item>
 				<title>卡片笔记写作法：如何实现从阅读到写作</title>
@@ -137,7 +137,7 @@
 				<link>https://blog.zzek.cn/weread/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B%E9%AB%98%E5%93%81%E8%B4%A8%E6%80%9D%E7%BB%B4%E7%9A%8430%E7%A7%8D%E6%A8%A1%E5%9E%8B-cb_8ht8mp8o45xz76b75s01h8fg/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://blog.zzek.cn/weread/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B%E5%BB%BA%E7%AB%8B%E9%AB%98%E5%93%81%E8%B4%A8%E6%80%9D%E7%BB%B4%E7%9A%8430%E7%A7%8D%E6%A8%A1%E5%9E%8B-cb_8ht8mp8o45xz76b75s01h8fg/</guid>
-				<description>&lt;h2 id=&#34;关于思维模型建立高品质思维的30种模型&#34;&gt;关于《思维模型：建立高品质思维的30种模型》&lt;/h2&gt;&#xA;&lt;p&gt;作者：(美) 彼 得·霍林斯 (Peter Hollins)&lt;/p&gt;&#xA;&lt;p&gt;共 &lt;strong&gt;37&lt;/strong&gt; 条笔记。&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;提示：阅读页使用动态 JSON 数据展示卡片，本文件主要用于 SEO 与固定链接。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+				<description>&lt;h2 id=&#34;关于思维模型建立高品质思维的30种模型&#34;&gt;关于《思维模型：建立高品质思维的30种模型》&lt;/h2&gt;&#xA;&lt;p&gt;作者：(美) 彼 得·霍林斯 (Peter Hollins)&lt;/p&gt;&#xA;&lt;p&gt;共 &lt;strong&gt;59&lt;/strong&gt; 条笔记。&lt;/p&gt;&#xA;&lt;hr /&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;提示：阅读页使用动态 JSON 数据展示卡片，本文件主要用于 SEO 与固定链接。&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
 			</item>
 			<item>
 				<title>打造第二大脑</title>

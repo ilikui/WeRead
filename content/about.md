@@ -3,6 +3,10 @@ title: 关于
 description: 关于 WeRead 读书笔记博客
 ---
 
+## 开源地址
+
+* [WeRead](https://github.com/ilikui/WeRead)
+
 ## 关于本站
 
 本站使用 [Hugo](https://gohugo.io/) 构建，数据来源为微信读书划线与批注。
