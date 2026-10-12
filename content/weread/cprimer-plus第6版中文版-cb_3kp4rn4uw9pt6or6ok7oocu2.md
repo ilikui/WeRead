@@ -5,8 +5,17 @@
   "book_id": "CB_3Kp4rn4uW9PT6oR6ok7OoCu2",
   "cover": "https://res.weread.qq.com/wrepub/CB_Eln0Jn0Gk5dz6i36gnBok5kd_parsecover",
   "category": "",
-  "note_count": 72,
+  "note_count": 73,
   "notes": [
+    {
+      "id": "CB_3Kp4rn4uW9PT6oR6ok7OoCu2_15_993-1049",
+      "chapter": "第9章 函数",
+      "chapter_uid": 15,
+      "highlight": "首先，什么是函数？函数（function）是完成特定任务的独立程序代码单元。语法规则定义了函数的结构和使用方式。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1791783335
+    },
     {
       "id": "CB_3Kp4rn4uW9PT6oR6ok7OoCu2_10_22207-22254",
       "chapter": "第4章 字符串和格式化输入/输出",
@@ -665,7 +674,7 @@
 
 作者：[美]史蒂芬·普拉达（Stephen Prata）
 
-共 **72** 条笔记。
+共 **73** 条笔记。
 
 ---
 
