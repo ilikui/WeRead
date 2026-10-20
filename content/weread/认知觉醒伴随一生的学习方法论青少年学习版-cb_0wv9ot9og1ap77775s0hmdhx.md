@@ -5,8 +5,35 @@
   "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
   "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
   "category": "",
-  "note_count": 6,
+  "note_count": 9,
   "notes": [
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_10606-10625",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "其本质都是大脑中的神经元细胞在建立连接",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792484441
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_10267-10307",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "学校里的学霸通常是那些更能克服天性的人，他们的耐心水平更高，延迟满足的能力更强。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1792452503
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_9669-9745",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "他们总想同时学很多东西，还要马上看到结果，还想不经历学习的过程，这样的心态注定他们的学习成绩平平。",
+      "comment": "",
+      "color": "purple",
+      "created_at": 1792452469
+    },
     {
       "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_9870-9976",
       "chapter": "上篇 学习的技法",
@@ -71,7 +98,7 @@
 
 作者：周岭
 
-共 **6** 条笔记。
+共 **9** 条笔记。
 
 ---
 
