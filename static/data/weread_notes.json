@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-10-20T19:50:16.448706+00:00",
+    "generated_at": "2026-10-21T19:56:04.224212+00:00",
     "source": "wechat-reading-skill-gateway",
     "total_books": 19,
-    "total_notes": 692
+    "total_notes": 695
   },
   "books": [
     {
@@ -12,7 +12,7 @@
       "author": "周岭",
       "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
       "category": "",
-      "note_count": 9,
+      "note_count": 12,
       "chapters": [
         {
           "uid": 1,
@@ -86,6 +86,33 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_13542-13554",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "我们在行动上总是避难趋易",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1792553187
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_12587-12611",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "耐心不是毅力带来的结果，而是具有长远目光的结果。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1792553171
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_11285-11315",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "一是在学习或练习的初期，我们做不好或一时看不到进步是很正常的",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1792549480
+        },
         {
           "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_10606-10625",
           "chapter": "上篇 学习的技法",
