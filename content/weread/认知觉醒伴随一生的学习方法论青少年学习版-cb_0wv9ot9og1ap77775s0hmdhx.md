@@ -5,8 +5,26 @@
   "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
   "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
   "category": "",
-  "note_count": 12,
+  "note_count": 14,
   "notes": [
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_16846-16976",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "人类的“三个大脑”都可以被看作大脑里的小人，只不过我们平时称呼它们的时候只用“两个小人”——“原始小人”和“现代小人”​，或者“情绪小人”和“理智小人”。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792650252
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_16280-16306",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "缺乏耐心是人类的天性，我们要坦然接纳，不要盲目自责。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792648401
+    },
     {
       "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_13542-13554",
       "chapter": "上篇 学习的技法",
@@ -125,7 +143,7 @@
 
 作者：周岭
 
-共 **12** 条笔记。
+共 **14** 条笔记。
 
 ---
 
