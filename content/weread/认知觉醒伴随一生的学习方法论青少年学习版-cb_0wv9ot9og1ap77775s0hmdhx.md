@@ -5,8 +5,17 @@
   "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
   "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
   "category": "",
-  "note_count": 14,
+  "note_count": 15,
   "notes": [
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_17579-17635",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "所谓工作记忆，就是在大脑中对正在处理的信息进行瞬时及有意识加工的这部分记忆，简单来说就是理智脑可以使用的脑力资源",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792715689
+    },
     {
       "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_16846-16976",
       "chapter": "上篇 学习的技法",
@@ -143,7 +152,7 @@
 
 作者：周岭
 
-共 **14** 条笔记。
+共 **15** 条笔记。
 
 ---
 
