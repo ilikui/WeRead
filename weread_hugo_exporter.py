@@ -37,7 +37,7 @@ WEREAD_API_GATEWAY = os.getenv(
 ).strip()
 
 FLOMO_AUTHORIZATION = os.getenv("FLOMO_AUTHORIZATION", "").strip()
-FLOMO_TAG = os.getenv("FLOMO_TAG", "").strip()
+FLOMO_TAG = os.getenv("FLOMO_TAG", "Archive/Blog").strip() or "Archive/Blog"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -459,7 +459,7 @@ def normalize_memo(memo: "Parser") -> dict:
 
 
 def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
-    """拉取全部 Flomo memo；只有显式指定标签时才按该标签（含子标签）筛选。"""
+    """只拉取指定 Flomo 标签（默认 Archive/Blog，包含其子标签）的 memo。"""
     if not FLOMO_AUTHORIZATION:
         print("❌ 未检测到 FLOMO_AUTHORIZATION，请先配置环境变量。")
         return []
@@ -482,8 +482,7 @@ def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
     for raw in raw_memos:
         parsed = Parser(raw)
         tags = [_normalize_tag(t) for t in (getattr(parsed, "tags", None) or [])]
-        # 默认不筛标签，避免只导出少数带 Archive/Blog 的记录。
-        # 指定标签时，仍支持匹配该标签及其子标签。
+        # 默认只导出 Archive/Blog；支持该标签及其子标签，避免其他 Flomo 内容进入公开页面。
         if target_tag and not any(t == target_tag or t.startswith(f"{target_tag}/") for t in tags):
             continue
         matched.append(normalize_memo(parsed))
