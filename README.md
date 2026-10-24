@@ -76,14 +76,14 @@ python weread_hugo_exporter.py --site-dir .
 hugo --gc --minify
 ```
 
-## 从 Flomo 导出 Memos（#Archive/Blog）
+## 从 Flomo 导出 Memos（默认全部导出）
 
 1. 安装依赖并配置环境变量（`FLOMO_AUTHORIZATION` 是登录 Flomo 网页版后，在浏览器开发者工具中抓取的 `authorization` 请求头值）：
 
 ```bash
 pip install flomo
 export FLOMO_AUTHORIZATION="Bearer xxxxxxxxxxx"
-export FLOMO_TAG="Archive/Blog"   # 可选，默认 Archive/Blog
+export FLOMO_TAG=""                 # 可选；留空时导出全部 memo，填写标签时仅导出该标签及子标签
 ```
 
 2. 运行导出脚本（会同时导出微信读书与 Flomo Memos，可用 `--skip-weread` / `--skip-memos` 单独跳过）：
@@ -92,7 +92,7 @@ export FLOMO_TAG="Archive/Blog"   # 可选，默认 Archive/Blog
 python weread_hugo_exporter.py --site-dir .
 ```
 
-导出结果会写入 `static/data/flomo_memos.json`，并在 `/memos/` 页面以卡片形式展示，支持按标签筛选与全文搜索。
+默认导出 Flomo 中的全部 memo，不再限定 `Archive/Blog` 标签。若只想导出某个标签，可设置 `FLOMO_TAG`（例如 `Archive/Blog`）；导出结果写入 `static/data/flomo_memos.json`，`/memos/` 页面支持按标签筛选与全文搜索。
 
 ## GitHub Actions 自动更新与部署
 
