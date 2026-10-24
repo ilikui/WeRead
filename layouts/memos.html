@@ -86,7 +86,7 @@
         };
         // 数据文件位于站点根 /data/ 下，Memos 页固定位于 /memos/（根下一层），
         // 用相对路径 ../ 向上取到站点根，兼容本地预览与 GitHub Pages 子路径部署。
-        const dataUrl = '../' + '{{ site.Params.flomo.data_file | default "data/flomo_memos.json" }}';
+        const dataUrl = '../' + '{{ site.Params.flomo.data_file | default "data/flomo_memos.json" }}' + '?v={{ now.Format "20060102150405" }}';
 
         function $(id) { return document.getElementById(id); }
 
@@ -317,7 +317,7 @@
             });
 
             try {
-                const res = await fetch(dataUrl);
+                const res = await fetch(dataUrl, { cache: 'no-store' });
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 bootstrap(await res.json());
             } catch (err) {
