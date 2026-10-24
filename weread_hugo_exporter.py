@@ -483,7 +483,7 @@ def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
         parsed = Parser(raw)
         tags = [_normalize_tag(t) for t in (getattr(parsed, "tags", None) or [])]
         # 默认只导出 Archive/Blog；支持该标签及其子标签，避免其他 Flomo 内容进入公开页面。
-        if target_tag and not any(t == target_tag or t.startswith(f"{target_tag}/") for t in tags):
+        if target_tag and target_tag not in tags:
             continue
         matched.append(normalize_memo(parsed))
 
@@ -545,7 +545,7 @@ def main_export_memos(tag_filter: str):
     def in_scope(memo: dict) -> bool:
         tags = [_normalize_tag(t) for t in (memo.get("tags") or [])]
         return not target_tag or any(
-            tag == target_tag or tag.startswith(f"{target_tag}/") for tag in tags
+            tag == target_tag for tag in tags
         )
 
     # Flomo 的 updated 接口在部分情况下只返回近期更新项。
