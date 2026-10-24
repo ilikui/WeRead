@@ -17,7 +17,8 @@ params:
     notes_per_page: 12
     enable_search: true
   flomo:
-    data_file: 'data/flomo_memos.json'
+    # 新文件名用于绕开旧 JSON 路径的缓存；由 Actions 每次构建时从完整导出生成
+    data_file: 'data/flomo_memos_latest.json'
     memos_per_page: 12
   menu:
     side:
