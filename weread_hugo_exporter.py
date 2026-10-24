@@ -536,16 +536,57 @@ def generate_memos_index_page(content_dir: Path) -> Path:
 
 
 def main_export_memos(tag_filter: str):
+    """导出目标标签；当 Flomo API 只返回部分更新记录时，保留已有目标标签数据。"""
     scope = f"#{tag_filter} 标签（含子标签）" if tag_filter else "全部标签下的 memo"
     print(f"====== 开始通过 Flomo API 拉取{scope} ======")
-    memos = fetch_flomo_memos(tag_filter)
+    fresh_memos = fetch_flomo_memos(tag_filter)
+    target_tag = _normalize_tag(tag_filter)
+
+    def in_scope(memo: dict) -> bool:
+        tags = [_normalize_tag(t) for t in (memo.get("tags") or [])]
+        return not target_tag or any(
+            tag == target_tag or tag.startswith(f"{target_tag}/") for tag in tags
+        )
+
+    # Flomo 的 updated 接口在部分情况下只返回近期更新项。
+    # 合并仓库中上一次成功导出的同标签记录，避免一次不完整响应把旧文章清空。
+    existing_path = Path("static/data/flomo_memos.json")
+    existing_memos = []
+    if existing_path.exists():
+        try:
+            previous = json.loads(existing_path.read_text(encoding="utf-8"))
+            existing_memos = [
+                memo for memo in previous.get("memos", [])
+                if isinstance(memo, dict) and memo.get("id") and in_scope(memo)
+            ]
+        except (OSError, json.JSONDecodeError, TypeError) as exc:
+            print(f"⚠️ 读取旧 Flomo 数据失败，将仅使用本次 API 结果：{exc}")
+
+    merged = {memo["id"]: memo for memo in existing_memos}
+    for memo in fresh_memos:
+        if memo.get("id") and in_scope(memo):
+            merged[memo["id"]] = memo
+
+    memos = sorted(
+        merged.values(),
+        key=lambda memo: memo.get("created_at", ""),
+        reverse=True,
+    )
+    if len(fresh_memos) < len(existing_memos):
+        print(
+            f"⚠️ Flomo 本次仅返回 {len(fresh_memos)} 条目标 memo，"
+            f"旧数据有 {len(existing_memos)} 条；已合并保留历史目标标签记录。"
+        )
 
     if not memos:
-        print("⚠️ 未能拉取到符合条件的 memo。")
+        print("❌ 本次 API 没有返回目标标签数据，且仓库中没有可保留的旧数据。")
         return None
 
     scope = f"#{tag_filter}" if tag_filter else "全部标签"
-    print(f"🎉 成功获取 {len(memos)} 条 memo（范围：{scope}）。")
+    print(
+        f"🎉 导出 {len(memos)} 条 memo（范围：{scope}；"
+        f"本次 API 新返回/更新 {len(fresh_memos)} 条）。"
+    )
     return build_memos_export_data(memos, tag_filter)
 
 
