@@ -43,7 +43,7 @@ jobs:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
           WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
           FLOMO_AUTHORIZATION: ${{ secrets.FLOMO_AUTHORIZATION }}
-          FLOMO_TAG: ''
+          FLOMO_TAG: 'Archive/Blog'
         run: python weread_hugo_exporter.py
 
       # Stop deployment if the exported JSON is unexpectedly incomplete.
