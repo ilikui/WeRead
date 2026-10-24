@@ -537,14 +537,16 @@ def generate_memos_index_page(content_dir: Path) -> Path:
 
 
 def main_export_memos(tag_filter: str):
-    scope = f"#{tag_filter} 标签（含子标签）" if tag_filter else "全部标签下的 memo"\n    print(f"====== 开始通过 Flomo API 拉取{scope} ======")
+    scope = f"#{tag_filter} 标签（含子标签）" if tag_filter else "全部标签下的 memo"
+    print(f"====== 开始通过 Flomo API 拉取{scope} ======")
     memos = fetch_flomo_memos(tag_filter)
 
     if not memos:
         print("⚠️ 未能拉取到符合条件的 memo。")
         return None
 
-    scope = f"#{tag_filter}" if tag_filter else "全部标签"\n    print(f"🎉 成功获取 {len(memos)} 条 memo（范围：{scope}）。")
+    scope = f"#{tag_filter}" if tag_filter else "全部标签"
+    print(f"🎉 成功获取 {len(memos)} 条 memo（范围：{scope}）。")
     return build_memos_export_data(memos, tag_filter)
 
 
