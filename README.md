@@ -106,7 +106,7 @@ hugo --gc --minify
 
 在 content/blog/ 中创建 Markdown 文件：
 
-~~~markdown
+~~~~markdown
 ---
 title: "从一个问题开始"
 date: 2026-10-24
@@ -122,7 +122,7 @@ flowchart TD
     A[问题] --> B[证据]
     B --> C[结论]
 ~~~
-~~~
+~~~~
 
 文章可以使用标准 Markdown、表格、任务列表和代码块；Mermaid 图表、数学公式等功能以当前模板配置为准。
 
