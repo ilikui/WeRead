@@ -48,7 +48,7 @@ jobs:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
           WEREAD_API_GATEWAY: ${{ vars.WEREAD_API_GATEWAY || 'https://i.weread.qq.com/api/agent/gateway' }}
           FLOMO_AUTHORIZATION: ${{ secrets.FLOMO_AUTHORIZATION }}
-          FLOMO_TAG: ${{ vars.FLOMO_TAG || 'Archive/Blog' }}
+          FLOMO_TAG: ${{ vars.FLOMO_TAG || '' }}
         run: python weread_hugo_exporter.py
 
       # 固定与本地一致的 Hugo 版本，避免 latest 升级导致模板行为变化
