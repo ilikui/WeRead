@@ -37,7 +37,7 @@ WEREAD_API_GATEWAY = os.getenv(
 ).strip()
 
 FLOMO_AUTHORIZATION = os.getenv("FLOMO_AUTHORIZATION", "").strip()
-FLOMO_TAG = os.getenv("FLOMO_TAG", "Archive/Blog").strip()
+FLOMO_TAG = os.getenv("FLOMO_TAG", "").strip()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -459,7 +459,7 @@ def normalize_memo(memo: "Parser") -> dict:
 
 
 def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
-    """通过 flomo 库拉取指定标签（含子标签）下的 memo，返回标准化列表。"""
+    """拉取全部 Flomo memo；只有显式指定标签时才按该标签（含子标签）筛选。"""
     if not FLOMO_AUTHORIZATION:
         print("❌ 未检测到 FLOMO_AUTHORIZATION，请先配置环境变量。")
         return []
@@ -482,7 +482,9 @@ def fetch_flomo_memos(tag_filter: str = FLOMO_TAG) -> list:
     for raw in raw_memos:
         parsed = Parser(raw)
         tags = [_normalize_tag(t) for t in (getattr(parsed, "tags", None) or [])]
-        if not any(t == target_tag or t.startswith(f"{target_tag}/") for t in tags):
+        # 默认不筛标签，避免只导出少数带 Archive/Blog 的记录。
+        # 指定标签时，仍支持匹配该标签及其子标签。
+        if target_tag and not any(t == target_tag or t.startswith(f"{target_tag}/") for t in tags):
             continue
         matched.append(normalize_memo(parsed))
 
@@ -497,7 +499,7 @@ def build_memos_export_data(memos: list, tag_filter: str) -> dict:
         "meta": {
             "generated_at": generated_at,
             "source": "flomo",
-            "tag_filter": tag_filter,
+            "tag_filter": _normalize_tag(tag_filter),
             "total_memos": len(memos),
         },
         "memos": memos,
@@ -535,14 +537,14 @@ def generate_memos_index_page(content_dir: Path) -> Path:
 
 
 def main_export_memos(tag_filter: str):
-    print(f"====== 开始通过 Flomo API 拉取 #{tag_filter} 标签下的 memo ======")
+    scope = f"#{tag_filter} 标签（含子标签）" if tag_filter else "全部标签下的 memo"\n    print(f"====== 开始通过 Flomo API 拉取{scope} ======")
     memos = fetch_flomo_memos(tag_filter)
 
     if not memos:
         print("⚠️ 未能拉取到符合条件的 memo。")
         return None
 
-    print(f"🎉 成功获取 {len(memos)} 条 #{tag_filter} memo。")
+    scope = f"#{tag_filter}" if tag_filter else "全部标签"\n    print(f"🎉 成功获取 {len(memos)} 条 memo（范围：{scope}）。")
     return build_memos_export_data(memos, tag_filter)
 
 
@@ -666,7 +668,7 @@ def parse_args():
     parser.add_argument(
         "--memo-tag",
         default=FLOMO_TAG,
-        help="需要导出的 Flomo 标签（默认 Archive/Blog）",
+        help="可选：仅导出指定 Flomo 标签及其子标签；默认导出全部 memo",
     )
     parser.add_argument(
         "--memo-json-name",
