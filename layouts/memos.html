@@ -284,8 +284,15 @@
 
         function bootstrap(data) {
             state.meta = data.meta || {};
-            state.memos = data.memos || [];
-            state.tagFilter = state.meta.tag_filter || '';
+            // Fail closed: this page is dedicated to #Archive/Blog, even if a stale
+            // or cached JSON file accidentally contains the full Flomo export.
+            state.tagFilter = String(state.meta.tag_filter || 'Archive/Blog').replace(/^#/, '').trim();
+            const rawMemos = Array.isArray(data.memos) ? data.memos : [];
+            state.memos = state.tagFilter
+                ? rawMemos.filter(memo => (Array.isArray(memo.tags) ? memo.tags : [])
+                    .some(tag => String(tag).replace(/^#/, '').trim().toLowerCase() === state.tagFilter.toLowerCase()))
+                : rawMemos;
+            state.meta.total_memos = state.memos.length;
             updateSideStats();
             render();
         }
