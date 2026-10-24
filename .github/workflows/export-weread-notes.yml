@@ -97,6 +97,18 @@ jobs:
           if count < 1 or count != expected:
               raise SystemExit(f"Built artifact contains invalid Flomo data: actual={count}, expected={expected}")
           print(f"Build artifact verified: {count} Flomo memos")
+
+          # Verify the actual Hugo-generated page (the file that will be uploaded)
+          # points at the validated latest JSON and applies the dedicated tag filter.
+          html_path = Path("public/memos/index.html")
+          if not html_path.exists():
+              raise SystemExit("Missing generated page: public/memos/index.html")
+          html = html_path.read_text(encoding="utf-8")
+          if "data/flomo_memos_latest.json" not in html:
+              raise SystemExit("Generated Memos page does not reference data/flomo_memos_latest.json")
+          if "Archive/Blog" not in html:
+              raise SystemExit("Generated Memos page is missing the Archive/Blog filter")
+          print("Generated Memos page verified: latest JSON path and Archive/Blog filter present")
           PY
 
       - name: Commit updated notes and content
