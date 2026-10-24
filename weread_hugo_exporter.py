@@ -528,7 +528,7 @@ def generate_memos_index_page(content_dir: Path) -> Path:
     index_path.write_text(
         "---\n"
         "title: Memos\n"
-        "description: Flomo 卡片墙，展示带有指定标签的 memo。\n"
+        "description: Flomo 卡片墙，展示全部 memo，支持标签筛选与全文搜索。\n"
         "layout: memos\n"
         "---\n",
         encoding="utf-8",
