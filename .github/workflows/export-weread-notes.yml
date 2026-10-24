@@ -4,15 +4,11 @@ on:
   # 每天晚上 12 点自动更新（北京时间 00:00 = UTC 16:00）
   schedule:
     - cron: '0 16 * * *'
-  # 手动触发
   workflow_dispatch:
-  # 推送到 main 分支时也构建部署（用于发布博客/相册等新内容）
   push:
     branches:
       - main
 
-# contents: write          —— 允许机器人提交导出的数据文件
-# pages/id-token: write    —— 允许部署到 GitHub Pages
 permissions:
   contents: write
   pages: write
@@ -42,7 +38,6 @@ jobs:
       - name: Install Python dependencies
         run: pip install requests flomo
 
-      # 从微信读书/Flomo 拉取最新数据（对应密钥未配置时，脚本会自动跳过并保留已有数据）
       - name: Export WeRead notes and Flomo memos
         env:
           WEREAD_API_KEY: ${{ secrets.WEREAD_API_KEY }}
@@ -51,26 +46,59 @@ jobs:
           FLOMO_TAG: ''
         run: python weread_hugo_exporter.py
 
-      # 固定与本地一致的 Hugo 版本，避免 latest 升级导致模板行为变化
+      # Stop deployment if the exported JSON is unexpectedly incomplete.
+      # Publish a new filename to avoid stale CDN/browser caches for the old URL.
+      - name: Validate and prepare Flomo data
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          source = Path("static/data/flomo_memos.json")
+          data = json.loads(source.read_text(encoding="utf-8"))
+          memos = data.get("memos")
+          if not isinstance(memos, list):
+              raise SystemExit("Invalid Flomo export: 'memos' must be an array")
+          total = data.get("meta", {}).get("total_memos")
+          if len(memos) < 2:
+              raise SystemExit(f"Refusing to deploy incomplete Flomo data: only {len(memos)} memo(s)")
+          if total != len(memos):
+              raise SystemExit(f"Flomo count mismatch: meta.total_memos={total}, actual={len(memos)}")
+          target = Path("static/data/flomo_memos_latest.json")
+          target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"Validated {len(memos)} Flomo memos; prepared {target}")
+          PY
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.165.0'
           extended: true
 
-      # 自动启用 Pages（若仓库限制不允许，请到 Settings → Pages 手动把 Source 设为 GitHub Actions）
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
         continue-on-error: true
 
-      # baseURL 使用 hugo.yml 中配置的自定义域名 blog.zzek.cn
       - name: Build Hugo site
         run: hugo --gc --minify
 
-      # 仅提交导出的数据与生成的内容文件；构建产物 public/ 不再入库，
-      # 由下面的 upload/deploy 步骤直接发布到 GitHub Pages
+      - name: Verify deployed Flomo artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("public/data/flomo_memos_latest.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          count = len(data.get("memos", []))
+          expected = data.get("meta", {}).get("total_memos")
+          if count < 2 or count != expected:
+              raise SystemExit(f"Built artifact contains invalid Flomo data: actual={count}, expected={expected}")
+          print(f"Build artifact verified: {count} Flomo memos")
+          PY
+
       - name: Commit updated notes and content
         continue-on-error: true
         run: |
@@ -81,7 +109,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
-            # actions/checkout 默认是 detached HEAD，需显式指定分支才能 push 成功
             git push origin HEAD:${{ github.ref_name }}
           fi
 
