@@ -5,8 +5,26 @@
   "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
   "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
   "category": "",
-  "note_count": 15,
+  "note_count": 17,
   "notes": [
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_18209-18261",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "不难想象，成绩好的人的真正优势在于他们能够长时间让大脑中的7个小球同时关注一件事情，以保证高质高效地学习",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792983144
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_17902-17927",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "在短期内，你通常只能记住7个左右，多了就记不住了。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1792983018
+    },
     {
       "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_17579-17635",
       "chapter": "上篇 学习的技法",
@@ -152,7 +170,7 @@
 
 作者：周岭
 
-共 **15** 条笔记。
+共 **17** 条笔记。
 
 ---
 
