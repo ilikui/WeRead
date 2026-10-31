@@ -5,8 +5,71 @@
   "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
   "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
   "category": "",
-  "note_count": 17,
+  "note_count": 24,
   "notes": [
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_22793-22852",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "实际上，元认知能力就是我们习以为常、见怪不怪的自我觉察和反思能力",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793411028
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_22694-22761",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "元认知，就是最高级别的认知，它能对自身的思考过程进行认知和理解（见图1-5）​。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793411020
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_21358-21384",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "其实学习也是如此——想进步，我们也要先修大脑里的“路",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793410674
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_20701-20788",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "我们平时学习各种技能，比如钢琴、游泳、体操等，都会提高相关脑区的神经元密度，促进脑细胞之间的信号沟通，但是这些练习一旦停止，神经元就会开始减少，而凝神呼吸带来的改变是持久的。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793410641
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_19978-20026",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "然后问自己：“我到底在担心什么、害怕什么、期待什么？​”",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793410512
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_19341-19384",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "对学习来说，保持平稳的情绪是最理想的状态，大喜、大悲等剧烈波动的情绪对学习都极为不利。",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793410453
+    },
+    {
+      "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_18483-18509",
+      "chapter": "上篇 学习的技法",
+      "chapter_uid": 5,
+      "highlight": "人和人之间的能力竞争，说到底就是脑力资源利用率的竞争",
+      "comment": "",
+      "color": "blue",
+      "created_at": 1793410412
+    },
     {
       "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_18209-18261",
       "chapter": "上篇 学习的技法",
@@ -170,7 +233,7 @@
 
 作者：周岭
 
-共 **17** 条笔记。
+共 **24** 条笔记。
 
 ---
 
