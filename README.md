@@ -100,6 +100,23 @@ hugo --gc --minify
 
 构建产物默认生成在 public/。一般应修改 content/、layouts/、assets/、static/ 或配置文件，而不是直接编辑构建产物。
 
+
+
+## Cloudflare Workers 自动构建与部署
+
+仓库已配置 `wrangler.toml`，Cloudflare Workers Builds 从 `main` 分支拉取代码，并执行 Hugo 构建后部署到 Worker：
+
+- **Build command**：下载 Hugo Extended 0.165.0，执行 `hugo --gc --minify`，并检查首页、阅读页和微信读书 JSON 产物。
+- **静态资源目录**：`public/`（由 `wrangler.toml` 的 `[assets].directory` 指定）。
+- **Deploy command**：`npx wrangler deploy`。
+- **Worker**：`weread`，默认访问地址为 <https://weread.2563043733.workers.dev/>。
+
+不要将仓库根目录、`layouts/` 或 `static/` 直接配置为 Worker 静态资源目录。Hugo 先把模板、内容、CSS、JavaScript 和 JSON 数据合成为 `public/`，Wrangler 再部署该目录。
+
+Cloudflare 配置入口：Workers & Pages → weread → Settings → Builds。确认 Git 仓库为 `ilikui/WeRead`、分支为 `main`、Root directory 为 `/`，Build command 与 Deploy command 和上述设置一致。
+
+GitHub Actions 工作流仍负责定时导出微信读书与 Flomo 数据，并保留 GitHub Pages 发布链路；Cloudflare Workers Builds 则负责将同一份 Hugo 站点构建并发布到 `workers.dev`。
+
 ## 内容维护
 
 ### 写博客
