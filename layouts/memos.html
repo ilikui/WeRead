@@ -324,9 +324,24 @@
             });
 
             try {
-                const res = await fetch(dataUrl, { cache: 'no-store' });
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                bootstrap(await res.json());
+                // Prefer the Actions-generated latest artifact. Cloudflare Builds may
+                // only have the committed source JSON, so fall back to that file.
+                const dataUrls = [
+                    dataUrl,
+                    '../data/flomo_memos.json?v={{ now.Format "20060102150405" }}'
+                ];
+                let lastError = null;
+                for (const url of dataUrls) {
+                    try {
+                        const res = await fetch(url, { cache: 'no-store' });
+                        if (!res.ok) throw new Error(`HTTP ${res.status} (${url})`);
+                        bootstrap(await res.json());
+                        return;
+                    } catch (fetchError) {
+                        lastError = fetchError;
+                    }
+                }
+                throw lastError || new Error('No Flomo data source is available');
             } catch (err) {
                 if (location.protocol === 'file:') {
                     enableFileFallback(err);
