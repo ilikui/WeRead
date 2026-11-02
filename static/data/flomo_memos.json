@@ -1,11 +1,61 @@
 {
   "meta": {
-    "generated_at": "2026-11-01T20:11:06.671999+00:00",
+    "generated_at": "2026-11-02T23:19:43.481952+00:00",
     "source": "flomo",
     "tag_filter": "Archive/Blog",
-    "total_memos": 8
+    "total_memos": 13
   },
   "memos": [
+    {
+      "id": "MjYzMzQ5ODEw",
+      "content": "《白夜行》首先说的是白夜，既然是白为什么会有夜呢?\n白与夜会相互而行吗？书中有了答案，因为雪穗说“我的天空里没有太阳，总是黑夜，但并不暗，因为有东西代替了太阳”。这句话写出两个没有童年的孩子把彼此当成生命里唯一的光，亮司是雪穗的太阳，\n\n雪穗也是亮司的太阳。亮司的心愿是“希望能和你，在白天走路”，他渴望像正常人一样和雪穗在阳光下并肩走路。但是彼此又不能在一起见面，所以有了\"共生\"。书名“白夜行”是核心意象：没有太阳却也不完全黑暗的夜晚，正是两个孩子的世界。\n\n他们靠彼此的光照走了十九年，这不是光明也不是黑暗，而是白夜。是白照亮夜的黑，但是又不是永久照亮。\n\n📑《百夜行》",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-30T17:08:33",
+      "updated_at": "2026-11-02T12:50:26",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYzMzQ5ODEw"
+    },
+    {
+      "id": "MjYyODYzODAx",
+      "content": "**常用的 SKILL 有哪些？**\n\n分三块：官方那套、社区里活下来的几个、挑的时候的判断标准。\n\n**一、官方仓库 anthropics/skills（17 个）**\n\n  * 文档处理：pdf、docx、pptx、xlsx\n\n  * 开发：mcp-builder（搭 MCP server）、webapp-testing（用 Playwright 测网页）、claude-api、skill-creator（用来写 skill）\n\n  * 创意设计：frontend-design、web-artifacts-builder、canvas-design、algorithmic-art、theme-factory、brand-guidelines、slack-gif-creator\n\n  * 沟通：doc-coauthoring、internal-comms\n\n**二、社区里真正留下来的**\n\n  * superpowers（obra/superpowers）：brainstorming → writing-plans → executing-plans → TDD → systematic-debugging → requesting-code-review → verification-before-completion，把整条开发流程串成流水线\n\n  * find-skills（Vercel 出品）：不知道装什么的时候用它找\n\n  * claude-mem：跨会话记忆，不用反复交代背景\n\n  * agent-browser：浏览器自动化，token 效率比较高\n\n  * Skill Vetter：装第三方 skill 之前先跑一遍安全审计\n\n**三、挑的时候的几条经验**\n\n  * 一个 skill 只干一件事；SKILL.md 保持精简，细节推到 references/ 里按需加载\n\n  * description 要写成触发条件，也就是什么情况下用它；写成宣传语的话 agent 判断不出该不该加载\n\n  * 官方那 17 个没必要全装，社区里普遍的说法是日常真正用得住的不超过十个，装多了反而互相干扰\n\n进一步：若是给自建工具链打底，skill-creator 和 mcp-builder 最值得先拆开看，写法可以直接照着改。\n\n📎 相关：MCP 服务器版开发方案 → https://v.flomoapp.com/mine/?memo_id=MjYxMjU1MTQz",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-27T13:56:24",
+      "updated_at": "2026-11-02T12:50:50",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYyODYzODAx"
+    },
+    {
+      "id": "MjU5NjM2NDkw",
+      "content": "**10月6日·今日三问**\n\n**第一问 · 通信栈（刷写慢得像蜗牛，CanTp 流控参数卡在哪）**\n\n你 7/24 专栏①第5篇写过「诊断报文发到一半卡住了——CanTp 分包，BS 和 STmin 配粗了刷写变慢、配细了缓冲区撑爆」；7/19\n那张刷写参数表里又有一条「STmin 太大→刷写速度极慢」。这题把 0x36 刷写链路抠到参数：诊断仪连续发 N 帧，ECU 的 CanTp 收满 BS\n帧后回流控帧（FC 的 CTS=Wait 还是 Continue）——BS 配 0 到底表示「不限帧数」还是「不要流控」？STmin=0\n的「无最小间隔」模式，换到 CAN FD 上还能这么配吗？再落一个实际场景：TC3xx 的 CanIf Rx 硬件缓冲槽位有限，诊断仪 BS=32\n猛发——溢出时是 CanTp 层重传、还是 Can 层直接报错？最后算账：500k 总线、经典 CAN 每帧 8 字节有效载荷、STmin\n1ms——理论刷写速率最高多少 KB/s，实际能跑到几成？你项目刷写时间预算里，这对参数值几秒？\n\n📎 专栏①第5篇 CanTp 分包 → https://v.flomoapp.com/mine/?memo_id=MjQ4MjgzMDY3\n\n📎 DCM/DEM 实作（刷写参数表）→ https://v.flomoapp.com/mine/?memo_id=MjQ3NTEwNzk1\n\n**第二问 · 数学（Park 变换的旋转矩阵，为什么逆矩阵不用算）**\n\n你 7/28 专栏⑰第2篇写过「矩阵变换=坐标系转换——Park 变换 / DBC 解析 / RTE 是同一个数学」；第4篇又立过「课本定义 vs\n工程实际」的差距。这题抠旋转矩阵的数学性质：FOC 的 Park 变换矩阵是 [cosθ, -sinθ; sinθ,\ncosθ]——它是正交矩阵吗？正交矩阵的逆为什么等于转置？这个性质在工程里的直接收益是什么（反 Park\n变换不用求逆、转置即得；旋转不改变向量长度→电流幅值不衰减）？再连一层：DBC 的物理值=原始值×factor+offset\n是仿射变换、不是线性变换——课本里「仿射=线性+平移」，落到工程就是「先缩放再平移」，你解析信号时有没有把 offset 和 factor 的顺序搞反过？\n\n📎 专栏⑰第2篇 矩阵变换 → https://v.flomoapp.com/mine/?memo_id=MjQ5MDI4Mjc5\n\n📎 专栏⑰第4篇 课本 vs 工程 → https://v.flomoapp.com/mine/?memo_id=MjQ5MDI4MzMy\n\n**第三问 · 历史（用你给历史立的纪律，写一张「行业变迁」卡片）**\n\n你 8/7 专栏⑱收官写过「历史不考背诵，考的是你能不能用它解释今天」；7/16\n问题库又立过「历史卡片不写标准答案，写成当前理解+史料+争议」。这题把历史方法论用到你正身处的地方：软件定义汽车 + AI 浪潮里，「确定性时代的\nAUTOSAR 工程师」正在变成历史——按你的纪律写一张卡片：事实层（AUTOSAR 分层、UDS\n诊断、刷写/安全规范今天仍成立，还能写标准答案）；评价层（AI 生成代码、AI 查 BswM/NvM\n的坑，正在重估这套知识的稀缺性）；争议（软件定义汽车到底是范式革命，还是总线换成以太网的渐进升级？）。每层至少 1\n条证据，争议不站队——写出来，你就是在用历史的方法解释今天。\n\n📎 专栏⑱收官 15项自检 → https://v.flomoapp.com/mine/?memo_id=MjUwNzc1NzY4\n\n📎 历史问题库（不写标准答案的纪律）→ https://v.flomoapp.com/mine/?memo_id=MjQ3MDc5OTMz",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-06T09:02:47",
+      "updated_at": "2026-11-02T14:43:18",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjU5NjM2NDkw"
+    },
+    {
+      "id": "MjU5NDM4NTM5",
+      "content": "中国地图下载地址：\nhttps://www.mfa.gov.cn/web/ziliao_674904/zgdt/202607/t20260722_11989560.shtml",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-04T19:00:55",
+      "updated_at": "2026-11-02T15:23:34",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjU5NDM4NTM5"
+    },
+    {
+      "id": "MjU3MzczMjM3",
+      "content": "**需求映射卡模板**\n\n  * 需求编号：REQ-001\n\n  * 需求原文：（一句话，从文档原样抄）\n\n  * 需求来源：客户 / 系统 / 内部\n\n  * 实现位置：src/xxx.c:120-180\n\n  * 实现函数：xxx_init()\n\n  * 逻辑结构：\n\n    * 调用链：A → B → C\n\n    * 数据流：入参 → 处理 → 出参\n\n  * 验证方式：单测 / HIL / 评审\n\n  * 上下游：上游需求 → 本卡 → 测试用例\n\n**微示例（Dio）**\n\n  * 需求：「上电后 Dio 通道默认输出低电平」\n\n  * 实现：Dio_Init() → Dio_WriteChannel(0u)\n\n  * 调用链：Dio_Init → Dio_WriteChannel → PORT 寄存器写\n\n关联方案：https://v.flomoapp.com/mine/?memo_id=MjU3MzczMTYy",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-09-19T19:36:56",
+      "updated_at": "2026-11-02T15:23:15",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjU3MzczMjM3"
+    },
     {
       "id": "MjU2MDI5Mzg3",
       "content": "可以，早期 CPU\n就是单核。但现在高性能芯片之所以做成多核，不是“为了好看”，而是因为单核继续变强已经撞到物理和经济极限，多核是更划算的继续提升整体性能的办法。\n\n为什么不能只做一个超强单核？\n\n  1. 频率提不上去\n\n功耗大约和频率、电压平方相关：P ∝ C V² f。想提高频率，往往还要提高电压，功耗会爆炸式增长。10GHz 单核可能热到根本压不住\n\n  2. 散热有上限\n\n手机、电脑、服务器的散热能力有限。单核频率越高，发热越集中，很难散出去。\n\n  3. 信号传播有延迟\n\n电信号在芯片里跑也要时间。核越大、布线越长，一个时钟周期内让全核同步就越难。\n\n  4. 单核内部并行能力有限\n\n单核可以通过乱序执行、超标量、深流水线提升性能，但程序里能同时利用的“指令级并行”有限，越堆越复杂，收益递减。\n\n  5. 良率和成本\n\n一个巨大单核面积很大，制造时一个缺陷就可能整块报废。多个小核模块化设计，更容易扩展，也能屏蔽坏核。\n\n _多核为什么有效？_\n\n多核不是把一个核“切开”，而是放多个能独立执行指令的核心。\n\n如果程序能并行，比如视频渲染、服务器请求、AI 计算、多任务处理，多核可以同时干活，整体吞吐量大幅提高。\n\n而且同样性能下，多个低频核往往比一个高频核更省电，因为低频可以降压，功耗下降明显。\n\n但多核也不是越多越好\n\n程序里有串行部分，阿姆达尔定律说：如果只有一部分能并行，核再多，加速也有上限。\n\n另外核之间要通信、同步、共享内存带宽，核太多会互相抢资源。很多游戏、日常软件还依赖单核性能，所以现代 CPU 是“单核也要强 + 多核也要多”。\n\n所以现实方案是\n\n  * 低功耗简单设备：单核 MCU 就够。\n\n  * 手机/电脑：大小核异构，大核冲性能，小核省电。\n\n  * 服务器：很多强核，跑虚拟机、数据库、Web 服务。\n\n  * GPU/NPU：几千个小核，专门做图形和 AI 这种高度并行任务。\n\n打个比方：一个超级厨师切菜再快也有体力上限；多个厨师可以同时切菜、炒菜、备料，但前提是菜谱能拆开、有人协调。\n\n所以不是“单核不可以”，而是单核已经不够快、不够省电、不够划算。多核是工程上的折中，核数也不是唯一指标。\n\n🧐为什么芯片要设计多核呢？",
