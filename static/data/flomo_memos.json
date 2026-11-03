@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-11-02T23:19:43.481952+00:00",
+    "generated_at": "2026-11-03T21:29:58.592638+00:00",
     "source": "flomo",
     "tag_filter": "Archive/Blog",
-    "total_memos": 13
+    "total_memos": 17
   },
   "memos": [
     {
@@ -25,6 +25,49 @@
       "created_at": "2026-10-27T13:56:24",
       "updated_at": "2026-11-02T12:50:50",
       "url": "https://v.flomoapp.com/mine/?memo_id=MjYyODYzODAx"
+    },
+    {
+      "id": "MjYxOTc4Mzc4",
+      "content": "**FSRS 算法逻辑（公式）**\n\n模型只维护 (S, D) 两个状态，加距上次复习的天数 t；评分 G ∈ {1 again, 2 hard, 3 good, 4 easy}。\n\n**1\\. 遗忘曲线**\n\nR(t,S) = (1 + factor · t/S) ^ (-w20)\n\nfactor = 0.9^(-1/w20) - 1，保证 t=S 时 R 正好 90%。FSRS-4.5 固定 w20=0.5，即 (1 +\n(19/81)·t/S)^(-0.5)；FSRS-6 把衰减指数也做成可训练参数。\n\n**2\\. 排期**\n\nI(r,S) = S/factor · (r^(-1/w20) - 1)\n\nr=0.9 时 I=S；目标保留率调高，间隔缩短，复习量跟着涨。\n\n**3\\. 初次评分**\n\nS0(G) = w[G-1]（G=1..4 依次对应 w0..w3）\n\nD0(G) = w4 - e^(w5·(G-1)) + 1\n\n**4\\. 难度更新**\n\nΔD = -w6 · (G-3)\n\nD' = D + ΔD · (10-D)/9\n\nD'' = w7 · D0(4) + (1-w7) · D'\n\n第一句是线性阻尼，D 越接近 10，同样是差评也推不太动；第二句是均值回归，防 ease hell。\n\n**5\\. 记住后（G=2/3/4）稳定性怎么涨**\n\nS'_r = S · (1 + e^w8 · (11-D) · S^(-w9) · (e^(w10·(1-R)) - 1) · [G=2 时×w15] ·\n[G=4 时×w16])\n\n四个方向：D 越大涨幅越小；S 越大涨幅越小；R 越小涨幅越大（间隔效应）；hard 打折、easy 加成。\n\n**6\\. 忘了（G=1）后的稳定性**\n\nS'_f = w11 · D^(-w12) · ((S+1)^w13 - 1) · e^(w14·(1-R))\n\n忘记不清零，按原来的 S 和 D 给一个新起点，原 S 越大起点越高。\n\n**7\\. 同一天内反复复习（FSRS-5/6）**\n\nS' = S · e^(w17·(G-3+w18)) · S^(-w19)\n\nFSRS-6 的 S^(-w19) 让短时间内的增长收敛，不至于刷几下就涨飞。\n\n**8\\. 参数从哪来**\n\nw0..w20 共 21 个（FSRS-5 为 19 个），用复习日志（评分 + 间隔天数）拟合，最小化「预测的\nR」与「实际记没记住」的偏差。同一版算法，不同人训练出的权重不一样。\n\n📎 来源：FSRS 开发计划（要点版）→ https://v.flomoapp.com/mine/?memo_id=MjYwOTMyNTk3",
+      "tags": [
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-21T12:36:50",
+      "updated_at": "2026-11-03T08:14:06",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYxOTc4Mzc4"
+    },
+    {
+      "id": "MjYxNzMzMzE2",
+      "content": "**《认知觉醒》引用书籍 · 核心论点**\n\n**1\\. 深度学习与知识管理**\n\n  * 《好好学习》成甲：把力气花在\"临界知识\"上——少数底层规律能跨领域通用；靠反思日记把日常经验提炼成规律，态度是\"以慢为快\"，先把要害啃透。\n\n  * 《刻意练习》艾利克森：水平来自有明确目标、略超舒适区、有即时反馈的练习，光堆时长没用；关键产物是\"心理表征\"，也就是对某个领域的内在结构感。\n\n  * 《如何高效学习》斯科特·扬：整体性学习法，把知识连成一张网（获取、理解、拓展、纠错、应用），用比喻、内在化、图表把不同科目串起来，联系建得越多学得越快。\n\n  * 《奇特的一生》格拉宁：柳比歇夫的时间统计法，逐日记录时间开销、定期核算总结，几十年不断，用数据看清时间都去哪了。\n\n**2\\. 大脑科学与本能觉察**\n\n  * 《运动改造大脑》瑞迪：运动提升 BDNF、促进神经新生和突触连接，直接改善专注、情绪和抗压，是养理智脑最实在的手段。\n\n  * 《反本能》卫蓝：人天然避难趋易、急于求成；靠元认知（看见自己正在怎么想）识别并改写这些惯性反应。\n\n  * 《稀缺》穆来纳森：缺时间或缺钱会占用\"带宽\"，让人进入管窥，认知和自控当场下降，更容易做短视决定，形成恶性循环。\n\n  * 《超越感觉》鲁吉罗（批判性思考指南）：大部分\"我觉得\"是成长环境和立场的烙印，要拿证据和逻辑去检验，分清感觉与事实。\n\n**3\\. 行动力与成长心智**\n\n  * 《原则》瑞·达利欧：把人生和决策当机器来调试——极度求真、极度透明、可信度加权，配\"痛苦＋反思＝进步\"的循环。\n\n  * 《坚毅》卡洛琳·亚当斯·米勒：坚毅是对艰难目标的长久热情加毅力；培养靠找使命、自我控制、刻意练习、外部支持，尤其别在低谷时放弃。\n\n  * 《美好人生运营指南》一稼：用\"生命轮\"给目标、情绪、情感、工作、使命、财务、健康七项打分，短板决定轮子能不能滚，内心能量是轴心。\n\n**4\\. 个人见识与底层逻辑**\n\n  * 《见识》吴军：见识决定格局，人与人的差别常在看待问题的层次；做减法、抓重点，把时间投在能长期增值的事上。\n\n  * 《学习高手的三驾马车》李晓鹏：三条规律——从最简单的地方开始、把握规律系统学习、贵精不贵多；\"凭感觉\"只挑中等难度的题，进步最快。\n\n**两处要留意**\n\n  * 《坚毅》有两本同名书：卡洛琳·亚当斯·米勒（机械工业 2019）、安杰拉·达克沃思（中信 2017），引用时说清是哪本。\n\n  * \"用感知力代替思考力找天命\"没核实到原文出处，书里被引更多的是\"生命轮\"和七个维度；部分论点按通行理解整理，未必逐字对应原书。\n\n原书单 → https://v.flomoapp.com/mine/?memo_id=MjYxNjU0MjEw",
+      "tags": [
+        "Area/阅读管理",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-19T20:12:21",
+      "updated_at": "2026-11-03T08:13:53",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYxNzMzMzE2"
+    },
+    {
+      "id": "MjYxMjU1MTQz",
+      "content": "**MCP 服务器版开发方案**\n\n**1\\. 传输**\n\n用 Streamable HTTP，单一端点 /mcp；每条 JSON-RPC 消息一个 POST，需要流式就在该请求上返回 SSE。旧的 HTTP+SSE\n已废弃。\n\n**2\\. 框架**\n\n用官方 SDK（TypeScript 的 @modelcontextprotocol/sdk 或 Python 的 FastMCP），注册 tool /\nresource / prompt 后以 streamable-http 模式启动，不手写 JSON-RPC。\n\n**3\\. 对齐协议修订 2026-07-28**\n\n  * 协议已无状态：没有 initialize 会话握手，也没有 Mcp-Session-Id\n\n  * 每个请求在 _meta 里带 protocolVersion 和 clientCapabilities\n\n  * 新增 server/discover，客户端先问版本与能力\n\n  * 跨调用状态自己发 handle（如 job_id）当普通参数传回\n\n  * 这样服务才能放到负载均衡后面横向扩\n\n**4\\. 能力面分开设计**\n\n  * tools：会改状态 / 调外部接口的动作\n\n  * resources：只读数据（URI + 模板）\n\n  * prompts：固定模板\n\n  * 只读查询不包成工具\n\n**5\\. 认证分两档**\n\n  * 自用或小团队：bearer token（Authorization 头）最省事\n\n  * 对外：OAuth 2.1，服务当 resource server，暴露 Protected Resource Metadata 指向授权服务器，令牌仅对本服务有效\n\n**6\\. 安全与运维**\n\n  * 校验 Origin（防 DNS rebinding）\n\n  * 本地调试绑 127.0.0.1\n\n  * 工具参数按 inputSchema 校验，不直接拼进 shell 或 SQL\n\n  * 写操作带 idempotency_key\n\n  * 无状态后可直接进容器、网关或 Serverless\n\n**7\\. 落地顺序**\n\n本地 stdio 版跑通 → 换 streamable-http transport → 加 token → 部署并关掉不需要的能力\n\n📎 相关：MCP 在 VSCode 中运行·技术方案 → https://v.flomoapp.com/mine/?memo_id=MjU3NTg0ODY5",
+      "tags": [
+        "Area/技术/AI",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-16T13:05:25",
+      "updated_at": "2026-11-03T08:18:05",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYxMjU1MTQz"
+    },
+    {
+      "id": "MjYwNzQ3MjMy",
+      "content": "**我的常用工具**\n\n**开发工具**\n\n  * VS Code（通用编辑）\n\n  * STM32CubeIDE / Keil / IAR（MCU 开发）\n\n  * DaVinci Developer + Configurator Pro、EB tresos Studio（AUTOSAR 配置）\n\n  * MATLAB/Simulink + Embedded Coder（模型开发）\n\n  * CANoe（CAN 总线分析）\n\n  * Git（版本管理）\n\n  * Python 脚本（ARXML 批量处理 / 自动化）\n\n**阅读工具**\n\n  * 微信读书（划线同步进 flomo）\n\n  * RSS 阅读器（信息流聚合）\n\n**笔记工具**\n\n  * flomo（当前主力）\n\n  * 微信公众号（内容分发）\n\n  * 探索过：Notion、Obsidian、OneNote、SuperMemo、Zotero、Roam Research\n\n**硬件设备**\n\n  * STM32 开发板\n\n  * 示波器 / 万用表 / 逻辑分析仪 / 热成像仪（硬件调试）\n\n📎 相关：工具清单（旧版）→ https://v.flomoapp.com/mine/?memo_id=MTMzNDkxOTQ3",
+      "tags": [
+        "Inbox/工具",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-13T09:20:37",
+      "updated_at": "2026-11-03T08:17:54",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYwNzQ3MjMy"
     },
     {
       "id": "MjU5NjM2NDkw",
