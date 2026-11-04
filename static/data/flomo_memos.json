@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at": "2026-11-03T21:29:58.592638+00:00",
+    "generated_at": "2026-11-04T21:43:50.185850+00:00",
     "source": "flomo",
     "tag_filter": "Archive/Blog",
-    "total_memos": 17
+    "total_memos": 20
   },
   "memos": [
     {
@@ -27,6 +27,17 @@
       "url": "https://v.flomoapp.com/mine/?memo_id=MjYyODYzODAx"
     },
     {
+      "id": "MjYyMjU3NDU5",
+      "content": "**图灵测试怎么做**\n\n图灵测试是一场盲测聊天：询问者只靠文字，判断对面是机器还是人。\n\n**标准配置**\n\n  * 三方：一个询问者、一个真人、一个机器；询问者看不见对方，纯文本交流（图灵 1950 年原文用的是电传打字机）\n\n  * 询问者分别与两边对话，然后判断哪边是机器\n\n  * 通行判据：询问者正确率接近 50%（瞎猜水平），机器算通过\n\n  * 图灵当年给的数字：5 分钟对话后，正确识别率不超过 70%\n\n  * 补充：他最初的「模仿游戏」是让人分辨男女，后来才改成机器冒充人\n\n**自己办一场的步骤**\n\n  1. 隔离：同一界面、同样的打字速度，机器要加延迟模拟思考；头像、字体、回复节奏这些线索都抹掉\n\n  2. 时长固定（比如 5 分钟），时间到必须表态\n\n  3. 出题方向：\n\n  * 反常识：故意说错一件事，看纠不纠正、怎么纠\n\n  * 歧义与幽默：双关、冷笑话、带语病的句子\n\n  * 追问细节：同一件事连问三遍，看前后是否一致\n\n  * 生活记忆：问琐碎的、具体的个人经历\n\n  * 计算与拼写：让人故意算错，看机器会不会露出精确的「正确」\n\n  1. 找多个询问者各自独立判断，统计正确率\n\n**两个易漏点**\n\n  * 双方都要主动伪装（机器装人、人装机器），测试才有对抗性\n\n  * 它测的只是语言行为，不测理解——中文房间的批评就冲这一点\n\n**现状**\n\n2023 年有实验让人判断，GPT-4 冒充人类被判为人的比例约 54%，区分度在下降。所以有人主张加长对话、加多模态，或改成反向图灵测试（让 AI\n判断对面是不是人）。\n\n📎 相关：图灵测试与中文房间 → https://v.flomoapp.com/mine/?memo_id=MjQ5MDkwMjg3",
+      "tags": [
+        "Area/技术/AI",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-23T09:46:54",
+      "updated_at": "2026-11-04T14:56:51",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYyMjU3NDU5"
+    },
+    {
       "id": "MjYxOTc4Mzc4",
       "content": "**FSRS 算法逻辑（公式）**\n\n模型只维护 (S, D) 两个状态，加距上次复习的天数 t；评分 G ∈ {1 again, 2 hard, 3 good, 4 easy}。\n\n**1\\. 遗忘曲线**\n\nR(t,S) = (1 + factor · t/S) ^ (-w20)\n\nfactor = 0.9^(-1/w20) - 1，保证 t=S 时 R 正好 90%。FSRS-4.5 固定 w20=0.5，即 (1 +\n(19/81)·t/S)^(-0.5)；FSRS-6 把衰减指数也做成可训练参数。\n\n**2\\. 排期**\n\nI(r,S) = S/factor · (r^(-1/w20) - 1)\n\nr=0.9 时 I=S；目标保留率调高，间隔缩短，复习量跟着涨。\n\n**3\\. 初次评分**\n\nS0(G) = w[G-1]（G=1..4 依次对应 w0..w3）\n\nD0(G) = w4 - e^(w5·(G-1)) + 1\n\n**4\\. 难度更新**\n\nΔD = -w6 · (G-3)\n\nD' = D + ΔD · (10-D)/9\n\nD'' = w7 · D0(4) + (1-w7) · D'\n\n第一句是线性阻尼，D 越接近 10，同样是差评也推不太动；第二句是均值回归，防 ease hell。\n\n**5\\. 记住后（G=2/3/4）稳定性怎么涨**\n\nS'_r = S · (1 + e^w8 · (11-D) · S^(-w9) · (e^(w10·(1-R)) - 1) · [G=2 时×w15] ·\n[G=4 时×w16])\n\n四个方向：D 越大涨幅越小；S 越大涨幅越小；R 越小涨幅越大（间隔效应）；hard 打折、easy 加成。\n\n**6\\. 忘了（G=1）后的稳定性**\n\nS'_f = w11 · D^(-w12) · ((S+1)^w13 - 1) · e^(w14·(1-R))\n\n忘记不清零，按原来的 S 和 D 给一个新起点，原 S 越大起点越高。\n\n**7\\. 同一天内反复复习（FSRS-5/6）**\n\nS' = S · e^(w17·(G-3+w18)) · S^(-w19)\n\nFSRS-6 的 S^(-w19) 让短时间内的增长收敛，不至于刷几下就涨飞。\n\n**8\\. 参数从哪来**\n\nw0..w20 共 21 个（FSRS-5 为 19 个），用复习日志（评分 + 间隔天数）拟合，最小化「预测的\nR」与「实际记没记住」的偏差。同一版算法，不同人训练出的权重不一样。\n\n📎 来源：FSRS 开发计划（要点版）→ https://v.flomoapp.com/mine/?memo_id=MjYwOTMyNTk3",
       "tags": [
@@ -48,6 +59,17 @@
       "url": "https://v.flomoapp.com/mine/?memo_id=MjYxNzMzMzE2"
     },
     {
+      "id": "MjYxNjU0MjEw",
+      "content": "**《认知觉醒》引用书单（周岭）**\n\n在周岭老师的畅销书《认知觉醒：开启自我改变的原动力》中，为了从脑科学、心理学以及实践方法论上拆解成长规律，作者引用、参考并极力推荐了多本优秀的硬核书籍。\n\n根据书中提及的版块和高频出现的知识点，这些书籍主要可以划分为以下四大核心主题：\n\n**1\\. 深度学习与知识管理**\n\n这是书中提及最多、也是作者构建“熔断读书法”和“凭感觉学习”的灵感来源：\n\n  * 《好好学习》（成甲）：书中多次引用成甲关于“临界知识”和“反思日记”的示范，强调通过关联和反馈学习。\n\n  * 《刻意练习》（安德斯·艾利克森）：作者用它来解释如何走出“舒适区”，在“拉伸区”高频反馈地练习，这是认知升级的基石。\n\n  * 《如何高效学习》（斯科特·扬）：整体结构和多感官学习法的参考来源。\n\n  * 《奇特的一生》（格拉宁）：探讨时间统计法与精细化时间觉知。\n\n**2\\. 大脑科学与本能觉察**\n\n用于拆解书中核心概念“本能脑、情绪脑、理智脑”以及如何克服“避难趋易、急于求成”的天性：\n\n  * 《运动改造大脑》（约翰·瑞迪）：从脑科学角度证实运动如何促进神经元连接，帮助理智脑恢复掌控力。\n\n  * 《反本能》（卫蓝）：探讨如何通过元认知改变大脑的顽固思维与惯性。\n\n  * 《稀缺》（塞德希尔·穆来纳森）：阐述“带宽”概念，解释为什么人在焦虑和贫困时认知能力会大幅下降。\n\n  * 《超越感觉》（文森特·鲁吉罗）：教导如何打破局限，用理智的逻辑审视常识与直觉。\n\n**3\\. 行动力与成长心智**\n\n用于解决“懂得很多道理，却依然过不好这一生”的行动瘫痪问题：\n\n  * 《原则》（雷·达里奥）：强调“极度开放”与“极度求真”的机器思维，是理性化面对客观现实的标杆。\n\n  * 《坚毅》（卡洛琳·亚当斯·米勒）：通过寻找人生使命的核心提问，帮助读者建立长期的自我驱动力。\n\n  * 《美好人生运营指南》（一稼）：提及书中关于“用感知力代替思考力”去寻找人生天命的实践路径。\n\n**4\\. 个人见识与底层逻辑**\n\n  * 《见识》（吴军）：提供了看待个人成长阶层、命运财富的宏观视角。\n\n  * 《学习高手的三驾马车》（李晓鹏）：结合中国式学习场景，佐证“凭感觉捕捉触动点”的高效学习法。\n\n这些书籍中，周岭老师提及最多的是《好好学习》和《刻意练习》。请问你是想解决具体的时间内耗、学习效率低还是缺乏行动力的问题？我可以针对你的现状，推荐其中最适合你优先精读的那一本。\n\n📎 相关：引用书籍 · 核心论点 → https://v.flomoapp.com/mine/?memo_id=MjYxNzMzMzE2",
+      "tags": [
+        "Area/阅读管理",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-19T10:33:07",
+      "updated_at": "2026-11-04T14:53:35",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYxNjU0MjEw"
+    },
+    {
       "id": "MjYxMjU1MTQz",
       "content": "**MCP 服务器版开发方案**\n\n**1\\. 传输**\n\n用 Streamable HTTP，单一端点 /mcp；每条 JSON-RPC 消息一个 POST，需要流式就在该请求上返回 SSE。旧的 HTTP+SSE\n已废弃。\n\n**2\\. 框架**\n\n用官方 SDK（TypeScript 的 @modelcontextprotocol/sdk 或 Python 的 FastMCP），注册 tool /\nresource / prompt 后以 streamable-http 模式启动，不手写 JSON-RPC。\n\n**3\\. 对齐协议修订 2026-07-28**\n\n  * 协议已无状态：没有 initialize 会话握手，也没有 Mcp-Session-Id\n\n  * 每个请求在 _meta 里带 protocolVersion 和 clientCapabilities\n\n  * 新增 server/discover，客户端先问版本与能力\n\n  * 跨调用状态自己发 handle（如 job_id）当普通参数传回\n\n  * 这样服务才能放到负载均衡后面横向扩\n\n**4\\. 能力面分开设计**\n\n  * tools：会改状态 / 调外部接口的动作\n\n  * resources：只读数据（URI + 模板）\n\n  * prompts：固定模板\n\n  * 只读查询不包成工具\n\n**5\\. 认证分两档**\n\n  * 自用或小团队：bearer token（Authorization 头）最省事\n\n  * 对外：OAuth 2.1，服务当 resource server，暴露 Protected Resource Metadata 指向授权服务器，令牌仅对本服务有效\n\n**6\\. 安全与运维**\n\n  * 校验 Origin（防 DNS rebinding）\n\n  * 本地调试绑 127.0.0.1\n\n  * 工具参数按 inputSchema 校验，不直接拼进 shell 或 SQL\n\n  * 写操作带 idempotency_key\n\n  * 无状态后可直接进容器、网关或 Serverless\n\n**7\\. 落地顺序**\n\n本地 stdio 版跑通 → 换 streamable-http transport → 加 token → 部署并关掉不需要的能力\n\n📎 相关：MCP 在 VSCode 中运行·技术方案 → https://v.flomoapp.com/mine/?memo_id=MjU3NTg0ODY5",
       "tags": [
@@ -57,6 +79,17 @@
       "created_at": "2026-10-16T13:05:25",
       "updated_at": "2026-11-03T08:18:05",
       "url": "https://v.flomoapp.com/mine/?memo_id=MjYxMjU1MTQz"
+    },
+    {
+      "id": "MjYwOTMyNTk3",
+      "content": "使用 https://github.com/open-spaced-repetition/awesome-fsrs 开发卡片记忆软件\n\n  * 闪卡软件 https://open-spaced-repetition.github.io/awesome-fsrs/\n\n**FSRS 算法要点**\n\nFSRS 全称 Free Spaced Repetition Scheduler，叶峻峣（L-M-Sherlock）做的开源间隔重复调度算法，Anki\n23.10 起原生内置。\n\n基于 DSR 记忆模型：\n\n  * D 难度：这张卡对你有多难，连续浮点值，随评分上下调\n\n  * S 稳定性：记忆能撑多久，指回忆概率从 100% 掉到 90% 所需的天数\n\n  * R 可提取性：此刻还能想起它的概率，随时间衰减\n\n每次按 Again / Hard / Good / Easy 打分，先用上次的 S 算出这次复习时理论上的 R，再结合评分更新 D、S；下次复习安排在 R\n掉到目标保留率（默认 0.9）的那一刻。\n\n和 SM-2 的差别：SM-2 是经验规则（易度因子加固定乘数）；FSRS 直接建模回忆概率，权重参数用真实复习日志拟合，每张卡有独立的 D、S。\n\n门槛：参数靠复习记录训练，一般攒到上千条才准；数据少先吃默认参数。\n\n来路：DSR 最早由 SuperMemo 作者 Woźniak 提出，FSRS 把它数学化、再用数据拟合。\n\n📎 公式细节：FSRS 算法逻辑（公式）→ https://v.flomoapp.com/mine/?memo_id=MjYxOTc4Mzc4\n\n📎 相关：SuperMemo 的 20 条规则 → https://v.flomoapp.com/mine/?memo_id=MjMwMDAyOTMw",
+      "tags": [
+        "Inbox/计划",
+        "Archive/Blog"
+      ],
+      "created_at": "2026-10-14T10:46:09",
+      "updated_at": "2026-11-04T15:16:10",
+      "url": "https://v.flomoapp.com/mine/?memo_id=MjYwOTMyNTk3"
     },
     {
       "id": "MjYwNzQ3MjMy",
