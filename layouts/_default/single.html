@@ -30,8 +30,8 @@
     const headings = Array.from(content.querySelectorAll('h2, h3'));
     const used = new Set();
     const slugify = (value) => value.trim().toLowerCase()
-        .replace(/[^\\p{L}\\p{N}\\s-]/gu, '')
-        .replace(/[\\s]+/g, '-')
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
         .replace(/-+/g, '-')
         .replace(/^-|-$/g, '') || 'section';
 
