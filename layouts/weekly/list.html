@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="page weekly-page">
+  <header class="page-header">
+    <p class="eyebrow">CURATED WEEKLY</p>
+    <h1>Weekly · 每周分享</h1>
+    <p class="page-subtitle">阮一峰每周分享文章归档 · 每日自动同步</p>
+    <p class="article-meta">来源：<a href="https://github.com/ruanyf/weekly" target="_blank" rel="noopener noreferrer">ruanyf/weekly</a></p>
+  </header>
+  {{ $pages := where site.RegularPages "Section" "weekly" }}
+  {{ $pages = sort $pages "Params.issue" "desc" }}
+  {{ $paginator := .Paginate $pages 20 }}
+  <div class="book-grid weekly-grid">
+    {{ range $paginator.Pages }}
+    <article class="recent-card weekly-card">
+      <a class="recent-card-link" href="{{ .RelPermalink }}">
+        <span class="recent-card-kind">📰 第 {{ .Params.issue }} 期</span>
+        <h2 class="recent-card-title">{{ .Title }}</h2>
+        <p class="recent-card-meta">{{ .Date.Format "2006-01-02" }}</p>
+        <p class="weekly-summary">{{ .Summary | plainify | truncate 110 }}</p>
+      </a>
+    </article>
+    {{ else }}
+    <p class="empty-state">文章正在首次同步，请稍后刷新。</p>
+    {{ end }}
+  </div>
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Weekly 分页">
+    {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}">← 更新文章</a>{{ end }}
+    <span>第 {{ $paginator.PageNumber }} / {{ $paginator.TotalPages }} 页</span>
+    {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}">更早文章 →</a>{{ end }}
+  </nav>
+  {{ end }}
+</section>
+{{ end }}
