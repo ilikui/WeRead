@@ -1,0 +1,138 @@
+name: Sync Flomo Memos to Cloudflare
+
+on:
+  # 每 6 小时独立同步一次，不依赖微信读书 API
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weread-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-memos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Require Flomo credentials and preserve previous dataset
+        env:
+          FLOMO_AUTHORIZATION: ${{ secrets.FLOMO_AUTHORIZATION }}
+        run: |
+          if [ -z "$FLOMO_AUTHORIZATION" ]; then
+            echo "::error::FLOMO_AUTHORIZATION is not configured; refusing to publish."
+            exit 1
+          fi
+          test -s static/data/flomo_memos.json || {
+            echo "::error::No previous Memos snapshot exists. Refusing to start from an empty baseline."
+            exit 1
+          }
+          cp static/data/flomo_memos.json /tmp/flomo_memos_before.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install Flomo exporter dependencies
+        run: pip install requests flomo
+
+      - name: Export only #Archive/Blog memos
+        env:
+          FLOMO_AUTHORIZATION: ${{ secrets.FLOMO_AUTHORIZATION }}
+          FLOMO_TAG: 'Archive/Blog'
+        run: python weread_hugo_exporter.py --skip-weread --memo-tag 'Archive/Blog'
+
+      - name: Validate data, prevent regressions, and create stable artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          source = Path("static/data/flomo_memos.json")
+          previous_path = Path("/tmp/flomo_memos_before.json")
+          current = json.loads(source.read_text(encoding="utf-8"))
+          previous = json.loads(previous_path.read_text(encoding="utf-8"))
+          memos = current.get("memos")
+          meta = current.get("meta") or {}
+          old_memos = previous.get("memos") or []
+
+          if not isinstance(memos, list) or not memos:
+              raise SystemExit("Refusing to publish an empty Flomo dataset")
+          if meta.get("tag_filter") != "Archive/Blog":
+              raise SystemExit("Unexpected tag_filter; only #Archive/Blog may be public")
+          if meta.get("total_memos") != len(memos):
+              raise SystemExit("Flomo metadata count does not match the memo array")
+
+          ids = [memo.get("id") for memo in memos]
+          if any(not memo_id for memo_id in ids) or len(ids) != len(set(ids)):
+              raise SystemExit("Missing or duplicate memo IDs")
+          current_ids = set(ids)
+          old_ids = {memo.get("id") for memo in old_memos if memo.get("id")}
+          missing = old_ids - current_ids
+          if missing:
+              raise SystemExit(f"Refusing to drop {len(missing)} previously published memos")
+
+          for memo in memos:
+              tags = {str(tag).lstrip("#").strip().casefold() for tag in memo.get("tags", [])}
+              if "archive/blog" not in tags:
+                  raise SystemExit(f"Out-of-scope memo detected: {memo.get('id')}")
+
+          # Avoid a deployment every six hours when the content did not change.
+          def comparable(data):
+              result = json.loads(json.dumps(data))
+              result.setdefault("meta", {}).pop("generated_at", None)
+              return result
+
+          if comparable(current) == comparable(previous):
+              current = previous
+              print("No memo content changes; keeping the previous snapshot unchanged.")
+          else:
+              print(f"Validated {len(memos)} memos; preserved all {len(old_ids)} previous IDs.")
+
+          payload = json.dumps(current, ensure_ascii=False, indent=2) + "\n"
+          source.write_text(payload, encoding="utf-8")
+          Path("static/data/flomo_memos_latest.json").write_text(payload, encoding="utf-8")
+          PY
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.165.0'
+          extended: true
+
+      - name: Build and verify Memos page
+        run: |
+          hugo --gc --minify
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          data = json.loads(Path("public/data/flomo_memos_latest.json").read_text(encoding="utf-8"))
+          count = len(data.get("memos", []))
+          if count < 1 or data.get("meta", {}).get("total_memos") != count:
+              raise SystemExit("Memos build artifact failed validation")
+          html = Path("public/memos/index.html").read_text(encoding="utf-8")
+          if "flomo_memos_latest.json" not in html:
+              raise SystemExit("Memos page is not wired to the canonical dataset")
+          print(f"Ready for Cloudflare: /memos/ with {count} memos")
+          PY
+
+      - name: Commit and trigger Cloudflare deployment
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/data/flomo_memos.json static/data/flomo_memos_latest.json
+          if git diff --staged --quiet; then
+            echo "No content changes; no deployment required."
+          else
+            git commit -m "chore: sync Archive Blog memos [skip ci]"
+            git push origin HEAD:main
+          fi
