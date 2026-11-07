@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     {{ $style := resources.Get "css/weread-theme.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $polish := resources.Get "css/site-polish.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $polish.RelPermalink }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
 <body class="weread-page">
     <header class="site-header">
@@ -376,6 +380,16 @@
             };
         }
 
+        // 微信读书划线与想法也支持 Markdown；先解析，再由 DOMPurify 清洗 HTML。
+        function renderMarkdown(text) {
+            if (!text) return '<em>无内容</em>';
+            if (typeof marked === 'undefined' || typeof DOMPurify === 'undefined') {
+                return escapeHtml(text).replace(/\n/g, '<br>');
+            }
+            const html = marked.parse(String(text), { gfm: true, breaks: true });
+            return DOMPurify.sanitize(html);
+        }
+
         function renderDetailNotes() {
             const book = state.books.find(b => String(b.book_id) === String(state.selectedBookId));
             const grid = $('notesGrid');
@@ -402,9 +416,9 @@
                             <span class="tag tag-color">${escapeHtml(note.color || 'default')}</span>
                         </div>
                         <blockquote class="note-highlight">
-                            ${note.highlight ? escapeHtml(note.highlight) : '<em>无划线内容</em>'}
+                            ${note.highlight ? renderMarkdown(note.highlight) : '<em>无划线内容</em>'}
                         </blockquote>
-                        ${note.comment ? `<div class="note-comment"><strong>批注：</strong>${escapeHtml(note.comment)}</div>` : ''}
+                        ${note.comment ? `<div class="note-comment markdown-body"><strong>批注：</strong>${renderMarkdown(note.comment)}</div>` : ''}
                         ${note.created_at ? `<time class="note-time">${formatDate(note.created_at)}</time>` : ''}
                     </article>
                 `).join('');
