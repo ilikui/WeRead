@@ -250,3 +250,13 @@ python weread_hugo_exporter.py --help
 - Cloudflare Workers Builds 在 Hugo 构建阶段同时检查 `/memos/` 页面和最新 JSON 文件；缺失时构建失败，不会把空页面部署到生产环境。
 
 需要在 GitHub 仓库 Secrets 中配置 `FLOMO_AUTHORIZATION`。可以在 Actions 中手动运行 `Sync Flomo Memos to Cloudflare`，或运行每日的完整导出工作流。
+
+## 全站界面与 Markdown
+
+站点页面统一采用暖纸白与柔和墨绿的视觉系统，适配桌面、平板与手机，并支持跟随系统的深色模式。首页、博客、专题、相册、阅读书架、活动热力墙和 Memos 共用一致的导航、间距、卡片与交互规范。
+
+- 博客/专题/关于等 Markdown 页面由 Hugo Goldmark 渲染，支持表格、任务列表、引用、代码块、脚注、删除线、Mermaid 与数学公式。
+- 微信读书 JSON 中的划线和批注使用 Marked 渲染 Markdown，并由 DOMPurify 清洗输出。
+- Flomo Memos 内容使用 GFM Markdown 渲染，支持标题、列表、引用、表格、任务列表、链接与代码块，并由 DOMPurify 清洗输出。
+- 全站搜索可按 `/` 快速聚焦，按 `Esc` 清空并退出；阅读页搜索书籍、作者、划线和批注。
+- 相册图片支持点击放大；窄屏下侧栏分类转为横向导航。
