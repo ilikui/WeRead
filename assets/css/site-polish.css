@@ -236,3 +236,24 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   .article-toc ol { grid-template-columns: 1fr; }
   .article-toc a { font-size: 12px; }
 }
+
+
+/* Markdown extensions: code blocks, math, diagrams */
+.page-content .code-block-wrap { position: relative; margin: 1.5em 0; }
+.page-content .code-block-wrap pre { margin: 0; padding-top: 42px; }
+.page-content .code-copy-button {
+  position: absolute; z-index: 2; top: 8px; right: 9px;
+  padding: 5px 10px; border: 1px solid rgba(229,237,230,.2);
+  border-radius: 7px; background: rgba(255,255,255,.08);
+  color: #e5ede6; font-size: 11px; cursor: pointer;
+}
+.page-content .code-copy-button:hover { background: rgba(255,255,255,.16); }
+.page-content .highlight { max-width: 100%; overflow-x: auto; margin: 1.5em 0; }
+.page-content .highlight pre { margin: 0; }
+.page-content .katex-display { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 4px 0 10px; }
+.page-content .mermaid { max-width: 100%; overflow-x: auto; margin: 1.5em 0; padding: 18px; border: 1px solid var(--line); background: var(--paper); border-radius: 14px; text-align: center; }
+.page-content .mermaid svg { max-width: 100%; height: auto; }
+@media (max-width: 640px) {
+  .page-content .code-block-wrap pre { padding: 42px 13px 14px; font-size: 12px; }
+  .page-content .mermaid { padding: 10px; }
+}
