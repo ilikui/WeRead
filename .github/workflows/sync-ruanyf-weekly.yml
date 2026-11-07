@@ -80,9 +80,15 @@ jobs:
           print(f'Imported and validated {imported} Weekly issues')
           PY
 
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.165.0'
+          extended: true
+
       - name: Build and verify Weekly pages
         run: |
-          docker run --rm -v "$PWD:/src" -w /src hugomods/hugo:exts-0.165.0 hugo --gc --minify
+          hugo --gc --minify
           test -s public/weekly/index.html
           python - <<'PY'
           from pathlib import Path
