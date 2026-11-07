@@ -235,3 +235,18 @@ python weread_hugo_exporter.py --help
 <sub>由 Hugo、Python 与 GitHub Actions 驱动的个人知识记录站</sub>
 
 </div>
+
+
+## Memos 数据可靠性与 Cloudflare 发布
+
+公开 Memos 页面：<https://read.likui.space/memos/>
+
+- `Sync Flomo Memos to Cloudflare` 每 6 小时独立同步一次，只发布 `#Archive/Blog`，不依赖微信读书 API。
+- `Export WeRead Notes and Publish Data` 每天更新微信读书数据；两条流程使用同一并发组，避免同时写入仓库。
+- `static/data/flomo_memos.json` 是持久数据源；`static/data/flomo_memos_latest.json` 是页面优先读取的稳定发布副本。两者在同步时一起提交。
+- 同步会合并仓库中已有的 memo ID；空数据、数量不一致、重复 ID、标签越界或历史记录意外减少都会阻止发布。
+- 页面会校验 JSON 的标签、记录数量和 ID；最新副本无效时回退到持久数据源。
+- `Memos Production Health Check` 每 30 分钟检查线上页面与 JSON 是否可用。
+- Cloudflare Workers Builds 在 Hugo 构建阶段同时检查 `/memos/` 页面和最新 JSON 文件；缺失时构建失败，不会把空页面部署到生产环境。
+
+需要在 GitHub 仓库 Secrets 中配置 `FLOMO_AUTHORIZATION`。可以在 Actions 中手动运行 `Sync Flomo Memos to Cloudflare`，或运行每日的完整导出工作流。
