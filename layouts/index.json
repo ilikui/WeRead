@@ -26,3 +26,12 @@
     {{- end -}}
 {{- end -}}
 {{ $items | jsonify }}
+
+{{- range where site.RegularPages "Section" "weekly" -}}
+    {{- $items = $items | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "type" "weekly"
+        "meta" (printf "第 %v 期" .Params.issue)
+    ) -}}
+{{- end -}}
