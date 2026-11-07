@@ -5,6 +5,7 @@
         <h1>{{ .Title }}</h1>
         {{ with .Params.subtitle }}<p class="page-subtitle">{{ . }}</p>{{ end }}
         {{ with .Date }}<p class="article-meta"><time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006年01月02日" }}</time></p>{{ end }}
+        {{ if eq .Section "weekly" }}<p class="article-meta">每周分享第 {{ .Params.issue }} 期 · <a href="{{ .Params.source_url }}" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>{{ end }}
     </header>
     <div class="article-grid">
         <div class="page-content" id="articleContent">
