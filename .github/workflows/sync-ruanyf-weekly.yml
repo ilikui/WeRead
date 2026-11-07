@@ -1,6 +1,9 @@
 name: Sync Ruanyifeng Weekly
 
 on:
+  push:
+    paths:
+      - '.github/workflows/sync-ruanyf-weekly.yml'
   schedule:
     - cron: '30 17 * * *' # 每天日本时间 02:30
   workflow_dispatch:
