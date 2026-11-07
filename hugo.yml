@@ -84,7 +84,60 @@ markup:
             - ['$$', '$$']
             - ['\\[', '\\]']
           inline:
-            - ['$', '$']
+            - ['\\(', '\\)']
+            - ['
+      strikethrough: true
+      table: true
+      typographer: true
+      definitionList: true
+      footnote: true
+      taskList: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  highlight:
+    style: 'github'
+    noClasses: true
+    lineNos: false
+
+outputFormats:
+  JSON:
+    mediaType: 'application/json'
+    baseName: 'index'
+    isPlainText: true
+
+outputs:
+  home: ['HTML', 'RSS', 'JSON']
+  page: ['HTML']
+  section: ['HTML', 'RSS']
+, '
+      strikethrough: true
+      table: true
+      typographer: true
+      definitionList: true
+      footnote: true
+      taskList: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+    ordered: false
+  highlight:
+    style: 'github'
+    noClasses: true
+    lineNos: false
+
+outputFormats:
+  JSON:
+    mediaType: 'application/json'
+    baseName: 'index'
+    isPlainText: true
+
+outputs:
+  home: ['HTML', 'RSS', 'JSON']
+  page: ['HTML']
+  section: ['HTML', 'RSS']
+]
       strikethrough: true
       table: true
       typographer: true
