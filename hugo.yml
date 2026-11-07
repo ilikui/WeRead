@@ -24,26 +24,32 @@ params:
     side:
       - identifier: read
         name: 'Read'
+        icon: '📚'
         url: '/weread/'
         weight: 10
       - identifier: memos
         name: 'Memos'
+        icon: '🗒️'
         url: '/memos/'
         weight: 15
       - identifier: blog
         name: 'Blog'
+        icon: '✍️'
         url: '/blog/'
         weight: 20
       - identifier: topics
         name: 'Topics'
+        icon: '🧭'
         url: '/topics/'
         weight: 25
       - identifier: gallery
         name: 'Gallery'
+        icon: '🖼️'
         url: '/gallery/'
         weight: 30
       - identifier: activity
         name: 'Activity'
+        icon: '📊'
         url: '/activity/'
         weight: 35
 
