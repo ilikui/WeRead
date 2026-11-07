@@ -1,29 +1,22 @@
-name: Export WeRead Notes and Deploy to GitHub Pages
+name: Export WeRead Notes and Publish Data
 
 on:
-  # 每天晚上 12 点自动更新（北京时间 00:00 = UTC 16:00）
+  # 微信读书全量更新每日执行；Flomo 另有独立的高频同步任务
   schedule:
     - cron: '0 16 * * *'
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
+  group: weread-content-sync
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  export-and-validate:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 45
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -46,27 +39,34 @@ jobs:
           FLOMO_TAG: 'Archive/Blog'
         run: python weread_hugo_exporter.py
 
-      # Keep the tag filter strict, but allow a valid export containing only one memo.
-      # Still reject empty or internally inconsistent exports before publishing.
-      - name: Validate and prepare Flomo data
+      - name: Validate and freeze public Memos dataset
         run: |
           python - <<'PY'
           import json
           from pathlib import Path
 
           source = Path("static/data/flomo_memos.json")
+          if not source.exists():
+              raise SystemExit("Missing Flomo dataset; refusing to publish an empty Memos page")
           data = json.loads(source.read_text(encoding="utf-8"))
           memos = data.get("memos")
-          if not isinstance(memos, list):
-              raise SystemExit("Invalid Flomo export: 'memos' must be an array")
-          total = data.get("meta", {}).get("total_memos")
-          if len(memos) < 1:
-              raise SystemExit("Refusing to deploy empty Flomo data: no Archive/Blog memos found")
-          if total != len(memos):
-              raise SystemExit(f"Flomo count mismatch: meta.total_memos={total}, actual={len(memos)}")
-          target = Path("static/data/flomo_memos_latest.json")
-          target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-          print(f"Validated {len(memos)} Flomo memos; prepared {target}")
+          meta = data.get("meta") or {}
+          if not isinstance(memos, list) or not memos:
+              raise SystemExit("Invalid Flomo dataset: memos must be a non-empty array")
+          if meta.get("tag_filter") != "Archive/Blog":
+              raise SystemExit(f"Unexpected public tag filter: {meta.get('tag_filter')!r}")
+          if meta.get("total_memos") != len(memos):
+              raise SystemExit(f"Count mismatch: meta={meta.get('total_memos')}, actual={len(memos)}")
+          ids = [m.get("id") for m in memos]
+          if any(not value for value in ids) or len(ids) != len(set(ids)):
+              raise SystemExit("Flomo dataset contains missing or duplicate memo IDs")
+          for memo in memos:
+              tags = {str(tag).lstrip("#").strip().casefold() for tag in memo.get("tags", [])}
+              if "archive/blog" not in tags:
+                  raise SystemExit(f"Out-of-scope memo detected: {memo.get('id')}")
+          latest = Path("static/data/flomo_memos_latest.json")
+          latest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(f"Validated and staged {len(memos)} #Archive/Blog memos")
           PY
 
       - name: Setup Hugo
@@ -75,60 +75,30 @@ jobs:
           hugo-version: '0.165.0'
           extended: true
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-        continue-on-error: true
-
-      - name: Build Hugo site
-        run: hugo --gc --minify
-
-      - name: Verify deployed Flomo artifact
+      - name: Build and verify static site
         run: |
+          hugo --gc --minify
           python - <<'PY'
           import json
           from pathlib import Path
-
-          path = Path("public/data/flomo_memos_latest.json")
-          data = json.loads(path.read_text(encoding="utf-8"))
-          count = len(data.get("memos", []))
-          expected = data.get("meta", {}).get("total_memos")
-          if count < 1 or count != expected:
-              raise SystemExit(f"Built artifact contains invalid Flomo data: actual={count}, expected={expected}")
-          print(f"Build artifact verified: {count} Flomo memos")
-
-          # Verify the actual Hugo-generated page (the file that will be uploaded)
-          # points at the validated latest JSON and applies the dedicated tag filter.
-          html_path = Path("public/memos/index.html")
-          if not html_path.exists():
-              raise SystemExit("Missing generated page: public/memos/index.html")
-          html = html_path.read_text(encoding="utf-8")
-          if "data/flomo_memos_latest.json" not in html:
-              raise SystemExit("Generated Memos page does not reference data/flomo_memos_latest.json")
-          if "Archive/Blog" not in html:
-              raise SystemExit("Generated Memos page is missing the Archive/Blog filter")
-          print("Generated Memos page verified: latest JSON path and Archive/Blog filter present")
+          data = json.loads(Path("public/data/flomo_memos_latest.json").read_text(encoding="utf-8"))
+          memos = data.get("memos", [])
+          if not memos or data.get("meta", {}).get("total_memos") != len(memos):
+              raise SystemExit("Built Memos JSON is empty or inconsistent")
+          page = Path("public/memos/index.html").read_text(encoding="utf-8")
+          if "flomo_memos_latest.json" not in page:
+              raise SystemExit("Memos page does not reference the canonical latest dataset")
+          print(f"Build verified: /memos/ + {len(memos)} memo records")
           PY
 
-      - name: Commit updated notes and content
-        continue-on-error: true
+      - name: Commit refreshed data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/data/weread_notes.json static/data/flomo_memos.json content/weread/ content/memos/
+          git add static/data/weread_notes.json static/data/flomo_memos.json static/data/flomo_memos_latest.json content/weread/ content/memos/
           if git diff --staged --quiet; then
-            echo "No changes to commit."
+            echo "No content changes; the existing published dataset remains intact."
           else
-            git commit -m "chore: auto update weread notes and flomo memos [skip ci]"
-            git push origin HEAD:${{ github.ref_name }}
+            git commit -m "chore: refresh reading and memo data [skip ci]"
+            git push origin HEAD:main
           fi
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./public
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
