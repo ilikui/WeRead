@@ -340,10 +340,29 @@
         }
 
         async function main() {
-            $('globalSearch').addEventListener('input', (e) => {
+            const searchInput = $('globalSearch');
+            searchInput.addEventListener('input', (e) => {
                 state.searchTerm = e.target.value.trim();
                 state.page = 1;
                 render();
+            });
+
+            // Keyboard-first search: press / to focus, Escape to clear and reset.
+            document.addEventListener('keydown', (event) => {
+                const target = event.target;
+                const typing = target && (target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(target.tagName));
+                if (event.key === '/' && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                    event.preventDefault();
+                    searchInput.focus();
+                    searchInput.select();
+                }
+                if (event.key === 'Escape' && document.activeElement === searchInput) {
+                    searchInput.value = '';
+                    state.searchTerm = '';
+                    state.page = 1;
+                    render();
+                    searchInput.blur();
+                }
             });
 
             try {
