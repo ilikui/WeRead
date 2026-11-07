@@ -309,3 +309,52 @@
     background: rgba(145,182,157,.13);
   }
 }
+
+
+/* Final mobile navigation override: prevent the Memos theme from forcing
+   fixed-width horizontal tabs after the shared sidebar styles are loaded. */
+@media (max-width: 560px) {
+  .memos-page .weread-side .side-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+  .memos-page .weread-side .side-tab {
+    display: flex;
+    flex: initial;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 58px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 7px 4px;
+    white-space: normal;
+    text-align: center;
+    overflow: visible;
+  }
+  .memos-page .weread-side .side-tab-label {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    text-align: center;
+  }
+  .memos-page .weread-side .side-tab-icon {
+    flex: 0 0 21px;
+    width: 21px;
+    height: 21px;
+  }
+}
