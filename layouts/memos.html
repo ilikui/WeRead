@@ -282,6 +282,29 @@
             });
         }
 
+        function validateDataset(data, source) {
+            if (!data || !Array.isArray(data.memos) || data.memos.length < 1) {
+                throw new Error(`Empty or invalid Memos dataset: ${source}`);
+            }
+            const meta = data.meta || {};
+            if (meta.tag_filter !== 'Archive/Blog') {
+                throw new Error(`Unexpected Memos tag filter: ${meta.tag_filter || 'missing'}`);
+            }
+            if (Number(meta.total_memos) !== data.memos.length) {
+                throw new Error(`Memos count mismatch: metadata=${meta.total_memos}, actual=${data.memos.length}`);
+            }
+            const invalid = data.memos.find(memo => {
+                const tags = Array.isArray(memo.tags) ? memo.tags : [];
+                return !memo.id || !tags.some(tag =>
+                    String(tag).replace(/^#/, '').trim().toLowerCase() === 'archive/blog'
+                );
+            });
+            if (invalid) {
+                throw new Error(`Invalid or out-of-scope memo: ${invalid.id || 'missing ID'}`);
+            }
+            return data;
+        }
+
         function bootstrap(data) {
             state.meta = data.meta || {};
             // Fail closed: this page is dedicated to #Archive/Blog, even if a stale
@@ -335,7 +358,8 @@
                     try {
                         const res = await fetch(url, { cache: 'no-store' });
                         if (!res.ok) throw new Error(`HTTP ${res.status} (${url})`);
-                        bootstrap(await res.json());
+                        const payload = validateDataset(await res.json(), url);
+                        bootstrap(payload);
                         return;
                     } catch (fetchError) {
                         lastError = fetchError;
