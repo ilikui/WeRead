@@ -500,3 +500,48 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     text-align: center;
   }
 }
+
+
+/* Homepage sidebar: the two-column rail is only ~205px wide even on desktop.
+   Stack icon above label so each label stays inside its own bordered card. */
+body:not(.memos-page) .site-body > aside.side-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+}
+body:not(.memos-page) .site-body > aside.side-tabs > .side-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  min-height: 60px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 7px 4px;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  line-height: 1.25;
+}
+body:not(.memos-page) .site-body > aside.side-tabs > .side-tab .side-tab-icon {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+}
+body:not(.memos-page) .site-body > aside.side-tabs > .side-tab .side-tab-label {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  text-align: center;
+}
