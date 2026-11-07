@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     {{ $style := resources.Get "css/weread-theme.css" | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $polish := resources.Get "css/site-polish.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $polish.RelPermalink }}">
     {{ block "extra-head" . }}{{ end }}
 </head>
 <body>
