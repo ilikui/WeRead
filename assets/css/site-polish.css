@@ -362,3 +362,32 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
     padding: 8px 12px;
   }
 }
+
+
+/* Compact, consistent icons for the framed section menu */
+.side-tab {
+  gap: 9px;
+}
+.side-tab-icon {
+  display: inline-flex;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: color-mix(in srgb, var(--accent) 9%, var(--paper));
+  font-size: 14px;
+  line-height: 1;
+  transition: transform .18s ease, background-color .18s ease;
+}
+.side-tab-label {
+  min-width: 0;
+}
+.side-tab:hover .side-tab-icon {
+  transform: scale(1.08);
+  background: color-mix(in srgb, var(--accent) 16%, var(--paper));
+}
+.side-tab.active .side-tab-icon {
+  background: color-mix(in srgb, var(--accent) 16%, var(--paper));
+}
