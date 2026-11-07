@@ -33,7 +33,9 @@
         <aside class="side-tabs" aria-label="分类导航">
             {{ range site.Params.menu.side }}
             <a href="{{ .url | relURL }}" class="side-tab{{ if eq $.RelPermalink (.url | relURL) }} active{{ end }}">
-                {{ .name }}
+                <span class="side-tab-icon" aria-hidden="true">{{ .icon }}</span>
+
+                <span class="side-tab-label">{{ .name }}</span>
             </a>
             {{ end }}
         </aside>
