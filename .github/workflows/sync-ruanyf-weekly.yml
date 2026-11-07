@@ -1,0 +1,107 @@
+name: Sync Ruanyifeng Weekly
+
+on:
+  schedule:
+    - cron: '30 17 * * *' # 每天日本时间 02:30
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weread-content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout WeRead
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout ruanyf/weekly
+        uses: actions/checkout@v6
+        with:
+          repository: ruanyf/weekly
+          ref: master
+          path: /tmp/ruanyf-weekly
+          fetch-depth: 0
+
+      - name: Import and validate Weekly issues
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from datetime import datetime, timezone
+          import re, subprocess
+
+          source = Path('/tmp/ruanyf-weekly/docs')
+          target = Path('content/weekly')
+          target.mkdir(parents=True, exist_ok=True)
+          files = sorted(source.glob('issue-*.md'), key=lambda p: int(re.search(r'issue-(\d+)', p.name).group(1)))
+          if not files:
+              raise SystemExit('No issue-*.md files found in ruanyf/weekly/docs')
+
+          imported = 0
+          for src in files:
+              match = re.fullmatch(r'issue-(\d+)\.md', src.name)
+              if not match:
+                  continue
+              issue = int(match.group(1))
+              raw = src.read_text(encoding='utf-8')
+              if not raw.strip():
+                  raise SystemExit(f'Empty source issue: {src.name}')
+              first = next((line.lstrip('#').strip() for line in raw.splitlines() if line.startswith('# ')), f'每周分享第 {issue} 期')
+              stamp = subprocess.run(
+                  ['git', '-C', '/tmp/ruanyf-weekly', 'log', '-1', '--format=%cI', '--', f'docs/{src.name}'],
+                  check=True, capture_output=True, text=True
+              ).stdout.strip()
+              if not stamp:
+                  stamp = datetime.now(timezone.utc).isoformat()
+              dest = target / src.name
+              front = (
+                  '---\n'
+                  f'title: {first!r}\n'
+                  f'date: "{stamp}"\n'
+                  f'issue: {issue}\n'
+                  f'source_url: "https://github.com/ruanyf/weekly/blob/master/docs/{src.name}"\n'
+                  f'original_url: "https://www.ruanyifeng.com/blog/weekly/"\n'
+                  '---\n\n'
+              )
+              body = raw
+              body = re.sub(r'^# .+\n+', '', body, count=1)
+              dest.write_text(front + body.rstrip() + '\n', encoding='utf-8')
+              imported += 1
+
+          if imported < 1:
+              raise SystemExit('Weekly import validation failed: zero issues imported')
+          print(f'Imported and validated {imported} Weekly issues')
+          PY
+
+      - name: Build and verify Weekly pages
+        run: |
+          docker run --rm -v "$PWD:/src" -w /src hugomods/hugo:exts-0.165.0 hugo --gc --minify
+          test -s public/weekly/index.html
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          page = Path('public/weekly/index.html').read_text(encoding='utf-8')
+          count = len(list(Path('content/weekly').glob('issue-*.md')))
+          if 'Weekly' not in page or count == 0:
+              raise SystemExit('Weekly index missing or no issues imported')
+          print(f'Weekly page build verified: {count} issues')
+          PY
+
+      - name: Commit imported articles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/weekly/
+          if git diff --staged --quiet; then
+            echo "Weekly source has no new changes."
+          else
+            git commit -m "chore: sync Ruanyifeng Weekly articles"
+            git push origin HEAD:main
+          fi
