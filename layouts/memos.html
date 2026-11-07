@@ -7,7 +7,11 @@
     <meta name="description" content="{{ .Params.description | default site.Params.description }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     {{ $style := resources.Get "css/weread-theme.css" | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}">\n    {{ $memoStyle := resources.Get "css/memos-refined.css" | resources.Minify | resources.Fingerprint }}\n    <link rel="stylesheet" href="{{ $memoStyle.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ $polish := resources.Get "css/site-polish.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $polish.RelPermalink }}">
+    {{ $memoStyle := resources.Get "css/memos-refined.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $memoStyle.RelPermalink }}">
     <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
@@ -261,8 +265,9 @@
         // memo 内容按 Markdown 渲染，并用 DOMPurify 过滤，防止数据源中混入脚本
         function renderMarkdown(content) {
             if (!content) return '<em>无内容</em>';
-            const html = marked.parse(content, { breaks: true });
-            return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+            if (typeof marked === 'undefined' || typeof DOMPurify === 'undefined') return escapeHtml(content).replace(/\n/g, '<br>');
+            const html = marked.parse(content, { gfm: true, breaks: true });
+            return DOMPurify.sanitize(html);
         }
 
         // 内容超过折叠高度时显示“展开/折叠”按钮
