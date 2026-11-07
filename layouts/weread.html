@@ -23,7 +23,7 @@
                 {{ end }}
             </ul>
             <div class="nav-search">
-                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+                <input type="search" id="globalSearch" placeholder="搜索书籍与笔记 · 按 / 定位" aria-label="搜索书籍与笔记">
             </div>
         </nav>
     </header>
@@ -490,6 +490,19 @@
                 } else {
                     state.detailPage = 1;
                     renderDetailNotes();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                const target = event.target;
+                const typing = target && (target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(target.tagName));
+                if (event.key === '/' && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                    event.preventDefault(); $('globalSearch').focus(); $('globalSearch').select();
+                }
+                if (event.key === 'Escape' && document.activeElement === $('globalSearch')) {
+                    $('globalSearch').value = '';
+                    $('globalSearch').dispatchEvent(new Event('input'));
+                    $('globalSearch').blur();
                 }
             });
 
