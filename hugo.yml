@@ -52,6 +52,11 @@ params:
         icon: '📊'
         url: '/activity/'
         weight: 35
+      - identifier: weekly
+        name: 'Weekly'
+        icon: '📰'
+        url: '/weekly/'
+        weight: 40
 
 menus:
   main:
@@ -70,6 +75,9 @@ menus:
     - name: '关于'
       url: '/about/'
       weight: 30
+    - name: 'Weekly'
+      url: '/weekly/'
+      weight: 35
 
 markup:
   goldmark:
