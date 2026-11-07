@@ -35,7 +35,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           from datetime import datetime, timezone
-          import re, subprocess
+          import re, subprocess, json
 
           source = Path('ruanyf-weekly/docs')
           target = Path('content/weekly')
@@ -63,7 +63,7 @@ jobs:
               dest = target / src.name
               front = (
                   '---\n'
-                  f'title: {__import__('json').dumps(first, ensure_ascii=False)}\n'
+                  f'title: {json.dumps(first, ensure_ascii=False)}\n'
                   f'date: "{stamp}"\n'
                   f'issue: {issue}\n'
                   f'source_url: "https://github.com/ruanyf/weekly/blob/master/docs/{src.name}"\n'
