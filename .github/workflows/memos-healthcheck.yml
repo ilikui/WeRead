@@ -1,0 +1,61 @@
+name: Memos Production Health Check
+
+on:
+  # 定期检查线上页面与 JSON，避免只看构建状态
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-production:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check live Memos page and dataset
+        run: |
+          set -euo pipefail
+          BASE="https://read.likui.space"
+          PAGE="$(mktemp)"
+          JSON="$(mktemp)"
+          trap 'rm -f "$PAGE" "$JSON"' EXIT
+
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 5 "$BASE/memos/" -o "$PAGE"
+          grep -q 'flomo_memos_latest.json' "$PAGE" || {
+            echo "::error::Live Memos page does not reference the latest dataset."
+            exit 1
+          }
+
+          FETCHED=0
+          for path in data/flomo_memos_latest.json data/flomo_memos.json; do
+            if curl --fail --silent --show-error --location --retry 2 "$BASE/$path" -o "$JSON"; then
+              if python - "$JSON" <<'PY'
+          import json, sys
+          from pathlib import Path
+          data = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
+          memos = data.get("memos")
+          meta = data.get("meta") or {}
+          if not isinstance(memos, list) or not memos:
+              raise SystemExit("empty memo array")
+          if meta.get("tag_filter") != "Archive/Blog":
+              raise SystemExit("unexpected tag filter")
+          if meta.get("total_memos") != len(memos):
+              raise SystemExit("memo count mismatch")
+          if any("Archive/Blog" not in [str(t).lstrip("#").strip() for t in (m.get("tags") or [])] for m in memos):
+              raise SystemExit("out-of-scope memo found")
+          print(f"Healthy: {len(memos)} public #Archive/Blog memos")
+          PY
+              then
+                FETCHED=1
+                echo "Live dataset verified from /$path"
+                break
+              fi
+            fi
+          done
+
+          if [ "$FETCHED" -ne 1 ]; then
+            echo "::error::Neither live Memos JSON endpoint contains a valid non-empty dataset."
+            exit 1
+          fi
