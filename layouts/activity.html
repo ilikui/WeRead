@@ -21,7 +21,8 @@
                 {{ end }}
             </ul>
             <div class="nav-search">
-                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
             </div>
         </nav>
     </header>
@@ -116,6 +117,33 @@
     <footer class="site-footer">
         <p>{{ site.Title }} · 使用 Hugo 构建</p>
     </footer>
+
+    <script>
+    (function () {
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        let items = null;
+        function close() { results.hidden = true; results.innerHTML = ''; }
+        function esc(v) { return String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+        input.addEventListener('input', async () => {
+            const term = input.value.trim().toLowerCase();
+            if (!term) { close(); return; }
+            if (!items) {
+                try { const response = await fetch('../index.json'); if (!response.ok) throw new Error('index'); items = await response.json(); }
+                catch (_) { items = []; }
+            }
+            const matches = items.filter(x => (x.title || '').toLowerCase().includes(term) || (x.meta || '').toLowerCase().includes(term)).slice(0,8);
+            results.innerHTML = matches.length ? matches.map(x => '<a class="search-result" href="' + esc(x.url) + '"><span class="search-result-title">' + esc(x.title) + '</span></a>').join('') : '<p class="search-empty">没有找到相关内容</p>';
+            results.hidden = false;
+        });
+        document.addEventListener('keydown', e => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); input.focus(); input.select(); }
+            if (e.key === 'Escape' && document.activeElement === input) { input.value = ''; close(); input.blur(); }
+        });
+        document.addEventListener('click', e => { if (!e.target.closest('.nav-search')) close(); });
+    })();
+    </script>
 
     <script>
     (function() {
