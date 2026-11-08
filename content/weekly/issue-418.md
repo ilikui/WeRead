@@ -1,6 +1,6 @@
 ---
 title: "科技爱好者周刊（第 418 期）：如果科技停止在21世纪初"
-date: "2026-11-06T07:51:27+08:00"
+date: "2026-11-08T22:43:20+08:00"
 issue: 418
 source_url: "https://github.com/ruanyf/weekly/blob/master/docs/issue-418.md"
 original_url: "https://www.ruanyifeng.com/blog/weekly/"
@@ -110,7 +110,7 @@ original_url: "https://www.ruanyifeng.com/blog/weekly/"
 
 但是，这个实验很可能表明“太空机房”不那么可行。
 
-因为这颗实验卫星每小时只能发1度电，且受散热限制，TPU 每次只能连续工作大约20分钟，就要停机散热。
+因为这颗实验卫星每小时最多发1度电，且受供电限制，TPU 每次只能连续工作大约20分钟，就要停机。
 
 可以推算，即使卫星的太阳板增大100倍，每小时发100度电，也是远远不够用。
 
@@ -140,7 +140,7 @@ original_url: "https://www.ruanyifeng.com/blog/weekly/"
 
 3、[JetBrains 亏损](https://www.helgilibrary.com/companies/jetbrains)
 
-著名 IDE 厂商 JetBrains 2025年亏损，是该公司成立20年以来第一次亏损。
+著名 IDE 厂商 JetBrains 2025年亏损，是该公司成立25年以来第一次亏损。
 
 ![](https://cdn.beekka.com/blogimg/asset/202610/bg2026100801.webp)
 
@@ -248,7 +248,7 @@ LaTex 排版软件的插件，在页面空白处生成植物图案。
 
 ![](https://cdn.beekka.com/blogimg/asset/202611/bg2026110407.webp)
 
-一个 Youtube 视频网站，汇集了“黑客新闻”论坛上提到的所有 Youtube 视频，可以用来寻找值得看的科技视频。
+一个 YouTube 视频推荐网站，汇集了“黑客新闻”论坛上提到的所有 Youtube 视频，可以用来寻找值得看的科技视频。
 
 另有 [HackerBooks](https://hackerbooks.org/topic/fantasy) 和 [HackerPodcasts](https://www.hackerpodcasts.org/)，分别收集了“黑客新闻”提到过的各种书籍和播客。（[@qcrao](https://github.com/ruanyf/weekly/issues/13061) 投稿）
 
@@ -350,7 +350,7 @@ LaTex 排版软件的插件，在页面空白处生成植物图案。
 
 4、
 
-AI 生成的内容就像沥青，看起来光鲜明亮，而且很容易随处涂抹。但如果你以后需要清除沥青，即使一切顺利，也需要数年时间。
+AI 生成的内容就像石棉，看起来光鲜明亮，而且很容易随处涂抹。但如果你以后需要清除石棉，即使一切顺利，也需要数年时间。
 
 -- [《AI 帕斯卡的赌注》](https://ploum.net/2026-10-01-pascal_wager.html)
 
