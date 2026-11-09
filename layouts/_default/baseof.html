@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ $polish.RelPermalink }}">
     {{ block "extra-head" . }}{{ end }}
 </head>
-<body>
+<body{{ if eq .Type `learn` }} class="learn-site"{{ end }}>
     <header class="site-header">
         <nav class="site-nav" aria-label="主导航">
             <a class="site-brand" href="{{ `/` | relURL }}">{{ site.Title }}</a>
@@ -28,7 +28,7 @@
         </nav>
     </header>
 
-    <div class="site-body">
+    <div class="site-body{{ if eq .Type `learn` }} site-body-learn{{ end }}">
         {{ block "sidebar" . }}
         <aside class="side-tabs" aria-label="分类导航">
             {{ range site.Params.menu.side }}

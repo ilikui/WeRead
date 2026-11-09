@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 416 期）：编程已经面目全非 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 416 期）：编程已经面目全非</h1>
+        
+        <p class="article-meta"><time datetime="2026-10-23">2026年10月23日</time></p>
+        <p class="article-meta">每周分享第 416 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-416.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。另有<a href="https://github.com/ruanyf/weekly/issues/12009">《谁在招人》</a>服务，发布程序员招聘信息。合作请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102201.webp" alt="" /></p>
+<p>本周启用的上海大歌剧院内部装修。（<a href="http://sh.news.cn/20261022/b4bc8ab8a9e848f7aa8d044ba56487cc/c.html">via</a>）</p>
+<h2 id="编程已经面目全非">编程已经面目全非</h2>
+<p>大多数人只看到，AI 改变了程序员这个职业。很少有人提到，AI 也改变了编程。</p>
+<p>AI 推翻了传统的软件开发，编程现在已经面目全非。</p>
+<p>即使将来泡沫破灭，AI 也不可能从编程工具链中消失，已经永久成为软件开发的一部分，再也无法移除。</p>
+<p>一个国外的资深程序员<a href="https://x.com/thorstenball/status/2101305394190557466">总结</a>了，AI 改变了编程的哪些方面。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101515.webp" alt="" /></p>
+<p>他的观点非常激进，有很多大胆的断言，我觉得一定要分享给更多人看。</p>
+<p><strong>（1）代码审查（Code review）将消失。</strong></p>
+<p>人工审查代码已经没意义了。因为人类跟不上 AI 生成代码的速度，无法在合理的时间内，发现 AI 代码中的 Bug。</p>
+<p>人类未来只能审查整个系统的组成或架构是否合理，而绝不会像现在这样，通过 PR 逐行审查代码。</p>
+<p><strong>（2）单元测试可能会消失。</strong></p>
+<p>AI 可以随时改变代码的整个实现，再去测试一个个代码单元，就没意义了。也许下次迭代，整栋楼就会重建，何必再去检查单块砖头。</p>
+<p>将来的项目可能只有接口测试、集成测试、系统测试，而不会保留单元测试。</p>
+<p><strong>（3）软件开发的重点不再是写代码。</strong></p>
+<p>代码将来由 AI 负责，程序员的工作重点将移到代码以外的其他环节：如何用软件解决业务问题、了解软件如何实现、如何发布软件、如何收集反馈等等。</p>
+<p><strong>（4）Bug 的性质也变了。</strong></p>
+<p>大多数 Bug 不再是代码 Bug，而是需求提错了或表达不准确。</p>
+<p><strong>（5）软件开源不再能提升质量。</strong></p>
+<p>以前，代码开源的一个理由是“只要关注的人足够多，所有 Bug 都能被发现”。</p>
+<p>这句话依然成立，但是现在即使你不开源，AI 也能帮你发现 Bug。</p>
+<p><strong>（6）敏捷编程会死亡。</strong></p>
+<p>敏捷编程的各种方法（Agile、Scrum 等），都意义不大了，AI 的生成速度决定了项目的开发时间，你所要做的就是把工单直接推给 AI。</p>
+<p><strong>（7）项目分工将改变。</strong></p>
+<p>以前，项目组一般包括三种角色：项目经理（PM）、设计师（Designer）、工程人员（Engineer）。</p>
+<p>以后，这种三元架构将消失。有了 AI， 一个人可以兼任多个角色。</p>
+<p><strong>（8）“好代码”的概念将消失。</strong></p>
+<p>以前，“好代码”的标准是便于人类阅读理解、方便重构、开发维护效率较高的代码。</p>
+<p>但是，你已经不读代码、不直接修改和维护大部分代码，“好代码”的存在前提就消失了。</p>
+<p><strong>（9）代码风格规范和 linter 工具，也没意义了。</strong></p>
+<p>AI 会在乎代码风格吗：每行不超过80个字符、有没有换行符、缩进是 tab 键还是空格键……？</p>
+<p><strong>（10）UI 将变得不重要。</strong></p>
+<p>一方面，未来的很多 UI 是给 AI 使用的，而 AI 只需要 API，不需要精致的 UI。</p>
+<p>另一方面，如果代码的生成速度极快，那么用户界面（UI）将实时生成。许多 UI 之所以存在，是因为软件无法确定你想要什么。菜单、设置页、仪表盘、过滤器，都是为了帮助用户快速确定需求。用户通过语言明确了需求，AI 就可以实时为他生成定制的 UI。</p>
+<p><strong>（11）Token 为王。</strong></p>
+<p>谁能够负担更多的 Token，谁的软件就更好。如果你没有足够的 Token，你就开发不出最优秀的软件。</p>
+<h2 id="大模型的区别对待">大模型的区别对待</h2>
+<p>本周，一家美国模型公司在它们的网站上，发布了一篇骇人听闻的<a href="https://www.hirundo.io/blog/qwen3-coder-vulnerabilities">文章</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102204.webp" alt="" /></p>
+<p>它声称，Qwen3-Coder 模型会区别对待用户。如果你说自己是一家“美国国防承包商”，那么模型就会生成质量较差的代码，漏洞更多。</p>
+<p>反过来，如果你说自己是中国公司，模型生成的代码质量就会更高。</p>
+<p>我都要气笑了，真的是为了泼脏水，什么话都说得出来。一旦相信了阴谋论，一切就都是阴谋。</p>
+<p>且不论测试是否客观，只看他们选择的模型是 Qwen3-Coder-30B-A3B-Instruct 就有问题。</p>
+<p>这是2025年7月31日发布的模型，早就过时了。而且，它的激活参数只有 3.3B，谁会用这样的小模型来生成正式用途的代码？</p>
+<p>如果要偷偷植入漏洞，难道不是应该在高阶模型中动手脚吗？高阶模型有更大的可能被重要公司使用。</p>
+<p>这家美国公司对于为什么选择 Qwen3-Coder-30B-A3B-Instruct 作为唯一的示例，不选其他中国模型，完全没有解释。</p>
+<p>最可笑的是，他们卖的产品就是所谓“经过安全化处理的” Qwen3-Coder-30B-A3B-Instruct。先说中国模型不安全，然后让你买他们修改的中国模型，我不知道什么样智商的客户会掏钱购买他们的产品。</p>
+<p>虽说这样的文章纯粹是一个笑话，但是大模型会不会区别对待用户，却是一个严肃的问题。</p>
+<p>同一个模型，真的会针对特定用户，给出特定结果（计算机术语称为“蜜罐”）吗？</p>
+<p>如果这是可能的，就意味着，用户必须假设任何模型都是不可信任的，必须有其他模型来评估当前模型的生成结果。</p>
+<h2 id="印度的证书颁发机构">印度的证书颁发机构</h2>
+<p>本周还有一件令人哭笑不得的事情。</p>
+<p>eMudhra 是一家印度的证书颁发机构，它的私钥被<a href="https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/">破解</a>了。任何人都可以用它的私钥签发证书了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102205.webp" alt="" /></p>
+<p>跟大家想的不一样，破解它的私钥，完全不涉及黑客行为，也不需要海量的计算。因为它的一把私钥就是4，还有两把私钥是56和115。</p>
+<p>被破解的一共有八把私钥，全是这种255以内的整数。</p>
+<p>按理说，私钥应该是一个很大的随机数，但这家公司把私钥前面的字节都设置为0，只有最后一个字节设置为非零值，就像下图这样。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102206.webp" alt="" /></p>
+<p>所以，破解它的私钥毫不费力，只需要1毫秒的计算即可。</p>
+<p>现在，Chrome、Mozilla 等各大浏览器不得不采取紧急措施，更新内置的证书包，撤销对于 eMudhra 签发的证书的信任。</p>
+<p>印度公司的行事风格，总是刷新你的认知。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://simonwillison.net/2026/Sep/27/2026-in-llms-so-far/">2026年的大模型发展</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102119.webp" alt="" /></p>
+<p>著名程序员西蒙·威利森（Simon Willison）的演讲稿，整理今年的大模型发展，关键词依次是 OpenClaw、Tokenmaxxing、Claude Fable 5 / Mythos、Local model、Hugging Face incident。</p>
+<p>2、<a href="https://archive.ph/uaQ4X">陶哲轩与 AI 的战争</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102103.webp" alt="" /></p>
+<p>《纽约时报》的长篇报道，著名数学家陶哲轩公开反对大模型公司，反对它们肆无忌惮地用大模型去求证各种数学难题，认为这对人类的数学理解毫无帮助。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102104.webp" alt="" /></p>
+<p>报道也详细介绍了他的人生故事。上图是他13岁（1988年）获得国际数学竞赛金牌。后来，他24岁被加州大学聘为终身教授，下图是2007年他的公开课。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102105.webp" alt="" /></p>
+<p>3、<a href="https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/">我自托管的11个服务</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101501.webp" alt="" /></p>
+<p>作者在一台 16G 内存的家用迷你电脑上，运行着17个原生服务和11个 Podman 服务。本文介绍了为什么他要用这些服务。</p>
+<p>4、<a href="https://decrypt.co/resources/what-is-a-hardware-wallet-crypto-cold-storage-explained">什么是硬件钱包？</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101805.webp" alt="" /></p>
+<p>本文解释什么是加密货币的硬件钱包，它有什么用，以及最近出现的两起硬件钱包被破解的案件。</p>
+<p>5、<a href="https://simedw.com/2026/10/21/world-model-terminal/">我训练了一个3.6亿参数的模型，让它模拟终端</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102202.webp" alt="" /></p>
+<p>作者介绍他怎么基于 Qwen2.5-Coder-0.5B，训练出一个自己的模型，收集的训练材料大约20亿 Token，训练时间是75个 RTX 4090 显卡的 GPU 小时。</p>
+<p>最有意思的是这个模型的作用，它模拟终端的样子。用户每次在命令行输入一个命令，它不会去执行这个命令，而是预测运行结果，并展示出来。</p>
+<p>虽然想不出它的用途，但这个思路真的是脑洞大开。模型不执行任务，只给出预测的执行结果，显得任务好像被执行了。</p>
+<p>6、<a href="https://colo.to/nvidia-stock-narrative.html">英伟达欠我10亿美元股票</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102118.webp" alt="" /></p>
+<p>一篇有趣的回忆文章。30年前，英伟达同意给予作者一笔股票期权，当时英伟达是一家随时可能倒闭的小公司，期权根本不值钱。作者没在意，听过就忘了。</p>
+<p>30年后，他终于想起来了，发现这些期权的价值超过10亿美元。但已经过了追诉年限，法院不予受理。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/glincker/sslx">sslx</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101806.webp" alt="" /></p>
+<p>一个检测、查看 HTTPS 证书信息的命令行工具。</p>
+<p>2、<a href="https://github.com/kksimp/Mac.apk">Mac.apk</a></p>
+<p>这个应用可以让 Mac 运行安卓软件，不是虚拟机，也不是模拟器，原理是模拟安卓的系统 API。</p>
+<p>3、<a href="https://github.com/CLoaKY233/siltop">siltop</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102110.webp" alt="" /></p>
+<p>一个 macOS 命令行工具，在终端显示各种实时的系统信息：CPU、GPU、内存、电力、温度、存储、网络等。</p>
+<p>4、<a href="https://obdev.at/products/littlesnitch-mini/index.html">Little Snitch Mini</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071301.webp" alt="" /></p>
+<p>一个 macOS 软件，显示正在运行的所有应用的互联网连接，并可以阻断指定的单个连接。</p>
+<p>5、<a href="https://github.com/thedevdojo/pines">Pines</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071307.webp" alt="" /></p>
+<p>一个基于 Tailwind 的 UI 组件库。</p>
+<p>6、<a href="https://github.com/2234839/silkpulse">silkpulse</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101901.webp" alt="" /></p>
+<p>前端的远程页面调试工具。在页面插入一个脚本，就可以远程打开该网页的控制台，查看各种信息，接收实时报错，适合调试手机端页面。（<a href="https://github.com/ruanyf/weekly/issues/12383">@2234839</a> 投稿）</p>
+<p>7、<a href="https://github.com/ANYNC/TaskbarLyrics">TaskbarLyrics</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101903.webp" alt="" /></p>
+<p>Windows 任务栏实时显示歌词，支持国内主要音乐服务。（<a href="https://github.com/ruanyf/weekly/issues/12408">@ANYNC</a> 投稿）</p>
+<p>8、<a href="https://github.com/tt-a1i/archify">Archify</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101905.webp" alt="" /></p>
+<p>一个 Skill 项目，将一段话、一个计划、一个代码仓库变成互动式网页流程图。（<a href="https://github.com/ruanyf/weekly/issues/12423">@zhengxin-wang</a> 投稿）</p>
+<p>9、<a href="https://github.com/wx4766/html-to-video">html-to-video</a></p>
+<p>一个把 HTML 网页动画逐帧渲染成 MP4 视频的命令行工具。（<a href="https://github.com/ruanyf/weekly/issues/12486">@wx4766</a> 投稿）</p>
+<p>10、<a href="https://github.com/hyphy-void/Parcel">Parcel</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026102101.webp" alt="" /></p>
+<p>基于 Cloudflare Worker 环境的临时文件分享应用，上传文件后生成加密的分享链接，到期自动清理。（<a href="https://github.com/ruanyf/weekly/issues/12598">@hyphy-void</a> 投稿）</p>
+<p>11、<a href="https://github.com/Marvae/douban-cli">douban-cli</a></p>
+<p>豆瓣的非官方命令行客户端，可以用来获取电影、剧集、图书的数据。（<a href="https://github.com/ruanyf/weekly/issues/12616">@Marvae</a> 投稿）</p>
+<p>12、<a href="https://github.com/Trugamr/wol">wol</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202501/bg2025012509.webp" alt="" /></p>
+<p>一个命令行工具，可以通过命令行或 Web 界面，唤醒当前局域网里面某台正在休眠的计算机。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://zidian.dapengshufa.com/">大鹏书法</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202610/bg2026101902.webp" alt="" /></p>
+<p>查看某个字的各种书法。（<a href="https://github.com/ruanyf/weekly/issues/12402">@gengdapeng-beep</a> 投稿）</p>
+<p>2、<a href="https://github.com/iggredible/Learn-Vim">学习 Vim</a>（Learn Vim the Smart Way）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202311/bg2023110605.webp" alt="" /></p>
+<p>一个开源的 Vim 编辑器教程，这是英文版。另有<a href="https://gitlab.com/wsdjeg/Learn-Vim_zh_cn">中文版</a>。</p>
+<p>3、<a href="https://dthain.github.io/books/compiler/">编译器和语言设计导论</a>（Introduction to Compilers and Language Design）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202607/bg2026070703.webp" alt="" /></p>
+<p>一本免费的英语教材，面向初学者，介绍编译器的概念，以及如何写一个 C 语言的编译器。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://www.bbc.com/travel/article/20260327-the-road-signs-that-teach-travellers-about-france">法国的公路路标</a></p>
+<p>法国高速公路的路标，不仅用来指明方向，还会介绍当地的美食、村庄和风景。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202603/bg2026033109.webp" alt="" /></p>
+<p>上图的路标表示前方是一个水鸟公园。</p>
+<p>这些路标希望在几秒钟的时间里，吸引司机的注意力。它们只有一个简明的图标和一个名字，加上简洁的棕白配色。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202603/bg2026033110.webp" alt="" /></p>
+<p>上面的路标表示前方有一个著名城堡。</p>
+<p>下图是港口城市圣马洛的路标，有城墙、帆船和一大片海浪。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202603/bg2026033111.webp" alt="" /></p>
+<p>有些路牌还绘制了当地的著名人物。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202603/bg2026033112.webp" alt="" /></p>
+<p>上图是一个二战纪念馆，纪念当地的死难儿童。</p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://www.mentalfloss.com/posts/why-does-squinting-help-you-see-better">为什么眯眼能看得更清楚？</a></p>
+<p>我们都经历过这样的情景：当你很难看清楚远处某些东西时，眯起眼睛，清晰度会有所提高。</p>
+<p>仔细想想，这是有悖常理的。眯眼让眼睛的可用部分变少，为什么反而可以看得更清楚呢？</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202606/bg2026062510.webp" alt="" /></p>
+<p>你可能以为，这跟眼睛的压力有关，眯眼“挤压眼球”，暂时重塑晶状体的焦距，使其更好地聚焦。这种想法是不对的。</p>
+<p>眯眼的真正作用在于减少进入眼睛的光线量。通过眯眼，人们实际上让眼睛变小，减少多余光线的干扰，只允许光线进入靠近视野中心的位置，从而使视网膜上的光线更加集中。这称为针孔效应，这才是看得更清晰的根本原因。</p>
+<p>眯眼对眼睛不利的方面，主要是眯眼后，眨眼的次数会减少。因此，长时间眯眼（例如，整天眯着眼睛看电脑屏幕）会导致眼睛疲劳或干眼症。</p>
+<p>与某些观点相反，眯眼不会损害你的视力。它不是视力下降的原因，而是视力下降的症状。如果你不分场合一直在眯眼，那么你需要检查视力。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>有人问，AI 编写的代码，我根本不理解，公司却要我发布它，怎么办？</p>
+<p>我的回答是，不要让 AI 设计代码，而要让它实现你已经设计好的代码。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=50157475">Hacker News 读者</a></p>
+<p>2、</p>
+<p>大多数建议对于给出建议的人都是正确的，对于别人就不一定了。</p>
+<p>&ndash; <a href="https://coached.com/essays/most-advice-is-right-for-the-person-giving-it/">coached.com</a></p>
+<p>3、</p>
+<p>AI 让单人创业变得容易，创业失败的主要原因以后将是孤独。</p>
+<p>身边没有人对你的想法提出异议，没有人注意到你遇到的困难，或者鼓励你坚持到底。AI 或许可以帮助你更快地前进，但它无法完全取代与人倾诉或分享喜悦。</p>
+<p>&ndash; <a href="https://every.to/thesis-statements/julian-weisser">《自动化之后，单人创业将成为主流》</a></p>
+<p>4、</p>
+<p>美国政府的主要关注，现在已经变成了如何保持对中国的技术领先优势，以及设法维持美国股市的高股价。</p>
+<p>&ndash; <a href="https://www.economist.com/business/2026/09/30/the-era-of-speedball-capitalism-has-dawned">《经济学家》杂志</a></p>
+<p>5、</p>
+<p>过去几个月，OpenAI 公司发布了 AI 做出的数百项数学证明。这震惊了数学界，一位数学家说他不禁哭了，感到 AI 毁灭了自己的研究领域。</p>
+<p>技术乐观主义者可能不会这样想，他会劝这位数学家振作起来。</p>
+<p>数学不会在意你的感受，科学现实对你的眼泪漠不关心。你感到自己的圣殿被毁灭了，可是这种事以前也发生在别人身上。接受现实吧。</p>
+<p>&ndash; <a href="https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep">《我知道数学家为何哭泣》</a></p>
+<h2 id="往年回顾">往年回顾</h2>
+<p><a href="https://www.ruanyifeng.com/blog/2025/10/weekly-issue-369.html">Tim 与罗永浩的对谈</a>（#369）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2024/09/weekly-issue-319.html">如何拍出爆款视频</a>（#319）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2023/09/weekly-issue-269.html">为什么英雄不使用炸药</a>（#269）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2022/08/weekly-issue-219.html">如何防止帐号被黑</a>（#219）</p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

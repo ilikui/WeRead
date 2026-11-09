@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 373 期）：数据模型是新产品的核心 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 373 期）：数据模型是新产品的核心</h1>
+        
+        <p class="article-meta"><time datetime="2025-11-14">2025年11月14日</time></p>
+        <p class="article-meta">每周分享第 373 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-373.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。另有<a href="https://github.com/ruanyf/weekly/issues/8003">《谁在招人》</a>服务，发布程序员招聘信息。合作请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111108.webp" alt="" /></p>
+<p>甘肃省酒泉市今年开业的悬泉置景区，是一个汉代的丝绸之路驿站，供往来西域的客人投宿。中国现存的8万多片汉代简牍，有3万多片发现于这个驿站。（<a href="https://www.news.cn/culture/20250430/2dfefaf471ca46f48e70d1ab669ef6e9/c.html?page=5">via</a>）</p>
+<h2 id="数据模型是新产品的核心">数据模型是新产品的核心</h2>
+<p>（1）</p>
+<p>著名计算机学家、Pascal 语言之父<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">沃斯</a>说过一句著名的话。</p>
+<blockquote>
+<p>算法 + 数据结构 = 程序</p>
+</blockquote>
+<p>他甚至写了一本书，书名就是这句话。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110804.webp" alt="" /></p>
+<p>在他看来，<strong>数据结构跟算法一样，是最重要的事情</strong>，反倒是编程语言不怎么重要。</p>
+<p>如果数据结构不对，程序十有八九会有问题；反之，数据结构对了，解法往往很容易看出来。</p>
+<p>（2）</p>
+<p>我前些天看到<a href="https://notes.mtb.xyz/p/your-data-model-is-your-destiny">一篇文章</a>，也是这个观点，甚至更进一步提出，<strong>数据模型不仅是程序的核心，也是新产品的核心</strong>。</p>
+<p>他认为，数据结构决定了产品的形态，只要改变一下数据模型，往往就是一种新产品。</p>
+<p>文章举了很多例子，非常有启发，我跟大家分享。</p>
+<p>（3）</p>
+<p>最初的聊天软件，都是以人为中心，两人或两人以上组成一个聊天。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110807.webp" alt="" /></p>
+<p>它的数据模型就是围绕人建模，要是成员全部退出，聊天就结束。</p>
+<p>后来，新的群聊软件 <a href="https://slack.com/intl/zh-cn/">Slack</a> 诞生了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110805.webp" alt="" /></p>
+<p>它的数据模型变了，核心不是人，而是话题。一个话题就是一个容器，所有相关的聊天都在里面，又叫做频道（channel）。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110806.webp" alt="" /></p>
+<p>即使成员全部退出，没人聊天了，频道依然存在，话题的完整上下文也不会消失。新成员加入后，可以看到以前的所有讨论。</p>
+<p>由于这个特点，Slack 特别受企业欢迎，是目前公司内网工作聊天软件的首选。</p>
+<p>你看，就因为 Slack 的数据模型变了，哪怕其他都没变，它就成了一个全然不同的产品，杀出了聊天软件的重围，在企业市场大放异彩。</p>
+<p>（4）</p>
+<p>再看两个例子。Notion 和谷歌文档都是文档软件，都用来写文档，但是它们的数据模型不一样。</p>
+<p>谷歌文档就是传统模型，以单篇文档为中心。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110808.webp" alt="" /></p>
+<p>Notion 模型的核心其实不是文档，而是页面。一个页面就是一个容器，你可以组合多篇文档，呈现在一起。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110809.webp" alt="" /></p>
+<p>Figma 和 Photoshop 都是设计软件。</p>
+<p>PhotoShop 模型的核心是图像，所有编辑都归属于某张图像。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110810.webp" alt="" /></p>
+<p>Figma 模型的核心，我觉得，是工作区。一个设计稿就是一个工作区，里面可以有多张图像，其他人可以参与进来，留言讨论。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110811.webp" alt="" /></p>
+<p>（5）</p>
+<p>总之，数据模型稍作变化，就会产生一种新产品。它跟现有的产品有区别，从而能够打开新的市场。</p>
+<p>这启发我们，如果你的产品跟别人雷同，那么不妨思考一下，能否改变数据模型。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、澳大利亚安装了大量光伏板，出现了一个新的烦恼。</p>
+<p>那就是电太多，白天用不完。政府打算推出一个计划，中午太阳光最强的时候，<a href="https://electrek.co/2025/11/04/australia-has-so-much-solar-that-its-offering-everyone-free-electricity-3h-day/">用电免费</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110902.webp" alt="" /></p>
+<p>政府要求电力公司每天至少向所有人免费提供三个小时的电。如果你自己购买电池，把电储存起来，甚至可以全天免费用电。</p>
+<p>随着太阳能的发展，人类有望进入低电价甚至零电价的时代（至少在白天）。</p>
+<p>2、</p>
+<p>最近，纽约市的地铁站出现了同一个 <a href="https://archive.ph/HyMHm">AI 广告</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202510/bg2025101402.webp" alt="" /></p>
+<p>那是一个 AI 吊坠，佩戴者可以跟它说话，售价129美元。</p>
+<p>这个广告到处都是，墙壁、车身、车厢，无处不在。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202510/bg2025101403.webp" alt="" /></p>
+<p>该公司的 CEO 说，当他得知买下纽约地铁的广告，每月仅需不到100万美元，觉得很便宜，立刻就买下了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111305.webp" alt="" /></p>
+<p>但是，广告投放一个多月后，产品只卖出3100个，货值不到40万美元，怎么看都是一笔巨亏的买卖。</p>
+<p>不过，CEO 很乐观，相信等到产品在沃尔玛上架，销量就会快速提升。他认为，人们会需要这个吊坠作为 AI 伴侣，它帮助用户“显著提高情商，重新定义朋友”，为此他还准备在洛杉矶和芝加哥，投入巨额广告费。</p>
+<p>这就是 AI 设备和应用的现状：实际的销量不大，但需要巨额推广费用，AI 公司对此毫无怨言。</p>
+<p>3、世界最大的<a href="https://m.guancha.cn/industry-science/2025_11_12_796785.shtml">捕风伞</a>，最近在内蒙古阿拉善左旗试验场成功开伞和收伞。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111211.webp" alt="" /></p>
+<p>它的展开面积达到5000平方米，在高空中吸收风力，进行发电。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111212.webp" alt="" /></p>
+<p>高空才有大风，科学家很早就想出捕风伞，它就像一个放大的风筝，升到300米以上的高空捕获风能，再通过牵引缆绳，拉动地面的发电机转动发电。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111213.webp" alt="" /></p>
+<p>4、苹果的 Vision Pro 头盔刚发布的 VisionOS 26 系统，增加了一个<a href="https://www.cnet.com/tech/computing/apple-talks-to-me-about-vision-pro-personas-where-is-our-virtual-presence-headed/">空间头像</a>功能。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110508.webp" alt="" /></p>
+<p>它通过内部摄像头，拍摄用户的头部，然后使用高斯泼溅算法，将 2D 头像变成逼真的空间 3D 头像。</p>
+<p>用户通话时，就能看到对方栩栩如生的头像，浮在空气中，对你说话，表情动作都是实时的。当然，前提是双方都必须戴着头盔。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110509.webp" alt="" /></p>
+<p>该功能最多可以扩展到5个人同时通话。</p>
+<p>这个功能令人遐想，如果再为头像配上虚拟的身体，是不是就能看到对方在空间中做动作。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110510.webp" alt="" /></p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://gist.github.com/EchenD/8b211ebfa4941d2c5df7b526790b31aa#the-current-situation-being-completely-honest">一个伊朗程序员的求助</a>（英文）</p>
+<p>一个伊朗程序员开发了一个 AI 虚拟头像生成器，但是发现由于美国制裁，根本不可能向国外出售，于是在 GitHub 求助。</p>
+<blockquote>
+<p>我没有客户，没有收入，积蓄已经用光，而且已经积极找了九个月的工作，却一无所获。我的妻子是一名护士，每天从早上五点工作到晚上七点，而我却坐在电脑前，开发一些连房租都付不起的东西。</p>
+<p>我在伊朗无法使用 Stripe、PayPal 等西方支付处理商，也无法使用 AWS、GCP、Azure 等云服务商，我不能用西方银行账户接受付款，也不能接受顾客使用信用卡付款。</p>
+</blockquote>
+<p>2、<a href="https://parkscomputing.com/page/i-hate-screenshots-of-text">我讨厌代码截图</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111201.webp" alt="" /></p>
+<p>一个老外程序员呼吁，客户遇到问题时，不要再向他发送代码截图了，因为无法拷贝代码，而要发送代码链接。</p>
+<p>3、<a href="https://pagewatch.ai/blog/post/llm-text-as-image-tokens/">图片是否比文字节省 token？</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110802.webp" alt="" /></p>
+<p>本文验证如果把提示词从文字转成图片，是否更节省 token？</p>
+<p>答案是提示词本身确实节省了 token，但是模型会用更多的 token 来补全上下文，所以总体上并没有节省。</p>
+<p>4、<a href="https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/graph/dijkstra/README.zh-CN.md">Dijkstra 算法详细图解</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111207.webp" alt="" /></p>
+<p>Dijkstra 算法是寻找两点间最短路径的经典算法，本文用一步步的详细图解，解释这个算法。</p>
+<p>5、<a href="https://blog.tomayac.com/2025/11/07/using-the-web-monetization-api-for-fun-and-profit/">Web Monetization API 试用体会</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110803.webp" alt="" /></p>
+<p>浏览器有一个实验 API，用来让访问者向站长捐款，本文是这个 API 的试用报告。</p>
+<p>6、<a href="https://blog.kilocode.ai/p/testing-augment-codes-new-credit">AI 插件的模型成本比较</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111306.webp" alt="" /></p>
+<p>本文使用实际的编程任务，对 VS Code 的两个 AI 编程插件进行成本比较：<a href="https://www.augmentcode.com">Augment Code</a> 和 <a href="https://kilocode.ai/">Kilo Code</a>。</p>
+<p>前者不能更换模型，必须使用内置的 Claude Sonnet 4.5；后者可以配置自己的模型，到底谁更省钱。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/MagicMirrorOrg/MagicMirror">MagicMirror²</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110901.webp" alt="" /></p>
+<p>一个显示各种信息的面板应用，可以用于信息屏或者智能镜子。</p>
+<p>2、<a href="https://github.com/aristocratos/btop">btop</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111208.webp" alt="" /></p>
+<p>htop 命令的升级版，在终端里面详细展示系统信息。</p>
+<p>3、<a href="https://github.com/rajivm1991/DroidDock">DroidDock</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111206.webp" alt="" /></p>
+<p>一个 Mac 桌面应用，可以连接安卓手机，管理手机文件。</p>
+<p>4、<a href="https://github.com/tanhuang2016/RedisFX">RedisFX</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025110801.webp" alt="" /></p>
+<p>轻量级的 Redis 图形界面，使用 JavaFX 开发，运行在 JVM 上。（<a href="https://github.com/ruanyf/weekly/issues/8120">@tanhuang2016</a> 投稿）</p>
+<p>5、<a href="https://github.com/vicanso/pingap">Pingap</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111007.webp" alt="" /></p>
+<p>一个 Rust 语言开发的反向代理服务器，类似于 nginx，内置各种插件（身份验证、安全、流量控制、内容修改等）。（<a href="https://github.com/ruanyf/weekly/issues/8133">@vicanso</a> 投稿）</p>
+<p>6、<a href="https://github.com/bestruirui/Alle">Alle</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111008.webp" alt="" /></p>
+<p>开源的邮件聚合管理平台，基于 Cloudflare Workers 部署。在一个界面查看所有邮箱的收件，并带有邮件的 AI 处理。（<a href="https://github.com/ruanyf/weekly/issues/8140">@bestruirui</a> 投稿）</p>
+<p>7、<a href="https://github.com/gocronx-team/gocron">gocron</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111010.webp" alt="" /></p>
+<p>Linux 的定时任务管理系统，使用 Go 语言开发，自带 Web 界面，用于替代原生的 crontab。（<a href="https://github.com/ruanyf/weekly/issues/8143">@gocronx</a> 投稿）</p>
+<p>8、<a href="https://github.com/Simon-He95/markdown-it-ts">markdown-it-ts</a></p>
+<p>Markdown 语法解析库 markdown-it 的 TypeScript 重写。（<a href="https://github.com/ruanyf/weekly/issues/8145">@Simon-He95</a> 投稿）</p>
+<p>9、<a href="https://github.com/Gaurav-Gosain/tuios">TUIOS</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111109.webp" alt="" /></p>
+<p>一个很奇特的软件，终端窗口内部的窗口管理器，在一个终端里面管理多个终端对话窗口。（<a href="https://github.com/ruanyf/weekly/issues/8148">@kero990</a> 投稿）</p>
+<p>10、<a href="https://github.com/Tosencen/XMSLEEP">XMSLEEP</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111215.webp" alt="" /></p>
+<p>开源的安卓白噪音应用。（<a href="https://github.com/ruanyf/weekly/issues/8157">@Tosencen</a> 投稿）</p>
+<h2 id="ai-相关">AI 相关</h2>
+<p>1、<a href="https://github.com/davialabs/davia">Davia</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111203.webp" alt="" /></p>
+<p>这个开源工具使用 AI 将代码库变成一份可视化文档。</p>
+<p>2、<a href="https://github.com/voidmuse-dev/voidmuse">VoidMuse</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111009.webp" alt="" /></p>
+<p>一个学习目录的 AI 插件，支持 IDEA 和 VS Code，代码开源，用于这类 AI 编程助手的开发教学。（<a href="https://github.com/ruanyf/weekly/issues/8142">@voidmuse-dev</a> 投稿）</p>
+<p>3、<a href="https://github.com/halo-dev/upage">UPage</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111012.webp" alt="" /></p>
+<p>基于大模型的可视化网页构建平台，Lovable 的开源替代。（<a href="https://github.com/ruanyf/weekly/issues/8147">@wan92hen</a> 投稿）</p>
+<p>4、<a href="https://github.com/Cookee24/PairTranslate">Pair Translate</a></p>
+<p>一个开源的浏览器插件，用来翻译网页，可以配置翻译服务提供商或 AI 模型。（<a href="https://github.com/ruanyf/weekly/issues/8155">@Cookee24</a> 投稿）</p>
+<p>5、<a href="https://github.com/599yongyang/DatasetLoom">DatasetLoom</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111216.webp" alt="" /></p>
+<p>开源的 Web 应用，为多模态大模型构建训练数据。（<a href="https://github.com/ruanyf/weekly/issues/8156">@599yongyang</a> 投稿）</p>
+<p>6、<a href="https://github.com/1Panel-dev/CordysCRM">Cordys CRM</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111011.webp" alt="" /></p>
+<p>开源的 AI CRM 系统（客户关系管理系统）。（<a href="https://github.com/ruanyf/weekly/issues/8144">@maninhill</a> 投稿）</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://stickertop.art/main/">stickertop.art</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111204.webp" alt="" /></p>
+<p>这个网站收集贴了贴纸的笔记本照片。</p>
+<p>2、<a href="https://types.kitlangton.com/">TypeScript 类型图解</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111301.webp" alt="" /></p>
+<p>这个网站用图形讲解 TypeScript 类型。</p>
+<p>3、<a href="https://www.voronoiapp.com/economy/Who-Still-Uses-Cash-7090">各国现金使用比例</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111302.webp" alt="" /></p>
+<p>这个网站有2025年各国使用现金的比例，可以作为出国参考。中国的现金比例是10%，是最低的国家之一。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://www.facebook.com/photo/?fbid=1259756362864936&amp;set=a.474859918021255">麻省理工学院的入学考试题</a></p>
+<p>下图是大清同治八年（1869年）麻省理工学院入学试卷的代数题。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111210.webp" alt="" /></p>
+<p>2、<a href="https://optional.is/required/2009/12/03/welcome-the-entire-land/">古埃及象形文字</a></p>
+<p>一个冰岛程序员请教专家，将“hello world”这句话翻译成古埃及象形文字。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202511/bg2025111202.webp" alt="" /></p>
+<p>因为古埃及没有 world 的概念，这句话直译就是“欢迎，整个大陆”。</p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://hugo.writizzy.com/being-opinionated/57a0fa35-1afc-4824-8d42-3bce26e94ade">公司越大，越容易做出复杂的产品</a></p>
+<p>大公司容易做出复杂的产品，这主要有两个原因。</p>
+<p>（1）公司的人越多，产品复杂度就越高，因为每个人都想留下自己的印记。</p>
+<p>大公司的规则是，当你贡献了某种新功能，就会得到晋升。</p>
+<p>哪怕这些功能是多余的，十个月后就会发现它们毫无用处，它们的开发者也会收到奖励，所以所有人总是热衷于添加新功能。</p>
+<p>（2）公司规模越大，客户越多，就越需要应对具体的用例。</p>
+<p>销售人员会告诉你，一些客户需要这个功能；客户支持人员则会告诉你，另一些用户提出了那个需求。</p>
+<p>除非你有足够的远见，指出它们不符合软件发展的愿景，否则你就不得不按照那些人的要求，不停地添加功能。</p>
+<p>现实中，大公司内部有各种压力，程序员几乎没有自己的立场，必须取悦所有上级部门，在各种压力之间搞平衡，最终就做出具有巨大复杂性的软件。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>跟常规 API 不同，MCP 作为接口有一个好处。</p>
+<p>常规 API 是对开发者的一种承诺，发布后不能轻易改变。但是，MCP 接口只供大模型调用，而大模型每次都会动态读取使用规范，因此我们能够随时更改 MCP 服务器，不会有任何问题。</p>
+<p>&ndash; <a href="https://simonwillison.net/2025/Nov/12/steve-krouse/">史蒂夫·克劳斯</a>，美国程序员</p>
+<p>2、</p>
+<p>如果你向人们展示问题，又向他们展示解决方案，人们就会受到触动并采取行动。</p>
+<p>&ndash; <a href="https://www.goodreads.com/quotes/731935-i-believe-that-if-you-show-people-the-problems-and">比尔·盖茨</a></p>
+<p>3、</p>
+<p>地球表面的岩石，25%属于碳酸盐岩。这种石头大部分源于生物的有机体分解。这意味着，很多碳酸盐岩以前是生命体。</p>
+<p>&ndash; <a href="https://doc.searls.com/2025/10/06/leavings/">《我对死亡的思考》</a></p>
+<p>4、</p>
+<p>那些鼓吹 AI 编程的人是否意识到，AI 必定会带来大量垃圾代码和“理解债务”。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=45491685">Hacker News 读者</a></p>
+<p>5、</p>
+<p>最近，我在思考一个问题，如果 AI 能够将我们的语言翻译成可运行的代码，那么我们还需要编程语言吗？</p>
+<p>&ndash; <a href="https://joaquimrocha.com/2025/08/31/language-agnostic-programming-why-you-may-still-need-code/">《语言无关的编程》</a></p>
+<h2 id="往年回顾">往年回顾</h2>
+<p><a href="https://www.ruanyifeng.com/blog/2024/11/weekly-issue-326.html">世界没有那么多财富</a>（#326）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2023/11/weekly-issue-276.html">内容行业的衰落</a>（#276）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2022/10/weekly-issue-226.html">谷歌出了什么问题？</a>（#226）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2021/09/weekly-issue-176.html">中国法院承认 GPL 吗？</a>（#176）</p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

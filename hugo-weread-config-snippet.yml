@@ -5,6 +5,8 @@ params:
     data_file: '/data/weread_notes.json'
     notes_per_page: 12
     enable_search: true
+    gist_url: 'https://gist.github.com/ilikui/ef6b39d2648e666f47b129b54d3f09f7'
+    gist_comments_url: 'https://api.github.com/gists/ef6b39d2648e666f47b129b54d3f09f7/comments'
 
 menus:
   main:

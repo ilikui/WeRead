@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊：第 69 期 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊：第 69 期</h1>
+        
+        <p class="article-meta"><time datetime="2024-04-19">2024年04月19日</time></p>
+        <p class="article-meta">每周分享第 69 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-69.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志开源，访问 GitHub 的 <a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a> 仓库获取源文件。欢迎提交 issue 投稿或推荐你的项目。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019081403.jpg" alt="" /></p>
+<p>封面图片：上海世博源，2019。</p>
+<h2 id="刊首语">刊首语</h2>
+<p>一件事“做得好”比较好，还是“做得快”比较好？</p>
+<p>鱼和熊掌不能得兼，你怎么选择：做得好，付出的代价可能是耗时长、成本高；做得快，意味着完成度低、不是精品。</p>
+<p>我很赞同<a href="http://jsomers.net/blog/speed-matters">一篇文章</a>的结论：做得快更好。</p>
+<blockquote>
+<p>做得快不仅可以让你在单位时间内完成更多的工作，而且 <strong>因为你工作得很快，所以你会觉得成本低，从而倾向于做更多。</strong></p>
+</blockquote>
+<p>写一篇博客，你可能需要两天。这是很高的时间成本，你觉得太贵了，于是你很少写。但是，<strong>做好一件事的唯一方法，就是多做这件事。</strong> 做得越快，这件事的时间成本就越低，你会愿意做得更多。</p>
+<p>人们总是倾向于，多消费时间成本低的东西。网站很快，就会多访问；搜索很快，就会多搜索；文章很容易读懂，就会多读几篇。做得快的核心，就是要让时间成本降下来，从而多做。</p>
+<h2 id="家庭保障规划">家庭保障规划</h2>
+<p>周刊<a href="http://www.ruanyifeng.com/blog/2019/06/weekly-issue-60.html">第 60 期</a>介绍了 <strong>孙明展老师</strong> 公众号。当时参与活动的朋友挺多的，现在活动搞第二期了，孙老师团队就联系我，想再发一次消息。</p>
+<p>孙老师毕业于广州中山大学，现在还是金融系、统计系的（兼职）硕士导师。他曾经在一家世界500强保险公司担任精算师，设计各种产品。</p>
+<p>他发现很多人不了解保险，容易上当，就开办了自己的公众号，专门揭露各种理财骗局和保险套路。目前，已经有500多篇原创文章，介绍理财知识、保险案例分析等等，值得一看。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019081302.jpg" alt="" /></p>
+<p>他创立的谱蓝公司，主营业务就是财务咨询，普及保险理财知识，解决家庭保障需求。进一步的情况，可以搜索“谱蓝”。</p>
+<p>这次的推广活动，免费向大家赠送 <strong>家庭保障定制化服务</strong> 。如果你被保险代理人坑过，心有余悸，或者对各种保单或险种感到很难懂，拿不定主意，再或者就是单纯想增加家庭财务保障，都可以参加这个活动。活动内容主要是，根据报名情况进行电话或网络沟通，了解家庭背景资料以后，回答保险理财咨询。</p>
+<blockquote>
+<ol>
+<li>个人及家庭成员 <strong>保障责任综合评估</strong></li>
+<li>现有保险产品的 <strong>性价比分析比较</strong></li>
+<li>基于家庭状况和需求的 <strong>综合保障规划构建</strong></li>
+</ol>
+</blockquote>
+<p>微信扫描关注下面的公众号，然后输入 <strong>&ldquo;阮一峰 + 你的手机号码&rdquo;</strong> ，就可以参加这个活动了。参加者都可以获赠一份价值 <strong>800元</strong> 的免费保障规划。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201906/bg2019060903.jpg" alt="" /></p>
+<h2 id="资讯">资讯</h2>
+<p>1、<a href="https://www.sciencealert.com/there-is-now-an-actual-tattoo-that-can-change-colour-based-on-glucose-levels">变色纹身</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072702.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072703.jpg" alt="" /></p>
+<p>德国科学家开发出一种特殊颜料，会随着人体内葡萄糖、白蛋白或 pH 值的变化而改变颜色。它们纹在身上以后，就可以让患者和医生通过颜色，实时监测糖尿病和肾脏疾病等慢性疾病。</p>
+<p>你可以对着纹身拍照，然后让手机 App 解读颜色变化。不过，该颜料尚未在人体实验，纹身都是在猪身上进行的。</p>
+<p>2、<a href="https://insideevs.com/news/361822/honda-e-digital-dashboard/">屏幕最多的汽车</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072704.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072705.jpg" alt="" /></p>
+<p>本田公司最新的电动车“本田 e”，驾驶台上安装了五块触摸屏。如果算上头顶的中央后视镜，一共有六块屏幕，是世界上屏幕最多的小汽车。</p>
+<p>五块触摸屏之中，左右两侧是两块后视镜，驾驶盘前是仪表盘（8.8英寸），旁边则是两块娱乐用的触摸屏（12.3英寸），分别供司机和前排乘客使用。</p>
+<p>3、<a href="https://www.bbc.com/news/world-asia-48702762">新西兰计划清除食鸟害虫</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019070905.jpg" alt="" /></p>
+<p>新西兰由于地理的孤立性，保存了大量珍稀动物。但是，这些珍稀动物，尤其是鸟类以及鸟蛋，常常被其他动物捕食，使得新西兰大约80％的珍稀野生鸟类面临灭绝的危险。</p>
+<p>因此，新西兰决定在野外消灭这些鸟类的天敌，主要是白鼬、老鼠和负鼠。目前，首都惠灵顿的郊外已经基本消灭了这些害虫。</p>
+<p>4、<a href="https://techcrunch.com/2019/07/28/fortnite-world-cup-has-handed-out-30-million-in-prizes-and-cemented-its-spot-in-the-culture/">Fortnite 世界杯</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072903.jpg" alt="" /></p>
+<p>热门游戏 Fortnite 最近举行自己的世界杯比赛，共耗资3000万美元。美国16岁少年 Kyle 夺得冠军，奖金300万美元。</p>
+<p>这个奖金已经超过了温布尔登网球赛的冠军，只比美国公开赛的冠军少80万美元。这就是说，电子竞技的奖金已经跟顶级的职业体育运动不相上下了。Fortnite 世界杯最后一天的决赛在 YouTube 直播，有近900万人观看。</p>
+<p>5、<a href="https://techxplore.com/news/2019-07-drones-days-photovoltaic.html">更高效率的光伏电池</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072907.jpg" alt="" /></p>
+<p>加州大学伯克利分校的研究人员宣布，他们研发出了更高效率的光伏电池，可以让超轻型无人飞机连续飞行数天。</p>
+<p>目前，商用光伏电池的光能转化效率是23％，该团队将效率提高到29％，还声称不久的将来有望达到50％。</p>
+<p>6、<a href="https://www.tesla.com/megapack">Megapack</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019073001.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019073003.jpg" alt="" /></p>
+<p>特斯拉虽然是汽车公司，但是核心技术是电池。它在推出家庭电池包 Powerpack 以后，又推出了企业级电池包 Megapack，类似集装箱大小，一次可以储存3000度电。</p>
+<p>300多个 Megapack 就可以组成一个电能储存厂，保存100万度电，能够满足旧金山6个小时的用电需求。这种电能储存厂的安装速度也很快，只要用卡车把 Megapower 拉到现场以后，可以快速建厂。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019073002.jpg" alt="" /></p>
+<p>7、<a href="https://spectrum.ieee.org/automaton/robotics/robotics-hardware/surprisingly-speedy-soft-robot-survives-being-stepped-on">软体机器人</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019080101.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019080102.jpg" alt="" /></p>
+<p>清华大学和加州大学伯克利分校的研究人员，研发了一种新型软体机器人。它就是上图左下角的那个金属片，长3厘米宽1.5厘米，看起来像一张弯曲的纸条，但每秒能够前进60厘米，而且被踩踏也没关系，可以说就是一只电子蟑螂。</p>
+<p>这种机器人可以经受自身重量100万倍的踩踏，可以爬上15度的坡，还可以背负一颗花生米前进。</p>
+<p>8、<a href="https://www.axios.com/tumblr-verizon-sale-automattic-wordpress-5d8d374b-17af-49fb-9769-2ffb82b25df7.html">Tumblr 被甩卖</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019081501.jpg" alt="" /></p>
+<p>8月13日，博客平台 Tumblr 以 300万美元卖给了 WordPress 的母公司。2013年，雅虎收购 Tumblr 花了11亿美元，这意味着仅仅六年时间，Tumblr 变得一钱不值。</p>
+<p>雅虎公司创造了一项记录，他家收购的所有优质产品都被毁掉：GeoCities、Delicious、Flickr、Tumblr 等等。当年，谷歌创始人找上门要求被收购，雅虎拒绝；微软提出高溢价收购雅虎，雅虎拒绝。该公司的最成功一件事，是把雅虎中国卖给阿里巴巴，换来后者39%的股份。</p>
+<p>9、<strong>一句话消息</strong></p>
+<blockquote>
+<ul>
+<li><a href="https://www.axios.com/softbank-raising-108-billion-vision-fund-2-fa270d8e-ce68-4825-a155-4f838e9f83be.html">软银集团的远景基金</a>（Vision Fund）宣布筹集到第二期的1080亿美元资金。第一期已经有1000亿美元，这些天文数字的金钱都会投入高科技产业，主要是人工智能、芯片、机器人等方向。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072603.jpg" alt="" /></p>
+<blockquote>
+<ul>
+<li><a href="https://www.nature.com/articles/d41586-019-02275-3">日本</a>批准第一例人体细胞移植入小鼠胚胎，长大以后就是带有人类细胞的老鼠。实验目的是让人类细胞在老鼠身上发育，长出人体器官，最后再移植回人体。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072606.jpg" alt="" /></p>
+<blockquote>
+<ul>
+<li><a href="https://www.chicagotribune.com/visuals/ct-viz-train-big-boy-steam-locomotive-20190726-6p6csnoqhrebdbfgg6sjcb56ga-story.html">美国</a>庆祝北美大陆横贯铁路建成150周年，世界最大的蒸汽火车头7月26日举行了纪念性行驶。该铁路从纽约到旧金山，1869年建成。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072901.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072902.jpg" alt="" /></p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://medium.com/codeiq/object-oriented-programming-the-trillion-dollar-disaster-%EF%B8%8F-92a4b666c7c7">面向对象编程：一万亿美元的错误</a>（英文）</p>
+<p>这篇长文详细解释了，面向对象编程的一些缺点。比如，OOP 引入了太多的层，大项目很快就会变得非常复杂，而且由于对象内部有状态，不能保证同样的输入得到同样的输出，因此很难测试。</p>
+<p>2、<a href="https://www.mobile01.com/topicdetail.php?f=360&amp;t=5855017">我盖了一栋自己的房子</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072607.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072608.jpg" alt="" /></p>
+<p>台湾网友的长篇帖子，海量图片，记录他在老家的土地上，请建筑师设计了一栋三层钢结构的民宅，然后再请施工队盖出来，完成各种内外装修，直到入住。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072609.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072610.jpg" alt="" /></p>
+<p>3、<a href="https://dev.to/awwsmm/create-a-dynamic-prompt-string-in-bash-3617">如何在 Bash 提示符显示动态信息</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019072701.png" alt="" /></p>
+<p>Zsh 的命令行提示符会显示当前目录的 Git 分支名（上图），这在 Bash 中如何做到？</p>
+<p>4、<a href="https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49">如何使用 AWS S3 和 Cloudflare 托管免费网站</a>（英文）</p>
+<p>本文一步步介绍如何将静态网站托管在 AWS S3 上面，然后用 Cloudflare 建立 CDN，这都是免费的。</p>
+<p>5、<a href="https://nystudio107.com/blog/the-css-background-image-property-as-an-anti-pattern">CSS 的 background-image 属性是反模式</a></p>
+<p>作者提出，如果图像是内容一部分，就不应该设置成 CSS 的背景图像，而应该使用<code>&lt;picture&gt;</code>标签加上 CSS 的<code>object-fit</code>属性。</p>
+<p>6、<a href="https://medium.com/@filipvitas/how-to-bypass-slider-captcha-with-js-and-puppeteer-cd5e28105e3c">如何用 Puppeteer 破解滑块验证</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019073004.jpg" alt="" /></p>
+<p>很多网站现在都有滑块验证，识别用户是否为真人。但是，其实它们都可以用 Puppeteer 的自动化脚本破解，本文展示怎么做到这一点。</p>
+<p>7、<a href="https://ftp.arl.army.mil/~mike/ping.html">ping 的故事</a>（英文）</p>
+<p><code>ping</code>是最常用的网络命令之一。这篇文章是<code>ping</code>的作者介绍他怎么写出这个工具。他以前的工作是研究声纳和雷达，声纳发出的声音脉冲就叫做<code>ping</code>。</p>
+<p>8、<a href="https://cjting.me/2019/07/29/image-optimization/">从图片优化说起</a>（中文）</p>
+<p>谈谈如何使用 Node.js 进行各种图片操作，优化 Web 图片体验。（@<a href="https://github.com/ruanyf/weekly/issues/743">cj1128</a> 投稿）</p>
+<p>9、<a href="https://blog.npmjs.org/post/186494959890/monorepos-and-npm">lerna 入门教程</a>（英文）</p>
+<p>对于大型项目，多个模块放在一个代码仓库里面会比较方便。lerna 是管理这种多模块复合仓库的流行工具，本文介绍 lerna 的最简单用法。</p>
+<p>10、<a href="https://blogs.dropbox.com/tech/2019/08/the-not-so-hidden-cost-of-sharing-code-between-ios-and-android/">iOS 和 Android 共享代码的隐藏成本</a>（英文）</p>
+<p>Dropbox 一直使用C++编写手机代码，同时支持iOS和安卓，这样只写一次代码就够了。</p>
+<p>现在它也放弃了，不得不改用Swift和Kotlin各写一次。主要原因之一是，招不到同时懂前端和C++的程序员。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/schollz/hostyoself">hostyoself</a></p>
+<p>一个开源工具，可以架设服务，连接本地计算机，让其他人可以通过互联网访问本地的文件夹和文件。</p>
+<p>2、<a href="https://github.com/knadh/listmonk">listmonk</a></p>
+<p>一个开源的新闻邮件和邮件列表发送服务，带有管理后台。</p>
+<p>3、<a href="https://github.com/d4l3k/go-pry">go-pry</a></p>
+<p>Go 语言互动式的 REPL 环境，可以直接运行 Go 脚本。</p>
+<p>4、<a href="https://apps.apple.com/us/app/dato/id1470584107?mt=12">Dato</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071525.jpg" alt="" /></p>
+<p>macOS 菜单栏系统时钟的替代品，显示月历和时区，免费软件。</p>
+<p>5、<a href="https://github.com/intrinsiclabs/osgood">osgood</a></p>
+<p>一个专门运行 JavaScript 脚本的 HTTP 服务器。你可以把它想象成内置了 Express 框架的 JS 运行时。</p>
+<p>6、<a href="https://github.com/cnwhy/BitMatrix">BitMatrix</a></p>
+<p>矩阵数据结构的 JavaScript 库，使用了底层的二进制接口，性能较好。（@<a href="https://github.com/ruanyf/weekly/issues/687">cnwhy</a> 投稿）</p>
+<p>7、<a href="https://www.vugu.org/doc/start">Vugu</a></p>
+<p>一个使用 Go 语言写 HTML 前端页面的工具。完全不用 JavaScript，就能写出前端页面。未来的全栈将不再限于 JS，后端语言都可以写前端。</p>
+<p>8、<a href="https://github.com/zllrunning/video-object-removal">video-object-removal</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071804.jpg" alt="" /></p>
+<p>这个工具使用机器学习算法，去除视频里面的运动物体。</p>
+<p>9、<a href="https://tabnine.com/">TabNine</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071805.jpg" alt="" /></p>
+<p>基于深度学习的代码补全工具，号称支持所有语言。（@<a href="https://github.com/ruanyf/weekly/issues/690">ifrontend-xyz</a> 投稿）</p>
+<p>10、<a href="https://github.com/liriliri/licia">licia</a></p>
+<p>这个库收集 Web 开发的各种 JavaScript 小工具，使得开发者只用加载它一个库即可，跟 lodash 的思路有点像。（@<a href="https://github.com/ruanyf/weekly/issues/691">surunzi</a> 投稿）</p>
+<p>11、<a href="https://github.com/sizeofcat/civitas">civitas</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071808.jpg" alt="" /></p>
+<p>一个 JavaScript 写的网页策略模拟类游戏。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://people.smp.uq.edu.au/YoniNazarathy/julia-stats/StatisticsWithJulia.pdf">《使用 Julia 语言学习统计学》</a>（PDF，英文）</p>
+<p>免费电子书，大学本科的统计学入门教材，其中的示例使用简单的 Julia 语言。</p>
+<p>2、<a href="http://cryptocouple.com/">爱丽丝和鲍勃：密码学最著名的两个人</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071524.jpg" alt="" /></p>
+<p>爱丽丝（Alice）和鲍勃（Bob）通常用来解释加密协议，指代用户 A 和用户 B。该网站收集密码学发展过程中，使用这两个人作为例子的各种历史资料。</p>
+<p>3、<a href="http://astronaut.io">astronaut.io</a></p>
+<p>很多上传到 Youtube 的视频，从来没有人观看。该网站会随机选择那些很少人观看（接近零观看）的视频，播放给你看。</p>
+<p>4、<a href="https://elixir.bootlin.com/linux/latest/source">bootlin</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071608.jpg" alt="" /></p>
+<p>快速查看和搜索 linux 内核源代码的网站。（@<a href="https://github.com/ruanyf/weekly/issues/680">kele1997</a> 投稿）</p>
+<p>5、<a href="https://leetcode.com/problemset/concurrency/">leetcode 多线程同步题</a></p>
+<p>Leetcode 新增的多线程同步的题目。（@<a href="https://github.com/ruanyf/weekly/issues/684">DoctorLai</a> 投稿）</p>
+<p>6、<a href="https://justyy.com/archives/3418">家庭关系称谓查询</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071610.jpg" alt="" /></p>
+<p>根据对亲戚关系的描述，返回正确的称谓。（@<a href="https://github.com/ruanyf/weekly/issues/685">DoctorLai</a> 投稿）</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://www.telegraph.co.uk/history/9653497/British-have-invaded-nine-out-of-ten-countries-so-look-out-Luxembourg.html">英国没有入侵的国家</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071001.jpg" alt="" /></p>
+<p>英国历史上是“日不落帝国”，殖民地遍布全球。历史学家统计以后发现，现在全球近200个国家和地区，只有22个从来没有被英国入侵过（上图白色的部分）。</p>
+<p>2、<a href="https://www.collectorsweekly.com/articles/space-oddity-david-bowies-secret-obsession-with-80s-memphis-design/">孟菲斯集团的家具</a></p>
+<p>上个世纪80年代，意大利米兰的孟菲斯集团招聘了很多年轻的设计师，他们设计了很多后现代主义风格的家具。</p>
+<p>椅子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071109.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071111.jpg" alt="" /></p>
+<p>桌子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071110.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071113.jpg" alt="" /></p>
+<p>沙发。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071114.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071116.jpg" alt="" /></p>
+<p>架子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071115.jpg" alt="" /></p>
+<p>柜子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071117.jpg" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://blogs.sciencemag.org/pipeline/archives/2008/02/26/sand_wont_save_you_this_time">三氟化氯</a></p>
+<p>我们知道，沙子可以灭火。有一位读者提问，是否存在某样东西会让沙子着火。</p>
+<p>事实上，这种物质是存在的，它碰到沙子，沙子会烧起来。它就是三氟化氯。</p>
+<p>三氟化氯是人类已知的最强氟化剂，比任何一种氧化剂的效果都更强烈。它与大多数无机和有机材料都会产生激烈的化学反应，可以在没有任何火源的情况下，让许多不易燃烧的材料发生燃烧，甚至爆炸。</p>
+<p>由于它的氧化能力比氧更强，因此可以让已经烧到无法再烧的东西，继续燃烧下去，比如沙子、砖块和石棉瓦片，它都能让它们烧起来。它甚至还会点燃，已经在氧气中烧成灰烬的材料。一次工业事故中，900公斤的三氟化氯泄漏，使得30厘米的混凝土和90厘米的砾石层被烧穿。除了使用氮气和惰性气体外，没有已知的方法能够抑制该种物质的燃烧。</p>
+<p>第二次世界大战期间，德国人曾经想把它用于火焰喷射器，后来发现太难控制，只能放弃。目前，它主要用于半导体工业，清除电路板表面的氧化物。</p>
+<p>它能让玻璃烧起来，所以不能放在玻璃容器中，只能保存在钢、铜、铝等金属容器中，因为这些金属表面会形成一层金属氟化物薄膜，防止金属与它发生化学反应。一位化学家写道：“如果这种涂层熔化或被擦掉，操作者就会面临金属氟化物火灾的风险。这时，我推荐一双好的跑鞋。”</p>
+<p>2、<a href="https://jasonlefkowitz.net/2016/09/why-airplane-windows-have-round-corners/">为什么飞机窗户都是圆角的？</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071605.jpg" alt="" /></p>
+<p>如果你曾经坐过飞机的靠窗座位，可能已经注意到窗户是圆角的。你有没有想过这是为什么？</p>
+<p>答案很简单：保证飞行安全。</p>
+<p>要了解背后的原因，我们需要回到1954年。那时，飞机制造业开始制造专门的民用客机。</p>
+<p>自从莱特兄弟发明飞机以来，几乎所有的飞机都使用螺旋桨，这已经被证明适用和可靠。但是，螺旋桨无法令飞机飞得更快，而且具有巨大的噪音和振动，使得飞机的行程极不舒适。对于战斗机，这不是一个问题，但是对于民用航空，乘客舒适性是一个优先事项。</p>
+<p>人们把目光转向喷气发动机，由于喷气发动机包含在外壳里面，因此不用考虑空气阻力，可以推动飞机穿过声障。而且，喷气式飞机相对安静，对乘客没有打扰。</p>
+<p>1949年，英国航空业先驱 de Havilland 开设了自己的飞机公司，制造了第一架民用的喷气式客机，称为彗星飞机（comet）。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071606.jpg" alt="" /></p>
+<p>彗星飞机的机翼内装有四个喷气发动机，比传统的螺旋桨飞机速度高出近50％。而且，它具有增压舱设计，可以在高空保持跟平地一样的气压，带给乘客平稳舒适的乘坐体验。但是，有一个地方，它的设计跟传统飞机一样：它的窗户是方形的。</p>
+<p>这架飞机立即在世界各地取得了成功，各国纷纷订购。可是，意想不到的事情出现了。在服役的第一年，就发生了两起飞机坠毁事故。1953年3月3日，加拿大航空公司的一架飞机坠毁，机上11人全部遇难。1953年5月2日，另一架飞机在印度坠毁，造成43人死亡。最初的调查都认为，这是飞行员错误引起的，而不是彗星飞机本身的问题，可以照常飞行。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201907/bg2019071607.jpg" alt="" /></p>
+<p>接下来的1954年，又发生了两起坠毁事故。1954年1月10日，一架从罗马飞往伦敦的飞机坠毁，35人遇难。1954年4月8日，一架南非的飞机坠毁，21人遇难。</p>
+<p>经过四起坠机事故，英国政府终于决定对彗星飞机展开彻底调查。调查人员怀疑，事故原因与气压有关。高空没有足够的氧气供人们呼吸，因此飞机内部是加压的，这就要求飞机是密封的，防止氧气泄漏。如果在高空，飞机有裂缝，内部的空气就会冲出来，力量之大，有时甚至会引起机身撕裂。</p>
+<p>调查人员经过了各种测试，甚至将整个机舱浸没在一个巨大的水箱中，然后反复地加压和减压。他们终于找到了原因，一切都跟那些方形窗户有关。</p>
+<p>当飞机内部反复加压和减压，数月之后，飞机金属机身的强度就会逐渐减弱，这叫做金属疲劳。机身的方形窗口会带来尖角，就会有叫做应力集中的过程，那些尖角处会变得比其他地方更脆弱，最终裂缝开始在那些角落形成。其中一个裂缝变得足够宽时，机舱内的压缩空气就会冲出来，从而撕裂飞机。</p>
+<p>以前有过加压舱的飞机，但由于它们是螺旋桨驱动的，只能在较低的高度飞行，机身应力不那么严重。直到喷气动力的彗星飞机出现，飞机才能飞到更高的高度，使得机身应力超过了断裂点。可以这样说，彗星飞机的悲剧从第一天试飞就注定了。</p>
+<p>彗星公司立刻将所有窗户改成了圆角，并且采取了其他安全措施。但为时已晚，它的声誉受到了致命的打击，航空公司不再愿意购买它的飞机。彗星公司最终在1960年将自己卖掉了。美国的波音公司和洛克希德公司虽然进入喷气式客机市场较晚，但​​被认为更加安全，从而带来了属于美国的喷气机时代。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>软件的运行速度快，说明这个软件是专注的。</p>
+<p>&ndash; <a href="https://craigmod.com/essays/fast_software/">《快的软件，最好的软件》</a></p>
+<p>2、</p>
+<p>我们要把社会责任感强烈的人培养成领袖，还要把个人成就感强烈的人培养成英雄。</p>
+<p>领导者的责任就是要使自己的部下成为英雄，而自己成为领袖。</p>
+<p>&ndash; 任正非，1998年</p>
+<p>3、</p>
+<p>面向对象编程的问题是，每个对象都有自己的状态，开发程序时，必须记住当前所有对象的状态。</p>
+<p>为了让我们的生活更轻松，最好只有一小部分代码库处理状态，其他代码都是无状态和纯的。实际上，这就是前端的 Redux 库取得巨大成功的主要原因。</p>
+<p>&ndash; <a href="https://medium.com/codeiq/object-oriented-programming-the-trillion-dollar-disaster-%EF%B8%8F-92a4b666c7c7">《面向对象编程：一万亿美元的错误》</a></p>
+<p>4、</p>
+<p>20世纪50年代，建造月球基地是一项工程和技术挑战。
+今天，它基本上是一个政治和经济挑战，难点是说服足够多的人，花时间和精力去做这件事是值得的。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=20539000">HN 读者</a></p>
+<h2 id="招聘信息">招聘信息</h2>
+<p>周刊讨论区的<a href="https://github.com/ruanyf/weekly/issues/692">程序员招聘帖</a>，有大量工作/实习岗位，欢迎查看。</p>
+<p>同时，欢迎企业免费张贴招聘信息。如果希望发在周刊上，可以联系我（Email:  <a href="mailto:yifeng.ruan@gmail.com">yifeng.ruan@gmail.com</a> ），每条价格 250 元。</p>
+<p>1、<strong>秘猿科技</strong></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201908/bg2019080701.png" alt="" /></p>
+<p>区块链创业公司，为加密经济提供区块链基础设施和服务，主要产品有 Nervos、火币金融公链、CITA 等，全部开源。</p>
+<p>工作地点：杭州 或者 remote。诚意招聘以下岗位：</p>
+<blockquote>
+<ul>
+<li>高级区块链工程师：需要熟悉 Rust 语言。</li>
+<li>高级后端工程师：熟悉分布式系统开发。</li>
+<li>首席安全官：5年以上安全从业经验。</li>
+<li>高级测试经理：从事区块链底层的自动化测试。</li>
+</ul>
+</blockquote>
+<p>点击<a href="https://github.com/ruanyf/weekly/issues/692#issuecomment-518962331">这里</a>，查看详情。简历投递：<a href="mail:zhouyun@cryptape.com">zhouyun@cryptape.com</a> （一天内回复）</p>
+<h2 id="回顾">回顾</h2>
+<p>去年的本周：<a href="http://www.ruanyifeng.com/blog/2018/08/weekly-issue-17.html">《周刊第 17 期》</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201808/bg2018081001.jpg" alt="" /></p>
+<h2 id="订阅">订阅</h2>
+<p>这个周刊每周五发布，同步更新在<a href="http://www.ruanyifeng.com/blog">阮一峰的网络日志</a>、<a href="http://weixin.sogou.com/weixin?query=%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97">微信公众号</a>和<a href="https://yuque.com/ruanyf/share/">语雀</a>。</p>
+<p>微信搜索“阮一峰的网络日志”或者扫描二维码，即可订阅。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018042311.jpg" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

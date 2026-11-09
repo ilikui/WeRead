@@ -95,6 +95,7 @@
 
                 <nav class="pagination" id="detailPagination" aria-label="笔记分页"></nav>
             </section>
+
         </main>
     </div>
 
@@ -120,7 +121,6 @@
         // 数据文件位于站点根 /data/ 下，阅读页固定位于 /weread/（根下一层），
         // 用相对路径 ../ 向上取到站点根，兼容本地预览与 GitHub Pages 子路径部署。
         const dataUrl = '../' + '{{ site.Params.weread.data_file | default "data/weread_notes.json" }}';
-
         function $(id) { return document.getElementById(id); }
 
         function escapeHtml(text) {

@@ -1,18 +1,374 @@
 {
   "meta": {
-    "generated_at": "2026-10-25T18:44:17.836729+00:00",
+    "generated_at": "2026-11-08T20:12:13.546891+00:00",
     "source": "wechat-reading-skill-gateway",
-    "total_books": 19,
-    "total_notes": 698
+    "total_books": 20,
+    "total_notes": 708
   },
   "books": [
+    {
+      "book_id": "CB_EJX0f50dE1O277875SDRV3AT",
+      "title": "如何高效学习",
+      "author": "程冕(译)",
+      "cover": "https://res.weread.qq.com/wrepub/CB_6fu2gA2gq37L77575gEwc1sy_parsecover",
+      "category": "",
+      "note_count": 1,
+      "chapters": [
+        {
+          "uid": 1,
+          "title": "中文版序",
+          "level": 1
+        },
+        {
+          "uid": 2,
+          "title": "译者序",
+          "level": 1
+        },
+        {
+          "uid": 3,
+          "title": "导读",
+          "level": 1
+        },
+        {
+          "uid": 4,
+          "title": "前言",
+          "level": 1
+        },
+        {
+          "uid": 5,
+          "title": "是什么让一个人更聪明",
+          "level": 1
+        },
+        {
+          "uid": 6,
+          "title": "怎样算作聪明完全取决于你自己怎么看",
+          "level": 1
+        },
+        {
+          "uid": 7,
+          "title": "我的故事",
+          "level": 1
+        },
+        {
+          "uid": 8,
+          "title": "如何使用本书",
+          "level": 1
+        },
+        {
+          "uid": 9,
+          "title": "第一部分 整体性学习策略",
+          "level": 1
+        },
+        {
+          "uid": 10,
+          "title": "什么是整体性学习",
+          "level": 2
+        },
+        {
+          "uid": 11,
+          "title": "结构",
+          "level": 2
+        },
+        {
+          "uid": 12,
+          "title": "模型",
+          "level": 2
+        },
+        {
+          "uid": 13,
+          "title": "熟悉的结构成熟结构",
+          "level": 3
+        },
+        {
+          "uid": 14,
+          "title": "高速公路",
+          "level": 2
+        },
+        {
+          "uid": 15,
+          "title": "整体性学习的顺序",
+          "level": 2
+        },
+        {
+          "uid": 16,
+          "title": "获取阶段",
+          "level": 3
+        },
+        {
+          "uid": 17,
+          "title": "理解阶段",
+          "level": 3
+        },
+        {
+          "uid": 18,
+          "title": "拓展阶段",
+          "level": 3
+        },
+        {
+          "uid": 19,
+          "title": "纠错阶段",
+          "level": 3
+        },
+        {
+          "uid": 20,
+          "title": "应用阶段",
+          "level": 3
+        },
+        {
+          "uid": 21,
+          "title": "测试阶段",
+          "level": 3
+        },
+        {
+          "uid": 22,
+          "title": "找出薄弱环节",
+          "level": 3
+        },
+        {
+          "uid": 23,
+          "title": "信息结构",
+          "level": 2
+        },
+        {
+          "uid": 24,
+          "title": "随意信息",
+          "level": 3
+        },
+        {
+          "uid": 25,
+          "title": "观点信息",
+          "level": 3
+        },
+        {
+          "uid": 26,
+          "title": "过程信息",
+          "level": 3
+        },
+        {
+          "uid": 27,
+          "title": "具体信息",
+          "level": 3
+        },
+        {
+          "uid": 28,
+          "title": "抽象信息",
+          "level": 3
+        },
+        {
+          "uid": 29,
+          "title": "如何使用五种信息类型",
+          "level": 3
+        },
+        {
+          "uid": 30,
+          "title": "为什么你的课程枯燥乏味",
+          "level": 2
+        },
+        {
+          "uid": 31,
+          "title": "学习的目标",
+          "level": 2
+        },
+        {
+          "uid": 32,
+          "title": "第二部分 整体性学习技术",
+          "level": 1
+        },
+        {
+          "uid": 33,
+          "title": "整体性学习技术",
+          "level": 2
+        },
+        {
+          "uid": 34,
+          "title": "技术一览",
+          "level": 2
+        },
+        {
+          "uid": 35,
+          "title": "获取知识",
+          "level": 2
+        },
+        {
+          "uid": 36,
+          "title": "快速阅读",
+          "level": 3
+        },
+        {
+          "uid": 37,
+          "title": "笔记流",
+          "level": 3
+        },
+        {
+          "uid": 38,
+          "title": "联系观点",
+          "level": 2
+        },
+        {
+          "uid": 39,
+          "title": "比喻",
+          "level": 3
+        },
+        {
+          "uid": 40,
+          "title": "内在化",
+          "level": 3
+        },
+        {
+          "uid": 41,
+          "title": "图表法",
+          "level": 3
+        },
+        {
+          "uid": 42,
+          "title": "随意信息的处理",
+          "level": 2
+        },
+        {
+          "uid": 43,
+          "title": "联想法",
+          "level": 3
+        },
+        {
+          "uid": 44,
+          "title": "挂钩法",
+          "level": 3
+        },
+        {
+          "uid": 45,
+          "title": "信息压缩技术",
+          "level": 3
+        },
+        {
+          "uid": 46,
+          "title": "实际应用",
+          "level": 3
+        },
+        {
+          "uid": 47,
+          "title": "模型纠错",
+          "level": 3
+        },
+        {
+          "uid": 48,
+          "title": "以项目为基础的学习",
+          "level": 3
+        },
+        {
+          "uid": 49,
+          "title": "知识的延伸",
+          "level": 2
+        },
+        {
+          "uid": 50,
+          "title": "整体性学习技术的实际运用──费曼技巧",
+          "level": 2
+        },
+        {
+          "uid": 51,
+          "title": "整体性学习技术的回顾",
+          "level": 2
+        },
+        {
+          "uid": 52,
+          "title": "第三部分 超越整体性学习",
+          "level": 1
+        },
+        {
+          "uid": 53,
+          "title": "高效率的学生",
+          "level": 2
+        },
+        {
+          "uid": 54,
+          "title": "高效率秘籍1 能量管理",
+          "level": 3
+        },
+        {
+          "uid": 55,
+          "title": "高效率秘籍2 不要“学习”Don't study",
+          "level": 3
+        },
+        {
+          "uid": 56,
+          "title": "高效率秘籍3 绝不拖延",
+          "level": 3
+        },
+        {
+          "uid": 57,
+          "title": "高效率秘籍4 批处理",
+          "level": 3
+        },
+        {
+          "uid": 58,
+          "title": "高效率秘籍5 有组织",
+          "level": 3
+        },
+        {
+          "uid": 59,
+          "title": "自我教育",
+          "level": 2
+        },
+        {
+          "uid": 60,
+          "title": "建立良好的学习习惯",
+          "level": 3
+        },
+        {
+          "uid": 61,
+          "title": "克服挫折障碍",
+          "level": 3
+        },
+        {
+          "uid": 62,
+          "title": "设置学习目标",
+          "level": 3
+        },
+        {
+          "uid": 63,
+          "title": "自我教育小结",
+          "level": 3
+        },
+        {
+          "uid": 64,
+          "title": "第四部分 整体性学习的总结",
+          "level": 1
+        },
+        {
+          "uid": 65,
+          "title": "主要概念的小结",
+          "level": 2
+        },
+        {
+          "uid": 66,
+          "title": "技术一览",
+          "level": 3
+        },
+        {
+          "uid": 67,
+          "title": "特别感谢",
+          "level": 2
+        }
+      ],
+      "notes": [
+        {
+          "id": "CB_EJX0f50dE1O277875SDRV3AT_1_738-762",
+          "chapter": "中文版序",
+          "chapter_uid": 1,
+          "highlight": "你当然要找到知识间的关联，并把它们变成自己的观点",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793862546
+        }
+      ]
+    },
     {
       "book_id": "CB_0wV9Ot9OG1aP77775S0HMDHX",
       "title": "认知觉醒：伴随一生的学习方法论（青少年学习版）",
       "author": "周岭",
       "cover": "https://res.weread.qq.com/wrepub/CB_FMV8ZL8Xl7e977775XBGaFZ5_parsecover",
       "category": "",
-      "note_count": 15,
+      "note_count": 24,
       "chapters": [
         {
           "uid": 1,
@@ -86,6 +442,87 @@
         }
       ],
       "notes": [
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_22793-22852",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "实际上，元认知能力就是我们习以为常、见怪不怪的自我觉察和反思能力",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793411028
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_22694-22761",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "元认知，就是最高级别的认知，它能对自身的思考过程进行认知和理解（见图1-5）​。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793411020
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_21358-21384",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "其实学习也是如此——想进步，我们也要先修大脑里的“路",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793410674
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_20701-20788",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "我们平时学习各种技能，比如钢琴、游泳、体操等，都会提高相关脑区的神经元密度，促进脑细胞之间的信号沟通，但是这些练习一旦停止，神经元就会开始减少，而凝神呼吸带来的改变是持久的。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793410641
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_19978-20026",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "然后问自己：“我到底在担心什么、害怕什么、期待什么？​”",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793410512
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_19341-19384",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "对学习来说，保持平稳的情绪是最理想的状态，大喜、大悲等剧烈波动的情绪对学习都极为不利。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793410453
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_18483-18509",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "人和人之间的能力竞争，说到底就是脑力资源利用率的竞争",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1793410412
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_18209-18261",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "不难想象，成绩好的人的真正优势在于他们能够长时间让大脑中的7个小球同时关注一件事情，以保证高质高效地学习",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1792983144
+        },
+        {
+          "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_17902-17927",
+          "chapter": "上篇 学习的技法",
+          "chapter_uid": 5,
+          "highlight": "在短期内，你通常只能记住7个左右，多了就记不住了。",
+          "comment": "",
+          "color": "blue",
+          "created_at": 1792983018
+        },
         {
           "id": "CB_0wV9Ot9OG1aP77775S0HMDHX_5_17579-17635",
           "chapter": "上篇 学习的技法",

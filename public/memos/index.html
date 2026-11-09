@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Memos | 阅读笔记</title>
     <meta name="description" content="Flomo 卡片墙，展示全部 memo，支持标签筛选与全文搜索。">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <link rel="stylesheet" href="../css/weread-theme.min.ddc5f8a72e7b1b414a51d1e297b70bf7200f560487363fb9d6bb8e42d0ed75e4.css">
+    <link rel="stylesheet" href="../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+    <link rel="stylesheet" href="../css/memos-refined.min.257328130d9bdf70a65b444236bd041ab1a82b6433bb16ddb8bbbbc2580b5d7f.css">
     <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
@@ -21,15 +25,19 @@
                 
                 <li><a href="../weread/">阅读</a></li>
                 
+                <li><a href="../weread/learn/">Learn</a></li>
+                
                 <li><a href="../memos/">Memos</a></li>
                 
                 <li><a href="../activity/">热力墙</a></li>
                 
                 <li><a href="../about/">关于</a></li>
                 
+                <li><a href="../weekly/">Weekly</a></li>
+                
             </ul>
             <div class="nav-search">
-                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索">
+                <input type="search" id="globalSearch" placeholder="搜索灵感… 按 / 快速定位" aria-label="搜索 Memos" autocomplete="off">
             </div>
         </nav>
     </header>
@@ -39,27 +47,45 @@
             <div class="side-tabs">
                 
                 <a href="../weread/" class="side-tab">
-                    Read
+                    <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                    <span class="side-tab-label">Read</span>
                 </a>
                 
                 <a href="../memos/" class="side-tab active">
-                    Memos
+                    <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                    <span class="side-tab-label">Memos</span>
                 </a>
                 
                 <a href="../blog/" class="side-tab">
-                    Blog
+                    <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                    <span class="side-tab-label">Blog</span>
                 </a>
                 
                 <a href="../topics/" class="side-tab">
-                    Topics
+                    <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                    <span class="side-tab-label">Topics</span>
                 </a>
                 
                 <a href="../gallery/" class="side-tab">
-                    Gallery
+                    <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                    <span class="side-tab-label">Gallery</span>
                 </a>
                 
                 <a href="../activity/" class="side-tab">
-                    Activity
+                    <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                    <span class="side-tab-label">Activity</span>
+                </a>
+                
+                <a href="../weekly/" class="side-tab">
+                    <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                    <span class="side-tab-label">Weekly</span>
                 </a>
                 
             </div>
@@ -114,7 +140,7 @@
         };
         
         
-        const dataUrl = '../' + 'data\/flomo_memos_latest.json' + '?v=20261026080158';
+        const dataUrl = '../' + 'data\/flomo_memos_latest.json' + '?v=20261109123305';
 
         function $(id) { return document.getElementById(id); }
 
@@ -289,8 +315,9 @@
         
         function renderMarkdown(content) {
             if (!content) return '<em>无内容</em>';
-            const html = marked.parse(content, { breaks: true });
-            return typeof DOMPurify !== 'undefined' ? DOMPurify.sanitize(html) : html;
+            if (typeof marked === 'undefined' || typeof DOMPurify === 'undefined') return escapeHtml(content).replace(/\n/g, '<br>');
+            const html = marked.parse(content, { gfm: true, breaks: true });
+            return DOMPurify.sanitize(html);
         }
 
         
@@ -308,6 +335,29 @@
                     toggle.textContent = collapsed ? '展开' : '折叠';
                 });
             });
+        }
+
+        function validateDataset(data, source) {
+            if (!data || !Array.isArray(data.memos) || data.memos.length < 1) {
+                throw new Error(`Empty or invalid Memos dataset: ${source}`);
+            }
+            const meta = data.meta || {};
+            if (meta.tag_filter !== 'Archive/Blog') {
+                throw new Error(`Unexpected Memos tag filter: ${meta.tag_filter || 'missing'}`);
+            }
+            if (Number(meta.total_memos) !== data.memos.length) {
+                throw new Error(`Memos count mismatch: metadata=${meta.total_memos}, actual=${data.memos.length}`);
+            }
+            const invalid = data.memos.find(memo => {
+                const tags = Array.isArray(memo.tags) ? memo.tags : [];
+                return !memo.id || !tags.some(tag =>
+                    String(tag).replace(/^#/, '').trim().toLowerCase() === 'archive/blog'
+                );
+            });
+            if (invalid) {
+                throw new Error(`Invalid or out-of-scope memo: ${invalid.id || 'missing ID'}`);
+            }
+            return data;
         }
 
         function bootstrap(data) {
@@ -345,16 +395,51 @@
         }
 
         async function main() {
-            $('globalSearch').addEventListener('input', (e) => {
+            const searchInput = $('globalSearch');
+            searchInput.addEventListener('input', (e) => {
                 state.searchTerm = e.target.value.trim();
                 state.page = 1;
                 render();
             });
 
+            
+            document.addEventListener('keydown', (event) => {
+                const target = event.target;
+                const typing = target && (target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(target.tagName));
+                if (event.key === '/' && !typing && !event.metaKey && !event.ctrlKey && !event.altKey) {
+                    event.preventDefault();
+                    searchInput.focus();
+                    searchInput.select();
+                }
+                if (event.key === 'Escape' && document.activeElement === searchInput) {
+                    searchInput.value = '';
+                    state.searchTerm = '';
+                    state.page = 1;
+                    render();
+                    searchInput.blur();
+                }
+            });
+
             try {
-                const res = await fetch(dataUrl, { cache: 'no-store' });
-                if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                bootstrap(await res.json());
+                
+                
+                const dataUrls = [
+                    dataUrl,
+                    '../data/flomo_memos.json?v=20261109123305'
+                ];
+                let lastError = null;
+                for (const url of dataUrls) {
+                    try {
+                        const res = await fetch(url, { cache: 'no-store' });
+                        if (!res.ok) throw new Error(`HTTP ${res.status} (${url})`);
+                        const payload = validateDataset(await res.json(), url);
+                        bootstrap(payload);
+                        return;
+                    } catch (fetchError) {
+                        lastError = fetchError;
+                    }
+                }
+                throw lastError || new Error('No Flomo data source is available');
             } catch (err) {
                 if (location.protocol === 'file:') {
                     enableFileFallback(err);

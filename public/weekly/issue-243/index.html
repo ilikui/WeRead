@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 243 期）：与孔子 AI 聊天 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 243 期）：与孔子 AI 聊天</h1>
+        
+        <p class="article-meta"><time datetime="2023-02-24">2023年02月24日</time></p>
+        <p class="article-meta">每周分享第 243 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-243.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。周刊另有<a href="https://github.com/ruanyf/weekly/issues/2827">《谁在招人》</a>服务，发布程序员招聘信息。合作推广请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022201.webp" alt="" /></p>
+<p>四川金阳风力发电场海拔3500米，需要沿着盘山公路，将长达75米的发电机叶片运到山顶，场面十分惊险。（<a href="https://finance.sina.com.cn/tech/roll/2023-02-21/doc-imyhniys8643961.shtml">via</a>）</p>
+<h2 id="本周话题与孔子-ai-聊天">本周话题：与孔子 AI 聊天</h2>
+<p>今年以来，最轰动的 IT 产品，非 <a href="https://openai.com/blog/chatgpt/">ChatGPT</a> 莫属。</p>
+<p>它是一个 AI 聊天机器人，用户可以提出各种问题，它像学者一样回答。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011705.webp" alt="" /></p>
+<p>它的原理就是使用算法模型，分析大量语料，得出词语分布的统计规律，然后生成符合人类思维的文本。</p>
+<p>根据上面的原理，不难想到，<u>如果所训练的语料都跟某个主题相关，那么就可以生成该主题的聊天机器人，</u>比如法律或者生物学专用聊天机器人。</p>
+<p>进一步说，如果所训练的主题都跟某一个人相关，那么不就可以生成该人的聊天机器人？</p>
+<p>事实上，已经有人这样干了。2022年9月，谷歌公司的两个前员工，发布了一个叫做 <a href="https://beta.character.AI/">Character.ai</a> 的网站，允许用户创建“角色”，上传与该角色相关的资料，网站就会自动使用 AI 分析这些资料，生成该角色的聊天机器人，然后用户就可以跟它聊天了。</p>
+<p>现在，Character.ai 网站已经有几千个角色了，可以作为聊天对象。它的 App 都上架了，叫做<a href="https://www.hellohistory.ai/">“你好，历史”</a>（Hello History）。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011706.webp" alt="" /></p>
+<p>这些聊天对象里面，居然有孔子，也不知道是谁创建的，还上传了一张不相干的头像。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011707.webp" alt="" /></p>
+<p>国内一家网络杂志的记者，就试着跟孔子聊天。下面就是部分<a href="https://mp.weixin.qq.com/s/42t18FfRyfxX3Z-Zq1mXyA">聊天记录</a>，发表在他们的杂志上，原始对话是英文，翻译成了中文。</p>
+<p>大家看看，下面的话像不像孔子说的。</p>
+<blockquote>
+<p><strong>记者：你怎么评价周游列国？</strong></p>
+<p>孔子：我为传播思想和哲学而进行的旅行收获颇丰。我结识了许多不同的人，交流知识、听他们的故事，发现不同的人生观念。通过这些邂逅，我对人性有了深刻的理解，并深入了解了个人和社会如何相互作用。离开家乡的时间，也让我有机会反思自己的思想，并更好地理解我坚持初心的原因。</p>
+<p><strong>记者：周游列国时，你遇到的最大挑战是什么？</strong></p>
+<p>孔子：最大挑战之一是应对偏见和对我们思想的抵制。虽然许多人对向我学习充满热情，但有些人根本不想听。然而，我没有灰心，而是继续保持韧性和信心向前推进。</p>
+<p><strong>记者：你认识其他国家的哲学家吗？</strong></p>
+<p>孔子：我熟悉许多不同国家哲学家的作品，包括古希腊和罗马哲学，比如苏格拉底、柏拉图和亚里士多德，以及罗马哲学家西塞罗和塞内卡。我对他们的思想十分感兴趣，因为他们都强调公正、知识和忠告。</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011708.webp" alt="" /></p>
+<p>我觉得，这个机器人的水准很高，听上去很像孔子的口吻，让你真的有一种跟他聊天的感觉。</p>
+<p>这让我突发奇想，既然它可以生成孔子的聊天机器人，那么能不能生成一个我的聊天机器人？</p>
+<p>我写过的文字，也有几百万了。模型使用这些材料，是不是就能训练出一个“阮一峰聊天机器人”？</p>
+<p>以后，要是有人想了解我，跟这个机器人对话就行了。</p>
+<p>当然，想了解我的人不多，我的聊天机器人应该没啥商业价值。但是，换成名人可能就不一样了。举例来说，<strong>如果“罗永浩聊天机器人”问世，我估计很多人愿意付费，跟这个机器人聊天。</strong></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011709.webp" alt="" /></p>
+<p>这件事在技术上已经可行了，就看谁第一个吃螃蟹。如果第一个上架的聊天机器人卖得好，以后就会成为名人赚钱的又一种途径。</p>
+<p>这还凸显了平时多保留相关材料、多记录自己想法的重要性。否则，将来你想建个聊天机器人留给亲人，都找不到训练材料。其实，孔子也是这样，要不是他的弟子整理出版了上课笔记，今天根本不可能做出他的聊天机器人。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、<a href="https://www.politico.eu/article/eu-greenlights-frances-short-haul-ban-but-only-on-3-routes/">禁止短途航班</a></p>
+<p>法国通过一项法律，为了环保，规定如果两个城市之间有直通的火车，并且火车行程不多于2.5个小时，那么将禁止这两个城市之间的飞机航班。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022120401.webp" alt="" /></p>
+<p>这是为了鼓励多采用火车，少使用耗能大的飞机。法国的很多大城市都会因此受影响，比如巴黎到波尔多、巴黎到里昂、里昂到马赛，航班可能都会取消。</p>
+<p>如果以高铁每小时300公里计算，2.5小时的行程就相当于750公里，等于北京到徐州的距离，只有超出这个距离，才可以坐飞机。</p>
+<p>2、<a href="https://shrooly.com/">家用种蘑菇器</a></p>
+<p>一家英国创业公司推出了一种家用的种蘑菇装置，让蘑菇变成了盆景和玩具，还可以收获食用。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071418.webp" alt="" /></p>
+<p>用户需要购买不同的菌块，放入这个装置。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071420.webp" alt="" /></p>
+<p>打开开关后，LED 灯就会提供照明，7到10天后蘑菇就长成了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071419.webp" alt="" /></p>
+<p>装置的侧面还有电子纸的小屏，用来控制照明，实时显示内部温度，以及蘑菇成长情况，还可以在手机 App 上远程查看。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071421.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022071422.webp" alt="" /></p>
+<p>3、<a href="https://www.thesciverse.com/2022/06/japan-tested-giant-turbine-that.html">海底发电机</a></p>
+<p>一家日本公司发明了海底发电机，每一个都像波音飞机那么大，重达330吨。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060505.webp" alt="" /></p>
+<p>发电机的机身连接两个涡轮风扇，通过拉绳，漂浮在海床上，依靠深海洋流推动涡轮发电。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060701.webp" alt="" /></p>
+<p>这种发电机的优点是，电力比较稳定，不像太阳能或风力会时有时无。缺点是目前发电量太小，样机可以产生大约100千瓦的稳定电力，这点电力远远不够覆盖成本。</p>
+<p>另外，海水有腐蚀性，而且海底设备很难维护，所以它的运行成本很高，除非发电量增大几十倍，否则不具有经济意义。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://redian.news/wxnews/267808">“中国植物画第一人”曾孝濂</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022202.webp" alt="" /></p>
+<p>曾孝濂退休前任中科院昆明植物研究所教授级工程师，为《中国植物志》、《云南植物志》等书绘制画稿超过2000幅。上图是他画的猪笼草。</p>
+<p>2、<a href="https://www.wdbyte.com/java/chatgpt-files-list.html">我用 ChatGPT 发现代码 Bug</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022003.webp" alt="" /></p>
+<p>作者的一段 Java 代码存在一个 Bug，他让 ChatGPT 帮他检查，后者不仅发现了这个 Bug，还提出了修改建议。（<a href="https://github.com/ruanyf/weekly/issues/2908">@niumoo</a> 投稿）</p>
+<p>3、<a href="https://www.swyx.io/the-end-of-localhost">localhost 的终结</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022121902.webp" alt="" /></p>
+<p>作者提出一个观点，localhost 用于本地开发的历史将要终结。因为越来越多的开发者转向云端编码，可以直接云端调试。</p>
+<p>4、<a href="https://www.uber.com/en-JP/blog/devpod-improving-developer-productivity-at-uber/">Uber 的开发基础架构</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022121901.webp" alt="" /></p>
+<p>本文是 Uber 官方文章，介绍他们为了适应全世界的员工远程办公，而搭建的开发基础架构，所有工程师的代码都放在一个单一仓库里面。</p>
+<p>5、<a href="https://prithu.dev/posts/unix-pipeline/">Unix 管道之美</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060508.webp" alt="" /></p>
+<p>本文举了 Unix 管道运算符（<code>|</code>）的三个例子，讲解为什么它体现了 Unix 哲学。本文可以作为管道运算的教程。</p>
+<p>6、<a href="https://spectrum.ieee.org/xerox-parc">帕洛阿尔托研究中心的故事</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060507.webp" alt="" /></p>
+<p>《IEEE Spectrum》杂志的长文，介绍了美国施乐公司的帕洛阿尔托研究中心（PARC）在上个世纪六七十年代的兴起和衰落。</p>
+<p>这个研究中心诞生了许多划时代的技术，比如图形界面、以太网、激光打印机等等，喜欢科技史的同学可以读一读。</p>
+<p>7、 <a href="https://krypted.com/mac-os-x/free-space-required-for-modern-macos-upgrades/">macOS 升级所需的可用空间</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022110901.webp" alt="" /></p>
+<p>苹果电脑的系统升级包越来越大，需要的硬盘空间越来越多。本文总结了过去几年，每个升级包的大小。</p>
+<p>8、<a href="https://leerob.substack.com/p/why-im-optimistic-about-javascripts">为什么我对 JavaScript 的未来感到乐观</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022122208.webp" alt="" /></p>
+<p>本文提出 JavaScript 有三种使用场合：浏览器、服务器和边缘计算。在这三种场合都可以使用的语言，只有 JavaScript 一种。</p>
+<h2 id="ai-相关软件">AI 相关软件</h2>
+<p>现在各种软件纷纷加入 AI 相关的功能，在底层调用 OpenAI 的 API。</p>
+<p>下面就是网友投稿的作品。</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/ruanyf/weekly/issues/2912">GitHub code review bot</a>：每次提交代码，ChatGPT 自动 review。</li>
+<li><a href="https://github.com/ruanyf/weekly/issues/2928">cz-git</a>：使用 OpenAI 生成 git commit 提交信息。</li>
+<li><a href="https://github.com/ruanyf/weekly/issues/2927">ChatBot Feishu</a>：将 ChatGPT 接入飞书。</li>
+<li><a href="https://github.com/ruanyf/weekly/issues/2901">AI 换头像</a>：微信小程序，输入文字描述，自动生成头像图片。</li>
+</ul>
+</blockquote>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/fzdwx/popup-translation">Popup translation</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023021701.webp" alt="" /></p>
+<p>划词翻译工具。选中一个词以后，它会唤起一个本机的 WebView 窗口，在该窗口中返回翻译网站的结果。（<a href="https://github.com/ruanyf/weekly/issues/2903">@fzdwx</a> 投稿）</p>
+<p>2、<a href="https://github.com/luoxuhai/NightVision">夜视仪</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022006.webp" alt="" /></p>
+<p>iOS 免费应用，使用 iPhone 的激光镜头，在完全无光环境下扫描和检测距离，代码开源。（<a href="https://github.com/ruanyf/weekly/issues/2917">@luoxuhai</a> 投稿）</p>
+<p>3、<a href="https://github.com/xiqishow/bing_wallpaper">bing_wallpaper</a></p>
+<p>微软的必应每天发布壁纸图片，这个脚本让 Mac 电脑定时随机从其中选择一张作为桌面。（<a href="https://github.com/ruanyf/weekly/issues/2924">@xiqishow</a> 投稿）</p>
+<p>4、<a href="https://github.com/LHRUN/paint-board">paint-board</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022008.webp" alt="" /></p>
+<p>一个开源的 Web 画板，基于 canvas。（<a href="https://github.com/ruanyf/weekly/issues/2926">@LHRUN</a> 投稿）</p>
+<p>5、<a href="https://github.com/rothgar/static-mastodon">静态 Mastodon 服务器</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022009.webp" alt="" /></p>
+<p>Mastodon 是一个分布式社交网络，作者演示了只用静态文件，就可以让别人看到你的动态，参见<a href="https://justingarrison.com/blog/2022-12-06-mastodon-files-instance/">介绍文章</a>。（<a href="https://github.com/ruanyf/weekly/issues/2932">@DejavuMoe</a> 投稿）</p>
+<p>5、<a href="https://soundraw.io/">soundraw.io</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112422.webp" alt="" /></p>
+<p>一个 AI 音乐生成器，用户指定需要什么样的音乐，它就会自动生成。这是一个收费服务，生成的音乐还挺好听的。</p>
+<p>5、<a href="https://winkjs.org/wink-nlp/">winkNLP</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112502.webp" alt="" /></p>
+<p>一个 JS 库，提供易用的自然语言处理（nlp），不过目前只支持英语。</p>
+<p>6、<a href="https://cryptboard.io/">CryptBoard.io</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112601.webp" alt="" /></p>
+<p>一个<a href="https://github.com/MihanEntalpo/cryptboard.io">开源</a>的网络加密剪贴板。它为每个用户生成一对密钥，其他人只有拿到（你给他们的）公钥，才能看到你张贴的内容。</p>
+<p>7、<a href="https://www.chiark.greenend.org.uk/~ianmdlvl/hippotat/current/docs/">Hippotat</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112604.webp" alt="" /></p>
+<p>有些咖啡馆和旅馆的 Wifi，只允许连接外部服务器的80端口和443端口，不能使用其他端口，很不方便，作者就写了这个工具。</p>
+<p>只要在你的服务器安装它的服务端，本地再运行客户端，就能在它之上运行各种工具，通过 Web 端口连接服务器的各种端口。</p>
+<p>8、<a href="https://chrome.google.com/webstore/detail/nopecha-captcha-solver/dknlfmjaanfblgfdfebhijalfmhmjjjo">NopeCHA</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112802.webp" alt="" /></p>
+<p>一个 Chrome 插件，号称可以自动解开上图这样的 CAPTCHA 测试。</p>
+<p>9、<a href="https://mathb.in/1">MathB.in</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022092407.webp" alt="" /></p>
+<p>一个数学公式的分享网站，你用 LaTex 和 Markdown 输入公式，它会生成一个网址，你可以分享给其他人。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://citw.dev/tutorial/create-your-own-compiler">动手写编译器：互动讲解</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202211/bg2022112803.webp" alt="" /></p>
+<p>这个网站教大家写一个最简单的编译器，每一步都有详细讲解，并有代码演示。</p>
+<p>2、<a href="https://ce2.greensea.org/">月球地图</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022007.webp" alt="" /></p>
+<p>使用嫦娥二号发布的全月影像图制作，分辨率可以达到7米，能够搜索和定位各种环形山、地名以及人造物体位置。（<a href="https://github.com/ruanyf/weekly/issues/2919">@greensea</a> 投稿）</p>
+<p>3、<a href="https://neal.fun/wonders-of-street-view/">街景奇观</a>（Wonders of Street View）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022004.webp" alt="" /></p>
+<p>这个网站收集了很多谷歌街景的有趣照片，每次随机展示一张。（<a href="https://github.com/ruanyf/weekly/issues/2914">@kxxt</a> 投稿）</p>
+<p>4、<a href="https://www.handsome-css.com/">handsome-css3-lib</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022005.webp" alt="" /></p>
+<p>这个网站收集各种 CSS 特效和组件。（<a href="https://github.com/ruanyf/weekly/issues/2907">@ZiYi0414</a> 投稿）</p>
+<p>5、<a href="https://thissneakerdoesnotexist.com/">这双运动鞋不存在</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022063026.webp" alt="" /></p>
+<p>这个网站上的运动鞋，都是 AI 生成的，实际上并不存在。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://sciprogramming.com/community/index.php?topic=2081.0">老游戏的 AI 画面升级</a></p>
+<p>国外网友使用 AI 模型，将上个世纪的老游戏进行画面升级，效果出奇地好。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090601.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090602.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090603.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090604.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090605.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090606.webp" alt="" /></p>
+<p>2、<a href="https://www.odditycentral.com/travel/centuripe-a-small-italian-town-shaped-like-a-person.html">人形城镇</a></p>
+<p>意大利西西里岛有一个叫做 Centuripe 的小镇，坐落于山上。由于地形限制，城镇的形状很不规则。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202201/bg2022011315.webp" alt="" /></p>
+<p>一位摄影师夜拍时，意外发现这个小镇就像一个躺在大地上的人。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202201/bg2022011317.webp" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://news.ycombinator.com/item?id=32701769">独立软件承包商怎么收费？</a></p>
+<p>多年以前，我辞职了，变成一个独立的软件承包商。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022101.webp" alt="" /></p>
+<p>我接受客户委托，按照要求，为他们开发软件。</p>
+<p>但是，我不知道应该怎么报价，就去找一个有经营经验的朋友，询问她的建议。</p>
+<p>她说，你先定一个能够接受的每小时价格，无论这个价格是多少，你翻一倍报价。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202302/bg2023022102.webp" alt="" /></p>
+<p>我不太相信这个建议，但是决定试试看，就翻倍报价了，结果得到了我的第一份合同。</p>
+<p>后来我想明白了，朋友的建议其实是一种询价方法，如果你不知道自己收取的费用是否太少，或者市场的合理价格是多少，你就翻倍报价。</p>
+<p>如果你还能拿到合同，可以尝试稳步提价，直到你拿不到合同为止。只有这样才能知道真正的价格天花板在哪里。</p>
+<p>但是，你必须记住，如果收取的费用高，客户就会有更高的期望。我有一些报价在100美元/小时以下，这个价格并不高，但我还是愿意接受，因为客户的要求也没有很高。</p>
+<p>如果报价是200美元/小时，客户就会有很多挑剔的要求，要求你做这做那。虽然我收到的钱多了，但是我可能更想终止合同。客户的观念是“一分钱一分货”，如果你达不到他们的要求，双方的关系就会陷入困境。</p>
+<p>如果你的报价很高，并且客户也愿意接受，你就可以打入高端的细分市场了。那是个好地方！</p>
+<p>总之，还是这句老话，如果你的报价翻倍，而只失去一半的客户，那么你就赢了。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>我实际上不明白，为什么有些人在昏暗空间中工作时，还喜欢在显示器上启用黑暗模式。这会让人感觉如此慵懒和阴郁。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=33950115">Hacker News 读者</a></p>
+<p>2、</p>
+<p>物理学家费米曾经提出一个著名的悖论：宇宙如此之大，为什么我们没有发现任何其他智慧生命存在的迹象？</p>
+<p>我与几位科学家讨论过，他们认为答案可能是（文明会造成）气候变暖，使其无法长期存在。一个文明的自然寿命可能只有几千年，而一个工业文明的寿命可能只有几百年。</p>
+<p>&ndash; <a href="https://nymag.com/intelligencer/2017/07/climate-change-earth-too-hot-for-humans.html">《不适宜居住的地球》</a></p>
+<p>3、</p>
+<p>人类像所有哺乳动物一样，是一个热机，生存需要获取热量，同时还需要不断散热。通常，空气充当制冷剂，从皮肤上吸走热量，这样人体才能正常运转。如果空气的温度和湿度过高，影响散热，人体就会发生热衰竭。</p>
+<p>&ndash; <a href="https://nymag.com/intelligencer/2017/07/climate-change-earth-too-hot-for-humans.html">《不适宜居住的地球》</a></p>
+<p>4、</p>
+<p>开发一个社交产品，这不是技术问题。而是一个营销问题、政治问题和社会问题。</p>
+<p>脸书和推特拥有大量完全不懂技术的用户。你如何触及这样的用户，并让他们使用你的产品，这与对技术的深刻理解无关。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=34004890">Hacker News 读者</a></p>
+<p>5、</p>
+<p>我们像蝴蝶，只飞翔一天，便以为那是永恒。</p>
+<p>&ndash; <a href="https://www.goodreads.com/quotes/190741-we-are-like-butterflies-who-flutter-for-a-day-and">卡尔萨根</a>，美国科普作家</p>
+<h2 id="历史上的本周">历史上的本周</h2>
+<p><a href="http://www.ruanyifeng.com/blog/2022/02/weekly-issue-196.html">掌机的未来</a>（2022 #196）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2021/02/weekly-issue-146.html">网课应该怎么上？</a>（2021 #146）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2020/02/weekly-issue-94.html">既懂得制造，又懂得销售</a>（2020 #94）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2019/02/weekly-issue-44.html">高校“唯论文”导向的后果</a>（2019 #44）</p>
+<h2 id="鸣谢">鸣谢</h2>
+<p>周刊得到国内新一代知识管理与协作平台 <a href="https://flowus.cn?promotionChannel=GW_RYF_01">FlowUs</a> 的帮助，深表感谢。</p>
+<p><a href="https://flowus.cn?promotionChannel=GW_RYF_01">FlowUS</a>  = 文档 + 表格 + 网盘。你可以用它写文档、做主页、管理数据、存储文件等等。</p>
+<p>每一期周刊同时发布在<a href="https://ruanyf-weekly.flowus.cn/?code=FLOWUS&amp;promotionChannel=WX_RYF_00"> FlowUs 专栏</a>，欢迎大家也去开通自己的专栏和主页。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022072108.webp" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

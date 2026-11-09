@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Markdown | 阅读笔记</title>
     <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
     
-    <link rel="stylesheet" href="../../css/weread-theme.min.ddc5f8a72e7b1b414a51d1e297b70bf7200f560487363fb9d6bb8e42d0ed75e4.css">
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
     
 </head>
 <body>
@@ -20,15 +22,19 @@
                 
                 <li><a href="../../weread/">阅读</a></li>
                 
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
                 <li><a href="../../memos/">Memos</a></li>
                 
                 <li><a href="../../activity/">热力墙</a></li>
                 
                 <li><a href="../../about/">关于</a></li>
                 
+                <li><a href="../../weekly/">Weekly</a></li>
+                
             </ul>
             <div class="nav-search">
-                <input type="search" id="globalSearch" placeholder="Search" aria-label="搜索" autocomplete="off">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
                 <div class="search-results" id="searchResults" hidden></div>
             </div>
         </nav>
@@ -39,27 +45,45 @@
         <aside class="side-tabs" aria-label="分类导航">
             
             <a href="../../weread/" class="side-tab">
-                Read
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
             </a>
             
             <a href="../../memos/" class="side-tab">
-                Memos
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
             </a>
             
             <a href="../../blog/" class="side-tab">
-                Blog
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
             </a>
             
             <a href="../../topics/" class="side-tab">
-                Topics
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
             </a>
             
             <a href="../../gallery/" class="side-tab">
-                Gallery
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
             </a>
             
             <a href="../../activity/" class="side-tab">
-                Activity
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
             </a>
             
         </aside>
@@ -97,7 +121,7 @@
 
     <script>
     (function () {
-        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题' };
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
         const input = document.getElementById('globalSearch');
         const results = document.getElementById('searchResults');
         const indexUrl = '\/index.json';
@@ -181,6 +205,16 @@
                 return;
             }
             links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
         });
 
         document.addEventListener('click', (e) => {

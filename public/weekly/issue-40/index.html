@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>每周分享第 40 期 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>每周分享第 40 期</h1>
+        
+        <p class="article-meta"><time datetime="2024-04-19">2024年04月19日</time></p>
+        <p class="article-meta">每周分享第 40 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-40.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录过去一周，我看到的值得分享的东西，每周五发布。</p>
+<p>欢迎投稿，或推荐你自己的项目，请前往 GitHub 的 <a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a> 提交 issue。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011801.jpg" alt="" /></p>
+<p>我知道一个朋友，他很喜欢咖啡。</p>
+<p>但是，他喜欢的不是喝咖啡，而是制作咖啡。选购咖啡豆、研磨、泡制、萃取，他就是喜欢自己手动完成整个过程。他家里有很多咖啡器具，为了冲制一小杯咖啡，每天都乐此不疲，从头到尾制作一遍，看着咖啡豆变成一杯热腾腾的饮料，至少需要20分钟。</p>
+<p>他这样的咖啡爱好者似乎有一个共识：最好的咖啡一定不是电动机器制作的，而是手工冲制出来的。在他们看来，哪怕原料一样，电动咖啡机做出来的咖啡，就是没有手工咖啡品质好。确实，好像没有一家咖啡店宣传“本店咖啡是机器泡制的”，反而好一点咖啡店都标榜自己是手工咖啡。</p>
+<p>我猜想，他迷上制作咖啡，其实不完全因为咖啡本身，还有那种把玩机械装置的奇妙感觉，甚至里面包含的仪式感。机械其实是很有意思的东西，各种零件拼装在一起以后，整个机器就会动起来，仿佛自己就有了生命。</p>
+<p>电子时代来临以后，机械就有点没落了，电子装置开始取代机械装置。只有很少的领域，机械设备还胜过电子设备，并且消费者肯买单。手工咖啡也许就是其中最典型的一个例子。</p>
+<h2 id="新闻">新闻</h2>
+<p>1、<a href="https://www.npr.org/2018/12/21/679207604/the-world-has-a-new-largest-known-prime-number">最大的质数</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011802.jpg" alt="" /></p>
+<p>17世纪时，法国修道士梅森（Marin Mersenne）提出了一个质数计算公式：2^n - 1，称为梅森公式。符合该公式的质数，就称为梅森质数。比如，2的3次方等于8，8减1等于7，7就是梅森质数。</p>
+<p>1996年，有人发起了 GIMPS 项目，世界各地的人们下载软件，在自己的计算机上通过梅森公式，寻找新的质数。2018年12月7日，佛罗里达州的一台计算机，发现了世界最大的质数。这个质数有24,862,048位，对应的梅森公式里面的 n 是 82,589,933。之前的世界记录是一年前该项目在田纳西州发现的，比现在的世界记录小了150多亿。你可以在官网下载这个质数，它太长了必须打包成 <a href="https://www.mersenne.org/primes/digits/M82589933.zip">zip 文件</a>下载。</p>
+<p>2、<a href="https://www.bbc.com/news/world-europe-46193818">食品味道不是专利</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011803.jpg" alt="" /></p>
+<p>欧洲一家奶酪公司起诉另一家奶酪公司，声称后者的奶酪口味跟自己太像，侵犯了版权。法院最近裁决，食物的味道不受版权保护。</p>
+<p>法院认为，食品的味道是主观的和可变的，无法用精确和客观的方式来识别，因为不属于发明创造，所以不适用版权法律。</p>
+<p>3、<a href="https://www.voanews.com/a/time-may-be-running-out-for-millions-of-clocks/4554376.html">长波电台的授时服务</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011804.jpg" alt="" /></p>
+<p>美国政府宣布，打算关闭三个 60KHz 的长波电台，两个在科罗拉多州，一个在夏威夷州。上图为发送长波信号的天线。</p>
+<p>由于这些电台发送的无线电波用于授时，很多人担心，这会影响到许多电子设备，它们通过无线电波获得当前时间。另外，这三个电台每隔2分钟，发送了一个440赫兹（标准音高）的信号，用来给乐器校准音高。</p>
+<p>4、<a href="https://spectrum.ieee.org/tech-talk/computing/software/fujitsu-plans-to-support-professional-judges-with-lidar-and-ai-at-gymnastics-meets">机器裁判</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011805.jpg" alt="" /></p>
+<p>日本富士通公司使用激光雷达和人工智能软件，开发了一套体操的裁判系统，用来取代人工裁判。</p>
+<p>体操有大量的翻转和跳跃，还有很多细节，比如膝盖和肘部弯曲的角度。裁判按照自己的判断打分，常常引起争议。国际体操协会已同意将这套激光雷达系统纳入2019年世界锦标赛，以帮助裁判评估运动员的表现，同时计划到2020年实现全面自动化评分。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011806.jpg" alt="" /></p>
+<p>这套系统通过激光雷达的反射信号，捕捉运动员的身体运动，在屏幕上显示体操运动员身体轮廓的三维图像。然后使用软件，找出各种关节（肘部，膝盖和肩部），这样就可以判断谁旋转的角度更大、难度更高。</p>
+<p>5、<a href="https://www.theguardian.com/environment/2018/dec/02/world-verge-climate-catastophe">气候变暖已经无法阻止</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011807.jpg" alt="" /></p>
+<p>2018年的联合国气候大会认为，气候变暖可能已经不可逆转了。我们无法将全球气温上升控制在1.5摄氏度以下，海水上升、珊瑚礁毁灭、沙漠扩散、冰川融化都无法避免了。</p>
+<p>科学家描述2100年时，平均气温将比现在高3~5度，海平面上升0.74米至1.8米，足以淹没印度洋岛国，很多人口需要从低洼城市（比如珠江三角洲）搬迁（参见上面的想象图）。现在的地球人口总数是70亿，2100年可能达到110亿，随着人口增多，地球的生存环境将会变得更加恶劣。</p>
+<p>6、<a href="https://www.wweek.com/news/2018/12/26/portland-man-becomes-the-first-person-to-cross-antarctica-without-assistance/">穿越南极大陆</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011808.jpg" alt="" /></p>
+<p>33岁的美国人科林·奥布拉迪（Colin O'Brady）成为历史上第一个自力穿越南极大陆的人。他没有借助任何外力，比如机器、雪橇犬、风力，所有装备都放在一个雪橇上，重达170公斤。</p>
+<p>他在2018年11月出发，一共走了54天，总长度1482公里。</p>
+<p>7、<a href="http://www.kurzweilai.net/reflected-hidden-faces-in-photographs-revealed-in-pupil">瞳孔里的面孔</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011809.jpg" alt="" /></p>
+<p>现在的很多手机摄像头，能拍出4000万像素的图片。这么高的分辨率，可以从照片里面人物的瞳孔，提取出该人看到的人脸。</p>
+<p>英国一所大学的研究人员，最近就从照片瞳孔里面恢复了旁观者的图像。尽管分辨率低（全脸区域平均为322像素），但如果是熟人，就可以90%的成功率识别出这些图像到底是谁。研究人员提醒，不要轻易将高清晰度照片上传到公开的社交网站。</p>
+<p>8、<a href="https://wallstreetcn.com/articles/3459044">智能校服</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011810.jpg" alt="" /></p>
+<p><a href="http://www.globaltimes.cn/content/1132856.shtml">《环球时报》英文版</a>12月20日报道，贵州仁怀市第十一中学于2016年秋季开始使用“智能校服”，这款智能校服由贵州冠宇科技有限公司开发，其肩部位置植入了两块追踪芯片，可以实时定位到学生的位置。目前该所学校已有超过800名学生穿着这款智能校服。</p>
+<p>校长表示，学校方面不会主动追踪学生的校外动态，只有在学生失踪或者逃学的时候，才会使用校服来进行协助定位。他还表示，在引入智能校服以后，学生的出勤率有显著提升。</p>
+<p>贵州冠宇科技公司表示，如果穿着智能校服的学生未经许可走出学校，就会激活自动语音报警器。通过安装在学校门口的面部识别设备的帮助，如果学生更换他们的制服，警报也会响起。</p>
+<p>9、<a href="https://www.zdnet.com/article/eu-to-fund-bug-bounty-programs-for-14-open-source-projects-starting-january-2019/">欧盟资助开源软件</a></p>
+<p>很多开源项目都靠志愿者的奉献，并没有经费来源。现在，为了提高开源软件的安全性，欧盟宣布为14个开源项目的漏洞提供赏金计划。如果你发现了这些软件的漏洞，欧盟官方会向你支付奖金。每个项目的奖金总额在3万～9万欧元。</p>
+<p>这14个开源项目如下：7-zip，Apache Kafka，Apache Tomcat，Digital Signature Services (DSS)，Drupal，Filezilla， FLUX TL，the GNU C Library (glibc)，KeePass，midPoint，Notepad++，PuTTY，the Symfony PHP framework，VLC Media Player，WSO2。</p>
+<p>10、<strong>一句话新闻</strong></p>
+<ul>
+<li>
+<p><a href="https://www.theguardian.com/media/2018/aug/02/fifth-of-britons-feel-stressed-if-they-cant-access-internet-ofcom-report">英国</a>一项统计发现，英国人醒着的时候，平均12分钟查看一次手机，即一小时会主动看5次手机。</p>
+</li>
+<li>
+<p><a href="https://qz.com/1505030/keeping-up-with-netflix-originals-is-basically-a-part-time-job-now/">视频节目网站 Netflix</a> 2018年的自制节目接近9万分钟（1500小时），其中电视剧58,000分钟，电影8500分钟，其他是纪录片、儿童节目等。</p>
+</li>
+<li>
+<p><a href="https://www.forbes.com/sites/thomasbrewster/2019/01/14/feds-cant-force-you-to-unlock-your-iphone-with-finger-or-face-judge-rules/#58b1c02442b7">加州法院</a>判决，美国警察不能强迫人们用手指或者脸部解锁手机。</p>
+</li>
+<li>
+<p><a href="https://howmuch.net/articles/how-much-americans-make-in-wages">美国工人</a>的近一半，2017年的税后收入不到3万美元。</p>
+</li>
+</ul>
+<h2 id="教程">教程</h2>
+<p>1、<a href="https://just-taking-a-ride.com/inside_python_dict/chapter1.html">Python 的 Dict 数据结构的实现</a>（英文）</p>
+<p>本文介绍 Dict 结构的实现原理，从最简单的哈希数组的实现讲起。</p>
+<p>2、<a href="https://juejin.im/post/5bdfaed0e51d4505086fa4cd">开发不需要“编译”的 WebApp</a>（中文）</p>
+<p>作者介绍如何使用 Web Components 技术开发一个网页音乐播放器。（@<a href="https://github.com/ruanyf/weekly/issues/186">mantou132</a> 投稿）</p>
+<p>3、<a href="https://www.cnblogs.com/xueweihan/p/5220513.html">什么是真正的程序员</a>（中文）</p>
+<p>本文是一篇译文，作者仿照《小王子》中的情节，通过小 printf 遇见的不同类型的程序员，最后悟出什么才是真正的程序员！（@<a href="https://github.com/ruanyf/weekly/issues/185">LanjianNUll</a> 投稿）</p>
+<p>4、<a href="https://www.techradar.com/news/mobile-computing/laptops/best-laptops-1304361">2018年最佳笔记本电脑</a>（英文）</p>
+<p>这个网站评选了2018年最好的10款笔记本电脑。</p>
+<p>5、<a href="https://medium.com/@manuel.pineault/deploying-reactjs-with-docker-ac16728c0896">使用 Docker 部署React</a>（英文）</p>
+<p>本文介绍如何制作 React 应用的 Docker 容器，并将其部署到服务器。</p>
+<p>6、<a href="http://iolivia.me/posts/fizzbuzz-in-10-languages/">FizzBuzz 的10种语言解答</a>（英文）</p>
+<p>FizzBuzz 是考验编程初学者的经典题目，本文用10种语言写出答案，比较各种语言的不同。</p>
+<p>7、<a href="http://hongchao.me/living-and-working-in-sweden-as-engineers/">去瑞典当工程师，是否值得？</a>（英文）</p>
+<p>一个中国开发者移居到瑞典当工程师。十年之后，他对自己这个决定的看法，留在国内好，还是去瑞典好？</p>
+<p>8、<a href="https://thenextweb.com/syndication/2018/12/31/heres-why-telephones-and-calculators-use-different-numeric-keypads/">电话键盘与计算器键盘为什么不同？</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011811.jpg" alt="" /></p>
+<p>左侧是电话的拨号键盘，右侧是计算机的输入键盘，它们的排列方式为何不同？</p>
+<p>9、<a href="https://blog.networkprofile.org/6-year-homelab-history-in-pictures/">我如何搭建家庭机房</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011812.jpg" alt="" /></p>
+<p>作者回顾了六年来自己在家里搭建机房的过程，有大量图片。</p>
+<p>10、<a href="https://news.ycombinator.com/item?id=18829557">现在最流行的网站技术栈是什么？</a>（英文）</p>
+<p>这是一个论坛的讨论帖，有人问这个问题，下面一堆回答，流行的技术基本上都提到了。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://prism-break.org/zh-CN/all/">粉碎棱镜</a></p>
+<p>该网站收集不对用户进行监控的开源桌面软件。（@<a href="https://github.com/ruanyf/weekly/issues/151">Ynjxsjmh</a> 投稿）</p>
+<p>2、<a href="https://betterdev.link/">Better Dev 周刊</a></p>
+<p>每周一期的开发者周刊（英文）。</p>
+<p>3、<a href="https://space.bilibili.com/88461692/video">3Blue1Brown 视频的中文官方账号</a>（视频）</p>
+<p>3Blue1Brown 是著名的数学科普视频制作者。（@<a href="https://github.com/ruanyf/weekly/issues/156">guerbai</a> 投稿）</p>
+<p>4、<a href="https://www.c82.net/euclid/">《几何原本》在线版</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011813.jpg" alt="" /></p>
+<p>在线还原1847年的欧几里得《几何原本》的彩色版本。（@<a href="https://github.com/ruanyf/weekly/issues/165">arbeitandy</a> 投稿）</p>
+<p>5、<a href="https://medium.com/@ann.green/loading-indicators-e9d9ac9680b">页面加载动画</a></p>
+<p>这篇文章收集了近20个加载页面的优秀动画效果。</p>
+<p>6、<a href="https://zhuanlan.zhihu.com/p/23936161">12 款助你学编程的免费游戏</a></p>
+<p>本文中，我们评选出12个热门网站，你可以通过玩游戏学习编程。（@<a href="https://github.com/ruanyf/weekly/issues/117#issuecomment-448841120">Ynjxsjmh</a> 投稿）</p>
+<p>7、<a href="http://interactivepython.org/runestone/static/pythonds/index.html">Python 算法与数据结构</a>（第二版）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011814.jpg" alt="" /></p>
+<p>开源教程《Problem Solving with Algorithms and Data Structures Using Python》。网上有网友翻译的<a href="https://github.com/facert/python-data-structure-cn">中文版</a>。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://asciinema.org/">asciinema</a></p>
+<p>一个录制、分享命令行操作的工具，支持Linux, macOS（@<a href="https://github.com/ruanyf/weekly/issues/137">kt286</a> 投稿）</p>
+<p>2、<a href="https://chai2010.cn/awesome-wasm-zh/examples/c4/">C4</a></p>
+<p>一个在浏览器运行的 C 语言运行时，功能较为简单。（@<a href="https://github.com/ruanyf/weekly/issues/142">chai2010</a> 投稿）</p>
+<p>3、<a href="https://github.com/solobat/Steward">Steward</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011815.jpg" alt="" /></p>
+<p>一个类似 Alfred 的浏览器内的命令起动器，支持 Chrome / Firefox 两种浏览器。（@<a href="https://github.com/ruanyf/weekly/issues/134">solobat</a> 投稿）</p>
+<p>4、<a href="https://github.com/lucagez/Debucsser">Debucsser</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011816.jpg" alt="" /></p>
+<p>一个用于 CSS 的调试库，鼠标悬浮的时候，网页会显示区块的 CSS 信息。</p>
+<p>5、<a href="https://comixify.ii.pw.edu.pl/">Comixify</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011817.jpg" alt="" /></p>
+<p>一个波兰团队做了非常好玩的工具，可以把视频自动转成漫画，上图是他们提供的 demo，效果很棒。</p>
+<p>6、<a href="https://github.com/SkrewEverything/Command-Cache">Command-Cache</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011818.jpg" alt="" /></p>
+<p>一个桌面软件，可以搜索命令行的操作历史，只在 Mac 和 Linux 上可用。</p>
+<p>7、<a href="https://wwwtyro.github.io/keyzen/">keyzen</a></p>
+<p>测试打字速度的工具。（@<a href="https://github.com/ruanyf/weekly/issues/150">tifazxy</a> 投稿）</p>
+<p>8、<a href="https://github.com/cyfdecyf/cow">cow</a></p>
+<p>一个将命令行 socks 代理转为 http 代理的工具。另一个软件 <a href="https://github.com/hmgle/graftcp">graftcp</a> 也有类似功能。</p>
+<p>9、<a href="https://github.com/devhubapp/devhub">devhub</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011819.jpg" alt="" /></p>
+<p>将 GitHub 动态以 TweetDeck 形式展示的开源工具。</p>
+<p>10、<a href="https://minimalanalytics.com/">最小化的 Google Analytics 代码</a></p>
+<p>原始的 Google Analytics 代码是 73KB，可能拖累网页性能，经过简化以后，只需要 1.4KB。当然，功能也简化了，只能统计当前页面访问量。</p>
+<p>11、<a href="https://www.google.com/earth/studio/">Google Earth Studio</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011820.jpg" alt="" /></p>
+<p>谷歌官方推出的使用 Google Earth 制作 3D 动画的工具。</p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://edition.cnn.com/style/article/baikonur-buran-soviet-space-shuttle/index.html">苏联的航天飞机</a></p>
+<p><em><strong>IMAGE REMOVED</strong></em></p>
+<p>哈萨克斯坦的拜科努尔航天发射场，有两艘废弃的前苏联航天飞机。</p>
+<p>冷战时期，美国航天飞机成功以后，苏联决定模仿开发自己的航天飞机，1980年开始建造。苏联航天飞机的第一次、也是唯一一次飞行是在1988年11月15日，该次飞行成功完成。但是这时，冷战已经接近尾声。俄罗斯总统鲍里斯·叶利钦最终于1993年6月30日取消了航天飞机的发展计划。苏联解体后，根本没有资金让它继续发展下去。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011822.jpg" alt="" /></p>
+<p>（上图为1988年11月苏联航天飞机唯一一次发射。）</p>
+<p>苏联一共建造了三艘航天飞机，都被遗弃在哈萨克斯坦草原的仓库里面。其中真正飞行过的那艘，由于2002年的仓库倒塌，被压毁了，现在只剩下两艘。</p>
+<p>2008年，一家德国博物馆曾希望以1200万美元，购买一架作为展品。但由于运输费用过高，该计划被放弃。这些航天器已经在灰尘、鸟粪、高温和冰雪下度过了近30年，完全成了废墟，谁也不知道，它们还将这样继续存放多久。</p>
+<p><em><strong>IMAGE REMOVED</strong></em></p>
+<p>航天飞机仓库不对外开放，但是偷偷溜进去，也没有人管。上图为法国摄影记者潜入仓库。</p>
+<p>2、<a href="https://bts.nomadgate.com/medium-evergreen-content">你不应该把内容发布在 Medium</a></p>
+<p>很多人选择在 Medium 发布内容。但是，现在的 Medium 已经跟以前不一样了，发布之前你应该三思。</p>
+<p>（1）Medium 允许你为文章设置原文链接，以前这个链接是可以修改的，现在一旦设置了，就不再允许修改。</p>
+<p>（2）Medium 不再允许绑定自定义域名，自己的域名无法指向它的网站。</p>
+<p>（3）Medium 以前允许某些网站以 iFrame 形式嵌入，比如统计表单，现在不行了。</p>
+<p>（4）Medium 不再允许第三方广告，也就是说，你不再能够在自己的文章里接广告。</p>
+<p>（5）Medium 的阅读体验已经变得糟糕。以前读者打开文章，看到的是下面的样子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011824.jpg" alt="" /></p>
+<p>现在，看到的是下面这样。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011825.jpg" alt="" /></p>
+<p>3、<a href="https://threadreaderapp.com/thread/1081619342377156608.html">伐木工人的儿子</a></p>
+<p>爱达荷州，一名伐木工人有一个儿子。父亲希望儿子也能成为一名伐木工人。但是这个小孩喜欢火箭，高中时为了好玩而制作火箭，甚至用父亲的乙炔，自己去焊接火箭。</p>
+<p>高中毕业后，他去了当地的爱达荷大学，学习机械工程。因为家里没钱，他不得不在假期里面做了4年的伐木工作，赚到学费。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011826.jpg" alt="" /></p>
+<p>大学毕业后，他来到加利福尼亚州，加入了一家传统的航天公司——休斯公司，工作了15年，成为了该公司 TR-106 火箭的首席工程师。TR-106 是航天工业有史以来制造的最强大的火箭之一。</p>
+<p>工作过程中，他有了制造新型火箭的想法。但建造火箭是非常昂贵的，没有资本家愿意给一个爱达荷州出身的人，提供数十亿美元来创办自己的火箭公司。所以他只好在自家后院制造火箭，造出了历史上最大的业余爱好者的液体燃料火箭。伊隆·马斯克注意到这件事。</p>
+<p>后来，他作为创始人之一，加入了 SpaceX 公司，设计了Merlin发动机。现在他是推进系统的首席技术官，他的名字叫汤姆·穆勒（Tom Mueller）。</p>
+<h2 id="本周图片">本周图片</h2>
+<p>1、<a href="https://pudding.cool/2018/12/3d-cities-story/index.html">人口山</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011827.jpg" alt="" /></p>
+<p>如果将人口的聚集状况，以柱状图叠加在地图上，就形成了“人口山”。上图是中国的人口山地图。下图是美国东北部的人口山。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011828.jpg" alt="" /></p>
+<p>2、<a href="https://boingboing.net/2018/12/13/interesting-logos-are-being-re.html">Logo 的改变</a></p>
+<p>下图上排是以前的logo，下排是现在的logo。各公司都不约而同，选择了加粗的直线式无衬线字体，这样是为了更醒目、辨识度更高吗？</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011829.jpg" alt="" /></p>
+<p>网友 <a href="https://twitter.com/chun1iu/status/1073423775469686785">@chun1iu</a> 评论：“不是更加醒目，而是更加中庸，更容易被所有人接受。不会很喜欢，也不会很反感，就是很大众。这些公司的成长过了标新立异的阶段而已。”</p>
+<p>3、<a href="https://www.peterme.com/2007/08/27/thoughts-on-and-pics-of-the-original-macintosh-user-manual/">原版 Macintosh 手册</a></p>
+<p>1984年，Macintosh 电脑发布。现在，有人把第一版的用户手册扫描，放到了网上。该手册专门用一章，介绍配套的便携包，强调 Macintosh 可以随身携带。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011830.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011831.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/201901/bg2019011832.jpg" alt="" /></p>
+<h2 id="本周金句">本周金句</h2>
+<p>1、</p>
+<p>鸡应该不会灭绝，因为人类发现鸡肉味道鲜美，所以会想尽办法保证我们有鸡可吃。</p>
+<p>&ndash; <a href="https://cornercases.wordpress.com/2018/12/09/apex/">一位科学家</a></p>
+<p>2、</p>
+<p>中年人是艰难的。青年时代的理想主义已经消退，健康和活力也不可避免地有一点降低，但是承担的责任却在增长，再加上一些对死亡的恐惧和一些对活着的恐惧，你就有了叫做中年危机的东西。</p>
+<p>&ndash; <a href="http://dtrace.org/blogs/bmc/2018/12/14/open-source-confronts-its-midlife-crisis/">Bryan Cantrill</a>（dtrace 的作者）</p>
+<p>3、</p>
+<p>我们为了降低能源消耗，发明了节省能源的 LED 照明。结果，更高效的照明导致了更多的照明，从而使得社会整体能源消耗增加。</p>
+<p>很多事情都是这样，为了省电，我们提高了能源效率，结果人们因此买更多的电器，消耗更多的电。</p>
+<p>&ndash; <a href="https://thetyee.ca/Opinion/2018/02/26/Energy-Efficiency-Curse/">《能源效率的诅咒》</a></p>
+<p>4、</p>
+<p>美国是母乳喂养率最低的发达国家之一，原因之一就是法律没规定带薪产假。</p>
+<p>&ndash; <a href="https://www.nytimes.com/2018/12/31/business/breast-feeding-discrimination-pregnancy.html">《纽约时报》</a></p>
+<h2 id="欢迎订阅">欢迎订阅</h2>
+<p>这个专栏每周五发布，同步更新在我的<a href="http://www.ruanyifeng.com/blog">个人网站</a>、<a href="http://weixin.sogou.com/weixin?query=%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97">微信公众号</a>和<a href="https://yuque.com/ruanyf/share/">语雀</a>。</p>
+<p>微信搜索“<strong>阮一峰的网络日志</strong>”或者扫描二维码，即可订阅。</p>
+<p><img src="http://www.ruanyifeng.com/blogimg/asset/2018/bg2018042311.jpg" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

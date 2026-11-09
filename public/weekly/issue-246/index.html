@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 246 期）：永不丢失的网络身份 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 246 期）：永不丢失的网络身份</h1>
+        
+        <p class="article-meta"><time datetime="2023-09-08">2023年09月08日</time></p>
+        <p class="article-meta">每周分享第 246 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-246.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。周刊另有<a href="https://github.com/ruanyf/weekly/issues/2960">《谁在招人》</a>服务，发布程序员招聘信息。合作推广请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031406.webp" alt="" /></p>
+<p>由于清洁工人大罢工，巴黎街头本周到处堆积着一袋袋垃圾，行人在其中穿行。如果没人清理垃圾，现代都市可以支撑几天？（<a href="https://edition.cnn.com/2023/03/11/europe/paris-trash-strikes-intl/index.html">via</a>）</p>
+<h2 id="本周话题永不丢失的网络身份">本周话题：永不丢失的网络身份</h2>
+<p>1、</p>
+<p>在影视作品中，大家可能都见过这样的情节：某人从昏迷中醒来，丧失了记忆，无论如何想不起来“我是谁”。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031505.webp" alt="" /></p>
+<p>他不知道自己的姓名、年龄、住址，没有身份证和其他证物，也没有任何知情人。</p>
+<p>就这样，<strong>他变成了一个没有身份的人，丧失了曾经属于自己的一切。</strong></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031506.webp" alt="" /></p>
+<p>不过，这样的情节已经不多见了，因为现在有 DNA 数据库，查一下 DNA 就知道你是谁。即使查不到本人，也能查到亲戚。</p>
+<p>“我是谁”这个问题，很大程度上已经解决了。你永远是你，你的身份已经不会丢了。</p>
+<p>2、</p>
+<p>但是，人们除了社会身份，现在还有网络身份。网络身份的丢失，才是更现实的问题。</p>
+<p><strong>网络身份就是你的互联网账号。</strong> 如果丢失，你就会丧失在该账号下拥有的一切，甚至可能从互联网消失。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031507.webp" alt="" /></p>
+<p>以后，影视剧的情节大概会变成下面这样：某人从昏迷中醒来，丧失了记忆，<strong>无论如何想不起自己的网名。</strong></p>
+<p>没了网络身份，他在网上的资产、联系人、活动记录，就都丢失了。</p>
+<p>3、</p>
+<p>丢失网络身份的风险，其实比想象的大。</p>
+<p>大家不一定意识到，<strong>你的网络身份并不真正属于你，</strong> 不仅可能丢失和遗忘，还可能被剥夺。</p>
+<p>现在的互联网服务，一般要求用户使用手机号或邮箱地址注册。这两样东西都不真正属于用户。</p>
+<p>手机号属于电信服务商，邮箱属于邮箱服务商和域名服务商。如果他们收回你的手机号、邮箱、域名，你的网络身份就麻烦了，如果不能更改，很可能丢失。</p>
+<p>4、</p>
+<p>不仅账号的名称不属于你，而且账号的法律所有权也不属于你。</p>
+<p>举例来说，微信账号的所有权<a href="https://tech.sina.com.cn/roll/2020-09-08/doc-iivhuipp3172175.shtml">属于腾讯公司</a>。<a href="https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&amp;t=weixin_agreement&amp;s=default&amp;head=true">微信服务协议</a>的 7.1.2 条就明确写明：</p>
+<blockquote>
+<p>“微信帐号的所有权归腾讯公司所有，用户完成申请注册手续后，仅获得微信帐号的使用权。”</p>
+</blockquote>
+<p>基本上，各种网络服务的账号，都属于服务提供商，用户只有使用权。</p>
+<p>因此，<strong>服务商随时可以单方面暂停或注销你的账号，这是完全合法的。</strong> 特朗普被推特禁言，就属于这种情况。</p>
+<p>5、</p>
+<p>如果我们不真正拥有自己的网络身份，实际上就不真正拥有互联网上我们名下的一切。</p>
+<p>那么，<strong>有没有办法，让网络身份真正属于使用者，完全受你控制，其他任何人都无法夺走，永不丢失呢？</strong></p>
+<p>回答是有办法的，而且已经实现了。</p>
+<p>方法就是你用一个密钥对，作为自己的网络身份，公钥是你的用户 ID，私钥用来身份验证。</p>
+<p>这保证了每个用户的身份都是唯一的，只要私钥不泄漏，任何人都无法夺走你的账号。</p>
+<p>事实上，加密货币的身份体系就是这样设计的。用户用钱包表示身份，每个钱包的编号就是用户的公钥，必须用对应的私钥，才能往里面存取加密货币。这保证了你对钱包的绝对控制。</p>
+<p>前一阵子，有一个新兴的社交网络上线，叫做 <a href="https://nostr.com/">Nostr</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031601.webp" alt="" /></p>
+<p>你可以像使用推特一样，在它上面发言，与他人交流。不同之处在于，它的账号就是每个人的公钥，而且可以自己架设服务，因此不存在账号被关停这种事情，并且账号跟域名之间没有绑定关系。</p>
+<p>6、</p>
+<p>如果每个人都选择公钥作为自己的账号，那么不难想到，可以把所有人的公钥都放到区块链上。以后，查找某人的网络身份，只要检索一下区块链就可以了。</p>
+<p>事实上，这是我能想到的区块链的最佳用途。唯一的问题是，区块链的读取是免费的，但是写入需要手续费。</p>
+<p>我们可以把写入的费用，看作网络身份的登记费。只要一次性付费，你的这个身份就随时随地可以查到，没有任何人可以篡改，永不丢失。</p>
+<p>7、</p>
+<p>读到这里，细心的读者会说，这依然没有解决文章开头的场景啊。</p>
+<p>如果你得了失忆症，忘记了自己的公钥，你的网络身份不是照样丢失吗？</p>
+<p>事实上，这个问题也有人想出了解法，他就是现在如日中天的 OpenAI 公司的首席执行官山姆·阿特曼（Sam Altman）。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031602.webp" alt="" /></p>
+<p>他在2020年跟他人合伙创立了 <a href="https://worldcoin.org/">WorldCoin 项目</a>，就是为了解决这个问题。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031603.webp" alt="" /></p>
+<p>该项目的核心是一个叫做 <a href="https://techcrunch.com/2023/03/07/worldcoin-cofounded-by-sam-altman-is-betting-the-next-big-thing-in-ai-is-proving-you-are-human/">World ID</a> 的业务，目标是为每个人提供一个全球性的网络身份。</p>
+<p>具体做法就是扫描用户的虹膜，将用户的生物信息存进 WorldCoin 的区块链，同时为用户生成一个密钥对，作为网络 ID。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031604.webp" alt="" /></p>
+<p>这样的话，即使失忆了，只要扫描一下虹膜，就能找回你的公钥，从而得到你的网络身份。</p>
+<p>World ID 本月刚刚<a href="https://worldcoin.org/blog/announcements/introducing-world-id-and-sdk">发布了 SDK</a>，正式对外运作了。如果你愿意被它扫描一下虹膜，就可以拿到你的 World ID，感兴趣的同学可以关注一下。希望这种“密钥对作为网络身份”的实践，能够推广和普及。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、<a href="https://www.esa.int/Applications/Navigation/Telling_time_on_the_Moon">月球时间</a></p>
+<p>未来十年中，多个月球项目会同时开展，它们之间需要互相通信，比如多台月球车之间的通信。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031201.webp" alt="" /></p>
+<p>目前，所有月球设备采用的都是地球时间。欧洲空间局正在考虑，建立一套独立的月球时间和月球定位系统。</p>
+<p>它相当于月球的 GPS，可以不通过地球，精确定位某个物体在某一时刻，位于月球表面的地点和行动路线。</p>
+<p>显然，除了方便机器，月球时间也应该方便人类使用。但是，月球的公转和自转周期都是28天左右，要想与地球时间自然地结合，还是有难度。</p>
+<p>2、<a href="https://www.bbc.com/news/world-asia-63363473">菲律宾的防作弊措施</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022102411.webp" alt="" /></p>
+<p>菲律宾的一所大学，学生考试作弊成风，互相抄袭。</p>
+<p>一位教师就想了一个对策，规定学生只有戴上能遮住两侧眼角的帽子，才能参加考试。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022102412.webp" alt="" /></p>
+<p>最终，学生 DIY 了各种各样的帽子，照片在网上疯狂流传，获得几千个赞，新闻媒体都来报道。据教师说，考试效果很好，没有发现学生作弊。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022102413.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022102414.webp" alt="" /></p>
+<p>3、<a href="https://www.jefftk.com/p/ceiling-air-purifier">吊扇的空气过滤器</a></p>
+<p>一个老外程序员自己动手，在家里做了一个巨型空气过滤器，专用于吊扇。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060512.jpg" alt="" /></p>
+<p>他的做法其实很简单，就是在吊扇周围架上一圈 HEPA 滤网。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202206/bg2022060513.jpg" alt="" /></p>
+<p>这样的好处是吊扇的叶片长，所以比较安静，没有噪音，而且空气过滤效果也不差。经测试，可以有效减小室内 PM2.5 指数。</p>
+<p>4、<a href="https://phys.org/news/2022-08-moxie-reliably-oxygen-mars.html">火星氧气机</a></p>
+<p>2021年2月，美国的毅力号火星车成功着陆火星。这台火星车里面，有一个叫做 MOXIE 的氧气机，用来试验能否在火星上制造氧气。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090114.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090115.webp" alt="" /></p>
+<p>根据美国政府最新披露的报告，这台氧气机已经成功运行了7次，每小时可以在火星上制造6克氧气，足够让一个成年人呼吸10分钟。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022090116.webp" alt="" /></p>
+<p>火星大气充满了二氧化碳，这台氧气机采用电解，将二氧化碳分解成氧气和一氧化碳。</p>
+<p>如果评估后证实这种方法可行，美国就会制造更大型的氧气机，在人类登陆前，在火星上大量生产氧气。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://til.simonwillison.net/llms/llama-7b-m2">如何在个人电脑运行 LLaMA</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031407.webp" alt="" /></p>
+<p>LLaMA 是 Meta 公司的 AI 模型，效果号称超过 ChatGPT。它刚刚开放内测，就被破解了。</p>
+<p>本文教你怎么在个人电脑运行这个模型，从而拥有自己本地的 ChatGPT。它甚至不需要 GPU，只用 CPU 就能运行。</p>
+<p>2、<a href="https://developer.chrome.com/blog/control-your-drop-caps-with-css-initial-letter/">CSS 的 initial-letter 属性</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011905.webp" alt="" /></p>
+<p>CSS 新增了一个<code>initial-letter</code>属性，用来设置首字母下沉的样式。</p>
+<p>3、<a href="https://levelup.gitconnected.com/meet-a-programmer-who-turned-an-open-source-platform-into-a-7-500-000-000-company-645e14c53c8">WordPress 是怎么诞生的？</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011502.webp" alt="" /></p>
+<p>本文介绍2003年，19岁的美国程序员 Matt Mullenweg 怎么会创建开源软件 WordPress，文章内容挺精彩的。</p>
+<p>4、<a href="https://www.the5to9.xyz/p/replit-800m-side-project">Replit 诞生记</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011603.webp" alt="" /></p>
+<p>Replit 是运行在网页上的编程 IDE，作者是一个约旦人，后来移民到美国。本文介绍他的创业过程。</p>
+<p>5、<a href="https://www.instructables.com/DIY-Raspberry-Orange-Pi-NAS-That-Really-Looks-Like/">我用 Orange Pi 做了一个 NAS</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023011601.webp" alt="" /></p>
+<p>作者从硬件到软件，完全自己动手，从头做出了一个 NAS 网络存储装置，非常厉害。</p>
+<p>6、<a href="https://eylenburg.github.io/browser_engines.htm">Web 浏览器引擎的历史</a>（英文）</p>
+<p>本文梳理历史上出现过的浏览器引擎。</p>
+<h2 id="ai-相关软件">AI 相关软件</h2>
+<p>1、<a href="https://promptperfect.jina.ai/">PromptPerfect</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031402.webp" alt="" /></p>
+<p>专为生成式 AI 优化输入提示（prompt）的工具。（<a href="https://github.com/ruanyf/weekly/issues/2974">@hanxiao</a> 投稿）</p>
+<p>2、<a href="https://github.com/Bin-Huang/chatbox">Chatbox</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031409.webp" alt="" /></p>
+<p>OpenAI API 跨平台桌面客户端，主要用作 Prompt Debugging Console。（<a href="https://github.com/ruanyf/weekly/issues/2978">@Bin-Huang</a> 投稿）</p>
+<p>3、<a href="https://github.com/cosin2077/chaty">Chaty</a></p>
+<p>一个命令行工具，支持使用一条命令，完成 ChatGPT 的各种相关操作。（<a href="https://github.com/ruanyf/weekly/issues/2979">@cosin2077</a> 投稿）</p>
+<p>4、<a href="https://github.com/ouromoros/PowerGPT">PowerGPT</a></p>
+<p>一个 Windows PowerShell 工具，输入你想要完成的操作，它会用 AI 返回对应的 Windows 命令行命令。（<a href="https://github.com/ruanyf/weekly/issues/2980">@ouromoros</a> 投稿）</p>
+<p>5、<a href="https://github.com/anc95/writely">Writely</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031410.webp" alt="" /></p>
+<p>Chrome 浏览器插件，类似于 Notion AI，支持在任意编辑器网页上进行写作辅助。（<a href="https://github.com/ruanyf/weekly/issues/2981">@anc95</a> 投稿）</p>
+<p>6、<a href="https://github.com/CatsAndMice/lanlan">智能文案小助手</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031412.webp" alt="" /></p>
+<p>一个开源的 ChatGPT 前端表单页面，输入提示，自动生成文案。（<a href="https://github.com/ruanyf/weekly/issues/2984">@CatsAndMice</a> 投稿）</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://jami.net/">Jami</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022122201.webp" alt="" /></p>
+<p>一个开源的团队协作软件，可以文字聊天、视频通话、屏幕共享等。</p>
+<p>2、<a href="https://www.macphpstudy.com/">PhpWebStudy</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031401.webp" alt="" /></p>
+<p>macOS 系统 PHP 和 Web 开发环境管理工具，方便各软件的启动/重启、配置查看修改、日志排查等等（<a href="https://github.com/ruanyf/weekly/issues/2973">@xpf0000</a> 投稿）</p>
+<p>3、<a href="https://github.com/lcomplete/huntly">Huntly</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031405.webp" alt="" /></p>
+<p>一款自托管的信息管理工具，可以订阅 RSS 和自动保存浏览过的网页，支持多维度的分类和搜索。（<a href="https://github.com/ruanyf/weekly/issues/2977">@lcomplete</a> 投稿）</p>
+<p>4、<a href="https://github.com/pfalstad/circuitjs1">CircuitJS1</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031403.webp" alt="" /></p>
+<p>网页电路模拟器，可以添加电子元件、导出电路、分享 URL 等等。（<a href="https://github.com/ruanyf/weekly/issues/2975">@jerrylususu</a> 投稿）</p>
+<p>5、<a href="https://github.com/rxdrag/rxeditor">RxEditor</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031404.webp" alt="" /></p>
+<p>一款开源的可视化低代码前端工具，可以拖拽生成和编辑组件，目前仅支持 React，查看 <a href="https://rxeditor.vercel.app/">Demo</a>。（<a href="https://github.com/ruanyf/weekly/issues/2976">@rxdrag</a> 投稿）</p>
+<p>6、<a href="https://zarm.design/">Zarm</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031411.webp" alt="" /></p>
+<p>基于 React 的企业级移动端 UI 组库。（<a href="https://github.com/ruanyf/weekly/issues/2982">@dominicleo</a> 投稿）</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://www.useragents.me/">useragents.me</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022121803.webp" alt="" /></p>
+<p>这个网站提供各种最新版本浏览器的 User Agent 字符串。</p>
+<p>2、<a href="https://www.webrcade.com/">webЯcade</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202209/bg2022092604.webp" alt="" /></p>
+<p>一个<a href="https://github.com/webrcade/webrcade">开源</a>网站，让你在网页玩老游戏机（任天堂、世嘉等）的游戏，可以自己上传游戏 ROM。</p>
+<p>3、<a href="https://google.github.io/comprehensive-rust/">Comprehensive Rust</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022122211.webp" alt="" /></p>
+<p>安卓团队编写的为期四天的 Rust 课程，从基本语法到高级主题，最后一天还会讲到 Rust 如何用于安卓开发。</p>
+<p>4、<a href="https://github.com/pkivolowitz/asm_book">汇编语言编程导论</a>（A Gentle Introduction to Assembly Language Programming）</p>
+<p>一本英文的开源教程，向 C/C++ 学习者介绍 ARM 64 的汇编语言。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://www.sfgate.com/obscuresf/article/oldest-webcam-watches-san-francisco-17467544.php">最古老的直播摄像头</a></p>
+<p>旧金山州立大学的学生可能不知道，该校行政大楼的四楼有一个世界最古老的直播摄像头，直到今天，还在互联网上直播校园状况。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022100402.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022100403.webp" alt="" /></p>
+<p>1994年，一个研究生架设了这个摄像头，最初只是为了在网上查看，办公室咖啡壶是满的还是空的，需不需要自己带咖啡。</p>
+<p>后来，他开始直播校园。随着他的留校，这一播就是二十多年，2019年的时候，他宣布将下线这个摄像头。</p>
+<p>新闻媒体报道了这件事，校方最终决定接管它，然后就一直直播到现在。</p>
+<p>大家可以在 <a href="https://fogcam.org/">FogCam 网站</a>上观看它的直播。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202210/bg2022100407.webp" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://thebulletin.org/2022/09/gone-with-the-winds-what-happens-if-there-is-a-global-terrestrial-stilling/">如果风静止了</a></p>
+<p>风力发电正在全世界如火如荼地发展。</p>
+<p>但是，风力发电有一个前提，就是必须有源源不断的风。那么，风可能出现静止吗？</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031413.webp" alt="" /></p>
+<p>事实上，2021年的夏秋之际，欧洲大部分地区就发生了“风旱”。许多地方的风速比年平均水平至少慢了约15%，英国出现了60年来风力最小的时期。</p>
+<p>前年9月，风电发电还占英国发电量的18%，但到了去年9月，这一比例骤降至2%。为了弥补能源缺口，英国被迫重启了两座封存的煤电厂。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031414.webp" alt="" /></p>
+<p>一项研究表明，全世界的风速正在下降，从1978年到2010年，风速每十年下降2.3%。不过，2010年到2019 年又有所反弹。从每小时7英里增加到7.4英里。</p>
+<p>尽管如此，科学家还是认为，未来的风速将不断放缓，到2100年全球平均风速可能下降多达10%。</p>
+<p>其中的原因，涉及到了一个根本的问题：为什么地球上有风？</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023031415.webp" alt="" /></p>
+<p>地球出现风带，主要原因是温度不均匀：两极很冷，热带很暖。这种温差导致了空气流动，从而产生了风。</p>
+<p>但是由于全球变暖，两极与热带的温差正在减小，这是因为两极（尤其是北极）的变暖速度比热带地区快。</p>
+<p>另一个风速变小的原因，可能是“地球表面粗糙度”的增加。世界各地的城市建筑的数量和规模正在增加，这阻挡了风的流动。</p>
+<p>风速变小会产生严重后果，不仅仅影响到风力发电。（1）强风可以缓解城市污染，用新鲜空气代替停滞的空气。（2）较慢的风会让热浪难以缓解。（3）慢风也使飞机更难起飞，因为飞行员依靠逆风升空。希腊的一个机场，由于逆风减缓和气温上升，空客320在过去30年中，最大起飞重量减少了4吨。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>艺术家看到的不是世界的本来面目，而是一些更丰富、更简单、更强大的东西。</p>
+<p>艺术作品不是为了让观众重温现实，而是从现实中创造出一些东西，把一种更强烈的情绪传递给观众。</p>
+<p>&ndash; <a href="https://simonsarris.substack.com/p/photo-editing-respecting-context">《照片编辑》</a></p>
+<p>2、</p>
+<p>一种普遍存在的误解是，不应该吃过期食物。</p>
+<p>但是实际上，保质期大多数时候只表示食物何时最新鲜，而不是何时不可食用，跟食品安全关系不大。刚刚过期的食品就扔掉，会造成很大的浪费。</p>
+<p>&ndash; <a href="https://www.kiteandkeymedia.com/videos/common-myths-about-food-debunked/">《关于食物的四个常见误解》</a></p>
+<p>3、</p>
+<p>我不考虑使用投票来选择政策。我认为这表明了领导人思想上的虚弱，无法规划路线。</p>
+<p>媒体鼓励人们走哪条路，你就跟着走。你就不是领导者。</p>
+<p>&ndash; 李光耀</p>
+<p>4、</p>
+<p>行动是绝望的解药。（Action is the antidote to despair.）</p>
+<p>&ndash; <a href="https://www.brainyquote.com/quotes/joan_baez_132657">琼·贝兹</a>，美国音乐家</p>
+<p>5、</p>
+<p>一些软件公司可以将最简单的软件项目，变成一系列艰苦的流程，包含无休止的会议，以及大量“相关者”的参与。</p>
+<p>这些公司通过每周必须完成的一系列仪式和流程，消灭掉了编程的乐趣和生产力。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=34368904">Hacker News 读者</a></p>
+<h2 id="历史上的本周">历史上的本周</h2>
+<p><a href="http://www.ruanyifeng.com/blog/2022/03/weekly-issue-199.html">俄罗斯的 HTTPS 证书问题</a>（2022 #199）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2021/03/weekly-issue-149.html">新能源汽车，谁会是赢家？</a>（2021 #149）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2020/03/weekly-issue-97.html">那些为了考试拼搏的年轻人</a>（2020 #97）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2019/03/weekly-issue-47.html">吃播算不算正式工作？</a>（2019 #47）</p>
+<h2 id="鸣谢">鸣谢</h2>
+<p>周刊得到国内新一代知识管理与协作平台 <a href="https://flowus.cn?promotionChannel=GW_RYF_01">FlowUs</a> 的帮助，深表感谢。</p>
+<p><a href="https://flowus.cn?promotionChannel=GW_RYF_01">FlowUS</a>  = 文档 + 表格 + 网盘。你可以用它写文档、做主页、管理数据、存储文件等等。</p>
+<p>每一期周刊同时发布在<a href="https://ruanyf-weekly.flowus.cn/?code=FLOWUS&amp;promotionChannel=WX_RYF_00"> FlowUs 专栏</a>，欢迎大家也去开通自己的专栏和主页。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023030205.webp" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 263 期）：开源软件如何赚钱？ | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 263 期）：开源软件如何赚钱？</h1>
+        
+        <p class="article-meta"><time datetime="2023-07-21">2023年07月21日</time></p>
+        <p class="article-meta">每周分享第 263 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-263.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。另有<a href="https://github.com/ruanyf/weekly/issues/3222">《谁在招人》</a>服务，发布程序员招聘信息。合作请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072012.webp" alt="" /></p>
+<p>秘鲁首都利马是一个神奇的城市，建在面向太平洋的悬崖之上。要去海滩，还要下山。（<a href="https://www.instagram.com/p/CufbbVXPtA8/">via</a>）</p>
+<h2 id="开源软件如何赚钱">开源软件如何赚钱？</h2>
+<p>众所周知，开源软件很难赚钱，尤其是 GPL 许可证的代码。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071602.webp" alt="" /></p>
+<p>GPL 规定，必须向使用者提供源码，并且使用者有权重新发布源码。</p>
+<p>这就是说，<strong>别人可以免费分发你的软件</strong>，所以你无法靠出售软件获利。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071706.webp" alt="" /></p>
+<p><strong>既然卖不了软件，那么能不能卖服务呢</strong>，出售代码的支持、定制、咨询服务？</p>
+<p>我一直认为是可以的。证据就是有一家软件公司，依靠软件支持服务，赚到了大钱，还上市了。</p>
+<p>这家公司就是红帽公司，它出售 Linux 企业级支持和咨询服务，1999年成功上市，2019年被 IBM 以340亿美元的高价收购。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071603.webp" alt="" /></p>
+<p>但是，这个成功故事在上个月戛然而止。突然之间，所有人惊觉，<strong>软件客服的商业模式再也行不通了</strong>。</p>
+<p>下面我就来说说，到底发生了什么事。</p>
+<p>红帽的主要产品，就是它自己的 Linux 发行版，叫做 RHEL（Red Hat Enterprise Linux 的缩写）。它卖的是这个发行版的支持服务。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071707.webp" alt="" /></p>
+<p>根据 GPL 许可证，它必须免费提供源码，所以<strong>市场上有很多它的克隆版</strong>。那些不愿意买红帽服务的公司，就用克隆版，很多互联网大厂都这样做。</p>
+<p>以前，最流行的红帽克隆版是 CentOS。它甚至比红帽本身的使用量都要大。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071708.webp" alt="" /></p>
+<p>自从红帽被 IBM 收购以后，就觉得克隆版对生意的冲击太大了。它就收购了 CentOS，并在两年前把它停掉，改成自家的测试版，起名为 CentOS Stream，等于让社区帮它找 Bug。</p>
+<p>这件事让很多人不爽，但是红帽的源码是公开的，一个克隆版没了，那就再推其他克隆版。现在最流行的克隆版有两个：Alma Linux 和 Rocky Linux。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071710.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071711.webp" alt="" /></p>
+<p>上月发生的事情就是，红帽公司<a href="https://www.redhat.com/en/blog/furthering-evolution-centos-stream">突然宣布</a>：<strong>源码不再公开了，只向索要源码的客户私下提供</strong>。</p>
+<p>这个声明像炸弹一样，在业界炸开了锅。开源世界里面，从来没人这么干过。</p>
+<p>大家仔细分析以后，发现这居然符合 GPL 许可证。因为 GPL 只要求向使用者提供源码，红帽的使用者都是付费客户，所以它可以私下提供源码。</p>
+<p>问题是你成为红帽客户的时候，必须签一个《用户协议》，里面明确规定，<strong>如果你重新发布源码，红帽有权终止用户合同</strong>。这等于说，发布克隆版的人，从此就无权获得源码了，从而实际上禁止了克隆版。</p>
+<p>这一招真是高明啊，既没有违反 GPL，又消灭了克隆版。红帽一定是找了很多律师，反复研究才想出这种做法。</p>
+<p>这件事对红帽的长期影响，还有待观察。但是，至少说明了一点，<strong>红帽觉得“客服模式”赚的钱太少了，只有禁掉克隆版，才能赚更多的钱</strong>。</p>
+<p>红帽是业内唯一的开源软件“客服模式”的成功案例，就这样终结了。一家开源软件公司，通过客服赚到大钱，以前还有红帽，以后就绝迹了。</p>
+<p>国外媒体总结了<a href="https://opencoreventures.com/blog/2023-04-red-hat-model-only-worked-red-hat/">几个原因</a>，<strong>为什么“客服模式”行不通</strong>，我觉得说得非常好。</p>
+<p>（1）客服模式利润微薄，客户不愿意为支持服务支付高价。</p>
+<p>（2）客服很难扩展。客户可能会大量使用软件，但是只购买一份服务。</p>
+<p>（3）客服模式无法实现高速增长。软件越易用越可靠，用户就越不需要购买支持服务。“如果你出色构造了软件，你最终会让自己失业，因为客户可以在没有帮助的情况下使用它。”</p>
+<p>（4）客服模式很难获得早期收入。创业公司好不容易找到100个初始用户，其中可能只有几个会购买服务，也许一个都没有。</p>
+<p>因此，<strong>开源软件的盈利模式，一定不是客服，而是其他模式</strong>。不过，今天已经写得太长了，这个话题只好留到下周。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、<a href="https://peppe.rs/posts/plain_text_journaling/">待办显示屏</a></p>
+<p>一个国外程序员使用平板显示器，制作了一个“待办事项显示屏”。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202306/bg2023062003.webp" alt="" /></p>
+<p>每天放在桌子上，提醒自己要办什么事，进度如何。</p>
+<p>显示屏的上部显示最近几个月的日历，下面是每周的待办事项和进度。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202306/bg2023062004.webp" alt="" /></p>
+<p>这个设备成本很低，操作又很简单，可以取代传统的日历和台历，非常实用，也许还有商业潜力。</p>
+<p>2、<a href="https://edition.cnn.com/style/india-largest-office-building-surat-diamond-bourse/index.html">世界最大办公楼</a></p>
+<p>印度建造了一座世界最大办公楼，位置在孟买以北约250公里的苏拉特。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072001.webp" alt="" /></p>
+<p>那里是世界钻石加工中心，全球约90%的钻石在那里切割。这次新建的就是钻石交易所。</p>
+<p>整栋大楼的建筑面积约66万平方米，一共9个矩形单元通过中央走廊连在一起。整个建筑物高为15层楼，可以容纳65,000人同时办公。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072002.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072003.webp" alt="" /></p>
+<p>在它之前，世界最大的办公楼是美国国防部五角大楼，建筑面积61万平方米。世界最大的建筑物则是成都的环球中心，建筑面积176万平方米。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072004.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072005.webp" alt="" /></p>
+<p>3、<a href="https://petapixel.com/2023/07/13/legal-lullabies-puts-you-to-sleep-by-reading-social-media-terms-of-use/">法律摇篮曲</a></p>
+<p>互联网大厂的用户协议，充满了法律术语，冗长而乏味。如果仔细阅读，让人昏昏欲睡。</p>
+<p>有人想到一个点子，邀请配音演员来朗读这些协议，把录音放在网上，用来助眠。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072008.webp" alt="" /></p>
+<p>如果你睡不着，不妨去 <a href="https://www.zzzuckerberg.com/">zzzuckerberg.com</a>，听听这些录音，也许很快就会睡着。</p>
+<p>Instagram 协议的音频长达51分钟，TikTok 长约38分钟。</p>
+<p>4、<a href="https://www.digitalmusicnews.com/2023/07/12/ai-generated-music-platform-mubert-says-catalog-now-tops-100-million-songs/">AI 音乐平台</a></p>
+<p>各种音乐网站收录的，都是人类创造的音乐。现在有一个网站，专门收录 AI 创作的音乐。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072009.webp" alt="" /></p>
+<p>这个叫做 <a href="https://mubert.com/">Mubert</a> 的网站表示，已经收录了1亿首曲子，跟世界最大音乐网站 Spotify 的规模相当，你可以无穷无尽地收听。</p>
+<p>AI 音乐没有版权，用户可以任意使用，包括商用。这个网站还提供工具，让你按照自己的喜好生成音乐，添加到它的曲库。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://github.blog/2023-07-12-introducing-passwordless-authentication-on-github-com/">GitHub 支持无密码登录</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071401.webp" alt="" /></p>
+<p>GitHub 宣布，本月开始支持 Passkey（无密码登录），本文教你怎么打开这个功能。</p>
+<p>2、<a href="https://www.noahpinion.blog/p/interview-chris-miller-historian">《芯片战争》作者专访</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071202.webp" alt="" /></p>
+<p>专访畅销书《芯片战争》作者克里斯·米勒，谈美国芯片战略和中美芯片竞争。</p>
+<p>3、<a href="https://developer.mozilla.org/en-US/docs/Web/API/structuredClone">structuredClone() 简介</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202305/bg2023052814.webp" alt="" /></p>
+<p>JavaScript 自带的拷贝，都是浅拷贝，现在浏览器引入一个全局函数<code>structuredClone()</code>，用来深拷贝。</p>
+<p>4、<a href="https://plus.maths.org/content/circles-rolling-circles">圆圈滚动问题</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202305/bg2023052903.webp" alt="" /></p>
+<p>上图中，两个圆的半径分别是 r 和 4r。小圆沿着大圆滚动一圈，请问这时小圆自身滚动了几圈？（提示：答案不是4圈。）</p>
+<p>5、<a href="https://engineering.kablamo.com.au/posts/2023/media-queries-and-responsive-design/">CSS Media Query 入门</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202305/bg2023052904.webp" alt="" /></p>
+<p>本文是 CSS 入门科普文章，介绍如何使用 Media Query 完成响应式设计，写得很清晰。</p>
+<p>6、<a href="https://sites.google.com/a/chromium.org/dev/developers/fast-intro-to-git-internals">Git 内部原理的快速介绍</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202306/bg2023061803.webp" alt="" /></p>
+<p>Chrome 团队工程师写的 Git 原理简单介绍，理清 Git 的一些基本概念。</p>
+<p>7、<a href="https://samwho.dev/hashing/">哈希是什么</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202306/bg2023062103.webp" alt="" /></p>
+<p>一篇入门科普文章，图文并茂，通俗解释哈希的原理，怎么使用，写得很好。</p>
+<p>8、<a href="https://mp.weixin.qq.com/s/Ebvjy132eRDOmcIL5cmxJw">socket 到底是个啥</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071902.webp" alt="" /></p>
+<p>socket 的概念往往是常见面试问题，作者介绍了 socket 的使用场景和底层实现。（<a href="https://github.com/ruanyf/weekly/issues/3274">@xxxsalted</a> 投稿）</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/ddworken/hishtory">hiSHtory</a></p>
+<p>一个强大的 Shell 操作历史的搜索工具，可以替代 Bash 内置的 ctrl-r 搜索。</p>
+<p>2、<a href="https://github.com/vasanthv/talk">talk</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202212/bg2022122401.webp" alt="" /></p>
+<p>一个开源的 Web 应用，基于 WebRTC 技术的多人群聊软件，支持视频、音频和文字聊天。</p>
+<p>3、<a href="https://tinyvg.tech/">TinyVG</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023032101.webp" alt="" /></p>
+<p>SVG 图片格式的二进制版本，可以大大缩小 SVG 文件体积。</p>
+<p>4、<a href="https://github.com/cfour-hi/gitstars">Gitstars</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072007.webp" alt="" /></p>
+<p>一个开源的在线服务，用来管理你在 GitHub 打过星标的项目（收藏的项目）。（<a href="https://github.com/ruanyf/weekly/issues/3286">@cfour-hi</a> 投稿）</p>
+<p>5、<a href="https://github.com/palxiao/poster-design">迅排设计</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072006.webp" alt="" /></p>
+<p>开源的在线海报图片设计器。（<a href="https://github.com/ruanyf/weekly/issues/3284">@palxiao</a> 投稿）</p>
+<p>6、<a href="https://github.com/linyimin0812/spring-startup-analyzer">Spring Startup Ananlyzer</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071904.webp" alt="" /></p>
+<p>Spring 性能分析工具，收集启动过程数据，生成交互式分析报告。（<a href="https://github.com/ruanyf/weekly/issues/3280">@linyimin0812</a> 投稿）</p>
+<p>7、<a href="https://github.com/hughfenghen/WebAV">WebAV</a></p>
+<p>Chrome 94 开放了 WebCodecs API，意味着 JS 也能处理音视频了。这是一个实验性项目，尝试提供简单易用的 API 在浏览器中处理音视频数据。（<a href="https://github.com/ruanyf/weekly/issues/3282">@hughfenghen</a> 投稿）</p>
+<p>8、<a href="https://github.com/xxd763795151/kafka-console-ui">kafka-console-ui</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071901.webp" alt="" /></p>
+<p>一款轻量级的 Kafka 可视化管理平台。（<a href="https://github.com/ruanyf/weekly/issues/3272">@xxd763795151</a> 投稿）</p>
+<p>9、<a href="https://github.com/jkfran/killport">killport</a></p>
+<p>一个 Rust 语言写的命令行程序，可以杀死占用指定端口的进程。</p>
+<p>10、<a href="https://github.com/GyulyVGC/sniffnet">Sniffnet</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202305/bg2023051903.webp" alt="" /></p>
+<p>一个跨平台桌面应用，用来追踪监控网络流量，并以可视化的方式呈现。</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://triviance.com/">Triviance</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202304/bg2023042502.webp" alt="" /></p>
+<p>使用 ChatGPT 生成的智力测验的题库，超过100万题，都是四选一的选择题，还分成不同的主题。</p>
+<p>2、<a href="https://labs.kagi.com/fastgpt">FastGPT</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071601.webp" alt="" /></p>
+<p>新兴搜索引擎 Kagi 推出的 GPT 聊天，免费使用，响应很快，支持中文。</p>
+<p>3、<a href="https://www.toolai.io/">ToolAI</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023071903.webp" alt="" /></p>
+<p>AI 网站目录，收录了全球5000个 AI 网站。（<a href="https://github.com/ruanyf/weekly/issues/3276">@littledot2020</a> 投稿）</p>
+<p>4、<a href="https://wesmckinney.com/book/">Python 数据分析（第三版）</a>（Python for Data Analysis）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202207/bg2022070305.webp" alt="" /></p>
+<p>一本英文教材，最新的第三版，讲授 Python 数据分析的初步知识，免费阅读。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://mossandfog.com/incredible-photos-show-the-underside-of-icebergs/">冰山的底部</a></p>
+<p>人们总是说，冰山露出水面的部分不到20%。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012102.webp" alt="" /></p>
+<p>一个德国的水下摄影师，特意前往格陵兰，拍摄水下的冰山。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012103.webp" alt="" /></p>
+<p>她拍到了很多震撼的冰山底部的照片。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012104.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012105.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012107.webp" alt="" /></p>
+<p>2、<a href="https://www.iflscience.com/the-biggest-fossil-flower-ever-found-in-amber-has-a-new-name-67049">最大的化石花</a></p>
+<p>1872年，在北欧波罗的海附近，发现了一块距今3000多万前的琥珀化石。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012108.webp" alt="" /></p>
+<p>令人震惊的是，这块化石里面有一朵完整的花。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202301/bg2023012109.webp" alt="" /></p>
+<p>这是已知最大的化石花，花瓣长达28毫米，我们可以看到它在3000多万年前盛开的样子。</p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://perell.com/essay/adulting-fast-and-slow/">成年期的快与慢</a></p>
+<p>我们生活在这样一个社会：小孩子像成年人一样老成，而成年人像小孩子一样幼稚。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072010.webp" alt="" /></p>
+<p>现在的孩子们比以前更容易接触到成年人的世界，因此他们更早成人化。</p>
+<p>从很小的年龄起，他们就在视频网站观看暴力和战争，在社交网络上看到性感和暴露的照片和视频。</p>
+<p>然而，当孩子们成年以后，他们往往无法实现经济独立，也没有机会承担足够的责任。</p>
+<p>结果，整个社会的文化就变得很幼稚，成年人感到无法做出承诺，即使承诺了也缺乏信心，对以后的生活感到难以把握。</p>
+<p>他们的行事方式和处事态度，就像还在青少年时期。</p>
+<p>2、<a href="https://web.archive.org/web/20130203112329/http://dev.hasenj.org/post/3272592502">JSLint 的许可证</a></p>
+<p>JSON 格式的发明者道格拉斯（Douglas Crockford），在一次演讲中讲了一件趣事。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202307/bg2023072011.webp" alt="" /></p>
+<p>他在自己开发的 JSLint 软件许可证中设置了一个条款，要求“该软件应该用于善，而不是恶“。</p>
+<p>后来，他收到一封来自 IBM 公司律师的信。</p>
+<p>律师说，他们想使用 JSLint，但是这个许可证让他们有点为难。他们很确定，IBM 不会用它来作恶，但没法保证 IBM 客户的行为。因此询问道格拉斯，能不能给他们一个不同的许可证？</p>
+<p>道格拉斯回信：“可以。我允许 IBM、它的客户、合作伙伴使用 JSLint 作恶。”</p>
+<p>律师回信说：“非常感谢，道格拉斯！”</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>我们家的洗碗机经常坏，上一次是我自己修好的，这一次修不好了。</p>
+<p>一连10天，我都用手洗碗。虽然我小时候就是这样做，但是洗碗机让我忘了，自己曾经多么讨厌这件事。好在新洗碗机终于到了。</p>
+<p>&ndash; <a href="https://social.kernel.org/notice/AUkTPiXrpnBynp8vS4">莱纳斯·托沃兹</a>，Linux 创始人</p>
+<p>2、</p>
+<p>Linux 桌面环境，可能永远不会普及到大众。因为 Linux 使用者真正关心的是能否完成工作，他们对于桌面的要求，只要拥有浏览器即可满足，所以社区没有足够动力改善桌面体验。</p>
+<p>&ndash; <a href="https://antipaucity.com/2013/06/04/this-is-not-the-year-of-the-linux-desktop/">《今年不是 Linux 桌面年》</a></p>
+<p>3、</p>
+<p>网络社区最不能容忍的，就是大量持续涌入的陌生人，这让社区变成一个类似火车站的地方。成员的行为模式变得就像路过，人来人往，没有真正的归属感。</p>
+<p>&ndash; <a href="https://www.marginalia.nu/log/82_killing_community/">《杀死社区》</a></p>
+<p>4、</p>
+<p>以太坊发明者 Vitalik Buterin 在创建以太坊之前，是一名记者，为比特币杂志撰稿。
+他（或者他的父亲）说，他们相信写作帮助他理清了思想。</p>
+<p><a href="https://news.ycombinator.com/item?id=36793106">&ndash; Hacker News 读者</a></p>
+<h2 id="历史上的本周">历史上的本周</h2>
+<p><a href="http://www.ruanyifeng.com/blog/2022/07/weekly-issue-216.html">极简主义的胜利</a>（2022 #216）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2021/07/weekly-issue-166.html">视频学习胜过读书吗？</a>（2021 #166）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2020/07/weekly-issue-116.html">世界的未来就是一个火药桶</a>（2020 #116）</p>
+<p><a href="http://www.ruanyifeng.com/blog/2019/07/weekly-issue-66.html">创业不是零和游戏</a>（2019 #66）</p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

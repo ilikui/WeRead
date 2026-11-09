@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 159 期）：游戏开发者的年薪 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 159 期）：游戏开发者的年薪</h1>
+        
+        <p class="article-meta"><time datetime="2021-05-21">2021年05月21日</time></p>
+        <p class="article-meta">每周分享第 159 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-159.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志开源（GitHub: <a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a>），欢迎提交 issue，投稿或推荐科技内容。</p>
+<p>周刊讨论区的帖子<a href="https://github.com/ruanyf/weekly/issues/1747">《谁在招人？》</a>，提供大量程序员就业信息，欢迎访问或发布工作/实习岗位。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052012.jpg" alt="" /></p>
+<p>重庆市很多山地，地形复杂，产生了特有的奇观：被高架道路团团围住的楼盘。（<a href="https://www.instagram.com/p/CO6iPjJlIvs/">via</a>）</p>
+<h2 id="本周话题游戏开发者的年薪">本周话题：游戏开发者的年薪</h2>
+<p>最近，推特上面有很多欧美的游戏开发者，晒自己的薪水，使用 <a href="https://twitter.com/hashtag/gamedevpaidme">#GameDevPaidMe</a> 这个标签就能看到，从中可以了解国外程序员的收入。</p>
+<p>下面是一个美国开发者的发言。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051102.jpg" alt="" /></p>
+<p>他有超过十年的开发经验，年薪是20多万美元。这还是在西雅图，如果在湾区，工资可能还会再高一些。这跟我听说的差不多，美国高级程序员的年薪，一般都会超过20万美元（约130万人民币）。</p>
+<p>我没想到的是，欧洲程序员的年薪，比美国少非常多。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051103.jpg" alt="" /></p>
+<p>上面这个英国开发者，作为高级程序员，年薪居然才4万英镑（约36万人民币）。他入行时，更是少到1.5万英镑（约14万人民币）。欧洲其他国家的情况也差不多，年薪也就几万欧元，如果是东欧国家（比如波兰），薪水就更低了。</p>
+<p>这就是令我吃惊的地方， <strong>西欧国家的人均 GDP 远高于中国，但是程序员的收入居然与中国差不多，甚至还低于中国。</strong></p>
+<p>我敢说，国内高级游戏开发者的年薪，肯定不止4万英镑（36万人民币）。我举一个例子，去年有一条<a href="https://finance.sina.com.cn/tech/2021-03-05/doc-ikftpnnz2743455.shtml">新闻</a>，腾讯起诉了两名90后前员工，他们都是游戏开发，离职后违反了竞业条款，加入了竞争对手。为了计算违约金，法院的<a href="https://www.qixin.com/lawsuit/923ec0d1-1590-4ae4-a5c7-85d17c1cddcb/603d1ae1ebf551ed45008c1f">判决书</a>详细列出了薪资水平。</p>
+<blockquote>
+<p>吉某某于2019年3月4日提出辞职，工作至2019年4月1日。2018年4月至2019年3月期间，吉某某每月固定工资32,240元，腾讯公司于2018年11月以&quot;税前发放&quot;名义支付吉某某344.38元，2019年2月支付吉某某其他奖金113.08元。腾讯公司另发放2018年年终奖203,240元。</p>
+</blockquote>
+<p>按照上面列出的数字，工资 + 年终奖接近60万人民币。这比英国游戏开发者的收入，高出了一大截。这个还只是腾讯的普通开发，算不上骨干程序员。</p>
+<p><strong>结论就是，中国程序员的年薪已经不低了，虽然不如美国，但是一点不输给欧洲，高级程序员的收入其实要比欧洲高得多。</strong> 如果人民币以后升值，薪水差异就会更大。我在推特上说，如果以国内游戏业的薪水去欧洲招人，可以招到非常好的程序员。网友在底下评论，人家的薪水是以每天工作8小时计算的，这也是事实。</p>
+<p>以前我们总是说，中国的劳动力成本低，这种说法已经不成立了，现在欧洲程序员反而比国内更便宜。这样的一个直接后果就是，外包行业在国内搞不下去了，软件外包就是比谁的成本低，国内的外包行业已经在萎缩了，倒是收费高昂的软件咨询公司越来越多。</p>
+<p>对于年轻程序员来说，这也是前所未有的挑战。你的工资高了，但是面对的竞争也强了，你是跟全世界的优秀人才在竞争。如果国外程序员比你优秀，还比你便宜，那么雇主可能不会选择你，反正可以远程开发。所以，大家要有世界眼光，不要满足于跟周围的人比，要以世界水平来要求自己。</p>
+<h2 id="深度剖析-react-源码">深度剖析 React 源码</h2>
+<p>学习前端开发时，很多同学都有想法，想啃一啃框架的源码。</p>
+<p>这是很好的想法。如果能看懂源码，用起来就会得心应手，个人能力也是很大提升。万一还能向框架仓库提交代码，成为贡献者，那更是个人的荣耀和职业生涯的成就。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052006.jpg" alt="" /></p>
+<p>首当其冲的，就是 React 的源码。它是全世界最流行的前端框架，应用最广，包含了很多重要概念（比如虚拟 DOM、hooks、fiber 等），多端适用，很有学习价值。</p>
+<p>但是，React 源码量级实在是太大了（压缩后接近 300KB），内部构成非常复杂。很多同学第一次打开源码，就被“劝退”了，因为根本找不到代码入口。就算硬着头皮读下去，也是如坠云雾之中。</p>
+<p>就算这样，考虑到下面几点，我还是鼓励大家啃一下 React 源码。（1）大厂面试会问到 React 原理，没看过源码，很难深入理解。（2）读源码能提升解决 bug 和性能优化能力。（3） React 框架本身是一个非常好的学习资料，可以学到怎么写出规范的和可维护的代码。（4）读懂源码可以证明你的潜力。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052007.jpg" alt="" /></p>
+<p>本周的课程资料就是 <strong>《深度剖析 React 17 源码资料包》</strong> ，由前京东资深前端工程师高少云老师主讲。这份资料从简单的手写 mini-react 入手，再到复杂的fiber、hooks，深入解读 React 源码。</p>
+<p>课程主要内容如下。希望能够引导大家，真正入门 React 源码。</p>
+<blockquote>
+<ul>
+<li>第一课：《初步解读 React 的工作原理》，讲解虚拟 DOM 和 JSX 的源码实现。</li>
+<li>第二课：《Fiber 的背景与实现》，讲解 Fiber 架构。</li>
+<li>第三课：《深入解读 Hooks》：深度解读 Hooks 源码。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052011.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052009.jpg" alt="" /></p>
+<p>现在只需要微信扫描下方二维码，就可以 <strong>0 元</strong> 获得《深度剖析React源码》资料包。有意掌握 React 的同学，不妨学学看。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052010.jpg" alt="" /></p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、</p>
+<p><a href="https://3dprintingindustry.com/news/desktop-metal-redefines-woodworking-with-new-wood-3d-printing-technology-189752/">一家美国 3D 打印公司</a>推出了木纤维打印，可以 3D 打印出木制品。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050810.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050811.jpg" alt="" /></p>
+<p>2、</p>
+<p><a href="https://finance.sina.cn/7x24/2021-05-14/detail-ikmyaawc5198964.d.html">国家广电总局</a>发布统计，我国网民日均刷视频约100分钟。这个时长应该已经超过了刷网页的时长。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051403.jpg" alt="" /></p>
+<p>3、</p>
+<p><a href="https://news.sina.com.cn/c/2021-05-14/doc-ikmxzfmm2458567.shtml">山东省和河南省</a>签订《黄河生态保护协议》，规定从河南流入山东的黄河水，如果水质改善一个等级，山东给予河南6000万元补偿资金；如果恶化一个等级，河南给予山东6000万元补偿资金。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051701.jpg" alt="" /></p>
+<p>4、</p>
+<p><a href="https://www.npr.org/2021/05/13/996299367/how-to-stop-ransomware-attacks-1-proposal-would-prohibit-victims-from-paying-up">美国政府</a>正在考虑通过一项新法律，如果企业遭到勒索软件攻击，法律将禁止向勒索者支付赎金。政府希望让勒索者无利可图，从而停止攻击。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051502.jpg" alt="" /></p>
+<p>5、</p>
+<p><a href="https://www.h2-view.com/story/hyundai-nexo-breaks-world-record-for-longest-distance-travelled-in-a-fcev/">一位澳大利亚赛车手</a>创下了氢动力汽车续航的世界纪录，他使用一辆现代牌氢动力汽车，单次续航887.5公里，共消耗了6.27公斤的氢气。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051901.jpg" alt="" /></p>
+<p>6、</p>
+<p>巴勒斯坦和以色列最近爆发军事冲突，下面是一张5月14日凌晨的照片。右侧是巴勒斯坦发射的火箭弹，左侧是以色列“铁穹”（ Iron Dome）防御系统发射的拦截导弹，两方对射，看上去非常壮观。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051811.jpg" alt="" /></p>
+<p>7、</p>
+<p><a href="https://finance.sina.com.cn/chanjing/gsnews/2021-05-18/doc-ikmyaawc5978539.shtml">北京大兴</a>建成全球最大的加氢站，日加氢量可达4.8吨，共有8台加氢机、16把加氢枪。一辆总重4.5吨的氢燃料电池货车，只需加氢3分钟，就能续航350公里。氢能每公斤30元，与传统货车的加油成本基本相当。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051802.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051803.jpg" alt="" /></p>
+<p>8、<a href="https://www.wsj.com/articles/berkshire-hathaways-stock-price-is-too-much-for-computers-11620168548">32位股价不够用</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050506.jpg" alt="" /></p>
+<p>美国最贵的股票，目前是巴菲特的伯克希尔·哈撒韦公司 ，过去一年股价不断上涨，已经达到了421,000美元一股。</p>
+<p>这给纳斯达克股票市场造成了麻烦，因为交易所使用32位格式储存股价，能够记录的最大值是<code>2^32 - 1</code>（4,294,967,295）。其中，留出4位作为小数，所以能够记录的最高股价为429,496.7295美元。只要伯克希尔·哈撒韦公司再上涨2%，就会超出这个最高价。</p>
+<p>纳斯达克市场已经暂停了伯克希尔·哈撒韦公司的报价，开始升级系统。巴菲特曾经被问到，为什么不像大多数公司一样拆分股票，让股价变得便宜。他回答，这样会吸引来很多不老练的短期投资者，他们根本不知道自己在做什么，所以不会拆分股票。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://www.douban.com/people/xquizend/status/3421629287/">鸽子在我家窗口孵蛋</a>（中文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050701.jpg" alt="" /></p>
+<p>一对鸽子在阳台的空花盆筑了个简易巢，然后在里面下了两只蛋，并且孵了起来。作者观察了半个月，终于看到小鸟孵出来了。</p>
+<p>2、<a href="https://css-tricks.com/creating-non-rectangular-headers/">如何生成不规则边框的背景图</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050101.jpg" alt="" /></p>
+<p>本文介绍为一个网页元素添加不规则背景图（上图）的几种方法。</p>
+<p>3、<a href="https://blog.dnsimple.com/2019/01/two-years-of-squash-merge/">Git 的 squash 合并</a>（英文）</p>
+<p>Git 分支进行合并时，有多种合并方式：直进合并、非直进合并、递归合并和 squash 合并。最后一种 squash 合并，指的是把待合并的节点汇总成为一个新的提交。本文介绍这种合并方式。</p>
+<p>4、<a href="https://habr.com/ru/post/554334/">JavaScript 模块的代码重复性</a>（英文）</p>
+<p>作者做了一个实验，他新建了一个 Angular 的标准项目，分析 node_modules 目录里面安装的所有模块，对脚本文件的每一个函数计算哈希值，结果发现61%的函数是重复的，莫非大家都是从 StackOverflow 拷贝代码。</p>
+<p>5、<a href="https://brson.github.io/2021/05/02/rusts-most-unrecognized-contributor">Rust 的不知名贡献者</a>（英文）</p>
+<p>我们都知道，很多语言的创始人、主要贡献者是谁。但是，Rust 语言的主要贡献者是谁，大家却说不出来。本文介绍 Rust 语言背后的贡献者。</p>
+<p>6、<a href="https://joelcalifa.com/blog/tiny-wins/">微小变化带来的大收益</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050402.jpg" alt="" /></p>
+<p>作者讲了几个案例，都是网站细节的微小改进，带来用户体验的巨大改进，比如 GitHub 的 favicon 显示构建结果（上图）。</p>
+<p>7、<a href="https://ggcarvalho.dev/posts/montecarlo/">使用 Go 语言学习蒙特卡洛模拟</a>（英文）</p>
+<p>本文采用 Go 语言，使用各种小例子，讲解什么是蒙特卡洛模拟。</p>
+<p>8、<a href="https://www.cbsnews.com/news/semiconductor-chip-shortage-60-minutes-2021-05-02/">走进半导体巨头</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050301.jpg" alt="" /></p>
+<p>美国 CBS 电视网的著名新闻节目《60分钟》，最近播出了一期半导体特辑，访问英特尔和台积电的 CEO，报道芯片为什么会出现短缺。这是节目的文字稿。</p>
+<p>9、<a href="https://humanwhocodes.com/blog/2021/04/lazy-loading-property-pattern-javascript/">JavaScript 的延迟加载属性模式</a>（英文）</p>
+<p>如果一个对象的属性值需要非常昂贵的计算，我们可能希望，只有用到这个属性时，才对它求值。本文讨论这在 JavaScript 里面应该怎么实现，作者是著名的尼古拉斯·扎卡斯（Nicholas C.Zakas）。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://schemeflood.com/">Scheme flood</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051408.jpg" alt="" /></p>
+<p>大家用桌面浏览器访问这个网站，会列出你的电脑安装了什么应用（上图）。这样做的目的，是生成一个用户指纹，从而追踪用户，作者写了一篇详细的<a href="https://fingerprintjs.com/blog/external-protocol-flooding/">文章</a>，解释这是怎么实现的。（<a href="https://github.com/ruanyf/weekly/issues/1759">@jwenjian</a> 投稿）</p>
+<p>2、<a href="https://github.com/chanify/chanify/blob/main/README-zh_CN.md">Chanify</a></p>
+<p>一个开源的 iOS 设备消息推送工具，分为服务器和 iOS App 两个部分。安装以后，可以将文本/图片/文件等各种消息推送到 iOS 设备。（<a href="https://github.com/ruanyf/weekly/issues/1768">@wizjin</a> 投稿）</p>
+<p>3、<a href="https://github.com/osmoscraft/osmosfeed">osmos::feed</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050201.jpg" alt="" /></p>
+<p>一个通过 GitHub Actions 自动更新的 RSS 阅读器，每次更新后会发布成 GitHub Pages 的静态网页。（<a href="https://github.com/ruanyf/weekly/issues/1767">@chuanqisun</a> 投稿）</p>
+<p>4、<a href="https://apkinfo.online/">APK 在线分析</a></p>
+<p>一个在线工具，用来分析、修改 APK 文件（安卓应用安装包），以及提取 APK 图标。（<a href="https://github.com/ruanyf/weekly/issues/1765">@codemofa</a> 投稿）</p>
+<p>5、<a href="https://comebrowsewithme.com/">Come Browse With Me</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042810.jpg" alt="" /></p>
+<p>这个在线工具通过 WebRTC，可以将你的浏览器窗口分享给他人，也就是说，别人可以看到你在页面上的一举一动。</p>
+<p>6、<a href="https://readme.so/">readme.so</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050202.jpg" alt="" /></p>
+<p>一个 Web 工具，通过拖拉自动生成代码仓库的 README 文件。</p>
+<p>7、<a href="https://github.com/ficusjs/ficusjs">FicusJS</a></p>
+<p>一个轻量级的 Web Components 开发框架，用于快速开发 Web Components 组件。</p>
+<p>8、<a href="https://github.com/github/github-elements">github-elements</a></p>
+<p>这个仓库收集了 GitHub 发布的官方 Web Components 组件，目前有17个，都是 GitHub 官网实际在使用的项目。</p>
+<p>9、<a href="https://cv.devtool.tech/app">一纸简历</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051902.jpg" alt="" /></p>
+<p>使用 Markdown 编写简历的在线工具，支持模板与实时预览，可以导出为 PDF 文件。（<a href="https://github.com/ruanyf/weekly/issues/1756">@shfshanyue</a> 投稿）</p>
+<p>10、<a href="https://resume.mdedit.online/">木及简历</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051903.jpg" alt="" /></p>
+<p>编写简历的在线工具，与上一个软件类似，有多个模板可选择，源码见 <a href="https://github.com/hua1995116/react-resume-site">GitHub</a>。（<a href="https://github.com/ruanyf/weekly/issues/1760">@hua1995116</a> 投稿）</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://gist.github.com/steven2358/ba153c642fe2bb1e47485962df07c730">FFmpeg 操作备忘</a></p>
+<p>这个网页收集了 FFmpeg 一些常见操作的命令行写法。</p>
+<p>2、<a href="https://c9x.me/compile/bib/">业余编译器作者的学习资源</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042501.jpg" alt="" /></p>
+<p>该网页收集各种编译器相关的自学资源。</p>
+<p>3、<a href="http://js4ds.org">JavaScript 数据科学教程</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042406.jpg" alt="" /></p>
+<p>一本英文的 JavaScript 教程，免费阅读。从零基础的语法开始讲起，为数据研究人员提供必要的 JavaScript 知识。</p>
+<p>4、<a href="https://ipv6.stream/">IPv6 测试聚合站</a></p>
+<p>一个专门收集各种 IPv6 网络测试服务的网站。（<a href="https://github.com/ruanyf/weekly/issues/1764">@TulvL</a> 投稿）</p>
+<p>5、<a href="https://www.google.com/maps/d/viewer?mid=1H1x8jZs8vfjy60TvKgpbYs_grargieVw&amp;ll=42.83802071464017,-94.85800456249999&amp;z=2">Starlink 地面站分布图</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042613.jpg" alt="" /></p>
+<p>Starlink 的卫星上网，目前需要有地面站。网友在谷歌地图上建了一个图层，标出现阶段所有的地面站位置。亚洲一个都没有，所以国内就算有卫星天线，恐怕目前也无法使用 Starlink 卫星上网。</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://www.scientificamerican.com/article/the-art-of-mathematics-in-chalk/">数学家的黑板</a></p>
+<p>美国普林斯顿大学最近出版了一本<a href="https://press.princeton.edu/books/hardcover/9780691199221/do-not-erase">《数学家的黑板》</a>摄影集，收录了很多数学家的课堂板书。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042502.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042504.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042503.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042505.jpg" alt="" /></p>
+<p>2、<a href="https://devonzuegel.com/post/field-notes-miami">迈阿密的色彩</a></p>
+<p>迈阿密是美国南方的旅游胜地，是美国唯一一个外国出生的居民（58%）多于本土出生的居民的大城市。</p>
+<p>GitHub 的一个产品经理最近移居迈阿密，感叹这个城市的色彩，丰富得难以想象。她在自己网站上发布了许多照片，下面是其中的几张。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042310.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042309.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042308.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042311.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042307.jpg" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://twitter.com/zackkanter/status/1383494783591583749?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet">拉里·埃里森的回忆</a></p>
+<p>Oracle 公司的创始人拉里·埃里森（Larry Ellison）在回忆录《软件战争》（Softwar）里面，回忆了他跟比尔·盖茨的一段往事。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052004.jpg" alt="" /></p>
+<p>1993年，我打电话给比尔·盖茨，讨论了一些技术问题。我不同意他的观点，并解释了我的理由。比尔说：“我考虑一下，会给你回电话。”</p>
+<p>四小时后，比尔·盖茨回电话说：“我觉得你是对的，但是有几个地方，我还没有想通，你能解释一下 A、B 和 C 这几点吗？”</p>
+<p>我说：“比尔，你过去四个小时内一直在考虑这个吗？”</p>
+<p>他说，是的，这是一个重要的问题，我必须想通它，现在我们接着把它讨论清楚。</p>
+<p>我惊呆了。他投入时间和精力，反复思考这个问题，得出结论我是对的，他是错的。大多数人不愿承认自己是错的，比尔毫不犹豫就这样做了。他唯一关心的就是对和错。这使得他是一个非常危险的对手。</p>
+<p><strong>2、对于教育的三点思考</strong></p>
+<p>美国培训行业的一个创业者 David Perell，最近在他的邮件列表里面， 谈了对美国教育的三点感想。</p>
+<p>（1）表面上，美国人总是表现出来对教育很关心，学校暴露的各种运作问题都能上新闻媒体。但是，对于学生怎么学习、在学校里到底学到了什么，美国人却漠不关心。</p>
+<p>David Perell 认为，其实应该反过来，需要关心的是学生是否真的学到了东西，而对于学校的各种问题倒是可以漠不关心。</p>
+<p>（2）学生应该特别重视写作课。</p>
+<p>如果你不知道如何写作，可能就不知道如何思考。</p>
+<p>（3）老师们总是抱怨学生不听课，但是很少想一想，自己的讲课是否值得一听。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>机器学习模型的耗电量越来越大。目前，最复杂的模型 GPT-3，要使用 1,287 兆瓦的电能，相当于大型水电站的发电量，运行一次产生552公吨的二氧化碳排放量。</p>
+<p>&ndash; <a href="https://venturebeat.com/2021/04/29/google-led-paper-pushes-back-against-claims-of-ai-inefficiency/">《谷歌否认 AI 模型的低效率》</a></p>
+<p>2、</p>
+<p>很多创业公司是君主制，公司和创始人越来越难以区分，比如特斯拉公司。</p>
+<p>&ndash; <a href="https://www.axios.com/company-founders-elon-musk-tesla-stock-c4db4d28-d632-46bc-bf84-fa59c0f0b523.html">《创始人的控制溢价》</a></p>
+<p>3、</p>
+<p>创业公司的三个核心要素：团队，产品和市场。其中最重要的是市场，用户数量和增长率是决定性因素。创业公司失败的第一大原因就是缺乏市场。</p>
+<p>&ndash; <a href="https://pmarchive.com/guide_to_startups_part4.html">Marc Andreessen 的创业指南</a></p>
+<p>4、</p>
+<p>领先他人一年，你会致富；领先他人十年，你会发疯。</p>
+<p>&ndash; <a href="https://twitter.com/david_perell/status/1388121872332591105">David Perell</a></p>
+<p>5、</p>
+<p>我已将手机更改为黑白模式，有效防止了手机沉迷。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=27028620">Hacker News 读者</a></p>
+<h2 id="历史上的本周">历史上的本周</h2>
+<p>2020年（第 108 期）：<a href="http://www.ruanyifeng.com/blog/2020/05/weekly-issue-108.html">阵地战与奇袭战</a></p>
+<p>2019年（第 56 期）：<a href="http://www.ruanyifeng.com/blog/2019/05/weekly-issue-56.html">文科生为什么不容易就业？</a></p>
+<p>2018年（第 5 期）：<a href="http://www.ruanyifeng.com/blog/2018/05/weekly-issue-5.html">互联网时代，做一个好人是划算的</a></p>
+<h2 id="订阅">订阅</h2>
+<p>这个周刊每周五发布，同步更新在<a href="http://www.ruanyifeng.com/blog">阮一峰的网络日志</a>和<a href="http://weixin.sogou.com/weixin?query=%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97">微信公众号</a>。</p>
+<p>微信搜索“阮一峰的网络日志”或者扫描二维码，即可订阅。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202103/bg2021030402.jpg" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

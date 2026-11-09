@@ -1,0 +1,79 @@
+{{ define "title" }}Learn | {{ site.Title }}{{ end }}
+
+{{ define "extra-head" }}
+{{ $style := resources.Get "css/learn.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.6.0/dist/mermaid.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+{{ end }}
+
+{{ define "sidebar" }}{{ end }}
+
+{{ define "main" }}
+<section class="learn-page" id="learnPage"
+    data-gist-url="{{ site.Params.weread.gist_url | default `https://gist.github.com/ilikui/ef6b39d2648e666f47b129b54d3f09f7` }}"
+    data-comments-url="{{ site.Params.weread.gist_comments_url | default `https://api.github.com/gists/ef6b39d2648e666f47b129b54d3f09f7/comments` }}">
+    <header class="learn-page-head">
+        <div>
+            <p class="learn-kicker">PERSONAL STUDY NOTES</p>
+            <h1>Learn</h1>
+            <p class="learn-description">按日期整理的 Markdown 笔记与学习讨论</p>
+        </div>
+        <a class="learn-back-link" href="{{ `/weread/` | relURL }}">返回书架</a>
+    </header>
+    <div class="learn-toolbar">
+        <button class="learn-sidebar-toggle" id="learnSidebarToggle" type="button" aria-controls="learnTreePanel" aria-expanded="false">目录</button>
+        <div class="learn-view-tabs" role="tablist" aria-label="Learn 视图">
+            <button type="button" role="tab" id="learnNotesTab" aria-selected="true">笔记</button>
+            <button type="button" role="tab" id="learnCalendarTab" aria-selected="false">日历</button>
+        </div>
+        <a class="learn-gist-link" id="learnGistLink" target="_blank" rel="noopener noreferrer">打开 Gist ↗</a>
+    </div>
+    <div class="learn-layout">
+        <aside class="learn-tree-panel" id="learnTreePanel" aria-label="笔记目录">
+            <div class="learn-tree-heading"><h2>笔记目录</h2><span id="learnNoteCount">…</span></div>
+            <nav id="learnTree" aria-label="按年份浏览"><p class="learn-state" role="status">正在加载目录…</p></nav>
+        </aside>
+        <div class="learn-reader">
+            <section class="learn-calendar" id="learnCalendar" aria-label="笔记日历" hidden>
+                <div class="learn-calendar-header">
+                    <h2 id="learnMonthTitle"></h2>
+                    <div class="learn-month-nav">
+                        <button type="button" id="learnPreviousMonth" aria-label="上个月">‹</button>
+                        <button type="button" id="learnNextMonth" aria-label="下个月">›</button>
+                    </div>
+                </div>
+                <div class="learn-calendar-grid" id="learnCalendarGrid" role="grid" aria-label="月历"></div>
+                <p class="learn-calendar-summary" id="learnCalendarSummary"></p>
+            </section>
+            <div class="learn-state" id="learnLoading" role="status">正在加载笔记…</div>
+            <div class="learn-state learn-error" id="learnError" role="alert" hidden>
+                <span id="learnErrorMessage"></span><button type="button" id="learnRetry">重试</button>
+            </div>
+            <article class="learn-article" id="learnArticle" hidden>
+                <header class="learn-note-header"><h2 id="learnNoteTitle"></h2><p id="learnNoteMeta"></p></header>
+                <div class="learn-note-body" id="learnNoteBody"></div>
+            </article>
+            <section class="learn-comments" id="learnComments" aria-labelledby="learnCommentsTitle" hidden>
+                <header class="learn-comments-header">
+                    <div><p class="learn-kicker">GIST DISCUSSION</p><h2 id="learnCommentsTitle">补充讨论与学习计划</h2></div>
+                    <span id="learnCommentsCount"></span>
+                </header>
+                <p class="learn-state" id="learnCommentsStatus" role="status">正在加载评论…</p>
+                <div class="learn-comments-list" id="learnCommentsList"></div>
+                <p class="learn-comments-footer"><a id="learnCommentsLink" target="_blank" rel="noopener noreferrer">在 GitHub Gist 查看或参与讨论 ↗</a></p>
+                <button class="learn-retry" id="learnCommentsRetry" type="button" hidden>重试加载评论</button>
+            </section>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "extra-scripts" }}
+{{ $script := resources.Get "js/learn.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $script.RelPermalink }}"></script>
+{{ end }}

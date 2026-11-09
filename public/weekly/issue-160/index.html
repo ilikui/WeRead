@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 160 期）：中年码农的困境 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 160 期）：中年码农的困境</h1>
+        
+        <p class="article-meta"><time datetime="2023-09-08">2023年09月08日</time></p>
+        <p class="article-meta">每周分享第 160 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-160.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <h1 id="科技爱好者周刊第-160-期中年码农的困境">科技爱好者周刊（第 160 期）：中年码农的困境</h1>
+<p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志开源（GitHub: <a href="https://github.com/ruanyf/weekly">ruanyf/weekly</a>），欢迎提交 issue，投稿或推荐科技内容。</p>
+<p>周刊讨论区的帖子<a href="https://github.com/ruanyf/weekly/issues/1747">《谁在招人？》</a>，提供大量程序员就业信息，欢迎访问或发布工作/实习岗位。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052614.jpg" alt="" /></p>
+<p>云南红河州的蝴蝶谷，5月出现蝴蝶大爆发，数量是十年来最多，估计达到1.5亿只。（<a href="http://yn.people.com.cn/n2/2021/0522/c372453-34739809.html">via</a>）</p>
+<h2 id="本周话题中年码农的困境">本周话题：中年码农的困境</h2>
+<p>上周谈到了<a href="http://www.ruanyifeng.com/blog/2021/05/weekly-issue-159.html">游戏开发者的年薪</a>，我后来想到，曾经在 B 站看过一个<a href="https://www.bilibili.com/video/av838499481/">视频</a>，也是讲这个事情。</p>
+<p>我又重新看了一遍，还是感到说得很好，想分享给大家。下面就是我总结的视频主要内容，下文的“我”都是指视频的讲述者。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052601.jpg" alt="" /></p>
+<p>2008年，哈工大研究生毕业后，我和同宿舍的同学一起来了上海。他在盛大游戏工作几年后，回了广州老家，我们就很少联系了。</p>
+<p>前一段时间，我有事找他，就聊了一下近况。他本科和硕士都是计算机专业，现在广州的一家游戏公司上班，还在写代码。我们都已经35岁了，我也想知道，这个年龄段的中年码农，现在的行情怎么样？</p>
+<p>他跟我说了几个情况。首先，跟大家想的一样，加班非常厉害。周一到周五，每天基本是晚上十点下班，如果遇到项目上线或者重大更新，那肯定是凌晨两三点下班，通宵也是有的。周六还要正常上班。</p>
+<p>他现在的这家公司比较坑。游戏公司给研发人员的基本工资不会太高，你的很大一部分收入来自项目奖金。去年他们公司有一个项目上线，就在上线之前，把整个项目组解散了，要么辞退，要么分配到其他的项目组。公司这是为了节省成本，少发奖金。很多公司都这么干，没有办法的，员工永远是处在弱势的地位。</p>
+<p>然后，我很好奇，也是很多人好奇的，985高校的计算机硕士，工作到现在有12年了，收入是多少呢？他跟我说，他的月薪是每月税后三万多，具体多少他没说，奖金我也没问。</p>
+<p>我是自由职业者，会担心下个月的收入，我觉得他在公司上班，可能相对稳定一点。他说自由职业者的所有担心，他作为上班族都有，担心会被裁员。裁员是所有中年码农，或者说所有中年职场人士，都避不开的一个话题。35岁到40岁的这些职场人士，如果职位做不到中层，你的人力成本是很贵的。把你优化掉，雇佣那些刚毕业的年轻人，对公司是更优的选择。他们更有体力，也更听话，执行力也更强。很多公司裁员时，第一考虑的就是中年的中低层职员。作为中年人，如果你平时不加班，万一绩效评得不好，那就可能被优化掉。</p>
+<p>我刚毕业时，很多同学和同事可能心里想的是，写几年代码，代码写得好之后去转管理层。后来有一些人真的转了管理，但是更多的人是转行，不做码农了，因为年纪大了，各种体力都跟不上了。转管理层毕竟是少数，因为僧多粥少，只有那么几个位置，而且有些人就不适合做管理，喜欢写代码。就算成功晋升管理层，往上走就更难了，很多时候只能走到中层，很难走到高层。所以，对于中层管理者，前面说的那些中年危机，他同样都有。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052602.jpg" alt="" /></p>
+<p>现在已经有很多三四十岁的码农了，好消息是有一小撮人，像我同学那样，依然在写代码，坏消息是很多公司对于中年的码农比较苛刻，由于他们的综合人力成本比较高，很容易被优化掉。这就是现状。</p>
+<p>下面对于那些年轻的码农，我给几个建议吧。</p>
+<p>（1）要有积累。不管是文字、视频、项目、代码等等，一定要有积累，要在本职工作以外，有一个东西你可以慢慢的累积下来。最开始的几年，可能都没有什么收益，但你最好还是要坚持下去。我觉得，积累是一种很强大的力量，比学习能力更重要。因为随着年龄的增长，你的学习能力是在下降的，而且行业和技术迭代比较快，一直有新东西出现，你必须不断地保持学习，这很困难。</p>
+<p>（2）要让自己不可或缺。公司制定了很多很完善的流程和制度，目的就是为了让每一位员工都可以被替代，一旦有人离职，都可以在短时间内找到替代他的人，这样才能保持公司的正常运转。个人的策略其实就是跟公司相反，让公司不容易找到替代你的人。如果公司需要花费较长时间或者较大的成本，才能找到合适的人来替换你，那么你就是不可或缺的。</p>
+<p>（3）要保持开放的头脑，要善于接受。每个人的见识是有局限的，世界是多元的，每一次交流都是认知的碰撞。很多人就是不善于接受别人的观点，很固执。我并不是说，让你无脑地赞同别人，而是你愿意去尝试或者验证别人的观点。这样才会给自己带来更多的机会，蛮干是没有出路的。中国大部分码农的现状是不乐观的，如果你不多去思考的话，情况可能会更加的不乐观。</p>
+<h2 id="authing-身份云">Authing 身份云</h2>
+<p>以后，周刊会不定期推广国产软件精品和新品，每周详细介绍一款软件。如果大家有意推广自己的产品，欢迎与我联系（Email：yifeng.ruan@gmail.com）。</p>
+<hr />
+<p>本周的主角是北京蒸汽记忆科技有限公司的 <a href="https://sourl.cn/ppUZ8z">Authing</a>。去年他们在周刊上亮相过，经过近一年的密集开发，Authing 产品有了大幅度改进，功能稳定性显著提升，SDK 也更加完备，所以想再给大家介绍一下他们。</p>
+<p><a href="https://sourl.cn/ppUZ8z"><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052608.png" alt="" /></a></p>
+<p><strong>如果用一句话表达，Authing 做的是身份认证和授权管理的 SaaS 服务</strong>。说得通俗一点，他们通过云服务，帮外部应用解决用户登录和权限设置问题，国外称为 IDaaS（ID as a Service），中文译为“身份云”。</p>
+<p>用户的认证和权限管理对软件来说特别重要，不仅要保证数据安全，还要满足各种协议和使用场景，对企业来说往往是开发难度大，既耗时又费人力。</p>
+<p>Authing 就是为了解决这个痛点而生的，通过将用户数据与软件本身的功能解耦，使得开发者不必自建身份管理系统，只需要调用 Authing 的云服务，不仅提升了安全性，还节约了开发时间。</p>
+<p>小到几行代码的登录表单，大到企业应用的身份中台，你都可以在他们的平台上进行定制，整个过程方便快速，而且价格低廉。</p>
+<p>具体来说，Authing 提供三种不同的使用方法：</p>
+<blockquote>
+<p>（1）最简单的，让 Authing 托管你的登录页，登录时跳转到他们的网站即可，用户登录后，再返回到你的应用。大家可以点击查看这个<a href="https://sourl.cn/UgWcKq">范例</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052610.png" alt="" /></p>
+<p>（2）如果不想让用户跳到外部登录页，就使用他们提供的<a href="https://docs.authing.cn/v2/quickstarts/spa/react.html?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=3&amp;hmci=">前端登录组件</a>，嵌入自己的 Web 或移动端页面，完全不需要自己实现登录 UI 和认证逻辑。</p>
+<p>（3）自定义登录 UI 和认证流程，这样灵活性最大，但需要自己调用 API 开发，目前 Authing 提供 10 余种主流语言或框架的 <a href="https://docs.authing.cn/v2/guides/basics/authenticate-first-user/use-api-sdk/">SDK</a>。</p>
+</blockquote>
+<p>值得一提的是 Authing 提供多端支持，Web 页面、移动端、原生 App 和小程序等，都可以接入。具体使用哪一种认证（密码、手机二维码、社会化登录和多因素认证等），需要自己在后台配置。至于更复杂的权限控制，就请看<a href="https://docs.authing.cn/v2/guides/access-control/?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=4&amp;hmci=">文档</a>了。</p>
+<p>为了减轻开发负担，尤其是企业应用的开发，Authing 新上线了<a href="https://mp.weixin.qq.com/s/eIFEjeajQ08rnSL49a3Tbw">“应用市场”</a>，支持常见的云服务平台（比如，阿里云、腾讯云）。如果你的应用架设在这些云平台，那么只要安装一次对应的适配层，就能实现当前平台上所有应用的单点登录。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052609.png" alt="" /></p>
+<hr />
+<p>你也许想不到，他们是一家 95 后开发者成立的创业公司，才不到两岁，业务就已经蒸蒸日上，完成了多轮融资，每⽉的用户规模达数千万，支持着几万个企业级应用，国内大型企业（比如中国石油、国家电网）、事业单位（比如高等教育出版社）、知名外企（日本丰田、德高集团）和众多的创业公司都是他们的客户。</p>
+<p>尤其难得的是，他们还热心于技术传播和用户教育，写了很多科普文章。我推荐大家看一下他们的<a href="https://blog.authing.cn/blog/?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=6&amp;hmci=">博客</a>和<a href="https://forum.authing.cn/?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=7&amp;hmci=">论坛</a>，里面有很多不错的原创内容，比如<a href="https://forum.authing.cn/t/topic/98?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=8&amp;hmci=">《LDAP 协议入门》</a>和<a href="https://forum.authing.cn/t/topic/112?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=9&amp;hmci=">《单点登录教程》</a>。这说明他们把产品真正当作一种技术理想，这在国内是不多见的。</p>
+<p>最后，欢迎大家<a href="https://sourl.cn/ppUZ8z">试用</a>他们的服务，前 3000 次的认证是免费的，此后只对活跃用户收费，不登录就不收费。更多问题，可以去<a href="https://forum.authing.cn/?hmsr=ap528&amp;hmpl=ap528&amp;hmcu=ap528&amp;hmkw=11&amp;hmci=">论坛</a>提问和咨询。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、<a href="https://www.nytimes.com/2021/05/11/science/seeds-germinated-michigan-state.html">142年的种子实验</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051301.jpg" alt="" /></p>
+<p>1879年，一位美国植物学家在密西根州采集了大量植物种子，装瓶后埋在土里，希望几十年或几百年后再挖出来，看看种子是否还能发芽。从那以后，大约每隔20年，该实验的看护者就会挖出一个瓶子，将种子重新播种。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051302.jpg" alt="" /></p>
+<p>2021年4月中旬，密歇根州立大学的几位老师挖出了其中的一个瓶子，种下了里面的种子。到了4月23日，第一株幼苗破土而出，截止到5月初，已经有11株幼苗发芽了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051303.jpg" alt="" /></p>
+<p>这是世界上运行时间最长的实验之一，已经进行了142年，植物学家希望它至少还能持续80年，延续到22世纪。</p>
+<p>2、<a href="https://www.amazon.com/Amazon-Sidewalk/b?node=21328123011">Amazon Sidewalk 网络</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051108.jpg" alt="" /></p>
+<p>Amazon 公司宣布，将在6月份启动一个叫做 Sidewalk 的共享网络。以后，用户只要购买了 Amazon 的硬件设备（比如 Echo 智能音箱、Ring 智能门铃），这些设备就会分享用户家中一小部分带宽，给附近的电子设备共享，让那些设备可以网络通信。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051109.jpg" alt="" /></p>
+<p>这样一来，物联网设备只要具有蓝牙模块，就可以随处上网，大大扩展了功能。举例来说，运动时可以只带一个手表，不用带手机，就将运动数据发到网上；再比如，追踪项圈可以将宠物的 GPS 坐标实时发到网上。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051110.jpg" alt="" /></p>
+<p>3、<a href="https://www.morphingmatter.cs.cmu.edu/projects/morphing-pasta-and-beyond">扁平意大利面</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050805.jpg" alt="" /></p>
+<p>意大利面通常是螺旋状或管状，这样的面条有一个缺点，就是很占包装空间。一大包意大利面，真正的容量可能只有包装体积的40%。最近，卡内基梅隆大学的研究人员发明了一种扁平意大利面，煮熟以后会变得卷曲，图片是面条水煮前后的对比。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050806.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050807.jpg" alt="" /></p>
+<p>它的原理是在平坦的面条上刻出沟槽，这些沟槽的形状和深度，是研究人员事先使用计算机和物理实验确定的。水煮时，由于沟槽面的膨胀小于平滑面的膨胀，导致面条卷曲变形。理论上，还可以让面条水煮后呈现更复杂的形状。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050808.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050809.jpg" alt="" /></p>
+<p>4、<a href="https://m.gmw.cn/baijia/2021-05/07/1302278596.html">猪皮移植</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050816.jpg" alt="" /></p>
+<p>河南周口某医院为烧伤病人移植猪皮，手术利用猪皮覆盖保护患者被烧伤的皮肤，等到患者新皮肤组织再生后，移植的猪皮会自行脱落。</p>
+<p>严重的烧伤病人需要多次移植。该医院称以前有过患者进行多次猪皮移植手术，“当时一共用了6头猪。”</p>
+<p>5、</p>
+<p><a href="https://9to5google.com/2021/05/25/google-releases-fuchsia-os-nest-hub/">谷歌的 Fuchsia 操作系统</a>正式亮相，用在自家的智能家居控制器 Nest Hub 上面。这是谷歌的第三个操作系统，前两个是安卓和 ChromeOS。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052604.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052605.jpg" alt="" /></p>
+<p>6、</p>
+<p><a href="https://www.wired.co.uk/article/apple-ios14-facebook">Facebook</a> 在《纽约时报》等美国大报，刊登全版广告（下图），抨击苹果公司的新版本 iOS 允许关闭用户追踪，认为这样将打击美国小企业，因为 Facebook 无法为他们提供帮助了。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052202.jpg" alt="" /></p>
+<h2 id="四种显示屏"><a href="https://hackaday.com/2021/05/09/artwork-spans-fifty-years-of-display-technology/">四种显示屏</a></h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051001.jpg" alt="" /></p>
+<p>瑞士巴塞尔的一个基金会，委托当地的艺术家，创造了一个装置艺术品，使用四个显示屏展示当前时间，完成后会放到机场和火车站。</p>
+<p>这四个显示屏分别代表了显示技术的四个阶段。</p>
+<p>第一个是1960年代的机械点阵屏（Flip-Dot），通过电磁方式翻转黑白圆点，来显示内容。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051003.jpg" alt="" /></p>
+<p>第二个是1970~1980年代的单色液晶 LCD 屏，通过屏幕底下的灯管发光，只能发蓝光。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051002.jpg" alt="" /></p>
+<p>第三个是2000年左右的 LED 屏，通过红色、绿色、蓝色的发光二极管的不同组合，显示出彩色。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051004.jpg" alt="" /></p>
+<p>第四个是当代的液晶 TFT 屏，使用很小的薄膜晶体管，使得分辨率可以做得很高。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051005.jpg" alt="" /></p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://sspai.com/post/66658">使用 Notion API 建立自己的账本</a>（中文）</p>
+<p>Notion 最近开放了 API，作者详细介绍如何写一个 Python 脚本，调用 Notion API，将支付宝和微信导出的交易记录，输入 Notion 形成一个账本。</p>
+<p>2、<a href="https://www.dogatekin.com/blog/hypnotic-degenerate-spirals/">如何画出螺旋曲线？</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051007.jpg" alt="" /></p>
+<p>作者使用通俗语言，介绍螺旋曲线的数学含义，并给出多个 JavaScript 示例。</p>
+<p>3、<a href="https://viggy28.dev/article/setting-up-ghost-in-raspberry-pi-for-free/">树莓派架设公网网站</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051006.jpg" alt="" /></p>
+<p>作家介绍如何在家庭网络之中，使用树莓派架设一个网站，然后通过端口映射，供外网访问。</p>
+<p>4、<a href="https://www.makeuseof.com/how-to-analyze-disk-usage-with-gdu-in-linux/">Linux 系统的磁盘分析工具 gdu 用法</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050901.jpg" alt="" /></p>
+<p>gdu 是 du 命令的 Go 语言版，用来分析 Linux 和 macOS 系统的磁盘占用情况，提升了执行速度，并且有命令行图形界面。</p>
+<p>5、<a href="https://blog.replit.com/vite">为什么我们从 Webpack 切换到 Vite？</a>（英文）</p>
+<p>Replit 解释为什么将前端打包工具，从 Webpack 转为 Vite。</p>
+<p>6、<a href="https://blog.sessionstack.com/how-javascript-works-cryptography-how-to-deal-with-man-in-the-middle-mitm-attacks-bf8fc6be546c">JavaScript Web Cryptography API 的用法</a>（英文）</p>
+<p>浏览器原生支持 Web Cryptography API，用于加密和解密，本文通过举例，介绍这个 API 的用法。</p>
+<p>7、<a href="https://eli.thegreenplace.net/2011/02/04/where-the-top-of-the-stack-is-on-x86">x86 计算机的栈顶位置</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050812.jpg" alt="" /></p>
+<p>C 语言变量储存在内存的栈（stack）里面，从栈底开始存放，直到栈顶。这个概念很容易混淆，因为栈底是内存的高位地址，栈顶是内存的低位地址，本文就来分析这个概念。</p>
+<p>8、<a href="https://www.quantamagazine.org/solve-math-equations-that-are-stubborn-as-a-goat-20210506/">山羊吃草问题</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050813.jpg" alt="" /></p>
+<p>如果把山羊拴在谷仓大门上，山羊的活动面积就是上图粉色的部分，具体大小容易算出来。</p>
+<p>数学家对这个问题进行了很多发挥，其中有一个版本就是，如果把山羊拴在一个圆形谷仓里面（下图），请问绳子的长度是多少，可以让山羊的活动面积达到谷仓的一半。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050815.jpg" alt="" /></p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/slidevjs/slidev">Slidev</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021050603.jpg" alt="" /></p>
+<p>这个工具使用 Markdown 格式编写 PPT 幻灯片，功能较多。</p>
+<p>2、<a href="https://github.com/jendrikseipp/vulture">Vulture</a></p>
+<p>一个 Python 的静态代码检查工具，可以发现没有用到的代码。</p>
+<p>3、<a href="https://github.com/timvisee/send">Send</a></p>
+<p>Mozilla 基金会曾经推出了一个文件分享服务，后来停止开发了。社区就接过来，做成完全的开源版，现在可以自己搭建，并且有 Web、命令行和安卓等各种客户端。</p>
+<p>4、<a href="https://www.sequencer64.com/">Sequencer 64</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051205.jpg" alt="" /></p>
+<p>一个架子鼓的网页模拟器。</p>
+<p>5、<a href="https://github.com/aarondcohen/id128">Id128</a></p>
+<p>一个 JavaScript 库，生成 UUID（通用唯一识别码），支持多种算法。</p>
+<p>6、<a href="https://github.com/pyodide/pyodide">Pyodide</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051402.jpg" alt="" /></p>
+<p>这个库是浏览器的 Python 运行时，通过 WebAssembly 脚本让网页运行 Python 代码，可以通过它加载一些人工智能或者科学计算的库。</p>
+<p>7、<a href="https://zulip.com/">Zulip</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021051404.jpg" alt="" /></p>
+<p>一个团队协作工具，将聊天和电子邮件的线程模型结合在一起，类似 Slack，但是更像一个内部论坛。</p>
+<p>8、<a href="https://apps.apple.com/us/app/play-js-javascript-ide/id1423330822">Play.js</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052619.jpg" alt="" /></p>
+<p>一个 iOS 应用，提供 JavaScript IDE，允许在 iPhone 和 iPad 上开发 Web 和 Node.js 应用。</p>
+<p>9、<a href="http://magician-io.com/">Magician</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052611.jpg" alt="" /></p>
+<p>一个国内开发者写的 Java 的网络协议解析包，可以用作 HTTP 和 WebSocket 服务器，支持 TCP 和 UDP 通信，使用简单。（<a href="https://github.com/ruanyf/weekly/issues/1774">@yuyenews</a> 投稿）</p>
+<p>10、<a href="https://notes.tools/">NewTabEditor</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052612.jpg" alt="" /></p>
+<p>Chrome 浏览器的插件，可以让新标签页变成一个文本编辑器。（<a href="https://github.com/ruanyf/weekly/issues/1777">@5A59</a> 投稿）</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://web.dev/learn/css/">CSS 学习教程</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052201.jpg" alt="" /></p>
+<p>谷歌出品的 CSS 教程，内容很丰富全面，一共有24课。（<a href="https://github.com/ruanyf/weekly/issues/1772">@wxyudl</a> 投稿）</p>
+<p>2、<a href="https://iconic.app/">Iconic</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021043001.jpg" alt="" /></p>
+<p>一个开放式的图标仓库，可以分类查找图标，免费下载。</p>
+<p>3、<a href="https://jonatron.github.io/webgl-fingerprinting/">WebGL 指纹</a></p>
+<p>一些大型网站使用 WebGL 生成用户指纹，用来追踪用户。这个网页列出了不同公司使用的追踪代码。</p>
+<p>4、<a href="https://manuzoid.com/">MANUZOID</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052801.jpg" alt="" /></p>
+<p>这个网站可以搜索100多万种产品的英文产品说明书。</p>
+<p>5、<a href="http://icyfenix.cn/">凤凰架构</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052607.jpg" alt="" /></p>
+<p>一本中文的开源书籍，介绍如何构建一套可靠的分布式大型软件系统，可以免费阅读。（<a href="https://github.com/ruanyf/weekly/issues/1771">@1228857713</a> 投稿）</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://englishrussia.com/2021/04/20/35-entrances-3708-apartments-welcome-to-the-main-city-house-of-all-russia/">世界最长的公寓楼</a></p>
+<p>俄罗斯圣彼得堡有一座25层公寓楼，长达990米，弯弯曲曲，像一条长蛇。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042605.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042606.jpg" alt="" /></p>
+<p>照片看上去有很多栋楼，其实都是连在一起的。整座建筑有35个入口，3000多套公寓，如果每家有一辆车，就要解决几千辆车的停车问题。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042607.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042608.jpg" alt="" /></p>
+<p>2、<a href="https://en.wikipedia.org/wiki/Aizawl">印度山城</a></p>
+<p>艾索尔（Aizawl）是印度米佐拉姆邦（Mizoram）的首府，整座城市完全建在山上。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052622.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202104/bg2021042603.jpg" alt="" /></p>
+<p>整个山头密密麻麻都是房子，绵延几公里，还有四通八达的马路和公交系统，非常壮观。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052624.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052625.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052626.jpg" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052627.jpg" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、  <strong>乔布斯反对第三方硬件</strong></p>
+<p>摘自《硅谷革命：成就苹果公司的疯狂往事》一书。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202105/bg2021052620.jpg" alt="" /></p>
+<p>苹果公司最早的产品 Apple II 计算机，是联合创始人沃兹设计的。他是一个具有共享精神的工程师，很看重硬件的扩展性，所以他赋予 Apple II 极大的扩展性，内建了七个外置卡插槽，并经过精心设计，每张外置卡都能以自身的 ROM 芯片来运行内置软件。如此灵活的设计让 Apple II 能够运行大量的应用程序，同时也使得很多第三方公司为 Apple II 开发硬件。</p>
+<p>不过，后来 Macintosh 电脑的设计负责人 Jef Raskin 有不同的想法。他认为，扩展插槽带来的复杂性（必须允许用户拆开电脑），是阻碍个人电脑普及的原因之一。而且，很多第三方硬件质量参差不齐，不一定能够按照预想的方式工作。不同的第三方硬件也缺乏一致性。</p>
+<p>他认为，苹果公司应该推出标准化的、易用的、价格实惠的电脑，这样才能让产品大卖，允许硬件的扩展性只会徒增成本和复杂性，所以应该尽量避免。</p>
+<p>乔布斯在很多事情上都和 Jef Raskin 有不同意见，但是唯独对硬件的扩展性看法相同。他也认为，扩展性是设计上的缺陷，而非特性。据说乔布斯以前就很反对 Apple II 有太多的扩展插槽，所以他宣布 Macintosh 永远都不提供扩展插槽，外壳要密封起来，只留下两个串行端口。</p>
+<p>后来，他的一生中推出的所有苹果产品，扩展性都非常差，都不允许有第三方硬件扩展。</p>
+<p>这样做虽然能保证对产品的控制，但有一个严重的缺点。由于计算机技术发展很快，硬件很容易过时，第三方扩展可以增加设备的适用性，帮助产品满足不同的需求，延长销售寿命。一旦禁止，就必然要求公司要源源不断地推出受欢迎的产品。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>电视机的分辨率越高，屏幕尺寸就会越大，所以 8K 电视机不太可能进入家庭。正常情况下，在 3 米的距离观看电视，8K 屏幕需要达到300英寸，否则意义不大，4K 分辨率也有类似问题。</p>
+<p>较高的动态范围和较宽的色域，对于电视机可能更有意义。</p>
+<p>&ndash; <a href="https://www.dpreview.com/articles/6547603416/interview-canons-larry-thorpe-reflects-on-60-years-in-the-business">佳能公司资深研究员</a></p>
+<p>2、</p>
+<p>中国的大城市喜欢建造超高层建筑，我将这种现象称为“贫困时代的遗产”。过去的贫困时代仍然给整个社会留有一种落后的价值观，建筑物拼命比高度，展览馆、音乐厅、机场拼命比面积。</p>
+<p>建筑物适当的高一点，适当展示形象可以，但不应将建筑物的高度视为现代化的象征。</p>
+<p>&ndash; <a href="https://finance.sina.com.cn/jjxw/2021-05-21/doc-ikmxzfmm3802539.shtml">《专家谈深圳赛格大厦晃动》</a></p>
+<p>3、</p>
+<p>如果你的身家达到440亿美元，你也不会想忍受管理手下的小兵。</p>
+<p>&ndash; <a href="https://www.inputmag.com/tech/bytedance-ceo-is-stepping-down-because-hes-rich-tired-and-bored">国外网站</a>评论张一鸣辞去字节跳动的 CEO</p>
+<p>4、</p>
+<p>1979年，袁隆平的杂交水稻技术被引入美国，这是中华人民共和国历史上的第一个知识产权转让案例。</p>
+<p>&ndash; <a href="https://en.wikipedia.org/wiki/Yuan_Longping">维基百科的“袁隆平”条目</a></p>
+<h2 id="历史上的本周">历史上的本周</h2>
+<p>2020年（第 109 期）：<a href="http://www.ruanyifeng.com/blog/2020/05/weekly-issue-109.html">播客的价值</a></p>
+<p>2019年（第 57 期）：<a href="http://www.ruanyifeng.com/blog/2019/05/weekly-issue-57.html">分享知识是否违反人性？</a></p>
+<p>2018年（第 6 期）：<a href="http://www.ruanyifeng.com/blog/2018/05/weekly-issue-6.html">未来还需要苦学外语吗？</a></p>
+<h2 id="订阅">订阅</h2>
+<p>这个周刊每周五发布，同步更新在<a href="http://www.ruanyifeng.com/blog">阮一峰的网络日志</a>和<a href="http://weixin.sogou.com/weixin?query=%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A5%E5%BF%97">微信公众号</a>。</p>
+<p>微信搜索“阮一峰的网络日志”或者扫描二维码，即可订阅。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202103/bg2021030402.jpg" alt="" /></p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

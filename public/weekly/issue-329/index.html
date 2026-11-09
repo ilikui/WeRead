@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1318&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>科技爱好者周刊（第 329 期）：示意图利器 D2 | 阅读笔记</title>
+    <meta name="description" content="使用 Hugo 打造的微信读书笔记静态博客">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <link rel="stylesheet" href="../../css/weread-theme.min.1ce39a8663cf1266693214e131ba96a07ac7a5d854a5d454fc312159ab829928.css">
+    
+    <link rel="stylesheet" href="../../css/site-polish.min.4a5d08c7271b71a33bb7715230acb6ec2af68c8ce3445b2a12838143652c2558.css">
+    
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="主导航">
+            <a class="site-brand" href="../../">阅读笔记</a>
+            <ul class="nav-menu">
+                
+                <li><a href="../../">首页</a></li>
+                
+                <li><a href="../../weread/">阅读</a></li>
+                
+                <li><a href="../../weread/learn/">Learn</a></li>
+                
+                <li><a href="../../memos/">Memos</a></li>
+                
+                <li><a href="../../activity/">热力墙</a></li>
+                
+                <li><a href="../../about/">关于</a></li>
+                
+                <li><a href="../../weekly/">Weekly</a></li>
+                
+            </ul>
+            <div class="nav-search">
+                <input type="search" id="globalSearch" placeholder="搜索全站内容 · 按 / 定位" aria-label="搜索全站内容" autocomplete="off">
+                <div class="search-results" id="searchResults" hidden></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="site-body">
+        
+        <aside class="side-tabs" aria-label="分类导航">
+            
+            <a href="../../weread/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📚</span>
+
+                <span class="side-tab-label">Read</span>
+            </a>
+            
+            <a href="../../memos/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🗒️</span>
+
+                <span class="side-tab-label">Memos</span>
+            </a>
+            
+            <a href="../../blog/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">✍️</span>
+
+                <span class="side-tab-label">Blog</span>
+            </a>
+            
+            <a href="../../topics/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🧭</span>
+
+                <span class="side-tab-label">Topics</span>
+            </a>
+            
+            <a href="../../gallery/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">🖼️</span>
+
+                <span class="side-tab-label">Gallery</span>
+            </a>
+            
+            <a href="../../activity/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📊</span>
+
+                <span class="side-tab-label">Activity</span>
+            </a>
+            
+            <a href="../../weekly/" class="side-tab">
+                <span class="side-tab-icon" aria-hidden="true">📰</span>
+
+                <span class="side-tab-label">Weekly</span>
+            </a>
+            
+        </aside>
+        
+
+        <main class="site-main">
+            
+<div class="reading-progress" aria-hidden="true"><span id="readingProgressBar"></span></div>
+<article class="page article-layout">
+    <header class="page-header">
+        <h1>科技爱好者周刊（第 329 期）：示意图利器 D2</h1>
+        
+        <p class="article-meta"><time datetime="2024-12-13">2024年12月13日</time></p>
+        <p class="article-meta">每周分享第 329 期 · <a href="https://github.com/ruanyf/weekly/blob/master/docs/issue-329.md" target="_blank" rel="noopener noreferrer">查看 GitHub 原文</a></p>
+    </header>
+    <div class="article-grid">
+        <div class="page-content" id="articleContent">
+            <p>这里记录每周值得分享的科技内容，周五发布。</p>
+<p>本杂志<a href="https://github.com/ruanyf/weekly">开源</a>，欢迎<a href="https://github.com/ruanyf/weekly/issues">投稿</a>。另有<a href="https://github.com/ruanyf/weekly/issues/5610">《谁在招人》</a>服务，发布程序员招聘信息。合作请<a href="mailto:yifeng.ruan@gmail.com">邮件联系</a>（yifeng.ruan@gmail.com）。</p>
+<h2 id="封面图">封面图</h2>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121117.webp" alt="" /></p>
+<p>哈尔滨冰雪大世界即将开园，工人正在松花江上采冰，每天需要开采近万块大冰块。（<a href="https://app.xinhuanet.com/news/article.html?articleId=451916149ce4dde7e6035e935eb5a37f">via</a>）</p>
+<h2 id="示意图利器-d2">示意图利器 D2</h2>
+<p>制作示意图的工具有很多。</p>
+<p>我喜欢使用基于文本代码的作图工具，来绘制线框图，比如 Mermaid、Plantuml、Graphviz。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121201.webp" alt="" /></p>
+<p>它们都能根据代码，生成图片，非常适合放入代码仓库，进行版本管理。</p>
+<p>最近，我发现了一个更易用的同类工具 <a href="https://d2lang.com">D2</a>，简单直观，功能强大，下面介绍给大家。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120613.webp" alt="" /></p>
+<p>D2 可以命令行使用，也可以浏览器使用。假定你有一个图片代码文件<code>example.d2</code>，那么生成图片的命令如下。</p>
+<blockquote>
+<p>$ d2 example.d2</p>
+</blockquote>
+<p>大部分时候，我都通过浏览器使用它。它有一个线上生成器 <a href="https://play.d2lang.com/">play.d2lang.com</a>（下图），把代码贴进去，按下“compile”按钮，马上生成图片。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121202.webp" alt="" /></p>
+<p>想要 A 节点（节点的名称为 A），直接输入 A 就可以了。</p>
+<blockquote>
+<p>A</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120601.webp" alt="" /></p>
+<p>A 只是节点名称，如果要定制节点的内容，就像下面这样写。</p>
+<blockquote>
+<p>A: 甲</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120602.webp" alt="" /></p>
+<p>接着，添加一个节点。</p>
+<blockquote>
+<p>A: 甲<br />
+B: 乙</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120603.webp" alt="" /></p>
+<p>把它们连起来。</p>
+<blockquote>
+<p>A: 甲<br />
+B: 乙<br />
+A -&gt; B</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120604.webp" alt="" /></p>
+<p>连接可以用正箭头（<code>-&gt;</code>）、也可以用反箭头（<code>&lt;-</code>），甚至双向箭头（<code>&lt;-&gt;</code>）。如果不需要箭头，就直接连线（<code>--</code>）。</p>
+<p>箭头上还能添加文字。</p>
+<blockquote>
+<p>A: 甲<br />
+B: 乙<br />
+A -&gt; B: 连接</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120606.webp" alt="" /></p>
+<p>节点之间可以有多根连线。</p>
+<blockquote>
+<p>A: 甲<br />
+B: 乙<br />
+A -&gt; B: 请求<br />
+A &lt;- B: 响应</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120609.webp" alt="" /></p>
+<p>节点的连接也可以写在一行。</p>
+<blockquote>
+<p>甲 -&gt; 丙 &lt;- 乙: 连接</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120610.webp" alt="" /></p>
+<blockquote>
+<p>阶段一 -&gt; 阶段二 -&gt; 阶段三 -&gt; 阶段四<br />
+阶段四 -&gt; 阶段一: 反馈</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120611.webp" alt="" /></p>
+<p>这些语法就够画出基本的线框图了，是不是挺简单。</p>
+<p>D2 可以绘制非常复杂的图，更多语法参考<a href="https://d2lang.com/tour/intro">文档</a>。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120614.webp" alt="" /></p>
+<p>最后提一下，如果想修改节点形状，方框改成圆形，就像下面这样写。</p>
+<blockquote>
+<p>A: 甲<br />
+A.shape: circle</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120607.webp" alt="" /></p>
+<p>形状甚至可以改成一朵云，表示云服务。</p>
+<blockquote>
+<p>A: 甲<br />
+A.shape: cloud</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120608.webp" alt="" /></p>
+<p>线条颜色也可以改。</p>
+<blockquote>
+<p>A: 甲<br />
+A.style.stroke: red</p>
+</blockquote>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120612.webp" alt="" /></p>
+<h2 id="活动-ai-编程挑战赛">[活动] AI 编程挑战赛</h2>
+<p>程序员同学看过来，全国性的 <a href="https://zjsms.com/iUNhdBEk/">AI 编程大赛</a>来了。</p>
+<p>只要你善用 AI 编程，在 AI 的帮助之下，做出创新应用，或者快速解出算法题，就能参赛。</p>
+<p>参赛不仅锻炼 AI 编程能力，还能丰富自己的经历，如果得奖，就能在简历上写一笔，帮助就业。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121211.webp" alt="" /></p>
+<p>（1）比赛总奖池20万，<strong>一等奖的奖金4万元</strong>。学生和非学生分开评奖，获奖者还有 offer 机会，可以直通终面（包含实习岗与正式岗）。</p>
+<p>（2）<strong>比赛分为算法和应用两个赛道</strong>，可以提交自己的创新应用，也可以选择完成算法题。</p>
+<p>（3）大赛现在已经开始报名。创新应用在12月16日开放作品提交，算法比赛现在可以参加线上常规赛，决赛是线下举行的黑客马拉松。</p>
+<p>（4）两个赛道的决赛阶段，都要求使用豆包 MarsCode 的 AI 编程能力，作为辅助工具。</p>
+<p>本次 AI 编程巅峰挑战赛，由豆包MarsCode 和稀土掘金社区共同发起，面向全国程序员。大赛规则和报名入口，详见<a href="https://zjsms.com/iUNhdBEk/">活动官网</a>，也可扫描上方海报二维码，祝愿大家得奖。</p>
+<h2 id="科技动态">科技动态</h2>
+<p>1、<a href="https://www.theglobeandmail.com/business/industry-news/property-report/article-the-worlds-largest-deep-lake-water-cooling-project-just-got-bigger/">深湖冷却</a></p>
+<p>加拿大最大城市多伦多，就在安大略湖旁边。安大略湖是一个很深的湖，最深处达到244米。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202404/bg2024041412.webp" alt="" /></p>
+<p>多伦多市正在建设一个非常酷的项目，使用安大略湖底的冷水，为城市提供冷却系统。</p>
+<p>安大略湖底部的水温是很低的，该项目从水底85米处取水，即使盛夏，水温也只有4摄氏度。</p>
+<p>这些水经过40公里的管道，进入市中心的热交换站，为城市带来天然的冷气。</p>
+<p>2、<a href="https://www.decarpentier.nl/carpentopod">自走桌</a></p>
+<p>一位国外工程师，制作了一张会自己行走的桌子。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091217.webp" alt="" /></p>
+<p>这张木头桌子有12条腿，每次可以同时移动三条腿，每条腿都用电机驱动。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091218.webp" alt="" /></p>
+<p>桌子内部有无线接收器，用来接收遥控信号。远端计算机发出遥控命令，并计算出移动哪几条腿，每条腿移动的角度和幅度。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091219.webp" alt="" /></p>
+<p>3、<a href="https://www.tomshardware.com/tech-industry/big-tech/dog-like-robot-jams-home-networks-and-disables-devices-during-police-raids-dhs-develops-neo-robot-for-walking-denial-of-service-attacks">瘫痪网络的机器狗</a></p>
+<p>很多犯罪分子都在屋外装了摄像头，监控室外的风吹草动。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202407/bg2024072405.webp" alt="" /></p>
+<p>美国国土安全部研发了一款机器狗，它的唯一作用就是瘫痪无线摄像头的通信。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202407/bg2024072406.webp" alt="" /></p>
+<p>这个机器狗配备了一个天线阵列，接近目标后，会侦测周围无线信号的频率和信道，然后发送大量干扰信号，使得网络堵塞，无法通信。</p>
+<p>所有无线通信的智能家居设备，都会因此失效，包括摄像头。所以，重要地点的摄像头必须是有线的。</p>
+<p>4、<a href="https://www.bbc.com/news/articles/c4gv0rvx0dvo">无豆咖啡</a></p>
+<p>一些西方公司最近推出“无豆咖啡”，就是不使用咖啡豆制作的咖啡。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091303.webp" alt="" /></p>
+<p>它采用废弃的枣子或果核，提取生物质，然后添加提取自茶叶的咖啡因，使其具有咖啡的味道。</p>
+<p>因此，它比较环保，可以减少食物垃圾，也不必破坏森林种植咖啡树。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091304.webp" alt="" /></p>
+<p>据说，它的味道非常接近优质咖啡，普通人喝不出差异。只是成本不便宜，略高于传统的优质咖啡豆。</p>
+<h2 id="文章">文章</h2>
+<p>1、<a href="https://www.joshwcomeau.com/css/custom-css-reset/">CSS 重置（2024版）</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202410/bg2024102501.webp" alt="" /></p>
+<p>作者提出，最新的 CSS 重置（CSS reset，即更改浏览器默认样式）只需要9条规则，每一条都详细解释。</p>
+<p>2、<a href="https://monokai.pro/history">Monokai 的历史</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202410/bg2024103102.webp" alt="" /></p>
+<p>本文介绍流行的代码编辑器配色方案 Monokai 的诞生历史。</p>
+<p>3、<a href="https://www.rugu.dev/en/blog/concurrency-and-parallelism/">并发运行（Concurrency）和并行运行（Parallelism）：以 JavaScript 为例</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202409/bg2024091302.webp" alt="" /></p>
+<p>本文解释并发和并行的区别，然后给出 JavaScript 的示例。</p>
+<p>4、<a href="https://alfy.blog/2024/10/19/linking-directly-to-web-page-content.html">直接链接网页的某段文本</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202410/bg2024102409.webp" alt="" /></p>
+<p>浏览器现在支持，URL 直接链接到网页的某个文本片段（text fragment）（上图的高亮部分），本文介绍如何使用。</p>
+<p>5、<a href="https://blog.hyperknot.com/p/understanding-round-robin-dns">了解多重 DNS</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202410/bg2024102705.webp" alt="" /></p>
+<p>多重 DNS 就是同一个域名有多个 DNS 解析记录，可用来均衡负载。作者就测试了，均衡负载是否真能生效。</p>
+<p>6、<a href="https://medium.com/@vincentlambert0/it-all-started-with-a-perceptron-86bd0fb80b96">感知器是什么</a>（英文）</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202410/bg2024102908.webp" alt="" /></p>
+<p>本文解释神经网络的基础概念“感知器”（Perceptron）。</p>
+<h2 id="工具">工具</h2>
+<p>1、<a href="https://github.com/WCY-dt/EasyTransfer">EasyTransfer</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120701.webp" alt="" /></p>
+<p>开源的文件传输工具，匿名加密，只需访问网页，即可连接到其他设备，基于 webRTC 和 Vue.js，访问<a href="https://file.ch3nyang.top">试用网址</a>。（<a href="https://github.com/ruanyf/weekly/issues/5653">@ch3ny4ng</a> 投稿）</p>
+<p>2、<a href="https://screensharing.net">Screen Sharing</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120702.webp" alt="" /></p>
+<p>从浏览器分享你的屏幕给其他人，适合用来演示。（<a href="https://github.com/ruanyf/weekly/issues/5657">@markliuyuxiang</a> 投稿）</p>
+<p>3、<a href="https://github.com/maskerprc/pmatron">PMAtron</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121001.webp" alt="" /></p>
+<p>将 phpMyAdmin 用 Electron 封装成跨平台桌面软件。（<a href="https://github.com/ruanyf/weekly/issues/5666">@MaskerPRC</a> 投稿）</p>
+<p>4、<a href="https://github.com/CodePhiliaX/fastexcel">FastExcel</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121003.webp" alt="" /></p>
+<p>基于 Java 语言的 Excel 文件解析工具，可以用来提取数据。（<a href="https://github.com/ruanyf/weekly/issues/5671">@JerryFan626</a> 投稿）</p>
+<p>5、<a href="https://github.com/chrox/readest">Readest</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024120703.webp" alt="" /></p>
+<p>一款开源电子书阅读器，跨平台桌面应用，基于 Next.js 15和 Tauri v2。（<a href="https://github.com/ruanyf/weekly/issues/5663">@chrox</a> 投稿）</p>
+<p>6、<a href="https://img2avif.com">IMG2AVIF</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121301.webp" alt="" /></p>
+<p>一个网页工具，将各种格式的图片转成 AVIF 格式。（<a href="https://github.com/ruanyf/weekly/issues/5678">@malagebidi</a> 投稿）</p>
+<p>7、<a href="https://www.ytpics.com/">YT Pics</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202402/bg2024021106.webp" alt="" /></p>
+<p>一个 Web 应用，输入 YouTube 网址和指定时间，它会自动截取该时间的截图。</p>
+<p>8、<a href="https://github.com/dvcoolarun/web2pdf">Web2pdf</a></p>
+<p>一个命令行工具，将网页保存成 PDF 文件，有很多增强功能（自定义样式、生成目录等）。</p>
+<p>9、<a href="https://labs.leaningtech.com/blog/cheerpj-3.0">CheerpJ</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202402/bg2024021302.webp" alt="" /></p>
+<p>浏览器里面的 JVM 编译器，让 Java 程序可以在浏览器运行。</p>
+<p>10、<a href="https://github.com/m31coding/fuzzy-search">fuzzy-search</a></p>
+<p>一个前端的模糊搜索库，支持东亚语言。</p>
+<h2 id="ai-相关">AI 相关</h2>
+<p>1、<a href="https://github.com/Orenoid/BabelDuck">BabelDuck</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121002.webp" alt="" /></p>
+<p>基于 AI 的口语对话练习应用。（<a href="https://github.com/ruanyf/weekly/issues/5669">@Orenoid</a> 投稿）</p>
+<p>2、<a href="https://aigif.net">AIGIF</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121204.webp" alt="" /></p>
+<p>GIF 动图搜索，可对图片人物进行换脸。（<a href="https://github.com/ruanyf/weekly/issues/5682">@markliuyuxiang</a> 投稿）</p>
+<p>3、<a href="https://github.com/zhongweili/imagenie">Imagenie</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121206.webp" alt="" /></p>
+<p>跨平台的桌面应用，使用 AI 在本地处理图片，比如人像修复、超分辨率放大、背景移除。（<a href="https://github.com/ruanyf/weekly/issues/5688">@zhongweili</a> 投稿）</p>
+<h2 id="资源">资源</h2>
+<p>1、<a href="https://xdaforums.com/t/info-boot-process-android-vs-linux.3785254/">启动过程：Android 与 Linux</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202401/bg2024011705.webp" alt="" /></p>
+<p>这篇文章记录了 Linux 和 Android 各自的系统启动顺序。</p>
+<p>2、<a href="https://www.thebyte.com.cn">深入高可用系统原理与设计</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121205.webp" alt="" /></p>
+<p>开源的中文电子书，梳理网络、云、容器、集群等知识。（<a href="https://github.com/ruanyf/weekly/issues/5683">@isno</a> 投稿）</p>
+<p>3、<a href="https://englishnewsinlevels.com">English News in Levels</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121207.webp" alt="" /></p>
+<p>英语新闻分级阅读网站，实时更新新闻，分为三种难度，有重点词汇、理解测试和朗读音频。（<a href="https://github.com/ruanyf/weekly/issues/5699">@meterscao</a> 投稿）</p>
+<p>4、<a href="https://iohub.inshub.cn">GitHub Weekly</a></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202412/bg2024121208.webp" alt="" /></p>
+<p>这个网站将周刊讨论区的投稿，转成新闻卡片形式呈现。（<a href="https://github.com/ruanyf/weekly/issues/5701">@inshub</a> 投稿）</p>
+<h2 id="图片">图片</h2>
+<p>1、<a href="https://blog.archive.org/2024/06/01/the-backrooms-of-the-internet-archive/">密室照片</a></p>
+<p>2010年，美国互联网上流传一组密室照片，看上去非常空旷神秘。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024060904.webp" alt="" /></p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024060905.webp" alt="" /></p>
+<p>它们没有任何说明，不知道是在哪里拍的，也不知道是谁拍的。</p>
+<p>这样反而激起了网友的兴趣：昏黄的灯光，陈旧潮湿的地毯，黄色的荧光灯和墙壁，无限的空房间，没有任何窗户，你被困在里面。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024060906.webp" alt="" /></p>
+<p>经过不断转发，这些照片逐渐成为美国互联网经久不衰的一个神话，成为了很多电影和游戏的灵感，比如《命运规划局》、《黑暗城市》、《异次元杀阵》。</p>
+<p>最近，通过互联网档案馆（archive.org）的努力，现在终于查明，这组照片是一家家具店的二楼，当时正在进行翻新，一间间的小房间正是家具的陈列室。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202406/bg2024060907.webp" alt="" /></p>
+<h2 id="文摘">文摘</h2>
+<p>1、<a href="https://www.alexmurrell.co.uk/articles/the-age-of-average">大众审美</a></p>
+<p>人们眼中的美和丑，其实都是受到社会的影响，很少有人拥有自己独立的审美标准。</p>
+<p>1990年代初期，两位俄罗斯艺术家委托一家美国市场研究公司，进行市场调查，向1001位美国人询问下面的问题。</p>
+<blockquote>
+<ul>
+<li>你最喜欢的颜色是什么？</li>
+<li>你喜欢锐利的曲线还是柔和的曲线？</li>
+<li>你喜欢光滑的笔触还是厚重的笔触？</li>
+<li>你喜欢裸体还是穿着衣服的人物？</li>
+<li>你喜欢休闲的人物还是工作的人物？</li>
+<li>你喜欢室内场景还是室外场景？</li>
+<li>你喜欢什么样的风景？</li>
+</ul>
+</blockquote>
+<p>调查完成后，两位艺术家根据大多数人的偏好，绘制一幅画。理论上，这幅画应该受到最多社会大众的喜爱。</p>
+<p>后来，他们又在其他国家做这个调查，得到一个惊人的结果：每个国家的调查结果（即大众偏好），几乎都是一致的。</p>
+<blockquote>
+<p>“人们想要的都是风景画，周围有几个人物，前景是动物，主要色调是蓝色。”</p>
+</blockquote>
+<p>他们根据11个不同国家的调查结果，画出来的11幅画看上去几乎一样。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023032914.webp" alt="" /></p>
+<p>这证明了，全世界的大众审美正在趋同。从电影到时尚，从建筑到广告，全世界的人们喜欢差不多的东西，各国审美越来越接近，独特性越来越少。</p>
+<p>举例来说，AirBnB 上面的公寓，不管是哪个国家，装潢风格很多都是雷同的，可以称为 AirBnB 美学：白墙、原木、胶囊咖啡机、扶手椅、裸砖、木搁板、灯泡。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023032915.webp" alt="" /></p>
+<p>这种 AirBnB 美学既有工业主义的粗犷原始，又有古典主义的优雅极简。</p>
+<p>这种风格还影响到了咖啡店。</p>
+<p>世界各地的咖啡店（包括餐厅），也慢慢变得相似：粗糙的木桌、宽大的窗户、朴素的吊灯。</p>
+<p><img src="https://cdn.beekka.com/blogimg/asset/202303/bg2023032916.webp" alt="" /></p>
+<p>总之，随着互联网连接全球，全世界正在形成统一的大众审美。以后，无论去到哪个国家，旅馆和咖啡店可能都是一样的装修。</p>
+<h2 id="言论">言论</h2>
+<p>1、</p>
+<p>我生活中一切顺利的事情都遵循相同的过程:</p>
+<p>（1）我关注自己喜欢的​​事情。</p>
+<p>（2）我找到多做这些事情的方法。</p>
+<p>（3）我让有趣的人很容易发现我在做这些事情。</p>
+<p>（4）我和他们一起出去玩，一起做项目。</p>
+<p>&ndash; <a href="https://www.henrikkarlsson.xyz/p/unfolding">亨里克·卡尔森</a></p>
+<p>2、</p>
+<p>伟大的科学家是想法大胆的人，但是对自己的想法同时持有高度批判的态度。接受自己的猜想之前，他们首先会严厉尝试反驳它。</p>
+<p>只有发现很难反驳成功时，他们才相信自己的想法是对的。</p>
+<p>&ndash; <a href="https://igorpak.wordpress.com/2020/12/10/what-if-they-are-all-wrong/">卡尔·波普尔</a>，科学哲学家</p>
+<p>3、</p>
+<p>作为一个至少用过十几种语言进行过商业开发的程序员，我完全不同意有人说，一种语言的编程速度优于另一种语言。</p>
+<p>语言的编程速度因人而异，符合程序员的个人经历和思维习惯的语言，写起来最快。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=41616851">Hacker News 读者</a></p>
+<p>4、</p>
+<p>我长期以来一直认为地球是一个“水星球”，存在着大量的水覆盖星球。</p>
+<p>直到我做了数学计算，才意识到地球实际上是太空中的一块湿岩石，更像是用喷雾器喷了十几次的保龄球。</p>
+<p>&ndash; <a href="https://news.ycombinator.com/item?id=41238102">Hacker News 读者</a></p>
+<h2 id="往年回顾">往年回顾</h2>
+<p><a href="https://www.ruanyifeng.com/blog/2023/12/weekly-issue-282.html">电动皮卡 Cybertruck 的 48V 供电</a>（2023 #282）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2022/11/weekly-issue-232.html">好用的平面设计软件</a>（2022 #232）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2021/11/weekly-issue-182.html">新人优惠的风险</a>（2021 #182）</p>
+<p><a href="https://www.ruanyifeng.com/blog/2020/11/weekly-issue-132.html">快能力和慢能力</a>（2020 #132）</p>
+<p>（完）</p>
+
+        </div>
+        <aside class="article-toc-wrap" aria-label="文章导航">
+            <nav class="article-toc" id="articleToc">
+                <div class="article-toc-heading">本文目录</div>
+                <ol id="articleTocList"><li class="toc-loading">正在整理目录…</li></ol>
+            </nav>
+        </aside>
+    </div>
+</article>
+
+
+<script>
+(function () {
+    function enhanceCodeBlocks() {
+        document.querySelectorAll('.page-content pre').forEach(function (pre) {
+            if (pre.dataset.enhanced === 'true') return;
+            var code = pre.querySelector('code');
+            if (!code) return;
+            pre.dataset.enhanced = 'true';
+            var wrap = document.createElement('div');
+            wrap.className = 'code-block-wrap';
+            pre.parentNode.insertBefore(wrap, pre);
+            wrap.appendChild(pre);
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'code-copy-button';
+            button.textContent = '复制代码';
+            button.setAttribute('aria-label', '复制代码');
+            button.addEventListener('click', function () {
+                var text = code.textContent;
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(text).then(function () {
+                        button.textContent = '已复制';
+                        setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                    }).catch(function () { button.textContent = '复制失败'; });
+                } else {
+                    var area = document.createElement('textarea');
+                    area.value = text;
+                    area.style.position = 'fixed';
+                    area.style.opacity = '0';
+                    document.body.appendChild(area);
+                    area.select();
+                    try {
+                        document.execCommand('copy');
+                        button.textContent = '已复制';
+                    } catch (error) {
+                        button.textContent = '复制失败';
+                    }
+                    area.remove();
+                    setTimeout(function () { button.textContent = '复制代码'; }, 1400);
+                }
+            });
+            wrap.appendChild(button);
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', enhanceCodeBlocks);
+    else enhanceCodeBlocks();
+})();
+</script>
+
+<script>
+(function () {
+    const content = document.getElementById('articleContent');
+    const toc = document.getElementById('articleToc');
+    const list = document.getElementById('articleTocList');
+    const progress = document.getElementById('readingProgressBar');
+    if (!content || !toc || !list) return;
+
+    const headings = Array.from(content.querySelectorAll('h2, h3'));
+    const used = new Set();
+    const slugify = (value) => value.trim().toLowerCase()
+        .replace(/[^\p{L}\p{N}\s-]/gu, '')
+        .replace(/[\s]+/g, '-')
+        .replace(/-+/g, '-')
+        .replace(/^-|-$/g, '') || 'section';
+
+    headings.forEach((heading, index) => {
+        if (!heading.id) {
+            let id = slugify(heading.textContent);
+            const base = id;
+            let suffix = 2;
+            while (used.has(id) || document.getElementById(id)) id = base + '-' + suffix++;
+            heading.id = id;
+        }
+        used.add(heading.id);
+        heading.classList.add('article-heading-anchor');
+    });
+
+    if (!headings.length) {
+        toc.hidden = true;
+    } else {
+        list.innerHTML = headings.map((heading) =>
+            '<li class="toc-level-' + heading.tagName.toLowerCase() + '">' +
+            '<a href="#' + encodeURIComponent(heading.id) + '">' +
+            heading.textContent.trim().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') +
+            '</a></li>'
+        ).join('');
+
+        const links = Array.from(list.querySelectorAll('a'));
+        const setActive = (id) => links.forEach((link) => {
+            const active = decodeURIComponent(link.getAttribute('href').slice(1)) === id;
+            link.classList.toggle('active', active);
+            if (active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                const visible = entries.filter((entry) => entry.isIntersecting)
+                    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+                if (visible[0]) setActive(visible[0].target.id);
+            }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+            headings.forEach((heading) => observer.observe(heading));
+        }
+
+        links.forEach((link) => link.addEventListener('click', (event) => {
+            const id = decodeURIComponent(link.getAttribute('href').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            event.preventDefault();
+            history.replaceState(null, '', '#' + encodeURIComponent(id));
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+            setActive(id);
+        }));
+    }
+
+    let ticking = false;
+    const updateProgress = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = scrollable > 0 ? Math.min(100, Math.max(0, window.scrollY / scrollable * 100)) : 0;
+        if (progress) progress.style.width = percent + '%';
+        ticking = false;
+    };
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateProgress);
+            ticking = true;
+        }
+    }, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+})();
+</script>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <p>阅读笔记 · 使用 Hugo 构建</p>
+    </footer>
+
+    
+
+    <script>
+    (function () {
+        const TYPE_LABEL = { blog: '📝 博客', weread: '📚 读书', topic: '📁 专题', weekly: '📰 Weekly' };
+        const input = document.getElementById('globalSearch');
+        const results = document.getElementById('searchResults');
+        const indexUrl = '\/index.json';
+        let items = null;
+        let loading = null;
+        let activeIndex = -1;
+
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function loadIndex() {
+            if (items) return Promise.resolve(items);
+            if (loading) return loading;
+            loading = fetch(indexUrl)
+                .then((res) => res.json())
+                .then((data) => { items = data; return items; })
+                .catch(() => { items = []; return items; });
+            return loading;
+        }
+
+        function closeResults() {
+            results.hidden = true;
+            results.innerHTML = '';
+            activeIndex = -1;
+        }
+
+        function renderResults(matches) {
+            if (!matches.length) {
+                results.innerHTML = '<p class="search-empty">没有找到相关内容</p>';
+                results.hidden = false;
+                return;
+            }
+            results.innerHTML = matches.map((item, i) => `
+                <a class="search-result" href="${escapeHtml(item.url)}" data-index="${i}">
+                    <span class="search-result-type">${TYPE_LABEL[item.type] || '📄'}</span>
+                    <span class="search-result-body">
+                        <span class="search-result-title">${escapeHtml(item.title)}</span>
+                        ${item.meta ? `<span class="search-result-meta">${escapeHtml(item.meta)}</span>` : ''}
+                    </span>
+                </a>
+            `).join('');
+            results.hidden = false;
+        }
+
+        let debounceTimer;
+        input.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const term = input.value.trim().toLowerCase();
+            if (!term) { closeResults(); return; }
+            debounceTimer = setTimeout(() => {
+                loadIndex().then((all) => {
+                    const matches = all.filter((item) =>
+                        item.title.toLowerCase().includes(term) ||
+                        (item.meta || '').toLowerCase().includes(term)
+                    ).slice(0, 8);
+                    renderResults(matches);
+                });
+            }, 150);
+        });
+
+        input.addEventListener('keydown', (e) => {
+            const links = results.querySelectorAll('.search-result');
+            if (e.key === 'Escape') { closeResults(); input.blur(); }
+            if (!links.length) return;
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, links.length - 1);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, 0);
+            } else if (e.key === 'Enter' && activeIndex >= 0) {
+                e.preventDefault();
+                links[activeIndex].click();
+                return;
+            } else {
+                return;
+            }
+            links.forEach((el, i) => el.classList.toggle('active', i === activeIndex));
+        });
+
+        document.addEventListener('keydown', (e) => {
+            const typing = e.target && (e.target.isContentEditable || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName));
+            if (e.key === '/' && !typing && !e.metaKey && !e.ctrlKey && !e.altKey) {
+                e.preventDefault(); input.focus(); input.select();
+            }
+            if (e.key === 'Escape' && document.activeElement === input) {
+                input.value = ''; closeResults(); input.blur();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-search')) closeResults();
+        });
+    })();
+    </script>
+</body>
+</html>

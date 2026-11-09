@@ -16,6 +16,8 @@ params:
     books_per_page: 15
     notes_per_page: 12
     enable_search: true
+    gist_url: 'https://gist.github.com/ilikui/ef6b39d2648e666f47b129b54d3f09f7'
+    gist_comments_url: 'https://api.github.com/gists/ef6b39d2648e666f47b129b54d3f09f7/comments'
   flomo:
     # 新文件名用于绕开旧 JSON 路径的缓存；由 Actions 每次构建时从完整导出生成
     data_file: 'data/flomo_memos_latest.json'
@@ -66,6 +68,9 @@ menus:
     - name: '阅读'
       url: '/weread/'
       weight: 20
+    - name: 'Learn'
+      url: '/learn/'
+      weight: 23
     - name: 'Memos'
       url: '/memos/'
       weight: 25
